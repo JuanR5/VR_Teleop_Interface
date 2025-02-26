@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 6ebb8de27b8837148a5aab618b3bdfb6
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Voice/Samples/ShapesConduit/Scripts/ColorName.cs
+  uploadId: 667590

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 646da484d21bf48d887dedfb481d78f8
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/SampleFramework/Usage/Passthrough/Materials/BlackUnlit.mat
+  uploadId: 667590

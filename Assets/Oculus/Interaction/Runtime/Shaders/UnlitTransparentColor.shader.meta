@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 30ad2a53abd6f3e4aa5a1b0e0899691f
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures: []
+  nonModifiableTextures: []
+  preprocessorOverride: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Interaction/Runtime/Shaders/UnlitTransparentColor.shader
+  uploadId: 667590

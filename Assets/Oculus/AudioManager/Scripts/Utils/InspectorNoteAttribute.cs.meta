@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 4616bbe65d311471f8d71174295f4986
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/AudioManager/Scripts/Utils/InspectorNoteAttribute.cs
+  uploadId: 667590

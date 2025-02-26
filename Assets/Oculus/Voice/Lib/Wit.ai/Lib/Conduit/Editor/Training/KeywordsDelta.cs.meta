@@ -1,0 +1,10 @@
+fileFormatVersion: 2
+guid: 59244493b3074e128bc55157264df6ab
+timeCreated: 1665714270
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Voice/Lib/Wit.ai/Lib/Conduit/Editor/Training/KeywordsDelta.cs
+  uploadId: 667590

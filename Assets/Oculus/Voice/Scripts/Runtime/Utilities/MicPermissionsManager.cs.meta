@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: a2521d2c8c8225f4cb7349ab441608f3
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Voice/Scripts/Runtime/Utilities/MicPermissionsManager.cs
+  uploadId: 667590

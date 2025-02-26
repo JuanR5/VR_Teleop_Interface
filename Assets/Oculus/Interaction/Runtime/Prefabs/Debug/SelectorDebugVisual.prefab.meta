@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 2789b81452a53eb438f0467475526b1d
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Interaction/Runtime/Prefabs/Debug/SelectorDebugVisual.prefab
+  uploadId: 667590

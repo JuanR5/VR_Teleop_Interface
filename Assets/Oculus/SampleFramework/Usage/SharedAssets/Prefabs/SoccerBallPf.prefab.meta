@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 2942a9241566d9f49916c618e9dc95a7
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/SampleFramework/Usage/SharedAssets/Prefabs/SoccerBallPf.prefab
+  uploadId: 667590

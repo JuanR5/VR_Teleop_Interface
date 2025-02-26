@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: d6708eb99dec8334fb83db57b764097a
+timeCreated: 1470867310
+licenseType: Store
+ShaderImporter:
+  defaultTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/VR/Resources/Underlay Transparent Occluder.shader
+  uploadId: 667590

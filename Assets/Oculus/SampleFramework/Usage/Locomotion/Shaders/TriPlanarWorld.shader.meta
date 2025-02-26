@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 8de0f603bcd864c41a6fbf4c1788ef9c
+timeCreated: 1505320893
+licenseType: Store
+ShaderImporter:
+  defaultTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/SampleFramework/Usage/Locomotion/Shaders/TriPlanarWorld.shader
+  uploadId: 667590

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: d5f88f354e8735b4eb8fe8e0e7d5d278
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/VR/Editor/BuildingBlocks/BlockData/HandTracking/HandTracking.asset
+  uploadId: 667590

@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: e97d8d54c1d1f16468e12a2079fdd060
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/VR/Editor/PathHelper.cs
+  uploadId: 667590

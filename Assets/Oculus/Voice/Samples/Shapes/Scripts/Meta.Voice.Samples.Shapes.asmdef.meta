@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 27caad3e4bdcbe6478324a9c4c83dd50
+AssemblyDefinitionImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Voice/Samples/Shapes/Scripts/Meta.Voice.Samples.Shapes.asmdef
+  uploadId: 667590

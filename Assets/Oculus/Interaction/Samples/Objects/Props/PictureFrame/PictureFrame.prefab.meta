@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 146baf7aaccab2949a87118ab13da980
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Interaction/Samples/Objects/Props/PictureFrame/PictureFrame.prefab
+  uploadId: 667590

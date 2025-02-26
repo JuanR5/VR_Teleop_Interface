@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: a6446991ef31ced4190c53c206cf4b3e
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Interaction/Samples/Fonts/Roboto-Bold SDF.asset
+  uploadId: 667590

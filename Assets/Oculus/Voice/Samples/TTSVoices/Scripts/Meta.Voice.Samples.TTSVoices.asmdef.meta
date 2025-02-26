@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: c4ae70944d4b73049b04afa3a1e912a7
+AssemblyDefinitionImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Voice/Samples/TTSVoices/Scripts/Meta.Voice.Samples.TTSVoices.asmdef
+  uploadId: 667590

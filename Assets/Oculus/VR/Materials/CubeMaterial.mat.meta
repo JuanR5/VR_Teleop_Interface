@@ -1,0 +1,11 @@
+fileFormatVersion: 2
+guid: 62db2d638434d5a488dfb1e789e34b37
+NativeFormatImporter:
+  userData: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/VR/Materials/CubeMaterial.mat
+  uploadId: 667590

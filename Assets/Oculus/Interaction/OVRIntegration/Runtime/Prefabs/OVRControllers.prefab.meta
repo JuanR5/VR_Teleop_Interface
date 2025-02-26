@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: fbfc588a949bb1a42b20e5bddc4cf8cf
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Interaction/OVRIntegration/Runtime/Prefabs/OVRControllers.prefab
+  uploadId: 667590
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 5aa24c94acb775043bd5c44d48c21d68
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Voice/Samples/ShapesConduit/ShapesConduit.unity
+  uploadId: 667590

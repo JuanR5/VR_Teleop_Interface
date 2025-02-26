@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 672c396d97853fa4a9aed2f4ae7347aa
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures: []
+  nonModifiableTextures: []
+  preprocessorOverride: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/VR/Shaders/OVRTrackedKeyboard/Unlit-AlphaTestMMBias.shader
+  uploadId: 667590

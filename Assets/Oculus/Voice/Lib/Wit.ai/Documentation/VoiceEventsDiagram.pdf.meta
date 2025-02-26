@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 8eb9498a67cb0d640aafac2c509b1272
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Voice/Lib/Wit.ai/Documentation/VoiceEventsDiagram.pdf
+  uploadId: 667590

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: b925b5b4ed2d8bb438d0a5ff67765183
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Interaction/Samples/Audio/Prefabs/BodyCaptureTimerTick.prefab
+  uploadId: 667590

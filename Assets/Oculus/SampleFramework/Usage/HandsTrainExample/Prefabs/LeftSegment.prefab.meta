@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: bc23f966b19084442a7a67d85bc6abdb
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/SampleFramework/Usage/HandsTrainExample/Prefabs/LeftSegment.prefab
+  uploadId: 667590

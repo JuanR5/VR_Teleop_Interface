@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 0a1063314b03a02488a3ef840b635489
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/SampleFramework/Core/Video/Materials/MovieTexture.mat
+  uploadId: 667590

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 4c3436cc699cb25459568e9fa95b7fd7
+AssemblyDefinitionImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Voice/Features/Telemetry/Scripts/Editor/Telemetry.Editor.asmdef
+  uploadId: 667590

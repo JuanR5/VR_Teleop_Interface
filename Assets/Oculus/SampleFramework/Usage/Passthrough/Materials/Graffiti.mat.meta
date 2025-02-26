@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: dd331cc38e3258643bf0d3d221718362
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/SampleFramework/Usage/Passthrough/Materials/Graffiti.mat
+  uploadId: 667590

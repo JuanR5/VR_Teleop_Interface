@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 4a3c8f82a01756d43afc639499c0ce51
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Interaction/Runtime/Prefabs/Grab/GrabInteractable.prefab
+  uploadId: 667590

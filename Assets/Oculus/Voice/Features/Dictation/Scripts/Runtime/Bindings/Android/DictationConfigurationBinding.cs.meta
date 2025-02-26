@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: c72e9e84ab9e87741986d6efe576e0d9
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Voice/Features/Dictation/Scripts/Runtime/Bindings/Android/DictationConfigurationBinding.cs
+  uploadId: 667590

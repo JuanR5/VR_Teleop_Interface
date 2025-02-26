@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: a1a6574991742284e9630c2e8f93648a
+timeCreated: 1523339495
+licenseType: Store
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/SampleFramework/Usage/Passthrough/Scenes/PassthroughStyles.unity
+  uploadId: 667590

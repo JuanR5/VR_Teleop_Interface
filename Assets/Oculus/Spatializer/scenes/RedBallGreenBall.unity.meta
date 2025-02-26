@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 305999d68a83b7d438df1bb704b6bc06
+timeCreated: 1442947197
+licenseType: Store
+DefaultImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Spatializer/scenes/RedBallGreenBall.unity
+  uploadId: 667590

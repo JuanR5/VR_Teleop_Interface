@@ -1,0 +1,10 @@
+﻿fileFormatVersion: 2
+guid: be3974c2b13042ecb43558bf99c1603b
+timeCreated: 1629410878
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Interaction/Runtime/Scripts/Input/Hands/IHandSkeletonProvider.cs
+  uploadId: 667590

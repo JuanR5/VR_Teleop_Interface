@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 9aa46566e1d86644c9a55e3037e935f6
+timeCreated: 1504826310
+licenseType: Store
+ShaderImporter:
+  defaultTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/VR/Resources/OVRMRUnlit.shader
+  uploadId: 667590

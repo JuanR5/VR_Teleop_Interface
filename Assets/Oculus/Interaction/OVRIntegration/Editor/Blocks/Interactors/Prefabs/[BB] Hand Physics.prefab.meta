@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 5fc002002ecb74800b33f4b96a147701
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Interaction/OVRIntegration/Editor/Blocks/Interactors/Prefabs/[BB]
+    Hand Physics.prefab
+  uploadId: 667590

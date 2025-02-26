@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 67f0646cbbbe2ed4f9049110e8fb7351
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Voice/Lib/Wit.ai/Scripts/Runtime/Lib/Mic/Other/Mic.cs
+  uploadId: 667590

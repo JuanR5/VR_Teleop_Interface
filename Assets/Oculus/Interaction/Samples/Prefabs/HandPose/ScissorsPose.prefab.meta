@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 9de1955285a3aee4db01dfcd016da314
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Interaction/Samples/Prefabs/HandPose/ScissorsPose.prefab
+  uploadId: 667590

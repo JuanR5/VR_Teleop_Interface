@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: e36011c54ca6d994c94449356fa5cee6
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/SampleFramework/Usage/Passthrough/Scenes/SurfaceProjectedPassthrough.unity
+  uploadId: 667590

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: abd747a5d8c82d5439ad2453550edbaf
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Interaction/Samples/Scenes/Features/DebugBodyJoints.unity
+  uploadId: 667590

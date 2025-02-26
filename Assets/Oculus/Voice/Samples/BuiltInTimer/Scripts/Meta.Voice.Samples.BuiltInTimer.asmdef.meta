@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: b409cfa88b1012c48b47bf2ac9340e6d
+AssemblyDefinitionImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Voice/Samples/BuiltInTimer/Scripts/Meta.Voice.Samples.BuiltInTimer.asmdef
+  uploadId: 667590

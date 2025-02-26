@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 354a5d3fc93892c44978423fd55d7196
+timeCreated: 1469221557
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: -1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/SampleFramework/Usage/OVROverlay/Materials/Tile_Mat_Cinema.mat
+  uploadId: 667590

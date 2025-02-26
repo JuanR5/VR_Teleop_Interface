@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: eb3fd791afefd4a92a13c4a6149df2c0
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Voice/Features/Dictation/Scripts/Runtime/Data/WitDictationRuntimeConfiguration.cs
+  uploadId: 667590

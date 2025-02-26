@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 5fca3702cdf1a214a94e69dcfa704e17
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Interaction/Runtime/Prefabs/Poke/PokeInteractable.prefab
+  uploadId: 667590

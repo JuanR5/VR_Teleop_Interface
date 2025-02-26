@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 6dca398ec6487b142811f0497ed47f6d
+timeCreated: 1438737983
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/SampleFramework/Core/TouchControllers/Materials/R_controller_gloss_MAT.mat
+  uploadId: 667590

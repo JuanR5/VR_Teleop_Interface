@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 4bf41478a1af76e48b69aa772f7b81fd
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Interaction/Runtime/Scripts/PoseDetection/Debug/ActiveStateNodeUIHorizontal.cs
+  uploadId: 667590

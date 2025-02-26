@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: ecd24e91b27c645fc95f6c42115c13cc
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/AudioManager/Scripts/Audio/SoundEmitter.cs
+  uploadId: 667590

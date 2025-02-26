@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 071fba5195bd4b04eab8668985aa1683
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/SampleFramework/Usage/StartScene.unity
+  uploadId: 667590

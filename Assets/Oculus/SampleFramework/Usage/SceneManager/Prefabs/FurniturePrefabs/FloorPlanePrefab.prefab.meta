@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: a202d380b0eab3c4fbb4825c00a1e0cf
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/SampleFramework/Usage/SceneManager/Prefabs/FurniturePrefabs/FloorPlanePrefab.prefab
+  uploadId: 667590

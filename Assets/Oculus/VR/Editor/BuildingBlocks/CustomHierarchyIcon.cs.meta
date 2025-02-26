@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 45f3bbef57a1eb54d9bab25f13fbc2cf
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/VR/Editor/BuildingBlocks/CustomHierarchyIcon.cs
+  uploadId: 667590

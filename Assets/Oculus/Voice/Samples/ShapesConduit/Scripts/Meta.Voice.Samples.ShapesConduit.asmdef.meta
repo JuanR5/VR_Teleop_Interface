@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 58af511b0ae08c4479b0b2559ce05f0a
+AssemblyDefinitionImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Voice/Samples/ShapesConduit/Scripts/Meta.Voice.Samples.ShapesConduit.asmdef
+  uploadId: 667590

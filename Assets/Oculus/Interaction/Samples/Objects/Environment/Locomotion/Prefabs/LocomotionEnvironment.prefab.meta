@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 9ea3c3bd7f7fe1043a0bb52ecda39ce6
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Interaction/Samples/Objects/Environment/Locomotion/Prefabs/LocomotionEnvironment.prefab
+  uploadId: 667590

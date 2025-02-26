@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 24872d3c3760f23498f41ecb019ea5cd
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/SampleFramework/Usage/MixedRealityCapture.unity
+  uploadId: 667590

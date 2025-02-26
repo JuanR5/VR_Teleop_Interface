@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 93bda9a2bc9dddc43930634fa65d6e42
+AssemblyDefinitionImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/VR/Editor/BuildingBlocks/Meta.XR.BuildingBlocks.Editor.asmdef
+  uploadId: 667590

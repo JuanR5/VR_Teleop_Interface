@@ -1,0 +1,10 @@
+﻿fileFormatVersion: 2
+guid: 87bac4c0262b45dcbbf302346ee10eb4
+timeCreated: 1657570862
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Voice/Features/Dictation/Scripts/Runtime/Bindings/Android/PlatformDictationSession.cs
+  uploadId: 667590

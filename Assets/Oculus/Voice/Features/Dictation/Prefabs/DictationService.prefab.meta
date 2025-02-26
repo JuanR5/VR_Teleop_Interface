@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: ba31729cfe8be2642a8bcac537765e59
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Voice/Features/Dictation/Prefabs/DictationService.prefab
+  uploadId: 667590

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 1b2d3f90c0f50b94cb910c66c773d00d
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Interaction/Samples/Scenes/Examples/RayExamples.unity
+  uploadId: 667590

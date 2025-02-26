@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 7b1127eced26c0748b86cc88310b1711
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Interaction/Editor/Hands/FromHandPrefabDataSourceEditor.cs
+  uploadId: 667590
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

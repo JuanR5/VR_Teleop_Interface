@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: e183dfe6fccb38f40bc810cdf9e63215
+AssemblyDefinitionImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Platform/Oculus.Platform.asmdef
+  uploadId: 667590

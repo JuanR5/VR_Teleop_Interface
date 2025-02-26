@@ -1,0 +1,10 @@
+﻿fileFormatVersion: 2
+guid: ef7ac601451d4e869a7f05b23c59c842
+timeCreated: 1680127686
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Voice/Lib/Wit.ai/Scripts/Runtime/Attributes/TooltipBoxAttribute.cs
+  uploadId: 667590

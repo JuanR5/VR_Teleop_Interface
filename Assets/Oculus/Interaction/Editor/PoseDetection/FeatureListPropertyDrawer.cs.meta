@@ -1,0 +1,10 @@
+﻿fileFormatVersion: 2
+guid: 39acc9895ae6408898722a714edbe5ce
+timeCreated: 1631575366
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Interaction/Editor/PoseDetection/FeatureListPropertyDrawer.cs
+  uploadId: 667590

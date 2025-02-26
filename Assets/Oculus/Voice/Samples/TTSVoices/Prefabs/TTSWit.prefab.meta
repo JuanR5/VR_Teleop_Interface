@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 3e919abfe68b0314aa3fa156a83435f2
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Voice/Samples/TTSVoices/Prefabs/TTSWit.prefab
+  uploadId: 667590

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 2a54b78eced40e74db39ff12257d5702
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Interaction/Samples/Objects/Props/Key/Key.prefab
+  uploadId: 667590

@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: a63d0cd5dd6d39a4abd35114563fe347
+timeCreated: 1475105001
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Platform/Samples/VrHoops/Scripts/DetectBasket.cs
+  uploadId: 667590

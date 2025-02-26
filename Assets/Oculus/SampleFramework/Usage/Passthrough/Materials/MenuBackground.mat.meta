@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: cd0bb29d1f8a53e4b9356e3da1632421
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/SampleFramework/Usage/Passthrough/Materials/MenuBackground.mat
+  uploadId: 667590

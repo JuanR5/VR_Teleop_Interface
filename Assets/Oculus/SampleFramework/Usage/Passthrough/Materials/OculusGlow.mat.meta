@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 045a1929a97ff9b47aa45e3bb5d92f7d
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/SampleFramework/Usage/Passthrough/Materials/OculusGlow.mat
+  uploadId: 667590

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: fb201b34921119e469e82d12fd963ae2
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Interaction/Runtime/Prefabs/Locomotion/LocomotionHandInteractorGroup.prefab
+  uploadId: 667590

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: d2761a0af0f567748a72629d4bb18a26
+AssemblyDefinitionImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/VR/Editor/Oculus.VR.Editor.asmdef
+  uploadId: 667590

@@ -1,0 +1,10 @@
+﻿fileFormatVersion: 2
+guid: 1f92d53f052741758304c4518f58f607
+timeCreated: 1655183636
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/VR/Editor/OVRPluginInfo.cs
+  uploadId: 667590

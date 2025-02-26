@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 3c5f28d4801b36744961bf4c1bcacab8
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 23800000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Interaction/Samples/Environment/Locomotion/NavMesh.asset
+  uploadId: 667590

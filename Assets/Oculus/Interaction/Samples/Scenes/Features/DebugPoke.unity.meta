@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: acb3321847c599949acfd36b778e1f7a
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Interaction/Samples/Scenes/Features/DebugPoke.unity
+  uploadId: 667590

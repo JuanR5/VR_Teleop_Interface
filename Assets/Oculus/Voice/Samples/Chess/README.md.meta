@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 7e1c7ba90f09a004ca37c528183f2bc8
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Voice/Samples/Chess/README.md
+  uploadId: 667590

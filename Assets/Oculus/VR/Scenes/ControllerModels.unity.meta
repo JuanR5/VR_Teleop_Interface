@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 39cfe7aa0a2d46c47994d8d0308ec663
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/VR/Scenes/ControllerModels.unity
+  uploadId: 667590

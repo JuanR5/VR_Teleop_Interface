@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 0a5206cd53b21be4588ef635952929e9
+timeCreated: 1445011372
+licenseType: Store
+DefaultImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/LipSync/Scenes/LipSync_Demo.unity
+  uploadId: 667590

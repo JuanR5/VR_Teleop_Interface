@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: e06ae8cd9650553488e0949aa9da383b
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Interaction/Runtime/Prefabs/DistanceHandGrab/Reticles/ReticleLine.prefab
+  uploadId: 667590

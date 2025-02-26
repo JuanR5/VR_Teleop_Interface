@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 52478c233ce9df34087cc379c060a2d3
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/VR/Scenes/MultimodalHandsAndControllers.unity
+  uploadId: 667590

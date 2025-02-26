@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 555b14fdbb3654d92946230ea927ffda
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/SampleFramework/Usage/Locomotion/Prefabs/ThinBarsPf.prefab
+  uploadId: 667590

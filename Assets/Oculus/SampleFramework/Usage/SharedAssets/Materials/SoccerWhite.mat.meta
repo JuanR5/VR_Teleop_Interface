@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: a6f1778430eac934d8d2b1514f4b023f
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/SampleFramework/Usage/SharedAssets/Materials/SoccerWhite.mat
+  uploadId: 667590

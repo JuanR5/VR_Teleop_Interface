@@ -1,0 +1,10 @@
+fileFormatVersion: 2
+guid: 671577dd5928458da0dfb66db09c5b95
+timeCreated: 1670875696
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Voice/Lib/Wit.ai/Scripts/Runtime/Events/TelemetryEvents.cs
+  uploadId: 667590

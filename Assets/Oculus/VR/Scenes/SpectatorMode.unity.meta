@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 48f290ede0df84ec8bd990c5f5026654
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/VR/Scenes/SpectatorMode.unity
+  uploadId: 667590

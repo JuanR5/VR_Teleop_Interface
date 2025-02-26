@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: bfbb4b78fb9572d4da744c39224c6f1d
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Platform/Samples/NetChat/DataEntry.cs
+  uploadId: 667590

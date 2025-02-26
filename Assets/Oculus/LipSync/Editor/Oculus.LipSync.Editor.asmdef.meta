@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: a28a0ede888098f48be24ef95777d9bd
+AssemblyDefinitionImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/LipSync/Editor/Oculus.LipSync.Editor.asmdef
+  uploadId: 667590

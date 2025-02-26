@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: fdeaf26e845dc5841bcd31de97d26003
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Interaction/Runtime/Scripts/Interaction/Core/TagSet.cs
+  uploadId: 667590

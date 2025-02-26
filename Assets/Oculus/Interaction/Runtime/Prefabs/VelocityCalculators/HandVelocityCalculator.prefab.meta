@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 2487a3ae4f1630d439ce4a3e9ac03c7b
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Interaction/Runtime/Prefabs/VelocityCalculators/HandVelocityCalculator.prefab
+  uploadId: 667590

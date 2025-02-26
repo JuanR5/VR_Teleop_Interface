@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: bea6571c974f89440b3379b928084e50
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Interaction/Runtime/Scripts/Interaction/Models/Ray/Visuals/RayInteractorPinchVisual.cs
+  uploadId: 667590

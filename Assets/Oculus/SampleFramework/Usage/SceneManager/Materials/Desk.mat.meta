@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 5e69d30c83932bd4088b3f65bfd0b98a
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/SampleFramework/Usage/SceneManager/Materials/Desk.mat
+  uploadId: 667590

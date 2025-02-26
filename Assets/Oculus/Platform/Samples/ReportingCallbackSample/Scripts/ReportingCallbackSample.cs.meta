@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 9624dfcd1f9ea4397bc9a264da738b61
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Platform/Samples/ReportingCallbackSample/Scripts/ReportingCallbackSample.cs
+  uploadId: 667590

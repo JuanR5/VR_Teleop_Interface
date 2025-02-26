@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: c99e99ab53520b24f933da34732440eb
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/SampleFramework/Usage/SharedAssets/Materials/SportsBottle_lid.mat
+  uploadId: 667590

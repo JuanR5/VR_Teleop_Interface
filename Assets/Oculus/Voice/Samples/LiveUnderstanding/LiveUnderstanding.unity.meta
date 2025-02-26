@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 39670f1c7d5f53949b4cbbd6ae757ba8
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Voice/Samples/LiveUnderstanding/LiveUnderstanding.unity
+  uploadId: 667590

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 6498d4298a35c5c44894b5f194468896
+timeCreated: 1440787665
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Spatializer/scenes/materials/SpatializedObject1.mat
+  uploadId: 667590

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: f02292e638368584080af0193f81ff5c
+AssemblyDefinitionImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Voice/Lib/Wit.ai/Lib/Conduit/Runtime/Facebook.Wit.Conduit.asmdef
+  uploadId: 667590

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: fa958eb9f0171754fb207d563a15ddfa
+AssemblyDefinitionImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Voice/Lib/Wit.ai/Scripts/Editor/Facebook.Wit.Editor.asmdef
+  uploadId: 667590

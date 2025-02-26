@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 8d12702353d5fd74ba260506070081fd
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Interaction/Samples/Scenes/Tools/HandGrabPoseTool.unity
+  uploadId: 667590

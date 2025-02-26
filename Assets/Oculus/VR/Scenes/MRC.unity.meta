@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: c249320cff740054f973da7f7e24bd1f
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/VR/Scenes/MRC.unity
+  uploadId: 667590

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 4da77ccaa334a3e45961430811956356
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 9100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/VR/Meshes/MetaQuestTouchPro/Animation/MetaQuestTouchProRightAnimation.controller
+  uploadId: 667590

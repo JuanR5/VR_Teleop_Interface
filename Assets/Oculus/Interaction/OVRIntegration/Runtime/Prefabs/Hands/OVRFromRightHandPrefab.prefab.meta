@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: f610b7d0d48fa194193a8edc8f1c4959
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Interaction/OVRIntegration/Runtime/Prefabs/Hands/OVRFromRightHandPrefab.prefab
+  uploadId: 667590

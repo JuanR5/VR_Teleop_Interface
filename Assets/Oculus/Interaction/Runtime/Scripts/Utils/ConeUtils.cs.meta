@@ -1,0 +1,10 @@
+﻿fileFormatVersion: 2
+guid: 57e4c8fb882d4c2b8234cbdaa168a46e
+timeCreated: 1632799161
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Interaction/Runtime/Scripts/Utils/ConeUtils.cs
+  uploadId: 667590

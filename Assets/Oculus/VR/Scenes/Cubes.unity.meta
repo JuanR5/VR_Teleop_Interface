@@ -1,0 +1,11 @@
+fileFormatVersion: 2
+guid: d920b3d2525670f4abad3d20eda3b349
+DefaultImporter:
+  userData: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/VR/Scenes/Cubes.unity
+  uploadId: 667590

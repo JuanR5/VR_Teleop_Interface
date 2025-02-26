@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: eb540761693b1de438733a3581e21f58
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/VR/Scenes/TrackedKeyboard.unity
+  uploadId: 667590

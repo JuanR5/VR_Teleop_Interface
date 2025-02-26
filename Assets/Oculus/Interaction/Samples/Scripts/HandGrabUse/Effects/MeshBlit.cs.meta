@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: f38a2c2a6f2edf246a68b41b406dd964
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Interaction/Samples/Scripts/HandGrabUse/Effects/MeshBlit.cs
+  uploadId: 667590

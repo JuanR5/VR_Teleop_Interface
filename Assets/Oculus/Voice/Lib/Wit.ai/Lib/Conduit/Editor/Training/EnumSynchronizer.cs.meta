@@ -1,0 +1,10 @@
+﻿fileFormatVersion: 2
+guid: d2283b6a21d94c3db0a2b6f76b4cd90f
+timeCreated: 1657241875
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Voice/Lib/Wit.ai/Lib/Conduit/Editor/Training/EnumSynchronizer.cs
+  uploadId: 667590

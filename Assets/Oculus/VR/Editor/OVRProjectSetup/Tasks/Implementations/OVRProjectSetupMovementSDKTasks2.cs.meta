@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 0b59f40a4e9d6f340a944dbaa75354ca
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/VR/Editor/OVRProjectSetup/Tasks/Implementations/OVRProjectSetupMovementSDKTasks2.cs
+  uploadId: 667590

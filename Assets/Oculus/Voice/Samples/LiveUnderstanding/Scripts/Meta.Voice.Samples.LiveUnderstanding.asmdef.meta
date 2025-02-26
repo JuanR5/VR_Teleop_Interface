@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: baaa3b50d57e56447bac374c0e7aa2f2
+AssemblyDefinitionImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Voice/Samples/LiveUnderstanding/Scripts/Meta.Voice.Samples.LiveUnderstanding.asmdef
+  uploadId: 667590

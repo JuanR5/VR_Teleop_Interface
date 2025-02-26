@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 3abe693e061ff3d4781d623a0c9856c2
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/SampleFramework/Usage/SceneManager/Prefabs/BouncingBall.prefab
+  uploadId: 667590

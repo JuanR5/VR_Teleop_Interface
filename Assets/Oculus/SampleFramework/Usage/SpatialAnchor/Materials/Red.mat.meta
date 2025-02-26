@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 0066bacc1d5fc4644948eaee1f667052
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/SampleFramework/Usage/SpatialAnchor/Materials/Red.mat
+  uploadId: 667590

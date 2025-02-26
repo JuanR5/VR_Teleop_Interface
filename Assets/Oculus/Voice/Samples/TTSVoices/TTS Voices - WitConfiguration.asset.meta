@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 6329e25e1005d4845b580a523e588979
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Voice/Samples/TTSVoices/TTS Voices - WitConfiguration.asset
+  uploadId: 667590

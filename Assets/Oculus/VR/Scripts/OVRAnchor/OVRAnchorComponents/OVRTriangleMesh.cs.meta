@@ -1,0 +1,10 @@
+fileFormatVersion: 2
+guid: 0e2d445935c74f9484188ad82fbfd067
+timeCreated: 1674000939
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/VR/Scripts/OVRAnchor/OVRAnchorComponents/OVRTriangleMesh.cs
+  uploadId: 667590

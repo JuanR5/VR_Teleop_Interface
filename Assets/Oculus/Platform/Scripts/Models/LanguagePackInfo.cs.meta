@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: 2d77f72bf241d8f48b3570ac0c0cab4b
+timeCreated: 1533910661
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Platform/Scripts/Models/LanguagePackInfo.cs
+  uploadId: 667590

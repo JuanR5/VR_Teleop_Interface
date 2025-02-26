@@ -1,0 +1,10 @@
+﻿fileFormatVersion: 2
+guid: 5be6165094d84fbb9377d595397a1dbc
+timeCreated: 1680127468
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Voice/Lib/Wit.ai/Scripts/Editor/Drawers/TooltipBoxDrawer.cs
+  uploadId: 667590

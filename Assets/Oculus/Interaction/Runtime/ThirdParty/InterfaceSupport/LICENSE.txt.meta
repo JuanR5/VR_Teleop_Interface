@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: b4104bbb012ef2b4b9e1d89fcb33b495
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Interaction/Runtime/ThirdParty/InterfaceSupport/LICENSE.txt
+  uploadId: 667590

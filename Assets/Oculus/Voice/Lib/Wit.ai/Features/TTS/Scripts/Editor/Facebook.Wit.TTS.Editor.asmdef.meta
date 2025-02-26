@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: e31cc0253d8f956459091c800a16d68d
+AssemblyDefinitionImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Voice/Lib/Wit.ai/Features/TTS/Scripts/Editor/Facebook.Wit.TTS.Editor.asmdef
+  uploadId: 667590

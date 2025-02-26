@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 225aed143a64c4a6a93f3a07656ac5cd
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/AudioManager/Scripts/Audio/Editor/MinMaxPropertyDrawer.cs
+  uploadId: 667590

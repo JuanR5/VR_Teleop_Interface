@@ -1,0 +1,10 @@
+fileFormatVersion: 2
+guid: 4ad6f774c54d4181bd7a2c868a39c8c8
+timeCreated: 1675880354
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/VR/Scripts/OVRVirtualKeyboard/OVRVirtualKeyboardSampleWPMPrompt.cs
+  uploadId: 667590

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 4c0ee7a14e52ba544b89c2f777670cca
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Interaction/OVRIntegration/Runtime/Prefabs/OVRControllerHands.prefab
+  uploadId: 667590
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

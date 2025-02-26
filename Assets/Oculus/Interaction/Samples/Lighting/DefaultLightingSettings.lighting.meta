@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 71d50a177eaca9844972b921bc78d580
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 4890085278179872738
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Interaction/Samples/Lighting/DefaultLightingSettings.lighting
+  uploadId: 667590

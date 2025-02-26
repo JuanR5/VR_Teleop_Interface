@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: f23eceec74ac2974b8e71cb36b701fa7
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/VR/Scripts/OVRTelemetry/OVRTelemetryUtils.cs
+  uploadId: 667590

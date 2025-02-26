@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 6bcb907778a00234ea4e7aa9cf238631
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Interaction/Runtime/Scripts/Interaction/Models/TouchHandGrab/TouchHandGrabInteractor.cs
+  uploadId: 667590

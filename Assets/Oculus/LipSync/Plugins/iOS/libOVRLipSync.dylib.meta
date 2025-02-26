@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: f5b1c127a92bb426f8f5636c5ea8ab34
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/LipSync/Plugins/iOS/libOVRLipSync.dylib
+  uploadId: 667590

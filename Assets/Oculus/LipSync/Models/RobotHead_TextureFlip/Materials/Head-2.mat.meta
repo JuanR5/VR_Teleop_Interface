@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: b8f002f88e9d7e847b5306f3338f80db
+timeCreated: 1444079116
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/LipSync/Models/RobotHead_TextureFlip/Materials/Head-2.mat
+  uploadId: 667590

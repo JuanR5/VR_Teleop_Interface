@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: b95caf64e2cc3614892026a94bb2be84
+timeCreated: 1433268462
+licenseType: Store
+ShaderImporter:
+  defaultTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/VR/Shaders/OVRColorRampAlpha.shader
+  uploadId: 667590

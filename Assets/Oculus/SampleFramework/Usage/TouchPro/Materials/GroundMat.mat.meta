@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: dc32b8fb317b6d5488f28b92e6f61860
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/SampleFramework/Usage/TouchPro/Materials/GroundMat.mat
+  uploadId: 667590

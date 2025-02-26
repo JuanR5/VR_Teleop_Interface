@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: cfa50fc6e259b524ea01ec7dde0f108d
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures: []
+  nonModifiableTextures: []
+  preprocessorOverride: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/VR/Editor/BuildingBlocks/BlockData/HandTracking/Shaders/OculusSampleAlphaHandOutline.shader
+  uploadId: 667590

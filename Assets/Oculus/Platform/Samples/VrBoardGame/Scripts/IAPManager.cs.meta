@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: 3e54f4e408fb12842b72b24ac5dcbcf6
+timeCreated: 1479423466
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Platform/Samples/VrBoardGame/Scripts/IAPManager.cs
+  uploadId: 667590

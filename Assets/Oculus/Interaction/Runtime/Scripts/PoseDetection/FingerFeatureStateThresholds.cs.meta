@@ -1,0 +1,10 @@
+﻿fileFormatVersion: 2
+guid: c5af6ab9d1bd4a47970ad151090281f3
+timeCreated: 1627757407
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Interaction/Runtime/Scripts/PoseDetection/FingerFeatureStateThresholds.cs
+  uploadId: 667590

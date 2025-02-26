@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 961c534a8c3090742bd1a5fcf8edd46e
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Interaction/Samples/Prefabs/OVRIntegration/Legacy/legacy.txt
+  uploadId: 667590

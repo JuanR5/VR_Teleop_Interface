@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: eb7d6cff5f17513488d465cdc4efd298
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Interaction/OVRIntegration/Runtime/Scripts/Input/FromOVRControllerHandDataSource.cs
+  uploadId: 667590
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

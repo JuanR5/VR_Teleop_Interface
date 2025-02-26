@@ -1,0 +1,10 @@
+fileFormatVersion: 2
+guid: 8695749c9d2c4b408eba12edb958ce84
+timeCreated: 1678577145
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/VR/Scripts/Editor/OVRSkeletonEditor.cs
+  uploadId: 667590

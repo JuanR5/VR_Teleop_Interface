@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 4170d4d20a9b6034a88d89a71c2e0828
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Interaction/OVRIntegration/Runtime/Prefabs/HandGrab/Ghost-RightHand.prefab
+  uploadId: 667590
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

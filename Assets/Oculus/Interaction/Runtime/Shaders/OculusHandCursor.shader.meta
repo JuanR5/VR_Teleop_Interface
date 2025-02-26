@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 57c328e70d404164ab9b23ac6fc12df6
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures: []
+  nonModifiableTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Interaction/Runtime/Shaders/OculusHandCursor.shader
+  uploadId: 667590

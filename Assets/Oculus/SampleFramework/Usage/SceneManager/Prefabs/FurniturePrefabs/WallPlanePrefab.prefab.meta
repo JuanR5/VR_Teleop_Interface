@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 0a4918c8a9406de44ae8fd4253c3d402
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/SampleFramework/Usage/SceneManager/Prefabs/FurniturePrefabs/WallPlanePrefab.prefab
+  uploadId: 667590

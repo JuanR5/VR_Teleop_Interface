@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 4e321a8c9c3feef49a546c0467aa431d
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Voice/Resources/voicesdk_texts_en-us.json
+  uploadId: 667590

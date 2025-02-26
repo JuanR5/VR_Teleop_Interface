@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: ad074644ff568a14187a3690cfbd7534
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Spatializer/scripts/ONSPSettings.cs
+  uploadId: 667590

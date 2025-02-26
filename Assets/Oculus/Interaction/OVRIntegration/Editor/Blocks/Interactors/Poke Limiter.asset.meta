@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 6bb165ea6782545fd8deb1d8000cc383
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Interaction/OVRIntegration/Editor/Blocks/Interactors/Poke
+    Limiter.asset
+  uploadId: 667590

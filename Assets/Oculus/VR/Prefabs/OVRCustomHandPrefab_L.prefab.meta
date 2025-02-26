@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: c6a74181d4000004887343fb87b3c53a
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/VR/Prefabs/OVRCustomHandPrefab_L.prefab
+  uploadId: 667590

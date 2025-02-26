@@ -1,0 +1,10 @@
+﻿fileFormatVersion: 2
+guid: c1baa7891a0f4c63ad746d7e1b35faef
+timeCreated: 1660745160
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/VR/Editor/OVRProjectSetup/Tasks/Processors/OVRConfigurationTaskUpdaterSummary.cs
+  uploadId: 667590

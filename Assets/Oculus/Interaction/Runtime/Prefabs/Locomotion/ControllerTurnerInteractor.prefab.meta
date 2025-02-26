@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 122968827794c2b499a4451e4a8fa2ca
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Interaction/Runtime/Prefabs/Locomotion/ControllerTurnerInteractor.prefab
+  uploadId: 667590

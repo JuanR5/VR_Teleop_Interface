@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: df8e1d778abf442e4bec449c360e9e1c
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: -100
+  icon: {instanceID: 0}
+  userData: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/VR/Scripts/Util/OVRScreenFade.cs
+  uploadId: 667590

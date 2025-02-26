@@ -1,0 +1,10 @@
+﻿fileFormatVersion: 2
+guid: 7bc71515869d46e08e210173388da05c
+timeCreated: 1669731273
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/VR/Scripts/Util/Async/OVRTask.cs
+  uploadId: 667590

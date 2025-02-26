@@ -1,0 +1,12 @@
+fileFormatVersion: 2
+guid: 1f4d3ae64a10d434db219de8b14348e1
+DefaultImporter:
+  userData: 
+  assetBundleName: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/VR/Scenes/UI.unity
+  uploadId: 667590

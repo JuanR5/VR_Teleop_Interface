@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: eed002a9bbb525c499ee71cb1d4fe205
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/SampleFramework/Usage/SceneManager/Materials/Plastic.mat
+  uploadId: 667590

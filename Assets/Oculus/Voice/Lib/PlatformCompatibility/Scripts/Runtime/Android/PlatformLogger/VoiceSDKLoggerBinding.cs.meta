@@ -1,0 +1,10 @@
+﻿fileFormatVersion: 2
+guid: 02f219e3a02e4055b3df9be4f5786e5a
+timeCreated: 1652919643
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Voice/Lib/PlatformCompatibility/Scripts/Runtime/Android/PlatformLogger/VoiceSDKLoggerBinding.cs
+  uploadId: 667590

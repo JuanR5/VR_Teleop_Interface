@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 769480f79b2529649ab1ec4bc9d4a54f
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Interaction/Runtime/Scripts/Interaction/Visuals/HandConfidenceVisual.cs
+  uploadId: 667590

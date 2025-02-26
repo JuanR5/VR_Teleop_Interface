@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 5ba01b4d0d1b69f4ea5a0c139272031d
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Voice/Lib/Wit.ai/Lib/Wit/Runtime/Data/Info/WitVoiceInfo.cs
+  uploadId: 667590

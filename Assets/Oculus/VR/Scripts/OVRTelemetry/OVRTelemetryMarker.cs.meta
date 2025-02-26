@@ -1,0 +1,10 @@
+﻿fileFormatVersion: 2
+guid: 12346e489d1e4e4486812e77113174b9
+timeCreated: 1679668683
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/VR/Scripts/OVRTelemetry/OVRTelemetryMarker.cs
+  uploadId: 667590

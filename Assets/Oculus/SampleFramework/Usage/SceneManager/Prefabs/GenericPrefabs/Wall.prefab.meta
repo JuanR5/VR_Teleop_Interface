@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 26ac47ea790b8a24b958b02c678afdda
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/SampleFramework/Usage/SceneManager/Prefabs/GenericPrefabs/Wall.prefab
+  uploadId: 667590

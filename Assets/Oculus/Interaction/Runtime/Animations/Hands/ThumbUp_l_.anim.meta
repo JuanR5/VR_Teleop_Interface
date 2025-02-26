@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: d383e35b8d2f63f4f8258d5eadab871e
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 7400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Interaction/Runtime/Animations/Hands/ThumbUp_l_.anim
+  uploadId: 667590

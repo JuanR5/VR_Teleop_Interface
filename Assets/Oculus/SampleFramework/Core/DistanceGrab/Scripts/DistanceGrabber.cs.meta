@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 6b388ff4c8d1f3644a143b16d45403ca
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 201
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/SampleFramework/Core/DistanceGrab/Scripts/DistanceGrabber.cs
+  uploadId: 667590

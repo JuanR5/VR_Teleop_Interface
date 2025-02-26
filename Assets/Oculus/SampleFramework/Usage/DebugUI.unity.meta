@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 34004346bd7dcbf4fbfd78d2f12e4451
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/SampleFramework/Usage/DebugUI.unity
+  uploadId: 667590

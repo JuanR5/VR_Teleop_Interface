@@ -1,0 +1,10 @@
+﻿fileFormatVersion: 2
+guid: f472ecf83ab847938d92dbb8e1025d38
+timeCreated: 1674865710
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Interaction/Editor/Scripts/PhongPbrMaterialDescriptionPostprocessor.cs
+  uploadId: 667590

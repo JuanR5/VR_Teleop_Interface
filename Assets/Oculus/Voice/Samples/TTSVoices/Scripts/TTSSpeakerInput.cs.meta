@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: e2a2f88982fbc6f41a28fbeeb848c631
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Voice/Samples/TTSVoices/Scripts/TTSSpeakerInput.cs
+  uploadId: 667590

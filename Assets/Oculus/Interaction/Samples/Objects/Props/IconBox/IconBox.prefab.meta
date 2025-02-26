@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 08bd653119f9db54fb91155eb09c459a
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Interaction/Samples/Objects/Props/IconBox/IconBox.prefab
+  uploadId: 667590

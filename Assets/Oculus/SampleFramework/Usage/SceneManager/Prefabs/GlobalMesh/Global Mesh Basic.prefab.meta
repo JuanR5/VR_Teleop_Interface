@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: cc6abc5a64fded74e93ae4ae2442dc81
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/SampleFramework/Usage/SceneManager/Prefabs/GlobalMesh/Global
+    Mesh Basic.prefab
+  uploadId: 667590

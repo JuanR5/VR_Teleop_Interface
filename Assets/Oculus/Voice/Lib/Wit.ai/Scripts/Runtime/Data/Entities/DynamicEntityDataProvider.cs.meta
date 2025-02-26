@@ -1,0 +1,10 @@
+﻿fileFormatVersion: 2
+guid: 4b4e835dcc764fee99862c3c535ab5fa
+timeCreated: 1646775302
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Voice/Lib/Wit.ai/Scripts/Runtime/Data/Entities/DynamicEntityDataProvider.cs
+  uploadId: 667590

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: a436b70f34194434695d8a4d4d43038e
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/SampleFramework/Usage/Firebase/google-services.json
+  uploadId: 667590

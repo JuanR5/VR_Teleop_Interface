@@ -1,0 +1,10 @@
+﻿fileFormatVersion: 2
+guid: 282b7709803742fc96aa92c84f697a1e
+timeCreated: 1657314773
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Voice/Lib/Wit.ai/Lib/Conduit/Editor/Training/EnumCodeWrapper.cs
+  uploadId: 667590

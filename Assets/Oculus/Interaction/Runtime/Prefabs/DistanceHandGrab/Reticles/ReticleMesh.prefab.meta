@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 4f498c02c6abd9240965900485454116
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Interaction/Runtime/Prefabs/DistanceHandGrab/Reticles/ReticleMesh.prefab
+  uploadId: 667590

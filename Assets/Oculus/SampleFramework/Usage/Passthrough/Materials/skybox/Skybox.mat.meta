@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 34b43d94c855d49e491abad836c56a32
+timeCreated: 1536311508
+licenseType: Store
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/SampleFramework/Usage/Passthrough/Materials/skybox/Skybox.mat
+  uploadId: 667590

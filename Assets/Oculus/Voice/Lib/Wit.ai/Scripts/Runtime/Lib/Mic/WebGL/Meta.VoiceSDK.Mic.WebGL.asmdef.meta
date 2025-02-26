@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: aa2e2e88060c9fd4a81dab2812b7c8f3
+AssemblyDefinitionImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Voice/Lib/Wit.ai/Scripts/Runtime/Lib/Mic/WebGL/Meta.VoiceSDK.Mic.WebGL.asmdef
+  uploadId: 667590

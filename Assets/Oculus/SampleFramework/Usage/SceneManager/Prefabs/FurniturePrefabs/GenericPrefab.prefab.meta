@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 4448d19be5174b04aaffd0f79363db90
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/SampleFramework/Usage/SceneManager/Prefabs/FurniturePrefabs/GenericPrefab.prefab
+  uploadId: 667590

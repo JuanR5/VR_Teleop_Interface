@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: bb365ebe8e821fc4e81e9dca9d704357
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/VR/Scripts/OVRDisplay.cs
+  uploadId: 667590

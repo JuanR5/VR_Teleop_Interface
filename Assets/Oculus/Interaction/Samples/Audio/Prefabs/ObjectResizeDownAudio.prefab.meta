@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 5e5f065a0da50174f930fd138f3751ab
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Interaction/Samples/Audio/Prefabs/ObjectResizeDownAudio.prefab
+  uploadId: 667590

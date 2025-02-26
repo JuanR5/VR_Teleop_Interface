@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 1d90b910cd5a4854598ecfe4f74358d1
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/SampleFramework/Usage/OVROverlayCanvas/Shaders/UI Prerendered
+    Opaque.shader
+  uploadId: 667590

@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 8fd0b9a6fa1abd34393da45b7f791d6f
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures: []
+  nonModifiableTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Interaction/Runtime/Shaders/PolylineUnlit.shader
+  uploadId: 667590

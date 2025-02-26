@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: c4f46a0758bdd324b8f3a941cd6e0038
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Voice/Samples/LightTraits/Materials/LightOff.mat
+  uploadId: 667590

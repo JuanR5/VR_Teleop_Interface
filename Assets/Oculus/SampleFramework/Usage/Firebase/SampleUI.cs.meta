@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 62ce7e49b6fbfe84db3ccea903d0c104
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/SampleFramework/Usage/Firebase/SampleUI.cs
+  uploadId: 667590

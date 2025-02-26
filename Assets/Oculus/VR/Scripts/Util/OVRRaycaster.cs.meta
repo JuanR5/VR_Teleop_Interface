@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 7aaf960227867044282d921171d2d7ac
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/VR/Scripts/Util/OVRRaycaster.cs
+  uploadId: 667590

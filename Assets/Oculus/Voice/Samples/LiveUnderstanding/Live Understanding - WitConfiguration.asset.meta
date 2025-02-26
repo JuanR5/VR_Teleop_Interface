@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: c0e2e0312d2a4094e8ec9d778f08e326
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Voice/Samples/LiveUnderstanding/Live Understanding - WitConfiguration.asset
+  uploadId: 667590

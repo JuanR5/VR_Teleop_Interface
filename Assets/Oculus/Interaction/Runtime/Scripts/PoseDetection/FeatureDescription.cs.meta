@@ -1,0 +1,10 @@
+﻿fileFormatVersion: 2
+guid: 53118e1a377b4b6685ca776f1d23ca3b
+timeCreated: 1633632912
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Interaction/Runtime/Scripts/PoseDetection/FeatureDescription.cs
+  uploadId: 667590

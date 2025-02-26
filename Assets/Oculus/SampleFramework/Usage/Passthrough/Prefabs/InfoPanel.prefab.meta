@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: a088380b5cbca784a8ad386fa70c3d15
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/SampleFramework/Usage/Passthrough/Prefabs/InfoPanel.prefab
+  uploadId: 667590

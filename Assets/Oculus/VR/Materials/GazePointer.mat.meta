@@ -1,0 +1,11 @@
+fileFormatVersion: 2
+guid: 3fac3b9744290eb4c89b0e4ffd5fe085
+NativeFormatImporter:
+  userData: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/VR/Materials/GazePointer.mat
+  uploadId: 667590

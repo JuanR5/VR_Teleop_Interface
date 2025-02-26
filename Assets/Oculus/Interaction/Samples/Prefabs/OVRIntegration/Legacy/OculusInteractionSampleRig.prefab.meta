@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: f39a9d103c4129b42a53567f6cd8356a
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Interaction/Samples/Prefabs/OVRIntegration/Legacy/OculusInteractionSampleRig.prefab
+  uploadId: 667590
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

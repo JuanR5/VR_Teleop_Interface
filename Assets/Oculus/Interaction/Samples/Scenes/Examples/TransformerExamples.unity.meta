@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 7475942f60c376744ba1ec487d140105
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Interaction/Samples/Scenes/Examples/TransformerExamples.unity
+  uploadId: 667590

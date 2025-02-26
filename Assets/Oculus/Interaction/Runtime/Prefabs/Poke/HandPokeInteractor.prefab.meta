@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 424c2298facd2bf419beffd69e8cc855
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Interaction/Runtime/Prefabs/Poke/HandPokeInteractor.prefab
+  uploadId: 667590

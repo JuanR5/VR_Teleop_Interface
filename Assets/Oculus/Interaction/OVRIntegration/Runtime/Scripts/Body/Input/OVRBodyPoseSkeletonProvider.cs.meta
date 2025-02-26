@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: a2e52bbde0381514a9b68ecb0eff863a
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Interaction/OVRIntegration/Runtime/Scripts/Body/Input/OVRBodyPoseSkeletonProvider.cs
+  uploadId: 667590

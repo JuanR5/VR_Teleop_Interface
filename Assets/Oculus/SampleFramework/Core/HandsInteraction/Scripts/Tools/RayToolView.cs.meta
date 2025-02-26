@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: a4e71869e3ccfde47a7a16e2f483b328
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/SampleFramework/Core/HandsInteraction/Scripts/Tools/RayToolView.cs
+  uploadId: 667590

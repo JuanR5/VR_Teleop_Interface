@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: b895d3431e75dc345a72e171f82bfbea
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures: []
+  nonModifiableTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Interaction/Runtime/Shaders/OculusHand.shader
+  uploadId: 667590

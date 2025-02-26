@@ -1,0 +1,10 @@
+﻿fileFormatVersion: 2
+guid: b392af6b92984f2887f80975b07141ba
+timeCreated: 1629344165
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Interaction/Runtime/Scripts/Input/Controllers/IControllerDataModifier.cs
+  uploadId: 667590

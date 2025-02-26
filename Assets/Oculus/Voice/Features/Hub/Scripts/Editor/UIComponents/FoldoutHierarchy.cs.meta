@@ -1,0 +1,10 @@
+﻿fileFormatVersion: 2
+guid: 5b3b26502f774dd2b597ed1657a8f0a4
+timeCreated: 1681274028
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Voice/Features/Hub/Scripts/Editor/UIComponents/FoldoutHierarchy.cs
+  uploadId: 667590

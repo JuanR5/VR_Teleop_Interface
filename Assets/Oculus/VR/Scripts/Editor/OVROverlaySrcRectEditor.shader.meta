@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 589b36d0aa66c7349bcff8750b670434
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures: []
+  nonModifiableTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/VR/Scripts/Editor/OVROverlaySrcRectEditor.shader
+  uploadId: 667590

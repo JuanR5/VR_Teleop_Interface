@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 70d02a90551f23042a882cdceeaf8e3a
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Interaction/OVRIntegration/Runtime/Prefabs/Hands/OVRLeftHandVisual.prefab
+  uploadId: 667590

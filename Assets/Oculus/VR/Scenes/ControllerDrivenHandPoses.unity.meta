@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 7ea9f7c90c2fa404d86276a633b59903
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/VR/Scenes/ControllerDrivenHandPoses.unity
+  uploadId: 667590

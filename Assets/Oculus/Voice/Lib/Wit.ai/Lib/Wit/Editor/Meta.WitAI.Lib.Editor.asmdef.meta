@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 5c61c7ae4b0c6f94299e51352f802670
+AssemblyDefinitionImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Voice/Lib/Wit.ai/Lib/Wit/Editor/Meta.WitAI.Lib.Editor.asmdef
+  uploadId: 667590

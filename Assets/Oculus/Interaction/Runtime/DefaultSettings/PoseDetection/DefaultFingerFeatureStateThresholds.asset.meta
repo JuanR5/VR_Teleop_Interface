@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 8b470e0c4b48d474c9a42d7f661d48c7
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Interaction/Runtime/DefaultSettings/PoseDetection/DefaultFingerFeatureStateThresholds.asset
+  uploadId: 667590

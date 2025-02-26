@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 8851c2fd403d17444a83e2f3fbdb4044
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/SampleFramework/Usage/TouchPro/Prefabs/StylusTip/StylusTipPf.prefab
+  uploadId: 667590

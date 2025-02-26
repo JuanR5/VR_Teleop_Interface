@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 945300705d5265c40880df9dc394ebd5
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Interaction/Runtime/Shaders/UIStyleShader.shader
+  uploadId: 667590
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures: []
+  nonModifiableTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

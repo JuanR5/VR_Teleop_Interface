@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 7040c93f6035f5749888e6fdf5ef28f8
+AssemblyDefinitionImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Interaction/OVRIntegration/Runtime/Oculus.Interaction.OVR.asmdef
+  uploadId: 667590

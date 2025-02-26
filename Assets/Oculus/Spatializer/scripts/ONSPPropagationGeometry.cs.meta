@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: abdaae8d2b81ba54498967f33610da0d
+timeCreated: 1525731700
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Spatializer/scripts/ONSPPropagationGeometry.cs
+  uploadId: 667590

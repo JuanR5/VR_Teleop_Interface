@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 5dee22db95ad4c6499562cbedf95705c
+AssemblyDefinitionImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Voice/Samples/Chess/Scripts/Meta.Voice.Samples.Chess.asmdef
+  uploadId: 667590

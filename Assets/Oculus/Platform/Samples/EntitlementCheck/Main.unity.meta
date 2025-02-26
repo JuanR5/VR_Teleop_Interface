@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 9df623f348e176845a764b6c2e269451
+timeCreated: 1543369713
+licenseType: Store
+DefaultImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Platform/Samples/EntitlementCheck/Main.unity
+  uploadId: 667590

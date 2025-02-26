@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: f4b49debff9d269449879fc6f5991a83
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Interaction/Runtime/Materials/GrabDebugSphere.mat
+  uploadId: 667590

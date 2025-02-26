@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 9c2d282813c94144c99c645bfff6bf63
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Interaction/Samples/Objects/Props/BigStone/BigStone.prefab
+  uploadId: 667590

@@ -1,0 +1,10 @@
+﻿fileFormatVersion: 2
+guid: c8d63aebd47343999a855f5eff93e7a2
+timeCreated: 1657570491
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Voice/Lib/Wit.ai/Features/Dictation/Scripts/Runtime/Dictation/Events/DictationSessionEvent.cs
+  uploadId: 667590

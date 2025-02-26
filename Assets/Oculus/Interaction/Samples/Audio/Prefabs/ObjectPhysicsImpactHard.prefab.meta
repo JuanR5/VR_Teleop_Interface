@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 587a377cccd931246a8bc5bf692429c6
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Interaction/Samples/Audio/Prefabs/ObjectPhysicsImpactHard.prefab
+  uploadId: 667590

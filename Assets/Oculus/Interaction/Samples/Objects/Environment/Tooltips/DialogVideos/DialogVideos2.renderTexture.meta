@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: f62ca745d9c6bfe46a6d464337da6069
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 8400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Interaction/Samples/Objects/Environment/Tooltips/DialogVideos/DialogVideos2.renderTexture
+  uploadId: 667590

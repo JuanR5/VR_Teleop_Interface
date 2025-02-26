@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: dfee80e1d2a38ea45a01698af1c06034
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/VR/Meshes/MetaQuestTouchPro/Materials/MetaQuestProRight_Material.mat
+  uploadId: 667590

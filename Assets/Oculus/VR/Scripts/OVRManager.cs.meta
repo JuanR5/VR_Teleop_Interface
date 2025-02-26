@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 7e933e81d3c20c74ea6fdc708a67e3a5
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: -100
+  icon: {instanceID: 0}
+  userData: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/VR/Scripts/OVRManager.cs
+  uploadId: 667590

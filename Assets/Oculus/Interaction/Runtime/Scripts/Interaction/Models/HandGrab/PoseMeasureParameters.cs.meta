@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 6cf5fb44c93da2d4387ee22e7d4e93f4
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Interaction/Runtime/Scripts/Interaction/Models/HandGrab/PoseMeasureParameters.cs
+  uploadId: 667590

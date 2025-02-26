@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 07716e3d7cb93b84a91002545323c1d8
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/VR/Editor/BuildingBlocks/BlockData/RoomModel/Prefabs/SceneManagerBuildingBlock.prefab
+  uploadId: 667590

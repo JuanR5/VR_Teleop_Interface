@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 62a3c5a0973fc4f48a1039ab80b76232
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Interaction/OVRIntegration/Editor/Blocks/Interactors/Prefabs/[BB]
+    Hand Poke.prefab
+  uploadId: 667590

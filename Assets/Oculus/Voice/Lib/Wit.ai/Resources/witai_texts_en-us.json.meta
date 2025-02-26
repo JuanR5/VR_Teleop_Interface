@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 49d638c72ed2bc946b6b297f70acf158
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Voice/Lib/Wit.ai/Resources/witai_texts_en-us.json
+  uploadId: 667590

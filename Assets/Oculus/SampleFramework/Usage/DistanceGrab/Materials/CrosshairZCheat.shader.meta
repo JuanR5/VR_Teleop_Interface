@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 322c8bbfbbd774b33a90cac7d144bfe7
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/SampleFramework/Usage/DistanceGrab/Materials/CrosshairZCheat.shader
+  uploadId: 667590

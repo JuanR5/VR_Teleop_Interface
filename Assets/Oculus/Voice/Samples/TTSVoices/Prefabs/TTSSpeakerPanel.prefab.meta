@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 6ff7fbfe0243d604ea0d362d82d4baf2
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Voice/Samples/TTSVoices/Prefabs/TTSSpeakerPanel.prefab
+  uploadId: 667590

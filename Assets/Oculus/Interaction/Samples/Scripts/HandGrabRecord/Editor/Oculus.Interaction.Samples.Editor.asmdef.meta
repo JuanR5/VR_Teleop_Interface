@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 0ae31ae32e3e80a48806ef598d17341c
+AssemblyDefinitionImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Interaction/Samples/Scripts/HandGrabRecord/Editor/Oculus.Interaction.Samples.Editor.asmdef
+  uploadId: 667590

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 0c21dff7998be3b48bdbf4d868aa7710
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Interaction/Samples/Scenes/Features/DebugPose.unity
+  uploadId: 667590

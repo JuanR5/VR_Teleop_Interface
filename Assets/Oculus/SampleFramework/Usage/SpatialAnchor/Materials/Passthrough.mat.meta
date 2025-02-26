@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: e5462914f0e0ad646bd4fdabf728279c
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/SampleFramework/Usage/SpatialAnchor/Materials/Passthrough.mat
+  uploadId: 667590

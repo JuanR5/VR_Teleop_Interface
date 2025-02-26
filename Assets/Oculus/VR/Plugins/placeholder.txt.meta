@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 6c111fff50cd6404baf2b833432e6ee8
+timeCreated: 1493325988
+licenseType: Store
+TextScriptImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/VR/Plugins/placeholder.txt
+  uploadId: 667590

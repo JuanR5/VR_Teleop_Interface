@@ -1,0 +1,10 @@
+fileFormatVersion: 2
+guid: a325b28834054db2a96b89ac4354c880
+timeCreated: 1670629377
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Voice/Lib/Wit.ai/Scripts/Runtime/AudioDurationTracker.cs
+  uploadId: 667590

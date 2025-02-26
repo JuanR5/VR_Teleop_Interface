@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: fbb2e01d7c7a6904eaa71da7a854bfad
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Interaction/Editor/Grab/HandGrab/DistanceHandGrabInteractableEditor.cs
+  uploadId: 667590

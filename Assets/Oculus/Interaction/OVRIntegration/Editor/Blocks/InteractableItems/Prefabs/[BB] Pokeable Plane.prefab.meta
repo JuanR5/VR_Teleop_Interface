@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 7aec9913f7f564a05883130bcdaf2347
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Interaction/OVRIntegration/Editor/Blocks/InteractableItems/Prefabs/[BB]
+    Pokeable Plane.prefab
+  uploadId: 667590

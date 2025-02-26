@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 975bcaf61a9872e488aa68d572fd4fb4
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Interaction/Samples/Objects/Props/StonePolyhedra/StoneIcosahedron.prefab
+  uploadId: 667590

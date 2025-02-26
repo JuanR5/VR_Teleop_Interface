@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 0e7861142f653584586c707ede59072e
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/SampleFramework/Usage/Passthrough/Scenes/SelectivePassthrough.unity
+  uploadId: 667590

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 2cc7f2461925b5c45a164db3cf15d942
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Interaction/Samples/Objects/Props/Materials/CubeMaterialGreen.mat
+  uploadId: 667590

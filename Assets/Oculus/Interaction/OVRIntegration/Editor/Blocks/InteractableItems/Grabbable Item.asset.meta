@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 96924026786b04f6eafd366c51e7040a
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Interaction/OVRIntegration/Editor/Blocks/InteractableItems/Grabbable
+    Item.asset
+  uploadId: 667590

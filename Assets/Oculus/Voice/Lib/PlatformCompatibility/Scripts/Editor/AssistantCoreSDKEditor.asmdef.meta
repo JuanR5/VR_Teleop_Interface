@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: a32f21e557428c84e845c18e46d9284f
+AssemblyDefinitionImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Voice/Lib/PlatformCompatibility/Scripts/Editor/AssistantCoreSDKEditor.asmdef
+  uploadId: 667590

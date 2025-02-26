@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: ce9491a5df028fd4ca0a5130dbaa4fec
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Interaction/Samples/Prefabs/HandPose/ThumbsUpPose.prefab
+  uploadId: 667590

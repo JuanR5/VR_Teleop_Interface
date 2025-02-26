@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 5b2febef9538fb34e972bb0070c107a5
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Interaction/Samples/Objects/Props/ChessPiece/ChessPiece.prefab
+  uploadId: 667590

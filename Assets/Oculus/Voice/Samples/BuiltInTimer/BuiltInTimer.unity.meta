@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 9e6f8accd4b079d40b3603449f318633
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Voice/Samples/BuiltInTimer/BuiltInTimer.unity
+  uploadId: 667590

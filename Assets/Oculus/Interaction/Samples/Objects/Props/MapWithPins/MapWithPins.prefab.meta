@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: f32a961d1af73bf4685dd80f8418db40
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Interaction/Samples/Objects/Props/MapWithPins/MapWithPins.prefab
+  uploadId: 667590

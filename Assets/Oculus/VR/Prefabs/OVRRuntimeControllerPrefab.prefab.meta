@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: d0abdd77712724b409bdd185b622ac7c
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/VR/Prefabs/OVRRuntimeControllerPrefab.prefab
+  uploadId: 667590

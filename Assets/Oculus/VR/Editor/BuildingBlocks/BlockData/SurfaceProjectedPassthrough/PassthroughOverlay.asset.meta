@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 75105c75ad7ce5a428442b0cd00ca266
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/VR/Editor/BuildingBlocks/BlockData/SurfaceProjectedPassthrough/PassthroughOverlay.asset
+  uploadId: 667590

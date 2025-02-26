@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 1a48e92891831ea45824207b2bce72b2
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Voice/Features/VoiceHub/Hub/Pages/Voice SDK Samples.asset
+  uploadId: 667590

@@ -1,0 +1,10 @@
+fileFormatVersion: 2
+guid: 02b94495d67b450695350945a0ee4574
+timeCreated: 1674253724
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/VR/Editor/OVRExperimentalCheck.cs
+  uploadId: 667590

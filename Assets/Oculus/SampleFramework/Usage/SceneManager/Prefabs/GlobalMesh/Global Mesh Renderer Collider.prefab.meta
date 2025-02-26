@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 268b2e511a1841a4d9d7cbc5170bf381
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/SampleFramework/Usage/SceneManager/Prefabs/GlobalMesh/Global
+    Mesh Renderer Collider.prefab
+  uploadId: 667590

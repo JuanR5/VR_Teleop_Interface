@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 4b5d61cebc8bc2644b45d6034694ea8f
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Interaction/Runtime/Scripts/Input/Hands/DataModifiers/JointRotationHistoryHand.cs
+  uploadId: 667590

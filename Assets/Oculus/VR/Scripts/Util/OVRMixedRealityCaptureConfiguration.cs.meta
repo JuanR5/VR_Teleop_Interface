@@ -1,0 +1,10 @@
+﻿fileFormatVersion: 2
+guid: 3daa35105ec74ccb94bc0756d34b2d55
+timeCreated: 1605293235
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/VR/Scripts/Util/OVRMixedRealityCaptureConfiguration.cs
+  uploadId: 667590

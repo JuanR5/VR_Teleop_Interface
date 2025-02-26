@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: c19a2d64274b96e46aa2fae15534447c
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Interaction/Samples/Objects/SmallRoom.prefab
+  uploadId: 667590

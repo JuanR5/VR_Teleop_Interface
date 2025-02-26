@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: b9a31e08066d6e343a208d34ec298f09
+timeCreated: 1486173281
+licenseType: Store
+DefaultImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/VR/Scenes/HandTest.unity
+  uploadId: 667590

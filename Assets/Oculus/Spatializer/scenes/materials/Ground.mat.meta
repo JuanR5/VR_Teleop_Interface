@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: e121bf11a9143914dbafa9e733415f2a
+timeCreated: 1440788967
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Spatializer/scenes/materials/Ground.mat
+  uploadId: 667590

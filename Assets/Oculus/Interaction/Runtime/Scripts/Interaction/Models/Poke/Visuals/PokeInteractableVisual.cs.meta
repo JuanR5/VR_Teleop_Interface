@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 0b3b3f04ac18184468bedd999e5a6688
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Interaction/Runtime/Scripts/Interaction/Models/Poke/Visuals/PokeInteractableVisual.cs
+  uploadId: 667590

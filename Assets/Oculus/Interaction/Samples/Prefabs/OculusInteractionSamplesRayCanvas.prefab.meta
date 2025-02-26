@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: afb1615dd3b243a449003594175d971a
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Interaction/Samples/Prefabs/OculusInteractionSamplesRayCanvas.prefab
+  uploadId: 667590

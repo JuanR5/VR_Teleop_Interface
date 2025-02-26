@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 04649c951d07c7e4eb2b8611fcdb5daa
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/SampleFramework/Usage/SceneManager/Prefabs/SpawnablesVolume.prefab
+  uploadId: 667590

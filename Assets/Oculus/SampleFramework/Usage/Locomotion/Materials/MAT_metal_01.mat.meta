@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: 6fa48c2a126d0d74e8bb671b62e8cb1b
+labels:
+- Metal
+- Plates
+- Basic
+timeCreated: 1429689576
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/SampleFramework/Usage/Locomotion/Materials/MAT_metal_01.mat
+  uploadId: 667590

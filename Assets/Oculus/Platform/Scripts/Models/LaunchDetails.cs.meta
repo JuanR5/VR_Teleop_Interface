@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: 03ab56c36f18cf14fbeea9ce668871a7
+timeCreated: 1523486797
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Platform/Scripts/Models/LaunchDetails.cs
+  uploadId: 667590

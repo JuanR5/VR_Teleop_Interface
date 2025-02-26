@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: d0574574baafe9d4aa78d8df4a5e3e5e
+AssemblyDefinitionImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/VR/Scripts/BuildingBlocks/Meta.XR.BuildingBlocks.asmdef
+  uploadId: 667590

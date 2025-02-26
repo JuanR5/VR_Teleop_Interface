@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 075c78898abfc94419061ecfed0bcbfc
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Interaction/OVRIntegration/LICENSE.md
+  uploadId: 667590

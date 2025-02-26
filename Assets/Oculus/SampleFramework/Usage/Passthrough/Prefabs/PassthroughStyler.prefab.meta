@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: f1984b633af3d214aa142412a785ad04
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/SampleFramework/Usage/Passthrough/Prefabs/PassthroughStyler.prefab
+  uploadId: 667590

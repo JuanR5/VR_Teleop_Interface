@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: c84861587cd40b444928b69c626b5803
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 9100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Interaction/Samples/Animations/Meta_LocationDoors.controller
+  uploadId: 667590

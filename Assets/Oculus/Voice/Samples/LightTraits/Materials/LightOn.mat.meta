@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: ef2fb0acd0979394e9c74e0f2dc8adb1
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Voice/Samples/LightTraits/Materials/LightOn.mat
+  uploadId: 667590

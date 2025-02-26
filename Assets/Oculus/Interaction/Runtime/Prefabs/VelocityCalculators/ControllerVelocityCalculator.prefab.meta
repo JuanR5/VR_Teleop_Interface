@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: b6e5411f1b2c1fd4ab99a43d2142ea16
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Interaction/Runtime/Prefabs/VelocityCalculators/ControllerVelocityCalculator.prefab
+  uploadId: 667590

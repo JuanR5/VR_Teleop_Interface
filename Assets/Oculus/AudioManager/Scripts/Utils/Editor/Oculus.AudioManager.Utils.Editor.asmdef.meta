@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 4e79697c263b8554db87efff0e7046ba
+AssemblyDefinitionImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/AudioManager/Scripts/Utils/Editor/Oculus.AudioManager.Utils.Editor.asmdef
+  uploadId: 667590

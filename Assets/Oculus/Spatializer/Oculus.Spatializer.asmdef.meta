@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 3d2c6c35bff878341a57ebf7a749f298
+AssemblyDefinitionImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Spatializer/Oculus.Spatializer.asmdef
+  uploadId: 667590

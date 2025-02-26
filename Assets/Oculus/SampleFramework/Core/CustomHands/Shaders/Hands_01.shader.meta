@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: e78db4fab1ac74627bc038fe6c3edef8
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/SampleFramework/Core/CustomHands/Shaders/Hands_01.shader
+  uploadId: 667590

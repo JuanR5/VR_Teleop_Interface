@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: ab143fb33d1c042989fb5b744cd67a2e
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Interaction/OVRIntegration/Editor/Blocks/Interactors/Prefabs/[BB]
+    Hand Ray.prefab
+  uploadId: 667590

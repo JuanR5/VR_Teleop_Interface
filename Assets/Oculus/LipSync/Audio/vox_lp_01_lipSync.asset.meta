@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 1ccea2acd443f4ad4bb9a9f33fc960c0
+timeCreated: 1536698747
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/LipSync/Audio/vox_lp_01_lipSync.asset
+  uploadId: 667590

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 8ff769690226dec4ea7ad1cea633b2c3
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/SampleFramework/Core/DebugUI/Prefabs/DebugToggle.prefab
+  uploadId: 667590

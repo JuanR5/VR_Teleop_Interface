@@ -1,0 +1,10 @@
+fileFormatVersion: 2
+guid: db7ccd9452dd4d59901d858485bc0bf0
+timeCreated: 1688553516
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Interaction/OVRIntegration/Editor/Blocks/Interactors/Scripts/OVRHandPokeLimiterBlockData.cs
+  uploadId: 667590

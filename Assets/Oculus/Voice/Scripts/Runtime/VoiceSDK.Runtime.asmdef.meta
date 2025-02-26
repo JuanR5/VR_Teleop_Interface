@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: e545cc0678493234a9368f4e470c29e8
+AssemblyDefinitionImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Voice/Scripts/Runtime/VoiceSDK.Runtime.asmdef
+  uploadId: 667590

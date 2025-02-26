@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 02f4d91e963f1e74d8bee0002c24efe7
+timeCreated: 1512379123
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/VR/Materials/SelectionRay.mat
+  uploadId: 667590

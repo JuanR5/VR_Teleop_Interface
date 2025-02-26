@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 4b8f297a827717846a390137480216b9
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Voice/Lib/Wit.ai/Features/Dictation/Scripts/Editor/Inspectors/DictationEventPropertyDrawer.cs
+  uploadId: 667590

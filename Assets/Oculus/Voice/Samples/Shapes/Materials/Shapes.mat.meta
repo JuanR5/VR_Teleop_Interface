@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 1d4f1cabe1d44f24fab3957c9afcb58b
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Voice/Samples/Shapes/Materials/Shapes.mat
+  uploadId: 667590

@@ -1,0 +1,10 @@
+﻿fileFormatVersion: 2
+guid: efe24f81961b460eb43781a3f72460ed
+timeCreated: 1669712605
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/VR/Scripts/OVRAnchor/OVRAnchorComponents/OVRSemanticLabels.cs
+  uploadId: 667590

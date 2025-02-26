@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: ee3eb6d513f071a46b062b807ccaac4c
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/VR/Scripts/Util/SampleMetadata/SampleTelemetryEvents.cs
+  uploadId: 667590

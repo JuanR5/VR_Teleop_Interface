@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: c9684441ee1da1244a223118fdaa5d13
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/VR/Scenes/VirtualKeyboard.unity
+  uploadId: 667590

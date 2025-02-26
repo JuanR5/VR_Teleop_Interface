@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 41cb0f893e9a44e83b09a66c55bd7856
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/AudioManager/Scripts/Audio/AudioManager_Sound.cs
+  uploadId: 667590

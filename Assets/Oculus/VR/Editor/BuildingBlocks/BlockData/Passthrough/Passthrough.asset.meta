@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: cad9322c3ebd80c42aaa285feeda7deb
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/VR/Editor/BuildingBlocks/BlockData/Passthrough/Passthrough.asset
+  uploadId: 667590

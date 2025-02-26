@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 0212822be96f68142aafa96fbc13bec0
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Interaction/Samples/Audio/Prefabs/BasicRayPressAudio.prefab
+  uploadId: 667590

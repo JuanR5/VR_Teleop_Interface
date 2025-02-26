@@ -1,0 +1,10 @@
+﻿fileFormatVersion: 2
+guid: 66566fb53fc4428299c03dd0563d4ab4
+timeCreated: 1650587308
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Voice/Lib/Wit.ai/Lib/Conduit/Editor/Training/IProcessStep.cs
+  uploadId: 667590

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 3d39282ced021cb4c9a7a4e4250201a9
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Voice/Samples/Chess/Materials/ChessSkybox.mat
+  uploadId: 667590

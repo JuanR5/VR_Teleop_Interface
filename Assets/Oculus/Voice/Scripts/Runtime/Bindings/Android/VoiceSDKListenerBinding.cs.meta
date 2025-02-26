@@ -1,0 +1,10 @@
+﻿fileFormatVersion: 2
+guid: c4812e4a88b84256a571c7253e27799f
+timeCreated: 1630371293
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Voice/Scripts/Runtime/Bindings/Android/VoiceSDKListenerBinding.cs
+  uploadId: 667590

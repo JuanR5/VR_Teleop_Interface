@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 891349029806e4144812ff2d304d9cf9
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/VR/Editor/BuildingBlocks/BlockData/RoomModel/Prefabs/Volume.prefab
+  uploadId: 667590

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: c94e480e4a6da614693c0cd3372e2d2d
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/SampleFramework/Usage/Passthrough/Scenes/PassthroughHands.unity
+  uploadId: 667590

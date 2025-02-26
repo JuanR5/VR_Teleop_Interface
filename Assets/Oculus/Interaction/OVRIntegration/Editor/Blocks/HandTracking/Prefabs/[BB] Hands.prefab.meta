@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 44ed1c64fbd105143bff979a6c52c4d6
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Interaction/OVRIntegration/Editor/Blocks/HandTracking/Prefabs/[BB]
+    Hands.prefab
+  uploadId: 667590

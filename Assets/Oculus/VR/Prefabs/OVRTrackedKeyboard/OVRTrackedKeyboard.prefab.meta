@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: e9c36ab6506ab5b4bb79e26e150c8b4c
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/VR/Prefabs/OVRTrackedKeyboard/OVRTrackedKeyboard.prefab
+  uploadId: 667590

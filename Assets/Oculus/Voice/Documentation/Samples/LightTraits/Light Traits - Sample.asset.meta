@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 11c95440a0e854a4aaa420f7d8d37527
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Voice/Documentation/Samples/LightTraits/Light Traits -
+    Sample.asset
+  uploadId: 667590

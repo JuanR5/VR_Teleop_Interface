@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: 687155c0dd8b55d409e36711e0cc7167
+timeCreated: 1496939263
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/SampleFramework/Core/Locomotion/Scripts/TeleportInputHandler.cs
+  uploadId: 667590

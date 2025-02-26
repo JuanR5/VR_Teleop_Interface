@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 42051d7e5e153cb479292cecf7bafa25
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Interaction/Runtime/Prefabs/Hands/LeftHandSynthetic.prefab
+  uploadId: 667590

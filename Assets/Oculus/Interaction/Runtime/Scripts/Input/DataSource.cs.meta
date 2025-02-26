@@ -1,0 +1,10 @@
+﻿fileFormatVersion: 2
+guid: 5e3eaa7f7e074674929b88928616f063
+timeCreated: 1630527498
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Interaction/Runtime/Scripts/Input/DataSource.cs
+  uploadId: 667590

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 8f4f312dac6724ad7ba0c8c3d9ab3b03
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/SampleFramework/Usage/SharedAssets/Prefabs/RoomPf.prefab
+  uploadId: 667590

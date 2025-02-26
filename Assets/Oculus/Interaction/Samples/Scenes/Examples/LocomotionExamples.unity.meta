@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: d37ed7e92220d1045a36bc73c7c4cf16
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Interaction/Samples/Scenes/Examples/LocomotionExamples.unity
+  uploadId: 667590

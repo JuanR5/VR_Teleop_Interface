@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 11c63c21b94a3ff4088dda6ac3ca01cb
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/VR/Editor/BuildingBlocks/BlockData/CameraRig/Scripts/CameraRigSetupRules.cs
+  uploadId: 667590

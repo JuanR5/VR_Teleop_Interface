@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 48779c4e9105c1d4c986f52958bba9a3
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Interaction/Samples/Objects/Environment/BasicPoseDetectionPoses.prefab
+  uploadId: 667590

@@ -1,0 +1,10 @@
+fileFormatVersion: 2
+guid: 91cc641bbb7c4eadbfa894cc59e2a3ff
+timeCreated: 1678593640
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/VR/Scripts/Editor/OVRUnityHumanoidSkeletonRetargeterEditor.cs
+  uploadId: 667590

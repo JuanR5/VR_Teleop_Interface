@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 1dd706bb85d8aef4e83a6229dbd62c36
+timeCreated: 1440786022
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Spatializer/scenes/mixers/SpatializerMixer.mixer
+  uploadId: 667590

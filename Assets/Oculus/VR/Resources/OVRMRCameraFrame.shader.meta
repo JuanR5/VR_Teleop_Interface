@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 2bd7618c3fa0e4b4ab8e08dc3fadc376
+timeCreated: 1497574409
+licenseType: Store
+ShaderImporter:
+  defaultTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/VR/Resources/OVRMRCameraFrame.shader
+  uploadId: 667590

@@ -1,0 +1,10 @@
+﻿fileFormatVersion: 2
+guid: 2f6696f09b6647cda45870d07c064cab
+timeCreated: 1681499481
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Voice/Lib/Wit.ai/Features/TTS/Scripts/Editor/TTSWitInspector.cs
+  uploadId: 667590

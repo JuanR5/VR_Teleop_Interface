@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: bdb40a95c243fcc429e6ff8bfeddcfb8
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Interaction/Samples/Audio/Prefabs/ObjectPhysicsImpactSoft.prefab
+  uploadId: 667590

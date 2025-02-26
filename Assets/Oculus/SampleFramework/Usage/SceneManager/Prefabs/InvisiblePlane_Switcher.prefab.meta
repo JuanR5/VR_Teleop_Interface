@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 16fe4642d4c1d4640929478eee36078f
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/SampleFramework/Usage/SceneManager/Prefabs/InvisiblePlane_Switcher.prefab
+  uploadId: 667590

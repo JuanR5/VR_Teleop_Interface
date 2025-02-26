@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 275a1bf611376de469ea6f091d52177b
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/VR/Editor/BuildingBlocks/BlockData/RoomModel/RoomModel.asset
+  uploadId: 667590

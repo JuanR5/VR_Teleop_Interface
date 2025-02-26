@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: e720ef9c6dcfbe4489d043ddf61706f8
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/SampleFramework/Usage/OVROverlayCanvas/Shaders/UI Default
+    Correct.shader
+  uploadId: 667590

@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 74544b4f6fabb6e418f1fddd586dd072
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures: []
+  nonModifiableTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Interaction/Runtime/Resources/Shaders/DepthOverwrite.shader
+  uploadId: 667590

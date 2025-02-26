@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: 2bb0f5a590bee8641b2298ad4ad21c1c
+timeCreated: 1496862269
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/SampleFramework/Core/Locomotion/Scripts/TeleportOrientationHandlerThumbstick.cs
+  uploadId: 667590

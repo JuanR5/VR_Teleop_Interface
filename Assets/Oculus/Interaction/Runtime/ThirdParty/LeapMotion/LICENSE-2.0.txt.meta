@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 272d3d7ae5cbedd4b90fbe0d4ec1c6e3
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Interaction/Runtime/ThirdParty/LeapMotion/LICENSE-2.0.txt
+  uploadId: 667590

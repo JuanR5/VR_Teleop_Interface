@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: c813208e672e3074bbe118e1a9ee94fd
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/VR/Prefabs/OVRSceneManager.prefab
+  uploadId: 667590

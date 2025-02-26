@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: e35c14d64fd3af744baab6342ffa5d15
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Interaction/Samples/Audio/Prefabs/ObjectResizeUpAudio.prefab
+  uploadId: 667590

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: e99baad8337e84a4f93e76c76b8ce49b
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Voice/Samples/TTSVoices/TTSVoices.unity
+  uploadId: 667590

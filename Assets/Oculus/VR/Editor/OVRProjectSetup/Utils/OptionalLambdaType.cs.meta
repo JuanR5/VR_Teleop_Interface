@@ -1,0 +1,10 @@
+﻿fileFormatVersion: 2
+guid: eeb765bc919545b893b0c57629625f14
+timeCreated: 1662026667
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/VR/Editor/OVRProjectSetup/Utils/OptionalLambdaType.cs
+  uploadId: 667590

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: cd2af620b985a894881abfc004e150ec
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Interaction/OVRIntegration/Editor/Blocks/Interactors/Prefabs/[BB]
+    Grab Interactor.prefab
+  uploadId: 667590

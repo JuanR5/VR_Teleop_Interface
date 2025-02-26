@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: aa5e9cb2d6b763f4c983b82092bb192d
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Voice/Lib/PlatformCompatibility/Scripts/Runtime/Android/BaseAndriodConnectionImpl.cs
+  uploadId: 667590

@@ -1,0 +1,10 @@
+fileFormatVersion: 2
+guid: 9543f58e29dd4e78866a84f468672b25
+timeCreated: 1660697239
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/VR/Scripts/Util/OVRProfilerScope.cs
+  uploadId: 667590

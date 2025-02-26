@@ -1,0 +1,20 @@
+fileFormatVersion: 2
+guid: 82aa5cb7a870de440baadff9083be41c
+timeCreated: 1444935432
+licenseType: Store
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/LipSync/Scripts/OVRLipSync.cs
+  uploadId: 667590

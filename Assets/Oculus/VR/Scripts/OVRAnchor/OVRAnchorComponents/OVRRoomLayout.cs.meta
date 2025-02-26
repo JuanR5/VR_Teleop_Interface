@@ -1,0 +1,10 @@
+﻿fileFormatVersion: 2
+guid: d22c4dde2fa64be99f6c39b1c57ff87b
+timeCreated: 1669715079
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/VR/Scripts/OVRAnchor/OVRAnchorComponents/OVRRoomLayout.cs
+  uploadId: 667590

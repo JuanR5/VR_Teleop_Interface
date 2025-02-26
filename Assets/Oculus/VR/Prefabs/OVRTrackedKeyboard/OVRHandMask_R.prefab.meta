@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: f87c1bb867ed6194ea69c0d3a05a6209
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/VR/Prefabs/OVRTrackedKeyboard/OVRHandMask_R.prefab
+  uploadId: 667590

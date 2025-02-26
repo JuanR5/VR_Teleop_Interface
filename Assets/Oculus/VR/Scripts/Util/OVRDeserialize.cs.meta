@@ -1,0 +1,10 @@
+fileFormatVersion: 2
+guid: 0905396e50b244dabd2dc877e7715704
+timeCreated: 1652862802
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/VR/Scripts/Util/OVRDeserialize.cs
+  uploadId: 667590

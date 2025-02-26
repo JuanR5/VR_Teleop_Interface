@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: e42a6f3d5305d4c41aa7cb12ed1addf4
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/SampleFramework/Usage/TouchPro/Prefabs/Ui/UiPanelPf (Controls
+    - SelfTracking).prefab
+  uploadId: 667590

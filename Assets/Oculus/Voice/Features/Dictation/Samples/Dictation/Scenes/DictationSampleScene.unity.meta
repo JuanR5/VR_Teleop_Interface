@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 3a8c4fc64087e144b845d1afe890c5ba
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Voice/Features/Dictation/Samples/Dictation/Scenes/DictationSampleScene.unity
+  uploadId: 667590

@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: fa1f0af066e824a31875bc815a72cc5c
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Voice/Scripts/Editor/Utility/VoiceSDKStyles.cs
+  uploadId: 667590

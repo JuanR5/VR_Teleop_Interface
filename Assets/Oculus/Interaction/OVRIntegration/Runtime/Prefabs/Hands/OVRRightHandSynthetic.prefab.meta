@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 94313e563929cb3499e3989be338a213
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Interaction/OVRIntegration/Runtime/Prefabs/Hands/OVRRightHandSynthetic.prefab
+  uploadId: 667590

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 737cbb352eac8f04d8242de1c303e9fa
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/SampleFramework/Usage/TouchPro/Prefabs/StylusTip/StylusTipBreadCrumbPf.prefab
+  uploadId: 667590

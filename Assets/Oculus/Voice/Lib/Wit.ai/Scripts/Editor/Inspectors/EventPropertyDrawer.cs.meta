@@ -1,0 +1,10 @@
+fileFormatVersion: 2
+guid: c7a8ed72b9df46b794029f8801197ec8
+timeCreated: 1658431087
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Voice/Lib/Wit.ai/Scripts/Editor/Inspectors/EventPropertyDrawer.cs
+  uploadId: 667590

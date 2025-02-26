@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: a59598fb46d366b45ad435a0f942ce62
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Interaction/Samples/Scenes/Features/RayCanvasCurved.unity
+  uploadId: 667590

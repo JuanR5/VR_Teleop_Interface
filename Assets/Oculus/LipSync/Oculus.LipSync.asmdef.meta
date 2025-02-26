@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: bf7126905a54c9746b9c475d69312766
+AssemblyDefinitionImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/LipSync/Oculus.LipSync.asmdef
+  uploadId: 667590

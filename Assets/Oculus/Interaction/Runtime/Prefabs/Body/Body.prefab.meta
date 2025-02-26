@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 70fbb28682c6d554a8a8e495be5a36a5
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Interaction/Runtime/Prefabs/Body/Body.prefab
+  uploadId: 667590

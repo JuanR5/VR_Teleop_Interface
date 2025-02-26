@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: b57bba87873244d4f875b20cb0460ecc
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Interaction/Runtime/Prefabs/Hands.prefab
+  uploadId: 667590

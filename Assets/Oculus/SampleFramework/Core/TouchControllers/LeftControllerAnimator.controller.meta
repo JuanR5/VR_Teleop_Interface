@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 643f2c61311b7c143952344a7a406239
+timeCreated: 1438375496
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/SampleFramework/Core/TouchControllers/LeftControllerAnimator.controller
+  uploadId: 667590

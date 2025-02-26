@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 5abce8b5d04ce6e41a9cf7505269389d
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Interaction/Runtime/Scripts/Interaction/Models/Locomotion/Turn/LocomotionTurnerInteractorVisual.cs
+  uploadId: 667590

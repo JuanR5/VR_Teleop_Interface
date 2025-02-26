@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: a4f984fcee593d2418cc61f4a993d46d
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/SampleFramework/Usage/CustomHands.unity
+  uploadId: 667590

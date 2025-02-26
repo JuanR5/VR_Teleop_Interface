@@ -1,0 +1,10 @@
+﻿fileFormatVersion: 2
+guid: 6152072e57cc4c7c87b467b1237dc8e0
+timeCreated: 1628024382
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Interaction/Runtime/Scripts/PoseDetection/IFeatureStateThreshold.cs
+  uploadId: 667590

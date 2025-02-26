@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 15968ea8ca93ff345bc914f1f3e78225
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/SampleFramework/Usage/TouchPro/Prefabs/Ui/UiPanelPf.prefab
+  uploadId: 667590

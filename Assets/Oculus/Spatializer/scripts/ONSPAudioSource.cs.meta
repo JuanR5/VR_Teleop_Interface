@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: e503ea6418d27594caa33b93cac1b06a
+timeCreated: 1442244775
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Spatializer/scripts/ONSPAudioSource.cs
+  uploadId: 667590

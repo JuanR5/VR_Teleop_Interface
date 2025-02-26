@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: d8d21f2460d13554780e4af04a9e0d6e
+timeCreated: 1427350486
+licenseType: Store
+DefaultImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/VR/Scenes/Trivial.unity
+  uploadId: 667590

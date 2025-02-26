@@ -1,0 +1,10 @@
+﻿fileFormatVersion: 2
+guid: d2a8d5cf844b463aabaed6d6db3da8c0
+timeCreated: 1634670079
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Interaction/Runtime/Scripts/PoseDetection/SequenceActiveState.cs
+  uploadId: 667590

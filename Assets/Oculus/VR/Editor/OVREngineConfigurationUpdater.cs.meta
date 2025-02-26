@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: c86538ded11bfe24c8c79818bb9ea66a
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/VR/Editor/OVREngineConfigurationUpdater.cs
+  uploadId: 667590

@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: ced943c76cb8fb8489bab18c3dfcdcd3
+timeCreated: 1435284538
+licenseType: Store
+ShaderImporter:
+  defaultTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/VR/Resources/Unlit Transparent Color.shader
+  uploadId: 667590

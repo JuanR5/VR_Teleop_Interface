@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: 14c4f10921fa2ed46b4a9be3c07abeee
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures:
+  - _Stamp: {instanceID: 0}
+  - _MainTex: {instanceID: 0}
+  nonModifiableTextures: []
+  preprocessorOverride: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Interaction/Samples/Scripts/HandGrabUse/Effects/WaterSpray/MeshBlitStamp.shader
+  uploadId: 667590

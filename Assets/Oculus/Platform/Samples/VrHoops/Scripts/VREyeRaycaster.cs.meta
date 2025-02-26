@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: b02d3b7f6a849724695a1255745c4fa7
+timeCreated: 1475533243
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Platform/Samples/VrHoops/Scripts/VREyeRaycaster.cs
+  uploadId: 667590

@@ -1,0 +1,10 @@
+﻿fileFormatVersion: 2
+guid: 2606bf2f0c914a7aba4390f29ba2eb6e
+timeCreated: 1629334585
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Interaction/Runtime/Scripts/Input/HMD/Hmd.cs
+  uploadId: 667590

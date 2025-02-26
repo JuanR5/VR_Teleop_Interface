@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 225433a0c6686a24e85a3ab0e1d0630e
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Voice/Samples/LiveUnderstanding/Scripts/LiveUnderstandingColorChanger.cs
+  uploadId: 667590

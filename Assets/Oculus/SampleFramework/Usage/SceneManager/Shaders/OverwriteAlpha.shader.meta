@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: f12bf790f5ad5e541bad77474e171b7b
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures: []
+  nonModifiableTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/SampleFramework/Usage/SceneManager/Shaders/OverwriteAlpha.shader
+  uploadId: 667590

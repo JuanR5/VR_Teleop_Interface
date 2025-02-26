@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 1655dfcb8fc5f2b468db636edf92c279
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Interaction/Runtime/Prefabs/Debug/TransformRecognizerDebugVisual.prefab
+  uploadId: 667590

@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: eaeac9ce83896a04691d2590189776f5
+timeCreated: 1471282585
+licenseType: Store
+ShaderImporter:
+  defaultTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/VR/Resources/Underlay Impostor.shader
+  uploadId: 667590

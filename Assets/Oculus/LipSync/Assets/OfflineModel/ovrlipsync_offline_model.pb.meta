@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 3e1d42ccc29c54bf68636db8acf2eed8
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/LipSync/Assets/OfflineModel/ovrlipsync_offline_model.pb
+  uploadId: 667590

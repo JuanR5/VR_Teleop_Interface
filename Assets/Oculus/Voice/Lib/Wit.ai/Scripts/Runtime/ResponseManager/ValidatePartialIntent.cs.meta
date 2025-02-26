@@ -1,0 +1,10 @@
+﻿fileFormatVersion: 2
+guid: 4ac92a21e82e90b4c93ff4605a6d4c8f
+timeCreated: 1646065974
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Voice/Lib/Wit.ai/Scripts/Runtime/ResponseManager/ValidatePartialIntent.cs
+  uploadId: 667590

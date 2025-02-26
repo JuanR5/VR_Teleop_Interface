@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 6317243759ba40f43a2bf4a90c9e95d8
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/SampleFramework/Usage/SceneManager/Materials/Floor.mat
+  uploadId: 667590

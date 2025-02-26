@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: dc847e9f83e1d68469a4741be4840ccf
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Voice/Lib/Wit.ai/Prefabs/Wit.prefab
+  uploadId: 667590

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 4ed2a68815c34a34d8711a74f0b3e8ad
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Interaction/Samples/Objects/Props/StonePolyhedra/Materials/StonePolyhedraMat.mat
+  uploadId: 667590

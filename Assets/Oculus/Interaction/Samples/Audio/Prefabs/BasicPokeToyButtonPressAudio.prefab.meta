@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 2c388bdb963a363418437ef4347b4522
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Interaction/Samples/Audio/Prefabs/BasicPokeToyButtonPressAudio.prefab
+  uploadId: 667590

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 4a2d97a183ee4d3468daff21b3c92689
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Interaction/Runtime/Prefabs/Hands/LeftHandVisual.prefab
+  uploadId: 667590

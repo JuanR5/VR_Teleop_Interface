@@ -1,0 +1,10 @@
+fileFormatVersion: 2
+guid: 355eb2d1c97649fe850fe0a351a91833
+timeCreated: 1673341927
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/VR/Scripts/OVRGLTFAnimationNodeMorphTargetHandler.cs
+  uploadId: 667590

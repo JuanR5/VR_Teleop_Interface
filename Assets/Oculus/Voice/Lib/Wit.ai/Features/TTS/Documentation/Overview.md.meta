@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 0a78e70d61637eb498ee552bab9479ab
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Voice/Lib/Wit.ai/Features/TTS/Documentation/Overview.md
+  uploadId: 667590

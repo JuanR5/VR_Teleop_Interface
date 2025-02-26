@@ -1,0 +1,10 @@
+﻿fileFormatVersion: 2
+guid: e93d1390c1dc4578a1b8a87fd712839b
+timeCreated: 1680652764
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Voice/Features/VoiceHub/Scripts/Editor/VoiceHubConstants.cs
+  uploadId: 667590

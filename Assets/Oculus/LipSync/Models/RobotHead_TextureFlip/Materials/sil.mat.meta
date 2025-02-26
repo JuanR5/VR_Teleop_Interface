@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 5290b3a55eaa1b7458665dc2d856c042
+timeCreated: 1444079116
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/LipSync/Models/RobotHead_TextureFlip/Materials/sil.mat
+  uploadId: 667590

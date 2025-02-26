@@ -1,0 +1,10 @@
+﻿fileFormatVersion: 2
+guid: 8e8cb884d9db4d7aac0d92a8bf855815
+timeCreated: 1653351781
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/Voice/Lib/Wit.ai/Lib/Conduit/Runtime/IInstanceResolver.cs
+  uploadId: 667590

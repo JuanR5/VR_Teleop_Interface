@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: e20eab681d30ee74cb1f0951de06ae7b
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/VR/Editor/BuildingBlocks/BlockData/SurfaceProjectedPassthrough/Materials/QuadOutline.mat
+  uploadId: 667590

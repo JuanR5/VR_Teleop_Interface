@@ -1,0 +1,10 @@
+﻿fileFormatVersion: 2
+guid: 5f2967bab93d4b57ab8d2b9799ca6de9
+timeCreated: 1669366542
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/VR/Scripts/OVRAnchor/OVRAnchor.cs
+  uploadId: 667590

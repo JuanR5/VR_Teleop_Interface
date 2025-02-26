@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 4977c9139e37ed74c8fc8f818aeb9515
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 82022
+  packageName: Oculus Integration (Deprecated)
+  packageVersion: 57.0.2-deprecated
+  assetPath: Assets/Oculus/SampleFramework/Usage/SceneManager/Scenes/VirtualFurniture.unity
+  uploadId: 667590
