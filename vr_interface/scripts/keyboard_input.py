@@ -25,7 +25,7 @@ class KeyboardControlNode(Node):
         self.publisher = self.create_publisher(Twist, 'controller_movement', 10)
         
         # Timer to publish movement at a fixed interval (10 Hz)
-        self.timer = self.create_timer(0.1, self.timer_callback)
+        self.timer = self.create_timer(0.02, self.timer_callback)
         
         # Initialize velocity values
         self.linear_velocity = [0.0, 0.0, 0.0]  # X, Y, Z
@@ -76,7 +76,7 @@ class KeyboardControlNode(Node):
             self.handle_key(key, True)
             
             # Simulate key release after a short delay
-            time.sleep(0.1)
+            time.sleep(0.5)
             self.handle_key(key, False)
 
     def handle_key(self, key, pressed):
@@ -89,9 +89,9 @@ class KeyboardControlNode(Node):
             if pressed:
                 self.active_keys.add(key)
                 if vel_type == 'linear':
-                    self.linear_velocity[index] = float(value) 
+                    self.linear_velocity[index] = float(value)  * 0.01  
                 else:
-                    self.angular_velocity[index] = float(value)
+                    self.angular_velocity[index] = float(value) * 0.02
             else:
                 self.active_keys.discard(key)
                 if key not in self.active_keys:

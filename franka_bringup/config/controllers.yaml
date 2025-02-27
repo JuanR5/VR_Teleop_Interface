@@ -49,6 +49,9 @@ controller_manager:
     
     franka_robot_state_broadcaster:
       type: franka_robot_state_broadcaster/FrankaRobotStateBroadcaster
+      parameters: #!
+        arm_id: fr3
+        prefix: "fr3_"
 
 joint_impedance_with_ik_example_controller:
   ros__parameters:

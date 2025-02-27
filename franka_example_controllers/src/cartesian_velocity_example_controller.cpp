@@ -45,36 +45,42 @@ controller_interface::return_type CartesianVelocityExampleController::update(
   const rclcpp::Duration& period) {
   elapsed_time_ = elapsed_time_ + period;
 
-  //!
-  // Apply dampers to smooth out velocity changes
-  double damping_factor = 0.05;  // Adjust this value to control the damping effect
-  target_linear_velocity_ = target_linear_velocity_ + damping_factor * (desired_linear_velocity_ - target_linear_velocity_);
-  target_angular_velocity_ = target_angular_velocity_ + damping_factor * (desired_angular_velocity_ - target_angular_velocity_);
-
+  // todo 
+  // Apply low-pass filtering to smooth velocity commands
+  double alpha = 0.5;  // higher value smooths more, lower value reacts faster
+  // todo
+  target_linear_velocity_ = alpha * desired_linear_velocity_ + (1 - alpha) * target_linear_velocity_;
+  target_angular_velocity_ = alpha * desired_angular_velocity_ + (1 - alpha) * target_angular_velocity_;
+  
   // Clamp velocities to maximum limits
-  double max_linear_velocity = 0.015;  // Maximum linear velocity
-  double max_angular_velocity = 0.03;  // Maximum angular velocity
+  double max_linear_velocity = 0.01;  // Maximum linear velocity
+  double max_angular_velocity = 0.01;  // Maximum angular velocity
 
-  target_linear_velocity_ = target_linear_velocity_.cwiseMax(-max_linear_velocity).cwiseMin(max_linear_velocity);
+  target_linear_velocity_ = taret_linear_velocity_.cwiseMax(-max_linear_velocity).cwiseMin(max_linear_velocity);
   target_angular_velocity_ = target_angular_velocity_.cwiseMax(-max_angular_velocity).cwiseMin(max_angular_velocity);
+
+  // Limit acceleration
+  double max_linear_acceleration = 0.005;  // Maximum linear acceleration
+  double max_angular_acceleration = 0.005;  // Maximum angular acceleration
+
+  Eigen::Vector3d linear_acceleration = (desired_linear_velocity_ - target_linear_velocity_) / period.seconds();
+  Eigen::Vector3d angular_acceleration = (desired_angular_velocity_ - target_angular_velocity_) / period.seconds();
+
+  linear_acceleration = linear_acceleration.cwiseMax(-max_linear_acceleration).cwiseMin(max_linear_acceleration);
+  angular_acceleration = angular_acceleration.cwiseMax(-max_angular_acceleration).cwiseMin(max_angular_acceleration);
+
+  target_linear_velocity_ = target_linear_velocity_ + linear_acceleration * period.seconds();
+  target_angular_velocity_ = target_angular_velocity_ + angular_acceleration * period.seconds();
 
 
   Eigen::Vector3d cartesian_linear_velocity = target_linear_velocity_;
   Eigen::Vector3d cartesian_angular_velocity = target_angular_velocity_;
 
-// !
-  // double cycle = std::floor(pow(
-  //     -1.0,
-  //     (elapsed_time_.seconds() - std::fmod(elapsed_time_.seconds(), k_time_max_)) / k_time_max_));
-  // double v =
-  //     cycle * k_v_max_ / 2.0 * (1.0 - std::cos(2.0 * M_PI / k_time_max_ * elapsed_time_.seconds()));
-  // double v_x = std::cos(k_angle_) * v;
-  // double v_z = -std::sin(k_angle_) * v;
-  // double v_y = std::sin(k_angle_) * v;
+  RCLCPP_INFO(get_node()->get_logger(), "Target Linear Velocity: [%f, %f, %f]",
+  target_linear_velocity_.x(), target_linear_velocity_.y(), target_linear_velocity_.z());
 
-  // Eigen::Vector3d cartesian_linear_velocity(v_x, v_y, v_z);
-  // Eigen::Vector3d cartesian_angular_velocity(0.0, 0.0, 0.0);
-// !
+  RCLCPP_INFO(get_node()->get_logger(), "Target Angular Velocity: [%f, %f, %f]",
+  target_angular_velocity_.x(), target_angular_velocity_.y(), target_angular_velocity_.z());
 
   if (franka_cartesian_velocity_->setCommand(cartesian_linear_velocity,
                                              cartesian_angular_velocity)) {
@@ -112,16 +118,16 @@ CallbackReturn CartesianVelocityExampleController::on_configure(
     RCLCPP_INFO(get_node()->get_logger(), "Default collision behavior set.");
   }
 
-// !
 
   // Low-pass filter factor (tune between 0.0 - 1.0)
-  const double alpha = 0.2;  // Higher value reacts faster, lower value smooths more
+  // todo
+  const double deadband = 0.001;  // Higher value reacts faster, lower value smooths more 
+  //todo
 
-
-  // Create a subscriber to the /controller_movement topic
+  //* // Create a subscriber to the /controller_movement topic
   movement_subscriber_ = get_node()->create_subscription<geometry_msgs::msg::Twist>(
     "/controller_movement", 10,
-    [this, alpha](const geometry_msgs::msg::Twist::SharedPtr msg) {
+    [this, deadband](const geometry_msgs::msg::Twist::SharedPtr msg) {
         // Extract linear velocities
         double vx = msg->linear.x;
         double vy = msg->linear.y;
@@ -139,22 +145,42 @@ CallbackReturn CartesianVelocityExampleController::on_configure(
             return;
         }
 
-        // Apply low-pass filtering
-        desired_linear_velocity_ = alpha * Eigen::Vector3d(vx, vy, vz) +
-                                  (1 - alpha) * desired_linear_velocity_;
+        // Apply deadband to input velocities
+        if (std::abs(vx) < deadband) vx = 0.0;
+        if (std::abs(vy) < deadband) vy = 0.0;
+        if (std::abs(vz) < deadband) vz = 0.0;
+        if (std::abs(wx) < deadband) wx = 0.0;
+        if (std::abs(wy) < deadband) wy = 0.0;
+        if (std::abs(wz) < deadband) wz = 0.0;
 
-        desired_angular_velocity_ = alpha * Eigen::Vector3d(wx, wy, wz) +
-                                   (1 - alpha) * desired_angular_velocity_;
+        // Scale input values to appropriate velocity limits
+        double scale_linear = 0.005;  // Scaling factor for linear velocity
+        double scale_angular = 0.005; // Scaling factor for angular velocity
+
+        desired_linear_velocity_ = Eigen::Vector3d(
+            vx * scale_linear,
+            vy * scale_linear,
+            vz * scale_linear
+        );
+
+        desired_angular_velocity_ = Eigen::Vector3d(
+            wx * scale_angular,
+            wy * scale_angular,
+            wz * scale_angular
+        );
 
         // Clamp desired velocities to maximum limits
-        double max_linear_velocity = 0.015;  // Maximum linear velocity
-        double max_angular_velocity = 0.03;  // Maximum angular velocity
+        double max_linear_velocity = 0.01;  // Maximum linear velocity
+        double max_angular_velocity = 0.01;  // Maximum angular velocity
 
         desired_linear_velocity_ = desired_linear_velocity_.cwiseMax(-max_linear_velocity).cwiseMin(max_linear_velocity);
         desired_angular_velocity_ = desired_angular_velocity_.cwiseMax(-max_angular_velocity).cwiseMin(max_angular_velocity);
   
+                // Log input velocities for debugging
+        RCLCPP_INFO(get_node()->get_logger(), "Input Linear Velocity: [%f, %f, %f]", vx, vy, vz);
+        RCLCPP_INFO(get_node()->get_logger(), "Input Angular Velocity: [%f, %f, %f]", wx, wy, wz);
+
     });
-// !
   return CallbackReturn::SUCCESS;
 }
 
