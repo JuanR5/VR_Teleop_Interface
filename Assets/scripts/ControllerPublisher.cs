@@ -1,6 +1,6 @@
 using UnityEngine;
 using Unity.Robotics.ROSTCPConnector;
-using RosMessageTypes.Std;
+using RosMessageTypes.Geometry;
 using System;
 
 public class ControllerMovementPublisher : MonoBehaviour
@@ -12,13 +12,13 @@ public class ControllerMovementPublisher : MonoBehaviour
     private float timeElapsed;
 
     // XYZ from right controller, RPY from left controller
-    private Vector3Int positionVector = Vector3Int.zero;  // For XYZ
-    private Vector3Int rotationVector = Vector3Int.zero;  // For RPY
+    private Vector3 positionVector = Vector3.zero;  // For XYZ
+    private Vector3 rotationVector = Vector3.zero;  // For RPY
 
     void Start()
     {
         ros = ROSConnection.GetOrCreateInstance();
-        ros.RegisterPublisher<Int32MultiArrayMsg>(topicName);
+        ros.RegisterPublisher<TwistMsg>(topicName);
 
         timeElapsed = 0f;
 
@@ -47,59 +47,49 @@ public class ControllerMovementPublisher : MonoBehaviour
 
     private void HandleThumbstickInput(string thumbstick, Vector2 value)
     {
-        // Right controller handles X and Y position
         if (thumbstick == "Right Thumbstick")
         {
-            positionVector.x = value.x > 0 ? 1 : (value.x < 0 ? -1 : 0);
-            positionVector.y = value.y > 0 ? 1 : (value.y < 0 ? -1 : 0);
+            positionVector.x = value.x;
+            positionVector.y = value.y;
         }
-        // Left controller handles Roll and Pitch
         else if (thumbstick == "Left Thumbstick")
         {
-            rotationVector.x = value.x > 0 ? 1 : (value.x < 0 ? -1 : 0); // Roll
-            rotationVector.y = value.y > 0 ? 1 : (value.y < 0 ? -1 : 0); // Pitch
+            rotationVector.x = value.x; // Roll
+            rotationVector.y = value.y; // Pitch
         }
     }
 
     private void HandleButtonInput(string button)
     {
-        // Right controller buttons handle Z position
         if (button == "B Button (Right Controller)")
-            positionVector.z = 1;
+            positionVector.z = 1f;
         if (button == "A Button (Right Controller)")
-            positionVector.z = -1;
+            positionVector.z = -1f;
 
-        // Left controller buttons handle Yaw
         if (button == "Y Button (Left Controller)")
-            rotationVector.z = 1;  // Yaw right
+            rotationVector.z = 1f;  // Yaw right
         if (button == "X Button (Left Controller)")
-            rotationVector.z = -1; // Yaw left
+            rotationVector.z = -1f; // Yaw left
     }
 
     private void HandleButtonRelease(string button)
     {
-        // Reset Z position on right controller button release
         if (button == "B Button (Right Controller)" || button == "A Button (Right Controller)")
-            positionVector.z = 0;
+            positionVector.z = 0f;
 
-        // Reset Yaw on left controller button release
         if (button == "Y Button (Left Controller)" || button == "X Button (Left Controller)")
-            rotationVector.z = 0;
+            rotationVector.z = 0f;
     }
 
     private void PublishMovement()
     {
-        // Combine position (XYZ) and rotation (RPY) into one array
-        Int32MultiArrayMsg movementMsg = new Int32MultiArrayMsg
+        TwistMsg twistMsg = new TwistMsg
         {
-            data = new int[] 
-            { 
-                positionVector.x, positionVector.y, positionVector.z,  // XYZ position
-                rotationVector.x, rotationVector.y, rotationVector.z   // RPY rotation
-            }
+            linear = new RosMessageTypes.Geometry.Vector3Msg(positionVector.x, positionVector.y, positionVector.z),
+            angular = new RosMessageTypes.Geometry.Vector3Msg(rotationVector.x, rotationVector.y, rotationVector.z)
         };
 
-        ros.Publish(topicName, movementMsg);
-        Debug.Log($"Published Position: {positionVector}, Rotation: {rotationVector}");
+        ros.Publish(topicName, twistMsg);
+        Debug.Log($"Published Twist: Linear({positionVector}), Angular({rotationVector})");
     }
 }
