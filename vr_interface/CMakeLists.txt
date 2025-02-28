@@ -126,6 +126,7 @@ ament_target_dependencies(
 install(PROGRAMS
   scripts/move_controller.py
   scripts/keyboard_input.py
+  scripts/errorRecoveryClient.py
   DESTINATION lib/${PROJECT_NAME}
 )
 
