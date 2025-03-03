@@ -1,38 +1,40 @@
 using UnityEngine;
 using System.Collections;
 
-
 public class StereoCameraFeed : MonoBehaviour
 {
     [Header("Stereo Camera Settings")]
-    [SerializeField] private string stereoCameraName = "ZED-M";
-    [SerializeField] private Camera leftEyeCamera;
-    [SerializeField] private Camera rightEyeCamera;
-    
-    [Header("IPD Settings")]
-    [SerializeField, Range(0.0f, 0.075f)] private float ipd = 0.063f;
-    [SerializeField, Range(0.1f, 2f)] private float displayDistance = 1.28f;
-    [SerializeField, Range(-0.5f, 0.5f)] private float yOffset = 0.0f;
+    public string stereoCameraName { get; set; }
+    public Camera leftEyeCamera { get; set; }
+    public Camera rightEyeCamera { get; set; }
+    public float ipd { get; set; }
+    public float displayDistance { get; set; }
+    public float yOffset { get; set; }
+    public float quadWidthScale { get; set; }
+    public float quadHeightScale { get; set; }
 
-    [Header("Quad Scaling")]
-    [SerializeField, Range(0.1f, 3f)] private float quadWidthScale = 0.42f;
-    [SerializeField, Range(0.1f, 3f)] private float quadHeightScale = 0.9f;
-    
     private WebCamTexture webCamTexture;
-    private GameObject leftQuad;
-    private GameObject rightQuad;
+    private GameObject leftQuad, rightQuad;
 
-    void Start()
+    private void Start()
     {
-        InitializeStereoCam();
-        SetupCameras();
-        CreateEyeDisplays();
+        if (TryFindWebCam())
+        {
+            SetupCameras();
+            CreateEyeDisplays();
+        }
+        else
+        {
+            Debug.LogError($"Stereo camera '{stereoCameraName}' not found.");
+        }
     }
 
-    private void InitializeStereoCam()
+    /// <summary>
+    /// Attempts to find and initialize the stereo webcam.
+    /// </summary>
+    private bool TryFindWebCam()
     {
-        var devices = WebCamTexture.devices;
-        foreach (var device in devices)
+        foreach (var device in WebCamTexture.devices)
         {
             if (device.name.Contains(stereoCameraName))
             {
@@ -40,27 +42,26 @@ public class StereoCameraFeed : MonoBehaviour
                 webCamTexture.Play();
                 Debug.Log($"Stereo camera initialized: {device.name}");
 
-                // Wait for the camera to start before logging resolution
                 StartCoroutine(CheckWebCamResolution());
-                break;
+                return true;
             }
         }
-
-        if (webCamTexture == null)
-        {
-            Debug.LogError($"Stereo camera '{stereoCameraName}' not found.");
-            return;
-        }
+        return false;
     }
 
+    /// <summary>
+    /// Waits until the webcam provides a valid resolution.
+    /// </summary>
     private IEnumerator CheckWebCamResolution()
     {
         yield return new WaitUntil(() => webCamTexture.width > 100);
-
         Debug.Log($"WebCamTexture Resolution: {webCamTexture.width}x{webCamTexture.height}");
         Debug.Log($"Aspect Ratio: {(float)webCamTexture.width / webCamTexture.height}");
     }
 
+    /// <summary>
+    /// Configures the left and right eye cameras.
+    /// </summary>
     private void SetupCameras()
     {
         if (!leftEyeCamera || !rightEyeCamera)
@@ -78,17 +79,23 @@ public class StereoCameraFeed : MonoBehaviour
             return;
         }
 
-        SetupCamera(leftEyeCamera, true, leftEyeLayer);
-        SetupCamera(rightEyeCamera, false, rightEyeLayer);
+        ConfigureCamera(leftEyeCamera, true, leftEyeLayer);
+        ConfigureCamera(rightEyeCamera, false, rightEyeLayer);
     }
 
-    private void SetupCamera(Camera camera, bool isLeftEye, int layer)
+    /// <summary>
+    /// Configures an individual camera.
+    /// </summary>
+    private void ConfigureCamera(Camera camera, bool isLeftEye, int layer)
     {
         camera.cullingMask = 1 << layer;
         camera.stereoTargetEye = isLeftEye ? StereoTargetEyeMask.Left : StereoTargetEyeMask.Right;
     }
 
-   private void CreateEyeDisplays()
+    /// <summary>
+    /// Creates display quads for left and right eye views.
+    /// </summary>
+    private void CreateEyeDisplays()
     {
         int leftEyeLayer = LayerMask.NameToLayer("LeftEyeLayer");
         int rightEyeLayer = LayerMask.NameToLayer("RightEyeLayer");
@@ -97,6 +104,9 @@ public class StereoCameraFeed : MonoBehaviour
         rightQuad = CreateEyeQuad(rightEyeCamera, false, rightEyeLayer);
     }
 
+    /// <summary>
+    /// Creates a quad for displaying an eye's webcam feed.
+    /// </summary>
     private GameObject CreateEyeQuad(Camera camera, bool isLeftEye, int layer)
     {
         GameObject quad = GameObject.CreatePrimitive(PrimitiveType.Quad);
@@ -105,53 +115,64 @@ public class StereoCameraFeed : MonoBehaviour
         quad.transform.SetParent(camera.transform);
 
         float xOffset = ipd / 2f;
-        Vector3 localPos = new Vector3(isLeftEye ? -xOffset : xOffset, 0.0f, displayDistance);
-        quad.transform.localPosition = localPos;
+        quad.transform.localPosition = new Vector3(isLeftEye ? -xOffset : xOffset, yOffset, displayDistance);
         quad.transform.localRotation = Quaternion.identity;
 
-        float aspectRatio = 1.777f;  // Default aspect ratio
-        if (webCamTexture != null && webCamTexture.width > 0)
-        {
-            aspectRatio = (float)webCamTexture.width / webCamTexture.height;
-        }
+        // Calculate aspect ratio
+        float aspectRatio = webCamTexture != null && webCamTexture.width > 0
+            ? (float)webCamTexture.width / webCamTexture.height
+            : 1.777f;  // Default aspect ratio
 
-        float quadHeight = displayDistance * 2.0f * quadHeightScale; 
+        float quadHeight = displayDistance * 2.0f * quadHeightScale;
         float quadWidth = quadHeight * aspectRatio * quadWidthScale;
-
         quad.transform.localScale = new Vector3(quadWidth, quadHeight, 1f);
 
         Debug.Log($"Quad {quad.name} - Width: {quadWidth}, Height: {quadHeight}, Aspect Ratio: {aspectRatio}");
+
+        ApplyWebCamTextureToQuad(quad, isLeftEye);
+
+        return quad;
+    }
+
+    /// <summary>
+    /// Applies the webcam texture to a quad.
+    /// </summary>
+    private void ApplyWebCamTextureToQuad(GameObject quad, bool isLeftEye)
+    {
+        if (webCamTexture == null) return;
 
         Material eyeMaterial = new Material(Shader.Find("Unlit/Texture"));
         eyeMaterial.mainTexture = webCamTexture;
         eyeMaterial.mainTextureScale = new Vector2(0.5f, 1.0f);
         eyeMaterial.mainTextureOffset = isLeftEye ? Vector2.zero : new Vector2(0.5f, 0.0f);
         quad.GetComponent<MeshRenderer>().material = eyeMaterial;
-
-        return quad;
     }
 
-    void Update()
+    /// <summary>
+    /// Updates the interpupillary distance (IPD) dynamically.
+    /// </summary>
+    private void Update()
     {
-        if (leftEyeCamera && rightEyeCamera)
-        {
-            UpdateIPDPositions();
-        }
+        UpdateIPDPositions();
     }
 
+    /// <summary>
+    /// Adjusts the position of the display quads based on the IPD setting.
+    /// </summary>
     private void UpdateIPDPositions()
     {
-        float offset = ipd / 2.0f;
-
         if (leftQuad && rightQuad)
         {
+            float offset = ipd / 2.0f;
             leftQuad.transform.localPosition = new Vector3(-offset, yOffset, displayDistance);
-            rightQuad.transform.localPosition = new Vector3(offset, 0.0f, displayDistance);
+            rightQuad.transform.localPosition = new Vector3(offset, -yOffset, displayDistance);
         }
     }
 
-
-    void OnDisable()
+    /// <summary>
+    /// Stops the webcam feed when the object is disabled.
+    /// </summary>
+    private void OnDisable()
     {
         if (webCamTexture != null && webCamTexture.isPlaying)
         {
