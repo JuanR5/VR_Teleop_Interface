@@ -1,0 +1,1 @@
+/simple_ws/src/zed_components/src/zed_camera/include/cost_traversability.hpp

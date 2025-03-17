@@ -1,0 +1,789 @@
+[0.000000] (-) TimerEvent: {}
+[0.000280] (middle_nodes) JobQueued: {'identifier': 'middle_nodes', 'dependencies': OrderedDict()}
+[0.000375] (ros_tcp_endpoint) JobQueued: {'identifier': 'ros_tcp_endpoint', 'dependencies': OrderedDict()}
+[0.000434] (zed_components) JobQueued: {'identifier': 'zed_components', 'dependencies': OrderedDict()}
+[0.000465] (zed_wrapper) JobQueued: {'identifier': 'zed_wrapper', 'dependencies': OrderedDict([('zed_components', '/simple_ws/install/zed_components')])}
+[0.000504] (zed_ros2) JobQueued: {'identifier': 'zed_ros2', 'dependencies': OrderedDict([('zed_components', '/simple_ws/install/zed_components'), ('zed_wrapper', '/simple_ws/install/zed_wrapper')])}
+[0.000544] (zed_components) JobStarted: {'identifier': 'zed_components'}
+[0.004893] (middle_nodes) JobStarted: {'identifier': 'middle_nodes'}
+[0.008107] (ros_tcp_endpoint) JobStarted: {'identifier': 'ros_tcp_endpoint'}
+[0.011862] (zed_components) JobProgress: {'identifier': 'zed_components', 'progress': 'cmake'}
+[0.012286] (zed_components) Command: {'cmd': ['/usr/bin/cmake', '/simple_ws/src/zed_components', '-DAMENT_CMAKE_SYMLINK_INSTALL=1', '-DCMAKE_INSTALL_PREFIX=/simple_ws/install/zed_components'], 'cwd': '/simple_ws/build/zed_components', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LIBRARY_PATH', '/usr/local/cuda/lib64/stubs'), ('NV_LIBCUBLAS_VERSION', '12.1.0.26-1'), ('NV_NVPROF_DEV_PACKAGE', 'cuda-nvprof-12-1=12.1.55-1'), ('NV_CUDA_COMPAT_PACKAGE', 'cuda-compat-12-1'), ('NV_CUDA_NSIGHT_COMPUTE_VERSION', '12.1.0-1'), ('HOSTNAME', 'nakama-X570-AORUS-PRO'), ('NVIDIA_CUDA_END_OF_LIFE', '1'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/simple_ws/install/zed_components/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/local/nvidia/lib:/usr/local/nvidia/lib64'), ('NV_LIBNCCL_PACKAGE_VERSION', '2.17.1-1'), ('HOME', '/root'), ('OLDPWD', '/'), ('NV_LIBCUBLAS_DEV_VERSION', '12.1.0.26-1'), ('ROS_PYTHON_VERSION', '3'), ('LC_CTYPE', 'C.UTF-8'), ('NV_LIBNCCL_DEV_PACKAGE_VERSION', '2.17.1-1'), ('NV_LIBNPP_PACKAGE', 'libnpp-12-1=12.0.2.50-1'), ('CUDA_VERSION', '12.1.0'), ('COLCON_PREFIX_PATH', '/simple_ws/install'), ('NV_NVPROF_VERSION', '12.1.55-1'), ('ROS_DISTRO', 'humble'), ('NV_LIBCUBLAS_PACKAGE_NAME', 'libcublas-12-1'), ('NVIDIA_REQUIRE_CUDA', 'cuda>=12.1 brand=tesla,driver>=470,driver<471 brand=unknown,driver>=470,driver<471 brand=nvidia,driver>=470,driver<471 brand=nvidiartx,driver>=470,driver<471 brand=geforce,driver>=470,driver<471 brand=geforcertx,driver>=470,driver<471 brand=quadro,driver>=470,driver<471 brand=quadrortx,driver>=470,driver<471 brand=titan,driver>=470,driver<471 brand=titanrtx,driver>=470,driver<471 brand=tesla,driver>=525,driver<526 brand=unknown,driver>=525,driver<526 brand=nvidia,driver>=525,driver<526 brand=nvidiartx,driver>=525,driver<526 brand=geforce,driver>=525,driver<526 brand=geforcertx,driver>=525,driver<526 brand=quadro,driver>=525,driver<526 brand=quadrortx,driver>=525,driver<526 brand=titan,driver>=525,driver<526 brand=titanrtx,driver>=525,driver<526'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('NV_LIBCUSPARSE_VERSION', '12.0.2.55-1'), ('NVIDIA_DRIVER_CAPABILITIES', 'all'), ('NV_CUDA_LIB_VERSION', '12.1.0-1'), ('NV_LIBNCCL_PACKAGE_NAME', 'libnccl2'), ('NV_NVML_DEV_VERSION', '12.1.55-1'), ('NV_LIBNPP_DEV_PACKAGE', 'libnpp-dev-12-1=12.0.2.50-1'), ('TERM', 'xterm'), ('NV_CUDA_CUDART_VERSION', '12.1.55-1'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/nvidia/bin:/usr/local/cuda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('NV_LIBCUBLAS_DEV_PACKAGE_NAME', 'libcublas-dev-12-1'), ('NV_LIBCUBLAS_PACKAGE', 'libcublas-12-1=12.1.0.26-1'), ('NVARCH', 'x86_64'), ('NV_LIBNCCL_DEV_PACKAGE_NAME', 'libnccl-dev'), ('NV_LIBCUSPARSE_DEV_VERSION', '12.0.2.55-1'), ('DISPLAY', ':1'), ('NV_LIBNCCL_PACKAGE', 'libnccl2=2.17.1-1+cuda12.1'), ('NVIDIA_PRODUCT_NAME', 'CUDA'), ('NV_CUDA_CUDART_DEV_VERSION', '12.1.55-1'), ('ZED_SDK_URL', 'https://stereolabs.sfo2.cdn.digitaloceanspaces.com/zedsdk/4.2/ZED_SDK_Ubuntu22_cuda12.1_v4.2.0.zstd.run'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('ROS_DOMAIN_ID', '55'), ('AMENT_PREFIX_PATH', '/simple_ws/install/zed_ros2:/simple_ws/install/zed_wrapper:/simple_ws/install/zed_components:/simple_ws/install/ros_tcp_endpoint:/simple_ws/install/middle_nodes:/opt/ros/humble'), ('NV_LIBCUBLAS_DEV_PACKAGE', 'libcublas-dev-12-1=12.1.0.26-1'), ('NV_CUDA_NSIGHT_COMPUTE_DEV_PACKAGE', 'cuda-nsight-compute-12-1=12.1.0-1'), ('NV_LIBNCCL_DEV_PACKAGE', 'libnccl-dev=2.17.1-1+cuda12.1'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('NV_NVTX_VERSION', '12.1.66-1'), ('NV_LIBNPP_VERSION', '12.0.2.50-1'), ('PWD', '/simple_ws/build/zed_components'), ('PYTHONPATH', '/simple_ws/build/ros_tcp_endpoint:/simple_ws/install/ros_tcp_endpoint/lib/python3.10/site-packages:/simple_ws/build/middle_nodes:/simple_ws/install/middle_nodes/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('NVIDIA_VISIBLE_DEVICES', 'all'), ('NCCL_VERSION', '2.17.1-1'), ('TZ', 'Europe/Paris'), ('COLCON', '1'), ('NV_LIBNPP_DEV_VERSION', '12.0.2.50-1'), ('CMAKE_PREFIX_PATH', '/simple_ws/install/zed_ros2:/simple_ws/install/zed_wrapper:/simple_ws/install/zed_components:/simple_ws/install/ros_tcp_endpoint:/simple_ws/install/middle_nodes:/opt/ros/humble')]), 'shell': False}
+[0.099367] (-) TimerEvent: {}
+[0.153238] (zed_components) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[0.153718] (zed_components) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[0.153974] (zed_components) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.154030] (zed_components) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.159338] (zed_components) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.159616] (zed_components) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.160032] (zed_components) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.162770] (zed_components) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.199436] (-) TimerEvent: {}
+[0.221414] (zed_components) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.228388] (zed_components) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.228736] (zed_components) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.229257] (zed_components) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.234022] (zed_components) StdoutLine: {'line': b'-- Looking for sgemm_\n'}
+[0.285672] (zed_components) StdoutLine: {'line': b'-- Looking for sgemm_ - not found\n'}
+[0.286536] (zed_components) StdoutLine: {'line': b'-- Looking for pthread.h\n'}
+[0.299516] (-) TimerEvent: {}
+[0.340570] (zed_components) StdoutLine: {'line': b'-- Looking for pthread.h - found\n'}
+[0.340771] (zed_components) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[0.397310] (zed_components) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success\n'}
+[0.398075] (zed_components) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[0.399572] (-) TimerEvent: {}
+[0.418490] (zed_components) StdoutLine: {'line': b'-- Looking for sgemm_\n'}
+[0.489673] (zed_components) StdoutLine: {'line': b'-- Looking for sgemm_ - found\n'}
+[0.490128] (zed_components) StdoutLine: {'line': b'-- Found BLAS: /usr/lib/x86_64-linux-gnu/libopenblas.so  \n'}
+[0.499664] (-) TimerEvent: {}
+[0.505242] (ros_tcp_endpoint) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'develop', '--editable', '--build-directory', '/simple_ws/build/ros_tcp_endpoint/build', '--no-deps', 'symlink_data'], 'cwd': '/simple_ws/build/ros_tcp_endpoint', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'LIBRARY_PATH': '/usr/local/cuda/lib64/stubs', 'NV_LIBCUBLAS_VERSION': '12.1.0.26-1', 'NV_NVPROF_DEV_PACKAGE': 'cuda-nvprof-12-1=12.1.55-1', 'NV_CUDA_COMPAT_PACKAGE': 'cuda-compat-12-1', 'NV_CUDA_NSIGHT_COMPUTE_VERSION': '12.1.0-1', 'HOSTNAME': 'nakama-X570-AORUS-PRO', 'NVIDIA_CUDA_END_OF_LIFE': '1', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/simple_ws/install/zed_components/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/local/nvidia/lib:/usr/local/nvidia/lib64', 'NV_LIBNCCL_PACKAGE_VERSION': '2.17.1-1', 'HOME': '/root', 'OLDPWD': '/', 'NV_LIBCUBLAS_DEV_VERSION': '12.1.0.26-1', 'ROS_PYTHON_VERSION': '3', 'LC_CTYPE': 'C.UTF-8', 'NV_LIBNCCL_DEV_PACKAGE_VERSION': '2.17.1-1', 'NV_LIBNPP_PACKAGE': 'libnpp-12-1=12.0.2.50-1', 'CUDA_VERSION': '12.1.0', 'COLCON_PREFIX_PATH': '/simple_ws/install', 'NV_NVPROF_VERSION': '12.1.55-1', 'ROS_DISTRO': 'humble', 'NV_LIBCUBLAS_PACKAGE_NAME': 'libcublas-12-1', 'NVIDIA_REQUIRE_CUDA': 'cuda>=12.1 brand=tesla,driver>=470,driver<471 brand=unknown,driver>=470,driver<471 brand=nvidia,driver>=470,driver<471 brand=nvidiartx,driver>=470,driver<471 brand=geforce,driver>=470,driver<471 brand=geforcertx,driver>=470,driver<471 brand=quadro,driver>=470,driver<471 brand=quadrortx,driver>=470,driver<471 brand=titan,driver>=470,driver<471 brand=titanrtx,driver>=470,driver<471 brand=tesla,driver>=525,driver<526 brand=unknown,driver>=525,driver<526 brand=nvidia,driver>=525,driver<526 brand=nvidiartx,driver>=525,driver<526 brand=geforce,driver>=525,driver<526 brand=geforcertx,driver>=525,driver<526 brand=quadro,driver>=525,driver<526 brand=quadrortx,driver>=525,driver<526 brand=titan,driver>=525,driver<526 brand=titanrtx,driver>=525,driver<526', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'NV_LIBCUSPARSE_VERSION': '12.0.2.55-1', 'NVIDIA_DRIVER_CAPABILITIES': 'all', 'NV_CUDA_LIB_VERSION': '12.1.0-1', 'NV_LIBNCCL_PACKAGE_NAME': 'libnccl2', 'NV_NVML_DEV_VERSION': '12.1.55-1', 'NV_LIBNPP_DEV_PACKAGE': 'libnpp-dev-12-1=12.0.2.50-1', 'TERM': 'xterm', 'NV_CUDA_CUDART_VERSION': '12.1.55-1', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/opt/ros/humble/bin:/usr/local/nvidia/bin:/usr/local/cuda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin', 'NV_LIBCUBLAS_DEV_PACKAGE_NAME': 'libcublas-dev-12-1', 'NV_LIBCUBLAS_PACKAGE': 'libcublas-12-1=12.1.0.26-1', 'NVARCH': 'x86_64', 'NV_LIBNCCL_DEV_PACKAGE_NAME': 'libnccl-dev', 'NV_LIBCUSPARSE_DEV_VERSION': '12.0.2.55-1', 'DISPLAY': ':1', 'NV_LIBNCCL_PACKAGE': 'libnccl2=2.17.1-1+cuda12.1', 'NVIDIA_PRODUCT_NAME': 'CUDA', 'NV_CUDA_CUDART_DEV_VERSION': '12.1.55-1', 'ZED_SDK_URL': 'https://stereolabs.sfo2.cdn.digitaloceanspaces.com/zedsdk/4.2/ZED_SDK_Ubuntu22_cuda12.1_v4.2.0.zstd.run', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'ROS_DOMAIN_ID': '55', 'AMENT_PREFIX_PATH': '/simple_ws/install/zed_ros2:/simple_ws/install/zed_wrapper:/simple_ws/install/zed_components:/simple_ws/install/ros_tcp_endpoint:/simple_ws/install/middle_nodes:/opt/ros/humble', 'NV_LIBCUBLAS_DEV_PACKAGE': 'libcublas-dev-12-1=12.1.0.26-1', 'NV_CUDA_NSIGHT_COMPUTE_DEV_PACKAGE': 'cuda-nsight-compute-12-1=12.1.0-1', 'NV_LIBNCCL_DEV_PACKAGE': 'libnccl-dev=2.17.1-1+cuda12.1', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'NV_NVTX_VERSION': '12.1.66-1', 'NV_LIBNPP_VERSION': '12.0.2.50-1', 'PWD': '/simple_ws/build/ros_tcp_endpoint', 'PYTHONPATH': '/simple_ws/build/ros_tcp_endpoint/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/simple_ws/install/ros_tcp_endpoint/lib/python3.10/site-packages:/simple_ws/build/ros_tcp_endpoint:/simple_ws/install/ros_tcp_endpoint/lib/python3.10/site-packages:/simple_ws/build/middle_nodes:/simple_ws/install/middle_nodes/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'NVIDIA_VISIBLE_DEVICES': 'all', 'NCCL_VERSION': '2.17.1-1', 'TZ': 'Europe/Paris', 'COLCON': '1', 'NV_LIBNPP_DEV_VERSION': '12.0.2.50-1', 'CMAKE_PREFIX_PATH': '/simple_ws/install/zed_ros2:/simple_ws/install/zed_wrapper:/simple_ws/install/zed_components'}, 'shell': False}
+[0.509945] (zed_components) StdoutLine: {'line': b'-- Found CUDA: /usr/local/cuda (found suitable version "12.1", minimum required is "12") \n'}
+[0.511373] (middle_nodes) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'develop', '--editable', '--build-directory', '/simple_ws/build/middle_nodes/build', '--no-deps', 'symlink_data'], 'cwd': '/simple_ws/build/middle_nodes', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'LIBRARY_PATH': '/usr/local/cuda/lib64/stubs', 'NV_LIBCUBLAS_VERSION': '12.1.0.26-1', 'NV_NVPROF_DEV_PACKAGE': 'cuda-nvprof-12-1=12.1.55-1', 'NV_CUDA_COMPAT_PACKAGE': 'cuda-compat-12-1', 'NV_CUDA_NSIGHT_COMPUTE_VERSION': '12.1.0-1', 'HOSTNAME': 'nakama-X570-AORUS-PRO', 'NVIDIA_CUDA_END_OF_LIFE': '1', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/simple_ws/install/zed_components/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/local/nvidia/lib:/usr/local/nvidia/lib64', 'NV_LIBNCCL_PACKAGE_VERSION': '2.17.1-1', 'HOME': '/root', 'OLDPWD': '/', 'NV_LIBCUBLAS_DEV_VERSION': '12.1.0.26-1', 'ROS_PYTHON_VERSION': '3', 'LC_CTYPE': 'C.UTF-8', 'NV_LIBNCCL_DEV_PACKAGE_VERSION': '2.17.1-1', 'NV_LIBNPP_PACKAGE': 'libnpp-12-1=12.0.2.50-1', 'CUDA_VERSION': '12.1.0', 'COLCON_PREFIX_PATH': '/simple_ws/install', 'NV_NVPROF_VERSION': '12.1.55-1', 'ROS_DISTRO': 'humble', 'NV_LIBCUBLAS_PACKAGE_NAME': 'libcublas-12-1', 'NVIDIA_REQUIRE_CUDA': 'cuda>=12.1 brand=tesla,driver>=470,driver<471 brand=unknown,driver>=470,driver<471 brand=nvidia,driver>=470,driver<471 brand=nvidiartx,driver>=470,driver<471 brand=geforce,driver>=470,driver<471 brand=geforcertx,driver>=470,driver<471 brand=quadro,driver>=470,driver<471 brand=quadrortx,driver>=470,driver<471 brand=titan,driver>=470,driver<471 brand=titanrtx,driver>=470,driver<471 brand=tesla,driver>=525,driver<526 brand=unknown,driver>=525,driver<526 brand=nvidia,driver>=525,driver<526 brand=nvidiartx,driver>=525,driver<526 brand=geforce,driver>=525,driver<526 brand=geforcertx,driver>=525,driver<526 brand=quadro,driver>=525,driver<526 brand=quadrortx,driver>=525,driver<526 brand=titan,driver>=525,driver<526 brand=titanrtx,driver>=525,driver<526', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'NV_LIBCUSPARSE_VERSION': '12.0.2.55-1', 'NVIDIA_DRIVER_CAPABILITIES': 'all', 'NV_CUDA_LIB_VERSION': '12.1.0-1', 'NV_LIBNCCL_PACKAGE_NAME': 'libnccl2', 'NV_NVML_DEV_VERSION': '12.1.55-1', 'NV_LIBNPP_DEV_PACKAGE': 'libnpp-dev-12-1=12.0.2.50-1', 'TERM': 'xterm', 'NV_CUDA_CUDART_VERSION': '12.1.55-1', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/opt/ros/humble/bin:/usr/local/nvidia/bin:/usr/local/cuda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin', 'NV_LIBCUBLAS_DEV_PACKAGE_NAME': 'libcublas-dev-12-1', 'NV_LIBCUBLAS_PACKAGE': 'libcublas-12-1=12.1.0.26-1', 'NVARCH': 'x86_64', 'NV_LIBNCCL_DEV_PACKAGE_NAME': 'libnccl-dev', 'NV_LIBCUSPARSE_DEV_VERSION': '12.0.2.55-1', 'DISPLAY': ':1', 'NV_LIBNCCL_PACKAGE': 'libnccl2=2.17.1-1+cuda12.1', 'NVIDIA_PRODUCT_NAME': 'CUDA', 'NV_CUDA_CUDART_DEV_VERSION': '12.1.55-1', 'ZED_SDK_URL': 'https://stereolabs.sfo2.cdn.digitaloceanspaces.com/zedsdk/4.2/ZED_SDK_Ubuntu22_cuda12.1_v4.2.0.zstd.run', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'ROS_DOMAIN_ID': '55', 'AMENT_PREFIX_PATH': '/simple_ws/install/zed_ros2:/simple_ws/install/zed_wrapper:/simple_ws/install/zed_components:/simple_ws/install/ros_tcp_endpoint:/simple_ws/install/middle_nodes:/opt/ros/humble', 'NV_LIBCUBLAS_DEV_PACKAGE': 'libcublas-dev-12-1=12.1.0.26-1', 'NV_CUDA_NSIGHT_COMPUTE_DEV_PACKAGE': 'cuda-nsight-compute-12-1=12.1.0-1', 'NV_LIBNCCL_DEV_PACKAGE': 'libnccl-dev=2.17.1-1+cuda12.1', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'NV_NVTX_VERSION': '12.1.66-1', 'NV_LIBNPP_VERSION': '12.0.2.50-1', 'PWD': '/simple_ws/build/middle_nodes', 'PYTHONPATH': '/simple_ws/build/middle_nodes/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/simple_ws/install/middle_nodes/lib/python3.10/site-packages:/simple_ws/build/ros_tcp_endpoint:/simple_ws/install/ros_tcp_endpoint/lib/python3.10/site-packages:/simple_ws/build/middle_nodes:/simple_ws/install/middle_nodes/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'NVIDIA_VISIBLE_DEVICES': 'all', 'NCCL_VERSION': '2.17.1-1', 'TZ': 'Europe/Paris', 'COLCON': '1', 'NV_LIBNPP_DEV_VERSION': '12.0.2.50-1', 'CMAKE_PREFIX_PATH': '/simple_ws/install/zed_ros2:/simple_ws/install/zed_wrapper:/simple_ws/install/zed_components'}, 'shell': False}
+[0.535772] (zed_components) StdoutLine: {'line': b'-- Found CUDA: /usr/local/cuda (found version "12.1") \n'}
+[0.537376] (zed_components) StdoutLine: {'line': b'-- Found ament_cmake_auto: 1.3.11 (/opt/ros/humble/share/ament_cmake_auto/cmake)\n'}
+[0.599738] (-) TimerEvent: {}
+[0.626128] (ros_tcp_endpoint) StderrLine: {'line': b"/usr/lib/python3/dist-packages/setuptools/dist.py:723: UserWarning: Usage of dash-separated 'script-dir' will not be supported in future versions. Please use the underscore name 'script_dir' instead\n"}
+[0.626290] (ros_tcp_endpoint) StderrLine: {'line': b'  warnings.warn(\n'}
+[0.627923] (zed_components) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter \n'}
+[0.643859] (ros_tcp_endpoint) StdoutLine: {'line': b'running develop\n'}
+[0.648698] (middle_nodes) StdoutLine: {'line': b'running develop\n'}
+[0.670198] (zed_components) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[0.699848] (-) TimerEvent: {}
+[0.712532] (ros_tcp_endpoint) StdoutLine: {'line': b'running egg_info\n'}
+[0.712701] (ros_tcp_endpoint) StdoutLine: {'line': b'creating ros_tcp_endpoint.egg-info\n'}
+[0.712802] (ros_tcp_endpoint) StdoutLine: {'line': b'writing ros_tcp_endpoint.egg-info/PKG-INFO\n'}
+[0.712889] (ros_tcp_endpoint) StdoutLine: {'line': b'writing dependency_links to ros_tcp_endpoint.egg-info/dependency_links.txt\n'}
+[0.712978] (ros_tcp_endpoint) StdoutLine: {'line': b'writing entry points to ros_tcp_endpoint.egg-info/entry_points.txt\n'}
+[0.713027] (ros_tcp_endpoint) StdoutLine: {'line': b'writing requirements to ros_tcp_endpoint.egg-info/requires.txt\n'}
+[0.713067] (ros_tcp_endpoint) StdoutLine: {'line': b'writing top-level names to ros_tcp_endpoint.egg-info/top_level.txt\n'}
+[0.713137] (ros_tcp_endpoint) StdoutLine: {'line': b"writing manifest file 'ros_tcp_endpoint.egg-info/SOURCES.txt'\n"}
+[0.714122] (ros_tcp_endpoint) StdoutLine: {'line': b"reading manifest file 'ros_tcp_endpoint.egg-info/SOURCES.txt'\n"}
+[0.714528] (ros_tcp_endpoint) StdoutLine: {'line': b"writing manifest file 'ros_tcp_endpoint.egg-info/SOURCES.txt'\n"}
+[0.715530] (middle_nodes) StdoutLine: {'line': b'running egg_info\n'}
+[0.715615] (middle_nodes) StdoutLine: {'line': b'creating middle_nodes.egg-info\n'}
+[0.715699] (middle_nodes) StdoutLine: {'line': b'writing middle_nodes.egg-info/PKG-INFO\n'}
+[0.715771] (middle_nodes) StdoutLine: {'line': b'writing dependency_links to middle_nodes.egg-info/dependency_links.txt\n'}
+[0.715865] (middle_nodes) StdoutLine: {'line': b'writing entry points to middle_nodes.egg-info/entry_points.txt\n'}
+[0.715927] (middle_nodes) StdoutLine: {'line': b'writing requirements to middle_nodes.egg-info/requires.txt\n'}
+[0.715989] (middle_nodes) StdoutLine: {'line': b'writing top-level names to middle_nodes.egg-info/top_level.txt\n'}
+[0.716078] (middle_nodes) StdoutLine: {'line': b"writing manifest file 'middle_nodes.egg-info/SOURCES.txt'\n"}
+[0.716981] (middle_nodes) StdoutLine: {'line': b"reading manifest file 'middle_nodes.egg-info/SOURCES.txt'\n"}
+[0.717345] (middle_nodes) StdoutLine: {'line': b"writing manifest file 'middle_nodes.egg-info/SOURCES.txt'\n"}
+[0.742874] (ros_tcp_endpoint) StdoutLine: {'line': b'running build_ext\n'}
+[0.743027] (ros_tcp_endpoint) StdoutLine: {'line': b'Creating /simple_ws/install/ros_tcp_endpoint/lib/python3.10/site-packages/ros-tcp-endpoint.egg-link (link to .)\n'}
+[0.743525] (ros_tcp_endpoint) StdoutLine: {'line': b'Installing default_server_endpoint script to /simple_ws/install/ros_tcp_endpoint/lib/ros_tcp_endpoint\n'}
+[0.743651] (ros_tcp_endpoint) StdoutLine: {'line': b'\n'}
+[0.743798] (ros_tcp_endpoint) StdoutLine: {'line': b'Installed /simple_ws/build/ros_tcp_endpoint\n'}
+[0.743889] (ros_tcp_endpoint) StdoutLine: {'line': b'running symlink_data\n'}
+[0.743953] (ros_tcp_endpoint) StdoutLine: {'line': b'creating /simple_ws/install/ros_tcp_endpoint/share/ament_index\n'}
+[0.744013] (ros_tcp_endpoint) StdoutLine: {'line': b'creating /simple_ws/install/ros_tcp_endpoint/share/ament_index/resource_index\n'}
+[0.744071] (ros_tcp_endpoint) StdoutLine: {'line': b'creating /simple_ws/install/ros_tcp_endpoint/share/ament_index/resource_index/packages\n'}
+[0.744176] (ros_tcp_endpoint) StdoutLine: {'line': b'symbolically linking /simple_ws/build/ros_tcp_endpoint/resource/ros_tcp_endpoint -> /simple_ws/install/ros_tcp_endpoint/share/ament_index/resource_index/packages\n'}
+[0.744238] (ros_tcp_endpoint) StdoutLine: {'line': b'symbolically linking /simple_ws/build/ros_tcp_endpoint/package.xml -> /simple_ws/install/ros_tcp_endpoint/share/ros_tcp_endpoint\n'}
+[0.744290] (ros_tcp_endpoint) StdoutLine: {'line': b'creating /simple_ws/install/ros_tcp_endpoint/share/ros_tcp_endpoint/launch\n'}
+[0.744339] (ros_tcp_endpoint) StdoutLine: {'line': b'symbolically linking /simple_ws/build/ros_tcp_endpoint/launch/endpoint.py -> /simple_ws/install/ros_tcp_endpoint/share/ros_tcp_endpoint/launch\n'}
+[0.745256] (middle_nodes) StdoutLine: {'line': b'running build_ext\n'}
+[0.745369] (middle_nodes) StdoutLine: {'line': b'Creating /simple_ws/install/middle_nodes/lib/python3.10/site-packages/middle-nodes.egg-link (link to .)\n'}
+[0.745935] (middle_nodes) StdoutLine: {'line': b'Installing listener script to /simple_ws/install/middle_nodes/lib/middle_nodes\n'}
+[0.746027] (middle_nodes) StdoutLine: {'line': b'Installing listener2 script to /simple_ws/install/middle_nodes/lib/middle_nodes\n'}
+[0.746102] (middle_nodes) StdoutLine: {'line': b'Installing talker script to /simple_ws/install/middle_nodes/lib/middle_nodes\n'}
+[0.746167] (middle_nodes) StdoutLine: {'line': b'Installing zedStream script to /simple_ws/install/middle_nodes/lib/middle_nodes\n'}
+[0.746234] (middle_nodes) StdoutLine: {'line': b'Installing zedimage_bridge script to /simple_ws/install/middle_nodes/lib/middle_nodes\n'}
+[0.746348] (middle_nodes) StdoutLine: {'line': b'\n'}
+[0.746393] (middle_nodes) StdoutLine: {'line': b'Installed /simple_ws/build/middle_nodes\n'}
+[0.746458] (middle_nodes) StdoutLine: {'line': b'running symlink_data\n'}
+[0.746502] (middle_nodes) StdoutLine: {'line': b'creating /simple_ws/install/middle_nodes/share/ament_index\n'}
+[0.746565] (middle_nodes) StdoutLine: {'line': b'creating /simple_ws/install/middle_nodes/share/ament_index/resource_index\n'}
+[0.746611] (middle_nodes) StdoutLine: {'line': b'creating /simple_ws/install/middle_nodes/share/ament_index/resource_index/packages\n'}
+[0.746674] (middle_nodes) StdoutLine: {'line': b'symbolically linking /simple_ws/build/middle_nodes/resource/middle_nodes -> /simple_ws/install/middle_nodes/share/ament_index/resource_index/packages\n'}
+[0.746728] (middle_nodes) StdoutLine: {'line': b'symbolically linking /simple_ws/build/middle_nodes/package.xml -> /simple_ws/install/middle_nodes/share/middle_nodes\n'}
+[0.746783] (middle_nodes) StdoutLine: {'line': b'creating /simple_ws/install/middle_nodes/share/middle_nodes/launch\n'}
+[0.746821] (middle_nodes) StdoutLine: {'line': b'symbolically linking /simple_ws/build/middle_nodes/launch/zed_vr_conexion.launch.py -> /simple_ws/install/middle_nodes/share/middle_nodes/launch\n'}
+[0.763578] (ros_tcp_endpoint) CommandEnded: {'returncode': 0}
+[0.767344] (zed_components) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.6 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[0.771164] (ros_tcp_endpoint) JobEnded: {'identifier': 'ros_tcp_endpoint', 'rc': 0}
+[0.771885] (zed_components) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.6 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[0.772078] (middle_nodes) CommandEnded: {'returncode': 0}
+[0.776174] (middle_nodes) JobEnded: {'identifier': 'middle_nodes', 'rc': 0}
+[0.777315] (zed_components) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.6 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[0.785920] (zed_components) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.797311] (zed_components) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.799900] (-) TimerEvent: {}
+[0.874176] (zed_components) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[0.876158] (zed_components) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.7 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[0.899970] (-) TimerEvent: {}
+[0.951532] (zed_components) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  \n'}
+[0.968732] (zed_components) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/humble/include  \n'}
+[1.000034] (-) TimerEvent: {}
+[1.000442] (zed_components) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[1.100133] (-) TimerEvent: {}
+[1.191904] (zed_components) StdoutLine: {'line': b'-- Found eigen3_cmake_module: 0.1.1 (/opt/ros/humble/share/eigen3_cmake_module/cmake)\n'}
+[1.192749] (zed_components) StdoutLine: {'line': b'-- Found Eigen3: TRUE (found version "3.4.0") \n'}
+[1.192843] (zed_components) StdoutLine: {'line': b'-- Ensuring Eigen3 include directory is part of orocos-kdl CMake target\n'}
+[1.200190] (-) TimerEvent: {}
+[1.285484] (zed_components) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[1.300264] (-) TimerEvent: {}
+[1.313664] (zed_components) StdoutLine: {'line': b"-- Added test 'copyright' to check source files copyright and LICENSE\n"}
+[1.315208] (zed_components) StdoutLine: {'line': b"-- Added test 'cppcheck' to perform static code analysis on C / C++ code\n"}
+[1.315576] (zed_components) StdoutLine: {'line': b'-- Configured cppcheck include dirs: /simple_ws/src/zed_components/src/include;/simple_ws/src/zed_components/src/zed_camera/include;/simple_ws/src/zed_components/src/tools/include\n'}
+[1.315651] (zed_components) StdoutLine: {'line': b'-- Configured cppcheck exclude dirs and/or files: \n'}
+[1.316166] (zed_components) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[1.317721] (zed_components) StdoutLine: {'line': b"-- Added test 'uncrustify' to check C / C++ code style\n"}
+[1.317803] (zed_components) StdoutLine: {'line': b'-- Configured uncrustify additional arguments: \n'}
+[1.318174] (zed_components) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[1.320884] (zed_components) StdoutLine: {'line': b'-- Configuring done\n'}
+[1.343544] (zed_components) StdoutLine: {'line': b'-- Generating done\n'}
+[1.349822] (zed_components) StdoutLine: {'line': b'-- Build files have been written to: /simple_ws/build/zed_components\n'}
+[1.358665] (zed_components) CommandEnded: {'returncode': 0}
+[1.359178] (zed_components) JobProgress: {'identifier': 'zed_components', 'progress': 'build'}
+[1.359805] (zed_components) Command: {'cmd': ['/usr/bin/cmake', '--build', '/simple_ws/build/zed_components', '--', '-j32', '-l32'], 'cwd': '/simple_ws/build/zed_components', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LIBRARY_PATH', '/usr/local/cuda/lib64/stubs'), ('NV_LIBCUBLAS_VERSION', '12.1.0.26-1'), ('NV_NVPROF_DEV_PACKAGE', 'cuda-nvprof-12-1=12.1.55-1'), ('NV_CUDA_COMPAT_PACKAGE', 'cuda-compat-12-1'), ('NV_CUDA_NSIGHT_COMPUTE_VERSION', '12.1.0-1'), ('HOSTNAME', 'nakama-X570-AORUS-PRO'), ('NVIDIA_CUDA_END_OF_LIFE', '1'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/simple_ws/install/zed_components/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/local/nvidia/lib:/usr/local/nvidia/lib64'), ('NV_LIBNCCL_PACKAGE_VERSION', '2.17.1-1'), ('HOME', '/root'), ('OLDPWD', '/'), ('NV_LIBCUBLAS_DEV_VERSION', '12.1.0.26-1'), ('ROS_PYTHON_VERSION', '3'), ('LC_CTYPE', 'C.UTF-8'), ('NV_LIBNCCL_DEV_PACKAGE_VERSION', '2.17.1-1'), ('NV_LIBNPP_PACKAGE', 'libnpp-12-1=12.0.2.50-1'), ('CUDA_VERSION', '12.1.0'), ('COLCON_PREFIX_PATH', '/simple_ws/install'), ('NV_NVPROF_VERSION', '12.1.55-1'), ('ROS_DISTRO', 'humble'), ('NV_LIBCUBLAS_PACKAGE_NAME', 'libcublas-12-1'), ('NVIDIA_REQUIRE_CUDA', 'cuda>=12.1 brand=tesla,driver>=470,driver<471 brand=unknown,driver>=470,driver<471 brand=nvidia,driver>=470,driver<471 brand=nvidiartx,driver>=470,driver<471 brand=geforce,driver>=470,driver<471 brand=geforcertx,driver>=470,driver<471 brand=quadro,driver>=470,driver<471 brand=quadrortx,driver>=470,driver<471 brand=titan,driver>=470,driver<471 brand=titanrtx,driver>=470,driver<471 brand=tesla,driver>=525,driver<526 brand=unknown,driver>=525,driver<526 brand=nvidia,driver>=525,driver<526 brand=nvidiartx,driver>=525,driver<526 brand=geforce,driver>=525,driver<526 brand=geforcertx,driver>=525,driver<526 brand=quadro,driver>=525,driver<526 brand=quadrortx,driver>=525,driver<526 brand=titan,driver>=525,driver<526 brand=titanrtx,driver>=525,driver<526'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('NV_LIBCUSPARSE_VERSION', '12.0.2.55-1'), ('NVIDIA_DRIVER_CAPABILITIES', 'all'), ('NV_CUDA_LIB_VERSION', '12.1.0-1'), ('NV_LIBNCCL_PACKAGE_NAME', 'libnccl2'), ('NV_NVML_DEV_VERSION', '12.1.55-1'), ('NV_LIBNPP_DEV_PACKAGE', 'libnpp-dev-12-1=12.0.2.50-1'), ('TERM', 'xterm'), ('NV_CUDA_CUDART_VERSION', '12.1.55-1'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/nvidia/bin:/usr/local/cuda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('NV_LIBCUBLAS_DEV_PACKAGE_NAME', 'libcublas-dev-12-1'), ('NV_LIBCUBLAS_PACKAGE', 'libcublas-12-1=12.1.0.26-1'), ('NVARCH', 'x86_64'), ('NV_LIBNCCL_DEV_PACKAGE_NAME', 'libnccl-dev'), ('NV_LIBCUSPARSE_DEV_VERSION', '12.0.2.55-1'), ('DISPLAY', ':1'), ('NV_LIBNCCL_PACKAGE', 'libnccl2=2.17.1-1+cuda12.1'), ('NVIDIA_PRODUCT_NAME', 'CUDA'), ('NV_CUDA_CUDART_DEV_VERSION', '12.1.55-1'), ('ZED_SDK_URL', 'https://stereolabs.sfo2.cdn.digitaloceanspaces.com/zedsdk/4.2/ZED_SDK_Ubuntu22_cuda12.1_v4.2.0.zstd.run'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('ROS_DOMAIN_ID', '55'), ('AMENT_PREFIX_PATH', '/simple_ws/install/zed_ros2:/simple_ws/install/zed_wrapper:/simple_ws/install/zed_components:/simple_ws/install/ros_tcp_endpoint:/simple_ws/install/middle_nodes:/opt/ros/humble'), ('NV_LIBCUBLAS_DEV_PACKAGE', 'libcublas-dev-12-1=12.1.0.26-1'), ('NV_CUDA_NSIGHT_COMPUTE_DEV_PACKAGE', 'cuda-nsight-compute-12-1=12.1.0-1'), ('NV_LIBNCCL_DEV_PACKAGE', 'libnccl-dev=2.17.1-1+cuda12.1'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('NV_NVTX_VERSION', '12.1.66-1'), ('NV_LIBNPP_VERSION', '12.0.2.50-1'), ('PWD', '/simple_ws/build/zed_components'), ('PYTHONPATH', '/simple_ws/build/ros_tcp_endpoint:/simple_ws/install/ros_tcp_endpoint/lib/python3.10/site-packages:/simple_ws/build/middle_nodes:/simple_ws/install/middle_nodes/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('NVIDIA_VISIBLE_DEVICES', 'all'), ('NCCL_VERSION', '2.17.1-1'), ('TZ', 'Europe/Paris'), ('COLCON', '1'), ('NV_LIBNPP_DEV_VERSION', '12.0.2.50-1'), ('CMAKE_PREFIX_PATH', '/simple_ws/install/zed_ros2:/simple_ws/install/zed_wrapper:/simple_ws/install/zed_components:/simple_ws/install/ros_tcp_endpoint:/simple_ws/install/middle_nodes:/opt/ros/humble')]), 'shell': False}
+[1.400302] (zed_components) StdoutLine: {'line': b'[ 10%] \x1b[32mBuilding CXX object CMakeFiles/zed_camera_one_component.dir/src/tools/src/sl_tools.cpp.o\x1b[0m\n'}
+[1.400465] (-) TimerEvent: {}
+[1.400583] (zed_components) StdoutLine: {'line': b'[ 20%] \x1b[32mBuilding CXX object CMakeFiles/zed_camera_one_component.dir/src/tools/src/sl_win_avg.cpp.o\x1b[0m\n'}
+[1.400662] (zed_components) StdoutLine: {'line': b'[ 30%] \x1b[32mBuilding CXX object CMakeFiles/zed_camera_one_component.dir/src/tools/src/gnss_replay.cpp.o\x1b[0m\n'}
+[1.400769] (zed_components) StdoutLine: {'line': b'[ 40%] \x1b[32mBuilding CXX object CMakeFiles/zed_camera_one_component.dir/src/zed_camera/src/zed_camera_one_component.cpp.o\x1b[0m\n'}
+[1.400893] (zed_components) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/zed_camera_component.dir/src/tools/src/sl_tools.cpp.o\x1b[0m\n'}
+[1.401182] (zed_components) StdoutLine: {'line': b'[ 70%] \x1b[32mBuilding CXX object CMakeFiles/zed_camera_component.dir/src/tools/src/sl_win_avg.cpp.o\x1b[0m\n'}
+[1.401258] (zed_components) StdoutLine: {'line': b'[ 70%] \x1b[32mBuilding CXX object CMakeFiles/zed_camera_component.dir/src/zed_camera/src/zed_camera_component.cpp.o\x1b[0m\n'}
+[1.401331] (zed_components) StdoutLine: {'line': b'[ 80%] \x1b[32mBuilding CXX object CMakeFiles/zed_camera_component.dir/src/tools/src/gnss_replay.cpp.o\x1b[0m\n'}
+[1.500573] (-) TimerEvent: {}
+[1.600852] (-) TimerEvent: {}
+[1.701122] (-) TimerEvent: {}
+[1.801391] (-) TimerEvent: {}
+[1.901664] (-) TimerEvent: {}
+[2.001939] (-) TimerEvent: {}
+[2.102218] (-) TimerEvent: {}
+[2.202503] (-) TimerEvent: {}
+[2.302741] (-) TimerEvent: {}
+[2.403015] (-) TimerEvent: {}
+[2.503291] (-) TimerEvent: {}
+[2.603568] (-) TimerEvent: {}
+[2.703863] (-) TimerEvent: {}
+[2.804158] (-) TimerEvent: {}
+[2.904458] (-) TimerEvent: {}
+[3.004751] (-) TimerEvent: {}
+[3.105028] (-) TimerEvent: {}
+[3.205301] (-) TimerEvent: {}
+[3.305575] (-) TimerEvent: {}
+[3.405856] (-) TimerEvent: {}
+[3.506125] (-) TimerEvent: {}
+[3.606399] (-) TimerEvent: {}
+[3.706672] (-) TimerEvent: {}
+[3.806949] (-) TimerEvent: {}
+[3.907222] (-) TimerEvent: {}
+[4.007501] (-) TimerEvent: {}
+[4.107780] (-) TimerEvent: {}
+[4.208039] (-) TimerEvent: {}
+[4.308301] (-) TimerEvent: {}
+[4.408570] (-) TimerEvent: {}
+[4.508857] (-) TimerEvent: {}
+[4.609118] (-) TimerEvent: {}
+[4.709360] (-) TimerEvent: {}
+[4.809603] (-) TimerEvent: {}
+[4.836090] (zed_components) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24\x1b[m\x1b[K,\n'}
+[4.836242] (zed_components) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40\x1b[m\x1b[K,\n'}
+[4.836299] (zed_components) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24\x1b[m\x1b[K,\n'}
+[4.836344] (zed_components) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20\x1b[m\x1b[K,\n'}
+[4.836383] (zed_components) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25\x1b[m\x1b[K,\n'}
+[4.836427] (zed_components) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18\x1b[m\x1b[K,\n'}
+[4.836475] (zed_components) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20\x1b[m\x1b[K,\n'}
+[4.836512] (zed_components) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37\x1b[m\x1b[K,\n'}
+[4.836548] (zed_components) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25\x1b[m\x1b[K,\n'}
+[4.836584] (zed_components) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21\x1b[m\x1b[K,\n'}
+[4.836618] (zed_components) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155\x1b[m\x1b[K,\n'}
+[4.836652] (zed_components) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/tf2_ros/tf2_ros/buffer_interface.h:48\x1b[m\x1b[K,\n'}
+[4.836695] (zed_components) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/tf2_ros/tf2_ros/buffer.h:42\x1b[m\x1b[K,\n'}
+[4.836749] (zed_components) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/simple_ws/src/zed_components/src/zed_camera/include/sl_types.hpp:18\x1b[m\x1b[K,\n'}
+[4.836787] (zed_components) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/simple_ws/src/zed_components/src/zed_camera/include/zed_camera_component.hpp:24\x1b[m\x1b[K,\n'}
+[4.836828] (zed_components) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/simple_ws/src/zed_components/src/zed_camera/src/zed_camera_component.cpp:15\x1b[m\x1b[K:\n'}
+[4.836863] (zed_components) StderrLine: {'line': b'\x1b[01m\x1b[K/simple_ws/src/zed_components/src/zed_camera/src/zed_camera_component.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kbool stereolabs::ZedCamera::startCamera()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[4.836899] (zed_components) StderrLine: {'line': b'\x1b[01m\x1b[K/simple_ws/src/zed_components/src/zed_camera/src/zed_camera_component.cpp:4249:21:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kformat \xe2\x80\x98\x1b[01m\x1b[K%d\x1b[m\x1b[K\xe2\x80\x99 expects argument of type \xe2\x80\x98\x1b[01m\x1b[Kint\x1b[m\x1b[K\xe2\x80\x99, but argument 5 has type \xe2\x80\x98\x1b[01m\x1b[Ksize_t\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Klong unsigned int\x1b[m\x1b[K\xe2\x80\x99} [\x1b[01;35m\x1b[K-Wformat=\x1b[m\x1b[K]\n'}
+[4.836937] (zed_components) StderrLine: {'line': b' 4249 |       get_logger(), \x1b[01;35m\x1b[K" * SVO resolution -> %dx%d"\x1b[m\x1b[K,\n'}
+[4.836966] (zed_components) StderrLine: {'line': b'      |                     \x1b[01;35m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.836994] (zed_components) StderrLine: {'line': b' 4250 |       \x1b[32m\x1b[KmZed->getCameraInformation().camera_configuration.resolution.width\x1b[m\x1b[K,\n'}
+[4.837027] (zed_components) StderrLine: {'line': b'      |       \x1b[32m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.837054] (zed_components) StderrLine: {'line': b'      |                                                                    \x1b[32m\x1b[K|\x1b[m\x1b[K\n'}
+[4.837082] (zed_components) StderrLine: {'line': b'      |                                                                    \x1b[32m\x1b[Ksize_t {aka long unsigned int}\x1b[m\x1b[K\n'}
+[4.837113] (zed_components) StderrLine: {'line': b'\x1b[01m\x1b[K/simple_ws/src/zed_components/src/zed_camera/src/zed_camera_component.cpp:4249:44:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kformat string is defined here\n'}
+[4.837143] (zed_components) StderrLine: {'line': b' 4249 |       get_logger(), " * SVO resolution -> \x1b[01;36m\x1b[K%d\x1b[m\x1b[Kx%d",\n'}
+[4.837174] (zed_components) StderrLine: {'line': b'      |                                           \x1b[01;36m\x1b[K~^\x1b[m\x1b[K\n'}
+[4.837205] (zed_components) StderrLine: {'line': b'      |                                            \x1b[01;36m\x1b[K|\x1b[m\x1b[K\n'}
+[4.837232] (zed_components) StderrLine: {'line': b'      |                                            \x1b[01;36m\x1b[Kint\x1b[m\x1b[K\n'}
+[4.837259] (zed_components) StderrLine: {'line': b'      |                                           \x1b[32m\x1b[K%ld\x1b[m\x1b[K\n'}
+[4.837287] (zed_components) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24\x1b[m\x1b[K,\n'}
+[4.837314] (zed_components) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40\x1b[m\x1b[K,\n'}
+[4.837341] (zed_components) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24\x1b[m\x1b[K,\n'}
+[4.837368] (zed_components) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20\x1b[m\x1b[K,\n'}
+[4.837395] (zed_components) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25\x1b[m\x1b[K,\n'}
+[4.837422] (zed_components) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18\x1b[m\x1b[K,\n'}
+[4.837451] (zed_components) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20\x1b[m\x1b[K,\n'}
+[4.837479] (zed_components) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37\x1b[m\x1b[K,\n'}
+[4.837511] (zed_components) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25\x1b[m\x1b[K,\n'}
+[4.837542] (zed_components) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21\x1b[m\x1b[K,\n'}
+[4.837587] (zed_components) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155\x1b[m\x1b[K,\n'}
+[4.837616] (zed_components) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/tf2_ros/tf2_ros/buffer_interface.h:48\x1b[m\x1b[K,\n'}
+[4.837648] (zed_components) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/tf2_ros/tf2_ros/buffer.h:42\x1b[m\x1b[K,\n'}
+[4.837675] (zed_components) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/simple_ws/src/zed_components/src/zed_camera/include/sl_types.hpp:18\x1b[m\x1b[K,\n'}
+[4.837714] (zed_components) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/simple_ws/src/zed_components/src/zed_camera/include/zed_camera_component.hpp:24\x1b[m\x1b[K,\n'}
+[4.837746] (zed_components) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/simple_ws/src/zed_components/src/zed_camera/src/zed_camera_component.cpp:15\x1b[m\x1b[K:\n'}
+[4.837774] (zed_components) StderrLine: {'line': b'\x1b[01m\x1b[K/simple_ws/src/zed_components/src/zed_camera/src/zed_camera_component.cpp:4249:21:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kformat \xe2\x80\x98\x1b[01m\x1b[K%d\x1b[m\x1b[K\xe2\x80\x99 expects argument of type \xe2\x80\x98\x1b[01m\x1b[Kint\x1b[m\x1b[K\xe2\x80\x99, but argument 6 has type \xe2\x80\x98\x1b[01m\x1b[Ksize_t\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Klong unsigned int\x1b[m\x1b[K\xe2\x80\x99} [\x1b[01;35m\x1b[K-Wformat=\x1b[m\x1b[K]\n'}
+[4.837805] (zed_components) StderrLine: {'line': b' 4249 |       get_logger(), \x1b[01;35m\x1b[K" * SVO resolution -> %dx%d"\x1b[m\x1b[K,\n'}
+[4.837834] (zed_components) StderrLine: {'line': b'      |                     \x1b[01;35m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.837862] (zed_components) StderrLine: {'line': b' 4250 |       mZed->getCameraInformation().camera_configuration.resolution.width,\n'}
+[4.837894] (zed_components) StderrLine: {'line': b' 4251 |       \x1b[32m\x1b[KmZed->getCameraInformation().camera_configuration.resolution.height\x1b[m\x1b[K);\n'}
+[4.837922] (zed_components) StderrLine: {'line': b'      |       \x1b[32m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.837949] (zed_components) StderrLine: {'line': b'      |                                                                    \x1b[32m\x1b[K|\x1b[m\x1b[K\n'}
+[4.837977] (zed_components) StderrLine: {'line': b'      |                                                                    \x1b[32m\x1b[Ksize_t {aka long unsigned int}\x1b[m\x1b[K\n'}
+[4.838005] (zed_components) StderrLine: {'line': b'\x1b[01m\x1b[K/simple_ws/src/zed_components/src/zed_camera/src/zed_camera_component.cpp:4249:47:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kformat string is defined here\n'}
+[4.838033] (zed_components) StderrLine: {'line': b' 4249 |       get_logger(), " * SVO resolution -> %dx\x1b[01;36m\x1b[K%d\x1b[m\x1b[K",\n'}
+[4.838060] (zed_components) StderrLine: {'line': b'      |                                              \x1b[01;36m\x1b[K~^\x1b[m\x1b[K\n'}
+[4.838088] (zed_components) StderrLine: {'line': b'      |                                               \x1b[01;36m\x1b[K|\x1b[m\x1b[K\n'}
+[4.838115] (zed_components) StderrLine: {'line': b'      |                                               \x1b[01;36m\x1b[Kint\x1b[m\x1b[K\n'}
+[4.838142] (zed_components) StderrLine: {'line': b'      |                                              \x1b[32m\x1b[K%ld\x1b[m\x1b[K\n'}
+[4.909692] (-) TimerEvent: {}
+[5.009912] (-) TimerEvent: {}
+[5.110166] (-) TimerEvent: {}
+[5.210431] (-) TimerEvent: {}
+[5.310710] (-) TimerEvent: {}
+[5.410982] (-) TimerEvent: {}
+[5.511249] (-) TimerEvent: {}
+[5.611523] (-) TimerEvent: {}
+[5.711792] (-) TimerEvent: {}
+[5.812066] (-) TimerEvent: {}
+[5.912336] (-) TimerEvent: {}
+[6.012589] (-) TimerEvent: {}
+[6.112841] (-) TimerEvent: {}
+[6.213092] (-) TimerEvent: {}
+[6.313365] (-) TimerEvent: {}
+[6.413641] (-) TimerEvent: {}
+[6.513948] (-) TimerEvent: {}
+[6.614219] (-) TimerEvent: {}
+[6.714489] (-) TimerEvent: {}
+[6.814753] (-) TimerEvent: {}
+[6.915020] (-) TimerEvent: {}
+[7.015294] (-) TimerEvent: {}
+[7.115566] (-) TimerEvent: {}
+[7.215855] (-) TimerEvent: {}
+[7.316130] (-) TimerEvent: {}
+[7.416388] (-) TimerEvent: {}
+[7.516657] (-) TimerEvent: {}
+[7.616941] (-) TimerEvent: {}
+[7.717213] (-) TimerEvent: {}
+[7.817484] (-) TimerEvent: {}
+[7.917753] (-) TimerEvent: {}
+[8.018026] (-) TimerEvent: {}
+[8.118299] (-) TimerEvent: {}
+[8.218577] (-) TimerEvent: {}
+[8.318857] (-) TimerEvent: {}
+[8.419130] (-) TimerEvent: {}
+[8.519719] (-) TimerEvent: {}
+[8.619995] (-) TimerEvent: {}
+[8.720260] (-) TimerEvent: {}
+[8.820523] (-) TimerEvent: {}
+[8.920767] (-) TimerEvent: {}
+[9.021001] (-) TimerEvent: {}
+[9.121233] (-) TimerEvent: {}
+[9.221478] (-) TimerEvent: {}
+[9.321757] (-) TimerEvent: {}
+[9.422030] (-) TimerEvent: {}
+[9.522304] (-) TimerEvent: {}
+[9.622575] (-) TimerEvent: {}
+[9.722858] (-) TimerEvent: {}
+[9.823127] (-) TimerEvent: {}
+[9.923389] (-) TimerEvent: {}
+[10.023663] (-) TimerEvent: {}
+[10.123940] (-) TimerEvent: {}
+[10.224210] (-) TimerEvent: {}
+[10.324480] (-) TimerEvent: {}
+[10.424745] (-) TimerEvent: {}
+[10.525007] (-) TimerEvent: {}
+[10.625272] (-) TimerEvent: {}
+[10.725548] (-) TimerEvent: {}
+[10.825835] (-) TimerEvent: {}
+[10.926097] (-) TimerEvent: {}
+[11.026363] (-) TimerEvent: {}
+[11.126635] (-) TimerEvent: {}
+[11.226924] (-) TimerEvent: {}
+[11.327203] (-) TimerEvent: {}
+[11.427472] (-) TimerEvent: {}
+[11.527745] (-) TimerEvent: {}
+[11.628380] (-) TimerEvent: {}
+[11.728767] (-) TimerEvent: {}
+[11.829047] (-) TimerEvent: {}
+[11.929903] (-) TimerEvent: {}
+[12.030297] (-) TimerEvent: {}
+[12.130579] (-) TimerEvent: {}
+[12.230868] (-) TimerEvent: {}
+[12.331154] (-) TimerEvent: {}
+[12.431424] (-) TimerEvent: {}
+[12.531702] (-) TimerEvent: {}
+[12.631961] (-) TimerEvent: {}
+[12.732220] (-) TimerEvent: {}
+[12.832490] (-) TimerEvent: {}
+[12.932742] (-) TimerEvent: {}
+[13.032999] (-) TimerEvent: {}
+[13.115414] (zed_components) StdoutLine: {'line': b'[ 90%] \x1b[32m\x1b[1mLinking CXX shared library libzed_camera_one_component.so\x1b[0m\n'}
+[13.133072] (-) TimerEvent: {}
+[13.233278] (-) TimerEvent: {}
+[13.326983] (zed_components) StdoutLine: {'line': b'[ 90%] Built target zed_camera_one_component\n'}
+[13.333350] (-) TimerEvent: {}
+[13.433550] (-) TimerEvent: {}
+[13.533825] (-) TimerEvent: {}
+[13.634083] (-) TimerEvent: {}
+[13.734338] (-) TimerEvent: {}
+[13.834592] (-) TimerEvent: {}
+[13.934856] (-) TimerEvent: {}
+[14.035081] (-) TimerEvent: {}
+[14.135284] (-) TimerEvent: {}
+[14.235430] (-) TimerEvent: {}
+[14.335576] (-) TimerEvent: {}
+[14.435720] (-) TimerEvent: {}
+[14.535863] (-) TimerEvent: {}
+[14.636007] (-) TimerEvent: {}
+[14.736152] (-) TimerEvent: {}
+[14.836296] (-) TimerEvent: {}
+[14.936440] (-) TimerEvent: {}
+[15.036584] (-) TimerEvent: {}
+[15.136729] (-) TimerEvent: {}
+[15.236892] (-) TimerEvent: {}
+[15.337080] (-) TimerEvent: {}
+[15.437224] (-) TimerEvent: {}
+[15.537383] (-) TimerEvent: {}
+[15.637558] (-) TimerEvent: {}
+[15.737703] (-) TimerEvent: {}
+[15.837855] (-) TimerEvent: {}
+[15.938041] (-) TimerEvent: {}
+[16.038186] (-) TimerEvent: {}
+[16.138329] (-) TimerEvent: {}
+[16.238473] (-) TimerEvent: {}
+[16.338635] (-) TimerEvent: {}
+[16.438837] (-) TimerEvent: {}
+[16.538982] (-) TimerEvent: {}
+[16.639127] (-) TimerEvent: {}
+[16.739271] (-) TimerEvent: {}
+[16.839434] (-) TimerEvent: {}
+[16.939620] (-) TimerEvent: {}
+[17.039774] (-) TimerEvent: {}
+[17.139918] (-) TimerEvent: {}
+[17.240063] (-) TimerEvent: {}
+[17.340207] (-) TimerEvent: {}
+[17.440372] (-) TimerEvent: {}
+[17.540571] (-) TimerEvent: {}
+[17.640742] (-) TimerEvent: {}
+[17.740887] (-) TimerEvent: {}
+[17.841032] (-) TimerEvent: {}
+[17.941176] (-) TimerEvent: {}
+[18.041320] (-) TimerEvent: {}
+[18.141465] (-) TimerEvent: {}
+[18.241609] (-) TimerEvent: {}
+[18.341754] (-) TimerEvent: {}
+[18.441900] (-) TimerEvent: {}
+[18.542047] (-) TimerEvent: {}
+[18.642195] (-) TimerEvent: {}
+[18.742342] (-) TimerEvent: {}
+[18.842488] (-) TimerEvent: {}
+[18.942635] (-) TimerEvent: {}
+[19.042792] (-) TimerEvent: {}
+[19.142945] (-) TimerEvent: {}
+[19.243084] (-) TimerEvent: {}
+[19.343212] (-) TimerEvent: {}
+[19.443337] (-) TimerEvent: {}
+[19.543478] (-) TimerEvent: {}
+[19.643643] (-) TimerEvent: {}
+[19.743844] (-) TimerEvent: {}
+[19.843991] (-) TimerEvent: {}
+[19.944151] (-) TimerEvent: {}
+[20.044298] (-) TimerEvent: {}
+[20.144444] (-) TimerEvent: {}
+[20.244591] (-) TimerEvent: {}
+[20.344756] (-) TimerEvent: {}
+[20.444903] (-) TimerEvent: {}
+[20.545062] (-) TimerEvent: {}
+[20.645209] (-) TimerEvent: {}
+[20.745368] (-) TimerEvent: {}
+[20.845514] (-) TimerEvent: {}
+[20.945695] (-) TimerEvent: {}
+[21.045842] (-) TimerEvent: {}
+[21.145988] (-) TimerEvent: {}
+[21.246143] (-) TimerEvent: {}
+[21.346308] (-) TimerEvent: {}
+[21.446455] (-) TimerEvent: {}
+[21.546599] (-) TimerEvent: {}
+[21.646778] (-) TimerEvent: {}
+[21.746925] (-) TimerEvent: {}
+[21.847072] (-) TimerEvent: {}
+[21.947219] (-) TimerEvent: {}
+[22.047366] (-) TimerEvent: {}
+[22.147513] (-) TimerEvent: {}
+[22.247692] (-) TimerEvent: {}
+[22.347881] (-) TimerEvent: {}
+[22.448027] (-) TimerEvent: {}
+[22.548181] (-) TimerEvent: {}
+[22.648330] (-) TimerEvent: {}
+[22.748496] (-) TimerEvent: {}
+[22.848692] (-) TimerEvent: {}
+[22.948839] (-) TimerEvent: {}
+[23.048986] (-) TimerEvent: {}
+[23.149133] (-) TimerEvent: {}
+[23.249280] (-) TimerEvent: {}
+[23.349426] (-) TimerEvent: {}
+[23.449573] (-) TimerEvent: {}
+[23.549729] (-) TimerEvent: {}
+[23.649904] (-) TimerEvent: {}
+[23.750052] (-) TimerEvent: {}
+[23.850199] (-) TimerEvent: {}
+[23.950347] (-) TimerEvent: {}
+[24.050493] (-) TimerEvent: {}
+[24.150640] (-) TimerEvent: {}
+[24.250798] (-) TimerEvent: {}
+[24.350945] (-) TimerEvent: {}
+[24.451092] (-) TimerEvent: {}
+[24.551239] (-) TimerEvent: {}
+[24.651386] (-) TimerEvent: {}
+[24.751533] (-) TimerEvent: {}
+[24.851687] (-) TimerEvent: {}
+[24.951836] (-) TimerEvent: {}
+[25.051983] (-) TimerEvent: {}
+[25.152129] (-) TimerEvent: {}
+[25.252275] (-) TimerEvent: {}
+[25.352434] (-) TimerEvent: {}
+[25.452580] (-) TimerEvent: {}
+[25.552727] (-) TimerEvent: {}
+[25.652888] (-) TimerEvent: {}
+[25.753065] (-) TimerEvent: {}
+[25.853212] (-) TimerEvent: {}
+[25.953359] (-) TimerEvent: {}
+[26.053506] (-) TimerEvent: {}
+[26.153653] (-) TimerEvent: {}
+[26.253810] (-) TimerEvent: {}
+[26.353958] (-) TimerEvent: {}
+[26.454104] (-) TimerEvent: {}
+[26.554252] (-) TimerEvent: {}
+[26.654398] (-) TimerEvent: {}
+[26.754545] (-) TimerEvent: {}
+[26.854700] (-) TimerEvent: {}
+[26.954847] (-) TimerEvent: {}
+[27.054993] (-) TimerEvent: {}
+[27.155140] (-) TimerEvent: {}
+[27.255281] (-) TimerEvent: {}
+[27.355439] (-) TimerEvent: {}
+[27.455585] (-) TimerEvent: {}
+[27.555734] (-) TimerEvent: {}
+[27.655894] (-) TimerEvent: {}
+[27.756067] (-) TimerEvent: {}
+[27.856194] (-) TimerEvent: {}
+[27.956319] (-) TimerEvent: {}
+[28.056443] (-) TimerEvent: {}
+[28.156574] (-) TimerEvent: {}
+[28.256721] (-) TimerEvent: {}
+[28.356867] (-) TimerEvent: {}
+[28.457014] (-) TimerEvent: {}
+[28.557160] (-) TimerEvent: {}
+[28.657307] (-) TimerEvent: {}
+[28.757454] (-) TimerEvent: {}
+[28.857601] (-) TimerEvent: {}
+[28.957748] (-) TimerEvent: {}
+[29.057895] (-) TimerEvent: {}
+[29.158042] (-) TimerEvent: {}
+[29.258189] (-) TimerEvent: {}
+[29.358335] (-) TimerEvent: {}
+[29.458481] (-) TimerEvent: {}
+[29.558628] (-) TimerEvent: {}
+[29.658799] (-) TimerEvent: {}
+[29.758976] (-) TimerEvent: {}
+[29.859124] (-) TimerEvent: {}
+[29.959271] (-) TimerEvent: {}
+[30.059418] (-) TimerEvent: {}
+[30.159564] (-) TimerEvent: {}
+[30.259711] (-) TimerEvent: {}
+[30.359857] (-) TimerEvent: {}
+[30.460004] (-) TimerEvent: {}
+[30.560151] (-) TimerEvent: {}
+[30.660298] (-) TimerEvent: {}
+[30.760464] (-) TimerEvent: {}
+[30.860657] (-) TimerEvent: {}
+[30.960816] (-) TimerEvent: {}
+[31.060963] (-) TimerEvent: {}
+[31.161110] (-) TimerEvent: {}
+[31.261256] (-) TimerEvent: {}
+[31.361403] (-) TimerEvent: {}
+[31.461550] (-) TimerEvent: {}
+[31.561697] (-) TimerEvent: {}
+[31.661863] (-) TimerEvent: {}
+[31.762057] (-) TimerEvent: {}
+[31.862236] (-) TimerEvent: {}
+[31.962434] (-) TimerEvent: {}
+[32.062580] (-) TimerEvent: {}
+[32.162726] (-) TimerEvent: {}
+[32.262872] (-) TimerEvent: {}
+[32.363038] (-) TimerEvent: {}
+[32.463225] (-) TimerEvent: {}
+[32.563372] (-) TimerEvent: {}
+[32.663523] (-) TimerEvent: {}
+[32.763676] (-) TimerEvent: {}
+[32.863831] (-) TimerEvent: {}
+[32.963978] (-) TimerEvent: {}
+[33.064128] (-) TimerEvent: {}
+[33.164276] (-) TimerEvent: {}
+[33.264424] (-) TimerEvent: {}
+[33.364572] (-) TimerEvent: {}
+[33.464738] (-) TimerEvent: {}
+[33.564928] (-) TimerEvent: {}
+[33.665075] (-) TimerEvent: {}
+[33.765251] (-) TimerEvent: {}
+[33.865401] (-) TimerEvent: {}
+[33.965568] (-) TimerEvent: {}
+[34.065760] (-) TimerEvent: {}
+[34.165908] (-) TimerEvent: {}
+[34.266055] (-) TimerEvent: {}
+[34.366204] (-) TimerEvent: {}
+[34.466370] (-) TimerEvent: {}
+[34.566560] (-) TimerEvent: {}
+[34.666708] (-) TimerEvent: {}
+[34.766856] (-) TimerEvent: {}
+[34.867004] (-) TimerEvent: {}
+[34.967152] (-) TimerEvent: {}
+[35.067319] (-) TimerEvent: {}
+[35.167509] (-) TimerEvent: {}
+[35.267657] (-) TimerEvent: {}
+[35.367814] (-) TimerEvent: {}
+[35.467962] (-) TimerEvent: {}
+[35.568128] (-) TimerEvent: {}
+[35.668313] (-) TimerEvent: {}
+[35.768484] (-) TimerEvent: {}
+[35.868711] (-) TimerEvent: {}
+[35.968950] (-) TimerEvent: {}
+[36.069184] (-) TimerEvent: {}
+[36.169432] (-) TimerEvent: {}
+[36.269673] (-) TimerEvent: {}
+[36.369912] (-) TimerEvent: {}
+[36.470156] (-) TimerEvent: {}
+[36.570401] (-) TimerEvent: {}
+[36.670645] (-) TimerEvent: {}
+[36.770913] (-) TimerEvent: {}
+[36.871157] (-) TimerEvent: {}
+[36.971390] (-) TimerEvent: {}
+[37.071621] (-) TimerEvent: {}
+[37.171861] (-) TimerEvent: {}
+[37.272090] (-) TimerEvent: {}
+[37.372323] (-) TimerEvent: {}
+[37.472553] (-) TimerEvent: {}
+[37.572842] (-) TimerEvent: {}
+[37.679774] (-) TimerEvent: {}
+[37.780018] (-) TimerEvent: {}
+[37.880276] (-) TimerEvent: {}
+[37.980546] (-) TimerEvent: {}
+[38.080805] (-) TimerEvent: {}
+[38.180974] (-) TimerEvent: {}
+[38.281122] (-) TimerEvent: {}
+[38.381269] (-) TimerEvent: {}
+[38.481417] (-) TimerEvent: {}
+[38.581577] (-) TimerEvent: {}
+[38.681724] (-) TimerEvent: {}
+[38.781871] (-) TimerEvent: {}
+[38.882006] (-) TimerEvent: {}
+[38.982153] (-) TimerEvent: {}
+[39.082300] (-) TimerEvent: {}
+[39.182447] (-) TimerEvent: {}
+[39.282594] (-) TimerEvent: {}
+[39.382741] (-) TimerEvent: {}
+[39.482887] (-) TimerEvent: {}
+[39.583034] (-) TimerEvent: {}
+[39.683181] (-) TimerEvent: {}
+[39.783337] (-) TimerEvent: {}
+[39.883508] (-) TimerEvent: {}
+[39.983678] (-) TimerEvent: {}
+[40.083881] (-) TimerEvent: {}
+[40.184027] (-) TimerEvent: {}
+[40.284174] (-) TimerEvent: {}
+[40.384339] (-) TimerEvent: {}
+[40.484521] (-) TimerEvent: {}
+[40.584645] (-) TimerEvent: {}
+[40.684776] (-) TimerEvent: {}
+[40.784907] (-) TimerEvent: {}
+[40.885054] (-) TimerEvent: {}
+[40.985201] (-) TimerEvent: {}
+[41.007586] (zed_components) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX shared library libzed_camera_component.so\x1b[0m\n'}
+[41.085281] (-) TimerEvent: {}
+[41.185430] (-) TimerEvent: {}
+[41.285577] (-) TimerEvent: {}
+[41.347535] (zed_components) StdoutLine: {'line': b'[100%] Built target zed_camera_component\n'}
+[41.357358] (zed_components) CommandEnded: {'returncode': 0}
+[41.357882] (zed_components) JobProgress: {'identifier': 'zed_components', 'progress': 'install'}
+[41.364325] (zed_components) Command: {'cmd': ['/usr/bin/cmake', '--install', '/simple_ws/build/zed_components'], 'cwd': '/simple_ws/build/zed_components', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LIBRARY_PATH', '/usr/local/cuda/lib64/stubs'), ('NV_LIBCUBLAS_VERSION', '12.1.0.26-1'), ('NV_NVPROF_DEV_PACKAGE', 'cuda-nvprof-12-1=12.1.55-1'), ('NV_CUDA_COMPAT_PACKAGE', 'cuda-compat-12-1'), ('NV_CUDA_NSIGHT_COMPUTE_VERSION', '12.1.0-1'), ('HOSTNAME', 'nakama-X570-AORUS-PRO'), ('NVIDIA_CUDA_END_OF_LIFE', '1'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/simple_ws/install/zed_components/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/local/nvidia/lib:/usr/local/nvidia/lib64'), ('NV_LIBNCCL_PACKAGE_VERSION', '2.17.1-1'), ('HOME', '/root'), ('OLDPWD', '/'), ('NV_LIBCUBLAS_DEV_VERSION', '12.1.0.26-1'), ('ROS_PYTHON_VERSION', '3'), ('LC_CTYPE', 'C.UTF-8'), ('NV_LIBNCCL_DEV_PACKAGE_VERSION', '2.17.1-1'), ('NV_LIBNPP_PACKAGE', 'libnpp-12-1=12.0.2.50-1'), ('CUDA_VERSION', '12.1.0'), ('COLCON_PREFIX_PATH', '/simple_ws/install'), ('NV_NVPROF_VERSION', '12.1.55-1'), ('ROS_DISTRO', 'humble'), ('NV_LIBCUBLAS_PACKAGE_NAME', 'libcublas-12-1'), ('NVIDIA_REQUIRE_CUDA', 'cuda>=12.1 brand=tesla,driver>=470,driver<471 brand=unknown,driver>=470,driver<471 brand=nvidia,driver>=470,driver<471 brand=nvidiartx,driver>=470,driver<471 brand=geforce,driver>=470,driver<471 brand=geforcertx,driver>=470,driver<471 brand=quadro,driver>=470,driver<471 brand=quadrortx,driver>=470,driver<471 brand=titan,driver>=470,driver<471 brand=titanrtx,driver>=470,driver<471 brand=tesla,driver>=525,driver<526 brand=unknown,driver>=525,driver<526 brand=nvidia,driver>=525,driver<526 brand=nvidiartx,driver>=525,driver<526 brand=geforce,driver>=525,driver<526 brand=geforcertx,driver>=525,driver<526 brand=quadro,driver>=525,driver<526 brand=quadrortx,driver>=525,driver<526 brand=titan,driver>=525,driver<526 brand=titanrtx,driver>=525,driver<526'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('NV_LIBCUSPARSE_VERSION', '12.0.2.55-1'), ('NVIDIA_DRIVER_CAPABILITIES', 'all'), ('NV_CUDA_LIB_VERSION', '12.1.0-1'), ('NV_LIBNCCL_PACKAGE_NAME', 'libnccl2'), ('NV_NVML_DEV_VERSION', '12.1.55-1'), ('NV_LIBNPP_DEV_PACKAGE', 'libnpp-dev-12-1=12.0.2.50-1'), ('TERM', 'xterm'), ('NV_CUDA_CUDART_VERSION', '12.1.55-1'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/nvidia/bin:/usr/local/cuda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('NV_LIBCUBLAS_DEV_PACKAGE_NAME', 'libcublas-dev-12-1'), ('NV_LIBCUBLAS_PACKAGE', 'libcublas-12-1=12.1.0.26-1'), ('NVARCH', 'x86_64'), ('NV_LIBNCCL_DEV_PACKAGE_NAME', 'libnccl-dev'), ('NV_LIBCUSPARSE_DEV_VERSION', '12.0.2.55-1'), ('DISPLAY', ':1'), ('NV_LIBNCCL_PACKAGE', 'libnccl2=2.17.1-1+cuda12.1'), ('NVIDIA_PRODUCT_NAME', 'CUDA'), ('NV_CUDA_CUDART_DEV_VERSION', '12.1.55-1'), ('ZED_SDK_URL', 'https://stereolabs.sfo2.cdn.digitaloceanspaces.com/zedsdk/4.2/ZED_SDK_Ubuntu22_cuda12.1_v4.2.0.zstd.run'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('ROS_DOMAIN_ID', '55'), ('AMENT_PREFIX_PATH', '/simple_ws/install/zed_ros2:/simple_ws/install/zed_wrapper:/simple_ws/install/zed_components:/simple_ws/install/ros_tcp_endpoint:/simple_ws/install/middle_nodes:/opt/ros/humble'), ('NV_LIBCUBLAS_DEV_PACKAGE', 'libcublas-dev-12-1=12.1.0.26-1'), ('NV_CUDA_NSIGHT_COMPUTE_DEV_PACKAGE', 'cuda-nsight-compute-12-1=12.1.0-1'), ('NV_LIBNCCL_DEV_PACKAGE', 'libnccl-dev=2.17.1-1+cuda12.1'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('NV_NVTX_VERSION', '12.1.66-1'), ('NV_LIBNPP_VERSION', '12.0.2.50-1'), ('PWD', '/simple_ws/build/zed_components'), ('PYTHONPATH', '/simple_ws/build/ros_tcp_endpoint:/simple_ws/install/ros_tcp_endpoint/lib/python3.10/site-packages:/simple_ws/build/middle_nodes:/simple_ws/install/middle_nodes/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('NVIDIA_VISIBLE_DEVICES', 'all'), ('NCCL_VERSION', '2.17.1-1'), ('TZ', 'Europe/Paris'), ('COLCON', '1'), ('NV_LIBNPP_DEV_VERSION', '12.0.2.50-1'), ('CMAKE_PREFIX_PATH', '/simple_ws/install/zed_ros2:/simple_ws/install/zed_wrapper:/simple_ws/install/zed_components:/simple_ws/install/ros_tcp_endpoint:/simple_ws/install/middle_nodes:/opt/ros/humble')]), 'shell': False}
+[41.370698] (zed_components) StdoutLine: {'line': b'-- Install configuration: "Release"\n'}
+[41.371036] (zed_components) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[41.371290] (zed_components) StdoutLine: {'line': b'-- Symlinking: /simple_ws/install/zed_components/lib/libzed_camera_component.so\n'}
+[41.377382] (zed_components) StdoutLine: {'line': b'-- Symlinking: /simple_ws/install/zed_components/lib/libzed_camera_one_component.so\n'}
+[41.383332] (zed_components) StdoutLine: {'line': b'-- Symlinking: /simple_ws/install/zed_components/include/zed_components//cost_traversability.hpp\n'}
+[41.385660] (-) TimerEvent: {}
+[41.389128] (zed_components) StdoutLine: {'line': b'-- Symlinking: /simple_ws/install/zed_components/include/zed_components//sl_types.hpp\n'}
+[41.394993] (zed_components) StdoutLine: {'line': b'-- Symlinking: /simple_ws/install/zed_components/include/zed_components//zed_camera_component.hpp\n'}
+[41.400656] (zed_components) StdoutLine: {'line': b'-- Symlinking: /simple_ws/install/zed_components/include/zed_components//zed_camera_one_component.hpp\n'}
+[41.406434] (zed_components) StdoutLine: {'line': b'-- Symlinking: /simple_ws/install/zed_components/include/zed_components//gnss_replay.hpp\n'}
+[41.412251] (zed_components) StdoutLine: {'line': b'-- Symlinking: /simple_ws/install/zed_components/include/zed_components//json.hpp\n'}
+[41.418083] (zed_components) StdoutLine: {'line': b'-- Symlinking: /simple_ws/install/zed_components/include/zed_components//sl_logging.hpp\n'}
+[41.423830] (zed_components) StdoutLine: {'line': b'-- Symlinking: /simple_ws/install/zed_components/include/zed_components//sl_tools.hpp\n'}
+[41.429520] (zed_components) StdoutLine: {'line': b'-- Symlinking: /simple_ws/install/zed_components/include/zed_components//sl_win_avg.hpp\n'}
+[41.435371] (zed_components) StdoutLine: {'line': b'-- Symlinking: /simple_ws/install/zed_components/include/zed_components//visibility_control.hpp\n'}
+[41.441168] (zed_components) StdoutLine: {'line': b'-- Symlinking: /simple_ws/install/zed_components/share/zed_components/environment/library_path.sh\n'}
+[41.447020] (zed_components) StdoutLine: {'line': b'-- Symlinking: /simple_ws/install/zed_components/share/zed_components/environment/library_path.dsv\n'}
+[41.452927] (zed_components) StdoutLine: {'line': b'-- Symlinking: /simple_ws/install/zed_components/share/ament_index/resource_index/package_run_dependencies/zed_components\n'}
+[41.458714] (zed_components) StdoutLine: {'line': b'-- Symlinking: /simple_ws/install/zed_components/share/ament_index/resource_index/parent_prefix_path/zed_components\n'}
+[41.464493] (zed_components) StdoutLine: {'line': b'-- Symlinking: /simple_ws/install/zed_components/share/zed_components/environment/ament_prefix_path.sh\n'}
+[41.470215] (zed_components) StdoutLine: {'line': b'-- Symlinking: /simple_ws/install/zed_components/share/zed_components/environment/ament_prefix_path.dsv\n'}
+[41.475940] (zed_components) StdoutLine: {'line': b'-- Symlinking: /simple_ws/install/zed_components/share/zed_components/environment/path.sh\n'}
+[41.481791] (zed_components) StdoutLine: {'line': b'-- Symlinking: /simple_ws/install/zed_components/share/zed_components/environment/path.dsv\n'}
+[41.485739] (-) TimerEvent: {}
+[41.487521] (zed_components) StdoutLine: {'line': b'-- Symlinking: /simple_ws/install/zed_components/share/zed_components/local_setup.bash\n'}
+[41.493327] (zed_components) StdoutLine: {'line': b'-- Symlinking: /simple_ws/install/zed_components/share/zed_components/local_setup.sh\n'}
+[41.499026] (zed_components) StdoutLine: {'line': b'-- Symlinking: /simple_ws/install/zed_components/share/zed_components/local_setup.zsh\n'}
+[41.505408] (zed_components) StdoutLine: {'line': b'-- Symlinking: /simple_ws/install/zed_components/share/zed_components/local_setup.dsv\n'}
+[41.511423] (zed_components) StdoutLine: {'line': b'-- Symlinking: /simple_ws/install/zed_components/share/zed_components/package.dsv\n'}
+[41.518704] (zed_components) StdoutLine: {'line': b'-- Symlinking: /simple_ws/install/zed_components/share/ament_index/resource_index/packages/zed_components\n'}
+[41.524738] (zed_components) StdoutLine: {'line': b'-- Symlinking: /simple_ws/install/zed_components/share/ament_index/resource_index/rclcpp_components/zed_components\n'}
+[41.530704] (zed_components) StdoutLine: {'line': b'-- Symlinking: /simple_ws/install/zed_components/share/zed_components/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[41.536550] (zed_components) StdoutLine: {'line': b'-- Symlinking: /simple_ws/install/zed_components/share/zed_components/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[41.542376] (zed_components) StdoutLine: {'line': b'-- Symlinking: /simple_ws/install/zed_components/share/zed_components/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[41.548267] (zed_components) StdoutLine: {'line': b'-- Symlinking: /simple_ws/install/zed_components/share/zed_components/cmake/zed_componentsConfig.cmake\n'}
+[41.554391] (zed_components) StdoutLine: {'line': b'-- Symlinking: /simple_ws/install/zed_components/share/zed_components/cmake/zed_componentsConfig-version.cmake\n'}
+[41.560471] (zed_components) StdoutLine: {'line': b'-- Symlinking: /simple_ws/install/zed_components/share/zed_components/package.xml\n'}
+[41.568231] (zed_components) CommandEnded: {'returncode': 0}
+[41.583712] (zed_components) JobEnded: {'identifier': 'zed_components', 'rc': 0}
+[41.584140] (zed_wrapper) JobStarted: {'identifier': 'zed_wrapper'}
+[41.585807] (-) TimerEvent: {}
+[41.590020] (zed_wrapper) JobProgress: {'identifier': 'zed_wrapper', 'progress': 'cmake'}
+[41.590365] (zed_wrapper) Command: {'cmd': ['/usr/bin/cmake', '/simple_ws/src/zed_wrapper', '-DAMENT_CMAKE_SYMLINK_INSTALL=1', '-DCMAKE_INSTALL_PREFIX=/simple_ws/install/zed_wrapper'], 'cwd': '/simple_ws/build/zed_wrapper', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LIBRARY_PATH', '/usr/local/cuda/lib64/stubs'), ('NV_LIBCUBLAS_VERSION', '12.1.0.26-1'), ('NV_NVPROF_DEV_PACKAGE', 'cuda-nvprof-12-1=12.1.55-1'), ('NV_CUDA_COMPAT_PACKAGE', 'cuda-compat-12-1'), ('NV_CUDA_NSIGHT_COMPUTE_VERSION', '12.1.0-1'), ('HOSTNAME', 'nakama-X570-AORUS-PRO'), ('NVIDIA_CUDA_END_OF_LIFE', '1'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/simple_ws/install/zed_components/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/local/nvidia/lib:/usr/local/nvidia/lib64'), ('NV_LIBNCCL_PACKAGE_VERSION', '2.17.1-1'), ('HOME', '/root'), ('OLDPWD', '/'), ('NV_LIBCUBLAS_DEV_VERSION', '12.1.0.26-1'), ('ROS_PYTHON_VERSION', '3'), ('LC_CTYPE', 'C.UTF-8'), ('NV_LIBNCCL_DEV_PACKAGE_VERSION', '2.17.1-1'), ('NV_LIBNPP_PACKAGE', 'libnpp-12-1=12.0.2.50-1'), ('CUDA_VERSION', '12.1.0'), ('COLCON_PREFIX_PATH', '/simple_ws/install'), ('NV_NVPROF_VERSION', '12.1.55-1'), ('ROS_DISTRO', 'humble'), ('NV_LIBCUBLAS_PACKAGE_NAME', 'libcublas-12-1'), ('NVIDIA_REQUIRE_CUDA', 'cuda>=12.1 brand=tesla,driver>=470,driver<471 brand=unknown,driver>=470,driver<471 brand=nvidia,driver>=470,driver<471 brand=nvidiartx,driver>=470,driver<471 brand=geforce,driver>=470,driver<471 brand=geforcertx,driver>=470,driver<471 brand=quadro,driver>=470,driver<471 brand=quadrortx,driver>=470,driver<471 brand=titan,driver>=470,driver<471 brand=titanrtx,driver>=470,driver<471 brand=tesla,driver>=525,driver<526 brand=unknown,driver>=525,driver<526 brand=nvidia,driver>=525,driver<526 brand=nvidiartx,driver>=525,driver<526 brand=geforce,driver>=525,driver<526 brand=geforcertx,driver>=525,driver<526 brand=quadro,driver>=525,driver<526 brand=quadrortx,driver>=525,driver<526 brand=titan,driver>=525,driver<526 brand=titanrtx,driver>=525,driver<526'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('NV_LIBCUSPARSE_VERSION', '12.0.2.55-1'), ('NVIDIA_DRIVER_CAPABILITIES', 'all'), ('NV_CUDA_LIB_VERSION', '12.1.0-1'), ('NV_LIBNCCL_PACKAGE_NAME', 'libnccl2'), ('NV_NVML_DEV_VERSION', '12.1.55-1'), ('NV_LIBNPP_DEV_PACKAGE', 'libnpp-dev-12-1=12.0.2.50-1'), ('TERM', 'xterm'), ('NV_CUDA_CUDART_VERSION', '12.1.55-1'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/nvidia/bin:/usr/local/cuda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('NV_LIBCUBLAS_DEV_PACKAGE_NAME', 'libcublas-dev-12-1'), ('NV_LIBCUBLAS_PACKAGE', 'libcublas-12-1=12.1.0.26-1'), ('NVARCH', 'x86_64'), ('NV_LIBNCCL_DEV_PACKAGE_NAME', 'libnccl-dev'), ('NV_LIBCUSPARSE_DEV_VERSION', '12.0.2.55-1'), ('DISPLAY', ':1'), ('NV_LIBNCCL_PACKAGE', 'libnccl2=2.17.1-1+cuda12.1'), ('NVIDIA_PRODUCT_NAME', 'CUDA'), ('NV_CUDA_CUDART_DEV_VERSION', '12.1.55-1'), ('ZED_SDK_URL', 'https://stereolabs.sfo2.cdn.digitaloceanspaces.com/zedsdk/4.2/ZED_SDK_Ubuntu22_cuda12.1_v4.2.0.zstd.run'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('ROS_DOMAIN_ID', '55'), ('AMENT_PREFIX_PATH', '/simple_ws/install/zed_ros2:/simple_ws/install/zed_wrapper:/simple_ws/install/zed_components:/simple_ws/install/ros_tcp_endpoint:/simple_ws/install/middle_nodes:/opt/ros/humble'), ('NV_LIBCUBLAS_DEV_PACKAGE', 'libcublas-dev-12-1=12.1.0.26-1'), ('NV_CUDA_NSIGHT_COMPUTE_DEV_PACKAGE', 'cuda-nsight-compute-12-1=12.1.0-1'), ('NV_LIBNCCL_DEV_PACKAGE', 'libnccl-dev=2.17.1-1+cuda12.1'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('NV_NVTX_VERSION', '12.1.66-1'), ('NV_LIBNPP_VERSION', '12.0.2.50-1'), ('PWD', '/simple_ws/build/zed_wrapper'), ('PYTHONPATH', '/simple_ws/build/ros_tcp_endpoint:/simple_ws/install/ros_tcp_endpoint/lib/python3.10/site-packages:/simple_ws/build/middle_nodes:/simple_ws/install/middle_nodes/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('NVIDIA_VISIBLE_DEVICES', 'all'), ('NCCL_VERSION', '2.17.1-1'), ('TZ', 'Europe/Paris'), ('COLCON', '1'), ('NV_LIBNPP_DEV_VERSION', '12.0.2.50-1'), ('CMAKE_PREFIX_PATH', '/simple_ws/install/zed_components:/simple_ws/install/zed_ros2:/simple_ws/install/zed_wrapper:/simple_ws/install/ros_tcp_endpoint:/simple_ws/install/middle_nodes:/opt/ros/humble')]), 'shell': False}
+[41.629631] (zed_wrapper) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[41.667037] (zed_wrapper) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[41.672640] (zed_wrapper) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[41.685874] (-) TimerEvent: {}
+[41.721063] (zed_wrapper) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[41.728267] (zed_wrapper) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[41.728558] (zed_wrapper) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[41.728966] (zed_wrapper) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[41.731653] (zed_wrapper) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[41.785952] (-) TimerEvent: {}
+[41.789081] (zed_wrapper) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[41.796821] (zed_wrapper) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[41.797132] (zed_wrapper) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[41.797607] (zed_wrapper) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[41.800060] (zed_wrapper) StdoutLine: {'line': b'-- Found ament_cmake_auto: 1.3.11 (/opt/ros/humble/share/ament_cmake_auto/cmake)\n'}
+[41.886024] (-) TimerEvent: {}
+[41.897190] (zed_wrapper) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter \n'}
+[41.939835] (zed_wrapper) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[41.986102] (-) TimerEvent: {}
+[42.056874] (zed_wrapper) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.6 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[42.060542] (zed_wrapper) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.6 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[42.066762] (zed_wrapper) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.6 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[42.075500] (zed_wrapper) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[42.086189] (-) TimerEvent: {}
+[42.087055] (zed_wrapper) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[42.119250] (zed_wrapper) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[42.121321] (zed_wrapper) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.7 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[42.186261] (-) TimerEvent: {}
+[42.195899] (zed_wrapper) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  \n'}
+[42.215052] (zed_wrapper) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/humble/include  \n'}
+[42.246548] (zed_wrapper) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[42.253437] (zed_wrapper) StdoutLine: {'line': b'-- Looking for pthread.h\n'}
+[42.286353] (-) TimerEvent: {}
+[42.304647] (zed_wrapper) StdoutLine: {'line': b'-- Looking for pthread.h - found\n'}
+[42.304811] (zed_wrapper) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[42.356067] (zed_wrapper) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success\n'}
+[42.357268] (zed_wrapper) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[42.386427] (-) TimerEvent: {}
+[42.486592] (-) TimerEvent: {}
+[42.522701] (zed_wrapper) StdoutLine: {'line': b'-- Found eigen3_cmake_module: 0.1.1 (/opt/ros/humble/share/eigen3_cmake_module/cmake)\n'}
+[42.523510] (zed_wrapper) StdoutLine: {'line': b'-- Found Eigen3: TRUE (found version "3.4.0") \n'}
+[42.523583] (zed_wrapper) StdoutLine: {'line': b'-- Ensuring Eigen3 include directory is part of orocos-kdl CMake target\n'}
+[42.586669] (-) TimerEvent: {}
+[42.665792] (zed_wrapper) StdoutLine: {'line': b'-- Configuring done\n'}
+[42.671013] (zed_wrapper) StdoutLine: {'line': b'-- Generating done\n'}
+[42.672678] (zed_wrapper) StdoutLine: {'line': b'-- Build files have been written to: /simple_ws/build/zed_wrapper\n'}
+[42.680238] (zed_wrapper) CommandEnded: {'returncode': 0}
+[42.680670] (zed_wrapper) JobProgress: {'identifier': 'zed_wrapper', 'progress': 'build'}
+[42.680877] (zed_wrapper) Command: {'cmd': ['/usr/bin/cmake', '--build', '/simple_ws/build/zed_wrapper', '--', '-j32', '-l32'], 'cwd': '/simple_ws/build/zed_wrapper', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LIBRARY_PATH', '/usr/local/cuda/lib64/stubs'), ('NV_LIBCUBLAS_VERSION', '12.1.0.26-1'), ('NV_NVPROF_DEV_PACKAGE', 'cuda-nvprof-12-1=12.1.55-1'), ('NV_CUDA_COMPAT_PACKAGE', 'cuda-compat-12-1'), ('NV_CUDA_NSIGHT_COMPUTE_VERSION', '12.1.0-1'), ('HOSTNAME', 'nakama-X570-AORUS-PRO'), ('NVIDIA_CUDA_END_OF_LIFE', '1'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/simple_ws/install/zed_components/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/local/nvidia/lib:/usr/local/nvidia/lib64'), ('NV_LIBNCCL_PACKAGE_VERSION', '2.17.1-1'), ('HOME', '/root'), ('OLDPWD', '/'), ('NV_LIBCUBLAS_DEV_VERSION', '12.1.0.26-1'), ('ROS_PYTHON_VERSION', '3'), ('LC_CTYPE', 'C.UTF-8'), ('NV_LIBNCCL_DEV_PACKAGE_VERSION', '2.17.1-1'), ('NV_LIBNPP_PACKAGE', 'libnpp-12-1=12.0.2.50-1'), ('CUDA_VERSION', '12.1.0'), ('COLCON_PREFIX_PATH', '/simple_ws/install'), ('NV_NVPROF_VERSION', '12.1.55-1'), ('ROS_DISTRO', 'humble'), ('NV_LIBCUBLAS_PACKAGE_NAME', 'libcublas-12-1'), ('NVIDIA_REQUIRE_CUDA', 'cuda>=12.1 brand=tesla,driver>=470,driver<471 brand=unknown,driver>=470,driver<471 brand=nvidia,driver>=470,driver<471 brand=nvidiartx,driver>=470,driver<471 brand=geforce,driver>=470,driver<471 brand=geforcertx,driver>=470,driver<471 brand=quadro,driver>=470,driver<471 brand=quadrortx,driver>=470,driver<471 brand=titan,driver>=470,driver<471 brand=titanrtx,driver>=470,driver<471 brand=tesla,driver>=525,driver<526 brand=unknown,driver>=525,driver<526 brand=nvidia,driver>=525,driver<526 brand=nvidiartx,driver>=525,driver<526 brand=geforce,driver>=525,driver<526 brand=geforcertx,driver>=525,driver<526 brand=quadro,driver>=525,driver<526 brand=quadrortx,driver>=525,driver<526 brand=titan,driver>=525,driver<526 brand=titanrtx,driver>=525,driver<526'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('NV_LIBCUSPARSE_VERSION', '12.0.2.55-1'), ('NVIDIA_DRIVER_CAPABILITIES', 'all'), ('NV_CUDA_LIB_VERSION', '12.1.0-1'), ('NV_LIBNCCL_PACKAGE_NAME', 'libnccl2'), ('NV_NVML_DEV_VERSION', '12.1.55-1'), ('NV_LIBNPP_DEV_PACKAGE', 'libnpp-dev-12-1=12.0.2.50-1'), ('TERM', 'xterm'), ('NV_CUDA_CUDART_VERSION', '12.1.55-1'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/nvidia/bin:/usr/local/cuda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('NV_LIBCUBLAS_DEV_PACKAGE_NAME', 'libcublas-dev-12-1'), ('NV_LIBCUBLAS_PACKAGE', 'libcublas-12-1=12.1.0.26-1'), ('NVARCH', 'x86_64'), ('NV_LIBNCCL_DEV_PACKAGE_NAME', 'libnccl-dev'), ('NV_LIBCUSPARSE_DEV_VERSION', '12.0.2.55-1'), ('DISPLAY', ':1'), ('NV_LIBNCCL_PACKAGE', 'libnccl2=2.17.1-1+cuda12.1'), ('NVIDIA_PRODUCT_NAME', 'CUDA'), ('NV_CUDA_CUDART_DEV_VERSION', '12.1.55-1'), ('ZED_SDK_URL', 'https://stereolabs.sfo2.cdn.digitaloceanspaces.com/zedsdk/4.2/ZED_SDK_Ubuntu22_cuda12.1_v4.2.0.zstd.run'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('ROS_DOMAIN_ID', '55'), ('AMENT_PREFIX_PATH', '/simple_ws/install/zed_ros2:/simple_ws/install/zed_wrapper:/simple_ws/install/zed_components:/simple_ws/install/ros_tcp_endpoint:/simple_ws/install/middle_nodes:/opt/ros/humble'), ('NV_LIBCUBLAS_DEV_PACKAGE', 'libcublas-dev-12-1=12.1.0.26-1'), ('NV_CUDA_NSIGHT_COMPUTE_DEV_PACKAGE', 'cuda-nsight-compute-12-1=12.1.0-1'), ('NV_LIBNCCL_DEV_PACKAGE', 'libnccl-dev=2.17.1-1+cuda12.1'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('NV_NVTX_VERSION', '12.1.66-1'), ('NV_LIBNPP_VERSION', '12.0.2.50-1'), ('PWD', '/simple_ws/build/zed_wrapper'), ('PYTHONPATH', '/simple_ws/build/ros_tcp_endpoint:/simple_ws/install/ros_tcp_endpoint/lib/python3.10/site-packages:/simple_ws/build/middle_nodes:/simple_ws/install/middle_nodes/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('NVIDIA_VISIBLE_DEVICES', 'all'), ('NCCL_VERSION', '2.17.1-1'), ('TZ', 'Europe/Paris'), ('COLCON', '1'), ('NV_LIBNPP_DEV_VERSION', '12.0.2.50-1'), ('CMAKE_PREFIX_PATH', '/simple_ws/install/zed_components:/simple_ws/install/zed_ros2:/simple_ws/install/zed_wrapper:/simple_ws/install/ros_tcp_endpoint:/simple_ws/install/middle_nodes:/opt/ros/humble')]), 'shell': False}
+[42.686739] (-) TimerEvent: {}
+[42.712256] (zed_wrapper) CommandEnded: {'returncode': 0}
+[42.712842] (zed_wrapper) JobProgress: {'identifier': 'zed_wrapper', 'progress': 'install'}
+[42.713039] (zed_wrapper) Command: {'cmd': ['/usr/bin/cmake', '--install', '/simple_ws/build/zed_wrapper'], 'cwd': '/simple_ws/build/zed_wrapper', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LIBRARY_PATH', '/usr/local/cuda/lib64/stubs'), ('NV_LIBCUBLAS_VERSION', '12.1.0.26-1'), ('NV_NVPROF_DEV_PACKAGE', 'cuda-nvprof-12-1=12.1.55-1'), ('NV_CUDA_COMPAT_PACKAGE', 'cuda-compat-12-1'), ('NV_CUDA_NSIGHT_COMPUTE_VERSION', '12.1.0-1'), ('HOSTNAME', 'nakama-X570-AORUS-PRO'), ('NVIDIA_CUDA_END_OF_LIFE', '1'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/simple_ws/install/zed_components/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/local/nvidia/lib:/usr/local/nvidia/lib64'), ('NV_LIBNCCL_PACKAGE_VERSION', '2.17.1-1'), ('HOME', '/root'), ('OLDPWD', '/'), ('NV_LIBCUBLAS_DEV_VERSION', '12.1.0.26-1'), ('ROS_PYTHON_VERSION', '3'), ('LC_CTYPE', 'C.UTF-8'), ('NV_LIBNCCL_DEV_PACKAGE_VERSION', '2.17.1-1'), ('NV_LIBNPP_PACKAGE', 'libnpp-12-1=12.0.2.50-1'), ('CUDA_VERSION', '12.1.0'), ('COLCON_PREFIX_PATH', '/simple_ws/install'), ('NV_NVPROF_VERSION', '12.1.55-1'), ('ROS_DISTRO', 'humble'), ('NV_LIBCUBLAS_PACKAGE_NAME', 'libcublas-12-1'), ('NVIDIA_REQUIRE_CUDA', 'cuda>=12.1 brand=tesla,driver>=470,driver<471 brand=unknown,driver>=470,driver<471 brand=nvidia,driver>=470,driver<471 brand=nvidiartx,driver>=470,driver<471 brand=geforce,driver>=470,driver<471 brand=geforcertx,driver>=470,driver<471 brand=quadro,driver>=470,driver<471 brand=quadrortx,driver>=470,driver<471 brand=titan,driver>=470,driver<471 brand=titanrtx,driver>=470,driver<471 brand=tesla,driver>=525,driver<526 brand=unknown,driver>=525,driver<526 brand=nvidia,driver>=525,driver<526 brand=nvidiartx,driver>=525,driver<526 brand=geforce,driver>=525,driver<526 brand=geforcertx,driver>=525,driver<526 brand=quadro,driver>=525,driver<526 brand=quadrortx,driver>=525,driver<526 brand=titan,driver>=525,driver<526 brand=titanrtx,driver>=525,driver<526'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('NV_LIBCUSPARSE_VERSION', '12.0.2.55-1'), ('NVIDIA_DRIVER_CAPABILITIES', 'all'), ('NV_CUDA_LIB_VERSION', '12.1.0-1'), ('NV_LIBNCCL_PACKAGE_NAME', 'libnccl2'), ('NV_NVML_DEV_VERSION', '12.1.55-1'), ('NV_LIBNPP_DEV_PACKAGE', 'libnpp-dev-12-1=12.0.2.50-1'), ('TERM', 'xterm'), ('NV_CUDA_CUDART_VERSION', '12.1.55-1'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/nvidia/bin:/usr/local/cuda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('NV_LIBCUBLAS_DEV_PACKAGE_NAME', 'libcublas-dev-12-1'), ('NV_LIBCUBLAS_PACKAGE', 'libcublas-12-1=12.1.0.26-1'), ('NVARCH', 'x86_64'), ('NV_LIBNCCL_DEV_PACKAGE_NAME', 'libnccl-dev'), ('NV_LIBCUSPARSE_DEV_VERSION', '12.0.2.55-1'), ('DISPLAY', ':1'), ('NV_LIBNCCL_PACKAGE', 'libnccl2=2.17.1-1+cuda12.1'), ('NVIDIA_PRODUCT_NAME', 'CUDA'), ('NV_CUDA_CUDART_DEV_VERSION', '12.1.55-1'), ('ZED_SDK_URL', 'https://stereolabs.sfo2.cdn.digitaloceanspaces.com/zedsdk/4.2/ZED_SDK_Ubuntu22_cuda12.1_v4.2.0.zstd.run'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('ROS_DOMAIN_ID', '55'), ('AMENT_PREFIX_PATH', '/simple_ws/install/zed_ros2:/simple_ws/install/zed_wrapper:/simple_ws/install/zed_components:/simple_ws/install/ros_tcp_endpoint:/simple_ws/install/middle_nodes:/opt/ros/humble'), ('NV_LIBCUBLAS_DEV_PACKAGE', 'libcublas-dev-12-1=12.1.0.26-1'), ('NV_CUDA_NSIGHT_COMPUTE_DEV_PACKAGE', 'cuda-nsight-compute-12-1=12.1.0-1'), ('NV_LIBNCCL_DEV_PACKAGE', 'libnccl-dev=2.17.1-1+cuda12.1'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('NV_NVTX_VERSION', '12.1.66-1'), ('NV_LIBNPP_VERSION', '12.0.2.50-1'), ('PWD', '/simple_ws/build/zed_wrapper'), ('PYTHONPATH', '/simple_ws/build/ros_tcp_endpoint:/simple_ws/install/ros_tcp_endpoint/lib/python3.10/site-packages:/simple_ws/build/middle_nodes:/simple_ws/install/middle_nodes/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('NVIDIA_VISIBLE_DEVICES', 'all'), ('NCCL_VERSION', '2.17.1-1'), ('TZ', 'Europe/Paris'), ('COLCON', '1'), ('NV_LIBNPP_DEV_VERSION', '12.0.2.50-1'), ('CMAKE_PREFIX_PATH', '/simple_ws/install/zed_components:/simple_ws/install/zed_ros2:/simple_ws/install/zed_wrapper:/simple_ws/install/ros_tcp_endpoint:/simple_ws/install/middle_nodes:/opt/ros/humble')]), 'shell': False}
+[42.719432] (zed_wrapper) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[42.719750] (zed_wrapper) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[42.720128] (zed_wrapper) StdoutLine: {'line': b'-- Symlinking: /simple_ws/install/zed_wrapper/share/zed_wrapper/config/common_mono.yaml\n'}
+[42.726066] (zed_wrapper) StdoutLine: {'line': b'-- Symlinking: /simple_ws/install/zed_wrapper/share/zed_wrapper/config/common_stereo.yaml\n'}
+[42.732136] (zed_wrapper) StdoutLine: {'line': b'-- Symlinking: /simple_ws/install/zed_wrapper/share/zed_wrapper/config/ffmpeg.yaml\n'}
+[42.737904] (zed_wrapper) StdoutLine: {'line': b'-- Symlinking: /simple_ws/install/zed_wrapper/share/zed_wrapper/config/virtual.yaml\n'}
+[42.743815] (zed_wrapper) StdoutLine: {'line': b'-- Symlinking: /simple_ws/install/zed_wrapper/share/zed_wrapper/config/zed.yaml\n'}
+[42.749735] (zed_wrapper) StdoutLine: {'line': b'-- Symlinking: /simple_ws/install/zed_wrapper/share/zed_wrapper/config/zed2.yaml\n'}
+[42.755534] (zed_wrapper) StdoutLine: {'line': b'-- Symlinking: /simple_ws/install/zed_wrapper/share/zed_wrapper/config/zed2i.yaml\n'}
+[42.761394] (zed_wrapper) StdoutLine: {'line': b'-- Symlinking: /simple_ws/install/zed_wrapper/share/zed_wrapper/config/zedm.yaml\n'}
+[42.767229] (zed_wrapper) StdoutLine: {'line': b'-- Symlinking: /simple_ws/install/zed_wrapper/share/zed_wrapper/config/zedx.yaml\n'}
+[42.773292] (zed_wrapper) StdoutLine: {'line': b'-- Symlinking: /simple_ws/install/zed_wrapper/share/zed_wrapper/config/zedxm.yaml\n'}
+[42.779046] (zed_wrapper) StdoutLine: {'line': b'-- Symlinking: /simple_ws/install/zed_wrapper/share/zed_wrapper/config/zedxone4k.yaml\n'}
+[42.784844] (zed_wrapper) StdoutLine: {'line': b'-- Symlinking: /simple_ws/install/zed_wrapper/share/zed_wrapper/config/zedxonegs.yaml\n'}
+[42.786819] (-) TimerEvent: {}
+[42.790984] (zed_wrapper) StdoutLine: {'line': b'-- Symlinking: /simple_ws/install/zed_wrapper/share/zed_wrapper/urdf/include/materials.urdf.xacro\n'}
+[42.796775] (zed_wrapper) StdoutLine: {'line': b'-- Symlinking: /simple_ws/install/zed_wrapper/share/zed_wrapper/urdf/zed_descr.urdf.xacro\n'}
+[42.802869] (zed_wrapper) StdoutLine: {'line': b'-- Symlinking: /simple_ws/install/zed_wrapper/share/zed_wrapper/urdf/zed_macro.urdf.xacro\n'}
+[42.809251] (zed_wrapper) StdoutLine: {'line': b'-- Symlinking: /simple_ws/install/zed_wrapper/share/zed_wrapper/launch/zed_camera.launch.py\n'}
+[42.815255] (zed_wrapper) StdoutLine: {'line': b'-- Symlinking: /simple_ws/install/zed_wrapper/share/ament_index/resource_index/package_run_dependencies/zed_wrapper\n'}
+[42.821789] (zed_wrapper) StdoutLine: {'line': b'-- Symlinking: /simple_ws/install/zed_wrapper/share/ament_index/resource_index/parent_prefix_path/zed_wrapper\n'}
+[42.827775] (zed_wrapper) StdoutLine: {'line': b'-- Symlinking: /simple_ws/install/zed_wrapper/share/zed_wrapper/environment/ament_prefix_path.sh\n'}
+[42.833230] (zed_wrapper) StdoutLine: {'line': b'-- Symlinking: /simple_ws/install/zed_wrapper/share/zed_wrapper/environment/ament_prefix_path.dsv\n'}
+[42.839484] (zed_wrapper) StdoutLine: {'line': b'-- Symlinking: /simple_ws/install/zed_wrapper/share/zed_wrapper/environment/path.sh\n'}
+[42.845136] (zed_wrapper) StdoutLine: {'line': b'-- Symlinking: /simple_ws/install/zed_wrapper/share/zed_wrapper/environment/path.dsv\n'}
+[42.851018] (zed_wrapper) StdoutLine: {'line': b'-- Symlinking: /simple_ws/install/zed_wrapper/share/zed_wrapper/local_setup.bash\n'}
+[42.856937] (zed_wrapper) StdoutLine: {'line': b'-- Symlinking: /simple_ws/install/zed_wrapper/share/zed_wrapper/local_setup.sh\n'}
+[42.863242] (zed_wrapper) StdoutLine: {'line': b'-- Symlinking: /simple_ws/install/zed_wrapper/share/zed_wrapper/local_setup.zsh\n'}
+[42.868737] (zed_wrapper) StdoutLine: {'line': b'-- Symlinking: /simple_ws/install/zed_wrapper/share/zed_wrapper/local_setup.dsv\n'}
+[42.874643] (zed_wrapper) StdoutLine: {'line': b'-- Symlinking: /simple_ws/install/zed_wrapper/share/zed_wrapper/package.dsv\n'}
+[42.880589] (zed_wrapper) StdoutLine: {'line': b'-- Symlinking: /simple_ws/install/zed_wrapper/share/ament_index/resource_index/packages/zed_wrapper\n'}
+[42.886909] (zed_wrapper) StdoutLine: {'line': b'-- Symlinking: /simple_ws/install/zed_wrapper/share/zed_wrapper/cmake/zed_wrapperConfig.cmake\n'}
+[42.887016] (-) TimerEvent: {}
+[42.892434] (zed_wrapper) StdoutLine: {'line': b'-- Symlinking: /simple_ws/install/zed_wrapper/share/zed_wrapper/cmake/zed_wrapperConfig-version.cmake\n'}
+[42.898345] (zed_wrapper) StdoutLine: {'line': b'-- Symlinking: /simple_ws/install/zed_wrapper/share/zed_wrapper/package.xml\n'}
+[42.905610] (zed_wrapper) CommandEnded: {'returncode': 0}
+[42.917078] (zed_wrapper) JobEnded: {'identifier': 'zed_wrapper', 'rc': 0}
+[42.917477] (zed_ros2) JobStarted: {'identifier': 'zed_ros2'}
+[42.924847] (zed_ros2) JobProgress: {'identifier': 'zed_ros2', 'progress': 'cmake'}
+[42.925237] (zed_ros2) Command: {'cmd': ['/usr/bin/cmake', '/simple_ws/src/zed_ros2', '-DAMENT_CMAKE_SYMLINK_INSTALL=1', '-DCMAKE_INSTALL_PREFIX=/simple_ws/install/zed_ros2'], 'cwd': '/simple_ws/build/zed_ros2', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LIBRARY_PATH', '/usr/local/cuda/lib64/stubs'), ('NV_LIBCUBLAS_VERSION', '12.1.0.26-1'), ('NV_NVPROF_DEV_PACKAGE', 'cuda-nvprof-12-1=12.1.55-1'), ('NV_CUDA_COMPAT_PACKAGE', 'cuda-compat-12-1'), ('NV_CUDA_NSIGHT_COMPUTE_VERSION', '12.1.0-1'), ('HOSTNAME', 'nakama-X570-AORUS-PRO'), ('NVIDIA_CUDA_END_OF_LIFE', '1'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/simple_ws/install/zed_components/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/local/nvidia/lib:/usr/local/nvidia/lib64'), ('NV_LIBNCCL_PACKAGE_VERSION', '2.17.1-1'), ('HOME', '/root'), ('OLDPWD', '/'), ('NV_LIBCUBLAS_DEV_VERSION', '12.1.0.26-1'), ('ROS_PYTHON_VERSION', '3'), ('LC_CTYPE', 'C.UTF-8'), ('NV_LIBNCCL_DEV_PACKAGE_VERSION', '2.17.1-1'), ('NV_LIBNPP_PACKAGE', 'libnpp-12-1=12.0.2.50-1'), ('CUDA_VERSION', '12.1.0'), ('COLCON_PREFIX_PATH', '/simple_ws/install'), ('NV_NVPROF_VERSION', '12.1.55-1'), ('ROS_DISTRO', 'humble'), ('NV_LIBCUBLAS_PACKAGE_NAME', 'libcublas-12-1'), ('NVIDIA_REQUIRE_CUDA', 'cuda>=12.1 brand=tesla,driver>=470,driver<471 brand=unknown,driver>=470,driver<471 brand=nvidia,driver>=470,driver<471 brand=nvidiartx,driver>=470,driver<471 brand=geforce,driver>=470,driver<471 brand=geforcertx,driver>=470,driver<471 brand=quadro,driver>=470,driver<471 brand=quadrortx,driver>=470,driver<471 brand=titan,driver>=470,driver<471 brand=titanrtx,driver>=470,driver<471 brand=tesla,driver>=525,driver<526 brand=unknown,driver>=525,driver<526 brand=nvidia,driver>=525,driver<526 brand=nvidiartx,driver>=525,driver<526 brand=geforce,driver>=525,driver<526 brand=geforcertx,driver>=525,driver<526 brand=quadro,driver>=525,driver<526 brand=quadrortx,driver>=525,driver<526 brand=titan,driver>=525,driver<526 brand=titanrtx,driver>=525,driver<526'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('NV_LIBCUSPARSE_VERSION', '12.0.2.55-1'), ('NVIDIA_DRIVER_CAPABILITIES', 'all'), ('NV_CUDA_LIB_VERSION', '12.1.0-1'), ('NV_LIBNCCL_PACKAGE_NAME', 'libnccl2'), ('NV_NVML_DEV_VERSION', '12.1.55-1'), ('NV_LIBNPP_DEV_PACKAGE', 'libnpp-dev-12-1=12.0.2.50-1'), ('TERM', 'xterm'), ('NV_CUDA_CUDART_VERSION', '12.1.55-1'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/nvidia/bin:/usr/local/cuda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('NV_LIBCUBLAS_DEV_PACKAGE_NAME', 'libcublas-dev-12-1'), ('NV_LIBCUBLAS_PACKAGE', 'libcublas-12-1=12.1.0.26-1'), ('NVARCH', 'x86_64'), ('NV_LIBNCCL_DEV_PACKAGE_NAME', 'libnccl-dev'), ('NV_LIBCUSPARSE_DEV_VERSION', '12.0.2.55-1'), ('DISPLAY', ':1'), ('NV_LIBNCCL_PACKAGE', 'libnccl2=2.17.1-1+cuda12.1'), ('NVIDIA_PRODUCT_NAME', 'CUDA'), ('NV_CUDA_CUDART_DEV_VERSION', '12.1.55-1'), ('ZED_SDK_URL', 'https://stereolabs.sfo2.cdn.digitaloceanspaces.com/zedsdk/4.2/ZED_SDK_Ubuntu22_cuda12.1_v4.2.0.zstd.run'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('ROS_DOMAIN_ID', '55'), ('AMENT_PREFIX_PATH', '/simple_ws/install/zed_ros2:/simple_ws/install/zed_wrapper:/simple_ws/install/zed_components:/simple_ws/install/ros_tcp_endpoint:/simple_ws/install/middle_nodes:/opt/ros/humble'), ('NV_LIBCUBLAS_DEV_PACKAGE', 'libcublas-dev-12-1=12.1.0.26-1'), ('NV_CUDA_NSIGHT_COMPUTE_DEV_PACKAGE', 'cuda-nsight-compute-12-1=12.1.0-1'), ('NV_LIBNCCL_DEV_PACKAGE', 'libnccl-dev=2.17.1-1+cuda12.1'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('NV_NVTX_VERSION', '12.1.66-1'), ('NV_LIBNPP_VERSION', '12.0.2.50-1'), ('PWD', '/simple_ws/build/zed_ros2'), ('PYTHONPATH', '/simple_ws/build/ros_tcp_endpoint:/simple_ws/install/ros_tcp_endpoint/lib/python3.10/site-packages:/simple_ws/build/middle_nodes:/simple_ws/install/middle_nodes/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('NVIDIA_VISIBLE_DEVICES', 'all'), ('NCCL_VERSION', '2.17.1-1'), ('TZ', 'Europe/Paris'), ('COLCON', '1'), ('NV_LIBNPP_DEV_VERSION', '12.0.2.50-1'), ('CMAKE_PREFIX_PATH', '/simple_ws/install/zed_wrapper:/simple_ws/install/zed_components:/simple_ws/install/zed_ros2:/simple_ws/install/ros_tcp_endpoint:/simple_ws/install/middle_nodes:/opt/ros/humble')]), 'shell': False}
+[42.937394] (zed_ros2) StdoutLine: {'line': b'-- Found ament_cmake_auto: 1.3.11 (/opt/ros/humble/share/ament_cmake_auto/cmake)\n'}
+[42.987086] (-) TimerEvent: {}
+[43.036187] (zed_ros2) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter \n'}
+[43.078263] (zed_ros2) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[43.087173] (-) TimerEvent: {}
+[43.153597] (zed_ros2) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[43.172609] (zed_ros2) StdoutLine: {'line': b"-- Added test 'copyright' to check source files copyright and LICENSE\n"}
+[43.173590] (zed_ros2) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[43.174481] (zed_ros2) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[43.176342] (zed_ros2) StdoutLine: {'line': b'-- Configuring done\n'}
+[43.179786] (zed_ros2) StdoutLine: {'line': b'-- Generating done\n'}
+[43.181375] (zed_ros2) StdoutLine: {'line': b'-- Build files have been written to: /simple_ws/build/zed_ros2\n'}
+[43.183819] (zed_ros2) CommandEnded: {'returncode': 0}
+[43.184267] (zed_ros2) JobProgress: {'identifier': 'zed_ros2', 'progress': 'build'}
+[43.184629] (zed_ros2) Command: {'cmd': ['/usr/bin/cmake', '--build', '/simple_ws/build/zed_ros2', '--', '-j32', '-l32'], 'cwd': '/simple_ws/build/zed_ros2', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LIBRARY_PATH', '/usr/local/cuda/lib64/stubs'), ('NV_LIBCUBLAS_VERSION', '12.1.0.26-1'), ('NV_NVPROF_DEV_PACKAGE', 'cuda-nvprof-12-1=12.1.55-1'), ('NV_CUDA_COMPAT_PACKAGE', 'cuda-compat-12-1'), ('NV_CUDA_NSIGHT_COMPUTE_VERSION', '12.1.0-1'), ('HOSTNAME', 'nakama-X570-AORUS-PRO'), ('NVIDIA_CUDA_END_OF_LIFE', '1'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/simple_ws/install/zed_components/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/local/nvidia/lib:/usr/local/nvidia/lib64'), ('NV_LIBNCCL_PACKAGE_VERSION', '2.17.1-1'), ('HOME', '/root'), ('OLDPWD', '/'), ('NV_LIBCUBLAS_DEV_VERSION', '12.1.0.26-1'), ('ROS_PYTHON_VERSION', '3'), ('LC_CTYPE', 'C.UTF-8'), ('NV_LIBNCCL_DEV_PACKAGE_VERSION', '2.17.1-1'), ('NV_LIBNPP_PACKAGE', 'libnpp-12-1=12.0.2.50-1'), ('CUDA_VERSION', '12.1.0'), ('COLCON_PREFIX_PATH', '/simple_ws/install'), ('NV_NVPROF_VERSION', '12.1.55-1'), ('ROS_DISTRO', 'humble'), ('NV_LIBCUBLAS_PACKAGE_NAME', 'libcublas-12-1'), ('NVIDIA_REQUIRE_CUDA', 'cuda>=12.1 brand=tesla,driver>=470,driver<471 brand=unknown,driver>=470,driver<471 brand=nvidia,driver>=470,driver<471 brand=nvidiartx,driver>=470,driver<471 brand=geforce,driver>=470,driver<471 brand=geforcertx,driver>=470,driver<471 brand=quadro,driver>=470,driver<471 brand=quadrortx,driver>=470,driver<471 brand=titan,driver>=470,driver<471 brand=titanrtx,driver>=470,driver<471 brand=tesla,driver>=525,driver<526 brand=unknown,driver>=525,driver<526 brand=nvidia,driver>=525,driver<526 brand=nvidiartx,driver>=525,driver<526 brand=geforce,driver>=525,driver<526 brand=geforcertx,driver>=525,driver<526 brand=quadro,driver>=525,driver<526 brand=quadrortx,driver>=525,driver<526 brand=titan,driver>=525,driver<526 brand=titanrtx,driver>=525,driver<526'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('NV_LIBCUSPARSE_VERSION', '12.0.2.55-1'), ('NVIDIA_DRIVER_CAPABILITIES', 'all'), ('NV_CUDA_LIB_VERSION', '12.1.0-1'), ('NV_LIBNCCL_PACKAGE_NAME', 'libnccl2'), ('NV_NVML_DEV_VERSION', '12.1.55-1'), ('NV_LIBNPP_DEV_PACKAGE', 'libnpp-dev-12-1=12.0.2.50-1'), ('TERM', 'xterm'), ('NV_CUDA_CUDART_VERSION', '12.1.55-1'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/nvidia/bin:/usr/local/cuda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('NV_LIBCUBLAS_DEV_PACKAGE_NAME', 'libcublas-dev-12-1'), ('NV_LIBCUBLAS_PACKAGE', 'libcublas-12-1=12.1.0.26-1'), ('NVARCH', 'x86_64'), ('NV_LIBNCCL_DEV_PACKAGE_NAME', 'libnccl-dev'), ('NV_LIBCUSPARSE_DEV_VERSION', '12.0.2.55-1'), ('DISPLAY', ':1'), ('NV_LIBNCCL_PACKAGE', 'libnccl2=2.17.1-1+cuda12.1'), ('NVIDIA_PRODUCT_NAME', 'CUDA'), ('NV_CUDA_CUDART_DEV_VERSION', '12.1.55-1'), ('ZED_SDK_URL', 'https://stereolabs.sfo2.cdn.digitaloceanspaces.com/zedsdk/4.2/ZED_SDK_Ubuntu22_cuda12.1_v4.2.0.zstd.run'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('ROS_DOMAIN_ID', '55'), ('AMENT_PREFIX_PATH', '/simple_ws/install/zed_ros2:/simple_ws/install/zed_wrapper:/simple_ws/install/zed_components:/simple_ws/install/ros_tcp_endpoint:/simple_ws/install/middle_nodes:/opt/ros/humble'), ('NV_LIBCUBLAS_DEV_PACKAGE', 'libcublas-dev-12-1=12.1.0.26-1'), ('NV_CUDA_NSIGHT_COMPUTE_DEV_PACKAGE', 'cuda-nsight-compute-12-1=12.1.0-1'), ('NV_LIBNCCL_DEV_PACKAGE', 'libnccl-dev=2.17.1-1+cuda12.1'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('NV_NVTX_VERSION', '12.1.66-1'), ('NV_LIBNPP_VERSION', '12.0.2.50-1'), ('PWD', '/simple_ws/build/zed_ros2'), ('PYTHONPATH', '/simple_ws/build/ros_tcp_endpoint:/simple_ws/install/ros_tcp_endpoint/lib/python3.10/site-packages:/simple_ws/build/middle_nodes:/simple_ws/install/middle_nodes/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('NVIDIA_VISIBLE_DEVICES', 'all'), ('NCCL_VERSION', '2.17.1-1'), ('TZ', 'Europe/Paris'), ('COLCON', '1'), ('NV_LIBNPP_DEV_VERSION', '12.0.2.50-1'), ('CMAKE_PREFIX_PATH', '/simple_ws/install/zed_wrapper:/simple_ws/install/zed_components:/simple_ws/install/zed_ros2:/simple_ws/install/ros_tcp_endpoint:/simple_ws/install/middle_nodes:/opt/ros/humble')]), 'shell': False}
+[43.187241] (-) TimerEvent: {}
+[43.212978] (zed_ros2) CommandEnded: {'returncode': 0}
+[43.213519] (zed_ros2) JobProgress: {'identifier': 'zed_ros2', 'progress': 'install'}
+[43.213646] (zed_ros2) Command: {'cmd': ['/usr/bin/cmake', '--install', '/simple_ws/build/zed_ros2'], 'cwd': '/simple_ws/build/zed_ros2', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LIBRARY_PATH', '/usr/local/cuda/lib64/stubs'), ('NV_LIBCUBLAS_VERSION', '12.1.0.26-1'), ('NV_NVPROF_DEV_PACKAGE', 'cuda-nvprof-12-1=12.1.55-1'), ('NV_CUDA_COMPAT_PACKAGE', 'cuda-compat-12-1'), ('NV_CUDA_NSIGHT_COMPUTE_VERSION', '12.1.0-1'), ('HOSTNAME', 'nakama-X570-AORUS-PRO'), ('NVIDIA_CUDA_END_OF_LIFE', '1'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/simple_ws/install/zed_components/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/local/nvidia/lib:/usr/local/nvidia/lib64'), ('NV_LIBNCCL_PACKAGE_VERSION', '2.17.1-1'), ('HOME', '/root'), ('OLDPWD', '/'), ('NV_LIBCUBLAS_DEV_VERSION', '12.1.0.26-1'), ('ROS_PYTHON_VERSION', '3'), ('LC_CTYPE', 'C.UTF-8'), ('NV_LIBNCCL_DEV_PACKAGE_VERSION', '2.17.1-1'), ('NV_LIBNPP_PACKAGE', 'libnpp-12-1=12.0.2.50-1'), ('CUDA_VERSION', '12.1.0'), ('COLCON_PREFIX_PATH', '/simple_ws/install'), ('NV_NVPROF_VERSION', '12.1.55-1'), ('ROS_DISTRO', 'humble'), ('NV_LIBCUBLAS_PACKAGE_NAME', 'libcublas-12-1'), ('NVIDIA_REQUIRE_CUDA', 'cuda>=12.1 brand=tesla,driver>=470,driver<471 brand=unknown,driver>=470,driver<471 brand=nvidia,driver>=470,driver<471 brand=nvidiartx,driver>=470,driver<471 brand=geforce,driver>=470,driver<471 brand=geforcertx,driver>=470,driver<471 brand=quadro,driver>=470,driver<471 brand=quadrortx,driver>=470,driver<471 brand=titan,driver>=470,driver<471 brand=titanrtx,driver>=470,driver<471 brand=tesla,driver>=525,driver<526 brand=unknown,driver>=525,driver<526 brand=nvidia,driver>=525,driver<526 brand=nvidiartx,driver>=525,driver<526 brand=geforce,driver>=525,driver<526 brand=geforcertx,driver>=525,driver<526 brand=quadro,driver>=525,driver<526 brand=quadrortx,driver>=525,driver<526 brand=titan,driver>=525,driver<526 brand=titanrtx,driver>=525,driver<526'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('NV_LIBCUSPARSE_VERSION', '12.0.2.55-1'), ('NVIDIA_DRIVER_CAPABILITIES', 'all'), ('NV_CUDA_LIB_VERSION', '12.1.0-1'), ('NV_LIBNCCL_PACKAGE_NAME', 'libnccl2'), ('NV_NVML_DEV_VERSION', '12.1.55-1'), ('NV_LIBNPP_DEV_PACKAGE', 'libnpp-dev-12-1=12.0.2.50-1'), ('TERM', 'xterm'), ('NV_CUDA_CUDART_VERSION', '12.1.55-1'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/nvidia/bin:/usr/local/cuda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('NV_LIBCUBLAS_DEV_PACKAGE_NAME', 'libcublas-dev-12-1'), ('NV_LIBCUBLAS_PACKAGE', 'libcublas-12-1=12.1.0.26-1'), ('NVARCH', 'x86_64'), ('NV_LIBNCCL_DEV_PACKAGE_NAME', 'libnccl-dev'), ('NV_LIBCUSPARSE_DEV_VERSION', '12.0.2.55-1'), ('DISPLAY', ':1'), ('NV_LIBNCCL_PACKAGE', 'libnccl2=2.17.1-1+cuda12.1'), ('NVIDIA_PRODUCT_NAME', 'CUDA'), ('NV_CUDA_CUDART_DEV_VERSION', '12.1.55-1'), ('ZED_SDK_URL', 'https://stereolabs.sfo2.cdn.digitaloceanspaces.com/zedsdk/4.2/ZED_SDK_Ubuntu22_cuda12.1_v4.2.0.zstd.run'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('ROS_DOMAIN_ID', '55'), ('AMENT_PREFIX_PATH', '/simple_ws/install/zed_ros2:/simple_ws/install/zed_wrapper:/simple_ws/install/zed_components:/simple_ws/install/ros_tcp_endpoint:/simple_ws/install/middle_nodes:/opt/ros/humble'), ('NV_LIBCUBLAS_DEV_PACKAGE', 'libcublas-dev-12-1=12.1.0.26-1'), ('NV_CUDA_NSIGHT_COMPUTE_DEV_PACKAGE', 'cuda-nsight-compute-12-1=12.1.0-1'), ('NV_LIBNCCL_DEV_PACKAGE', 'libnccl-dev=2.17.1-1+cuda12.1'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('NV_NVTX_VERSION', '12.1.66-1'), ('NV_LIBNPP_VERSION', '12.0.2.50-1'), ('PWD', '/simple_ws/build/zed_ros2'), ('PYTHONPATH', '/simple_ws/build/ros_tcp_endpoint:/simple_ws/install/ros_tcp_endpoint/lib/python3.10/site-packages:/simple_ws/build/middle_nodes:/simple_ws/install/middle_nodes/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('NVIDIA_VISIBLE_DEVICES', 'all'), ('NCCL_VERSION', '2.17.1-1'), ('TZ', 'Europe/Paris'), ('COLCON', '1'), ('NV_LIBNPP_DEV_VERSION', '12.0.2.50-1'), ('CMAKE_PREFIX_PATH', '/simple_ws/install/zed_wrapper:/simple_ws/install/zed_components:/simple_ws/install/zed_ros2:/simple_ws/install/ros_tcp_endpoint:/simple_ws/install/middle_nodes:/opt/ros/humble')]), 'shell': False}
+[43.219523] (zed_ros2) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[43.219821] (zed_ros2) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[43.220043] (zed_ros2) StdoutLine: {'line': b'-- Symlinking: /simple_ws/install/zed_ros2/share/ament_index/resource_index/package_run_dependencies/zed_ros2\n'}
+[43.226011] (zed_ros2) StdoutLine: {'line': b'-- Symlinking: /simple_ws/install/zed_ros2/share/ament_index/resource_index/parent_prefix_path/zed_ros2\n'}
+[43.231794] (zed_ros2) StdoutLine: {'line': b'-- Symlinking: /simple_ws/install/zed_ros2/share/zed_ros2/environment/ament_prefix_path.sh\n'}
+[43.238264] (zed_ros2) StdoutLine: {'line': b'-- Symlinking: /simple_ws/install/zed_ros2/share/zed_ros2/environment/ament_prefix_path.dsv\n'}
+[43.244504] (zed_ros2) StdoutLine: {'line': b'-- Symlinking: /simple_ws/install/zed_ros2/share/zed_ros2/environment/path.sh\n'}
+[43.250697] (zed_ros2) StdoutLine: {'line': b'-- Symlinking: /simple_ws/install/zed_ros2/share/zed_ros2/environment/path.dsv\n'}
+[43.256807] (zed_ros2) StdoutLine: {'line': b'-- Symlinking: /simple_ws/install/zed_ros2/share/zed_ros2/local_setup.bash\n'}
+[43.262789] (zed_ros2) StdoutLine: {'line': b'-- Symlinking: /simple_ws/install/zed_ros2/share/zed_ros2/local_setup.sh\n'}
+[43.268675] (zed_ros2) StdoutLine: {'line': b'-- Symlinking: /simple_ws/install/zed_ros2/share/zed_ros2/local_setup.zsh\n'}
+[43.274692] (zed_ros2) StdoutLine: {'line': b'-- Symlinking: /simple_ws/install/zed_ros2/share/zed_ros2/local_setup.dsv\n'}
+[43.280616] (zed_ros2) StdoutLine: {'line': b'-- Symlinking: /simple_ws/install/zed_ros2/share/zed_ros2/package.dsv\n'}
+[43.286586] (zed_ros2) StdoutLine: {'line': b'-- Symlinking: /simple_ws/install/zed_ros2/share/ament_index/resource_index/packages/zed_ros2\n'}
+[43.287305] (-) TimerEvent: {}
+[43.292562] (zed_ros2) StdoutLine: {'line': b'-- Symlinking: /simple_ws/install/zed_ros2/share/zed_ros2/cmake/zed_ros2Config.cmake\n'}
+[43.298510] (zed_ros2) StdoutLine: {'line': b'-- Symlinking: /simple_ws/install/zed_ros2/share/zed_ros2/cmake/zed_ros2Config-version.cmake\n'}
+[43.304389] (zed_ros2) StdoutLine: {'line': b'-- Symlinking: /simple_ws/install/zed_ros2/share/zed_ros2/package.xml\n'}
+[43.312165] (zed_ros2) CommandEnded: {'returncode': 0}
+[43.322780] (zed_ros2) JobEnded: {'identifier': 'zed_ros2', 'rc': 0}
+[43.323369] (-) EventReactorShutdown: {}

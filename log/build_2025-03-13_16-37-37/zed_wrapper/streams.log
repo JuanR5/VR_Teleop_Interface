@@ -1,0 +1,75 @@
+[0.007s] Invoking command in '/simple_ws/build/zed_wrapper': CMAKE_PREFIX_PATH=/simple_ws/install/zed_components:/simple_ws/install/zed_ros2:/simple_ws/install/zed_wrapper:/simple_ws/install/ros_tcp_endpoint:/simple_ws/install/middle_nodes:/opt/ros/humble /usr/bin/cmake /simple_ws/src/zed_wrapper -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/simple_ws/install/zed_wrapper
+[0.046s] -- The C compiler identification is GNU 11.4.0
+[0.083s] -- The CXX compiler identification is GNU 11.4.0
+[0.089s] -- Detecting C compiler ABI info
+[0.137s] -- Detecting C compiler ABI info - done
+[0.144s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.144s] -- Detecting C compile features
+[0.145s] -- Detecting C compile features - done
+[0.148s] -- Detecting CXX compiler ABI info
+[0.205s] -- Detecting CXX compiler ABI info - done
+[0.213s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.213s] -- Detecting CXX compile features
+[0.213s] -- Detecting CXX compile features - done
+[0.216s] -- Found ament_cmake_auto: 1.3.11 (/opt/ros/humble/share/ament_cmake_auto/cmake)
+[0.313s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.356s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.473s] -- Found rosidl_generator_c: 3.1.6 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.476s] -- Found rosidl_adapter: 3.1.6 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.483s] -- Found rosidl_generator_cpp: 3.1.6 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.491s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.503s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.535s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.537s] -- Found rmw_fastrtps_cpp: 6.2.7 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.612s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[0.631s] -- Found FastRTPS: /opt/ros/humble/include  
+[0.662s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.669s] -- Looking for pthread.h
+[0.721s] -- Looking for pthread.h - found
+[0.721s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[0.772s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[0.773s] -- Found Threads: TRUE  
+[0.939s] -- Found eigen3_cmake_module: 0.1.1 (/opt/ros/humble/share/eigen3_cmake_module/cmake)
+[0.939s] -- Found Eigen3: TRUE (found version "3.4.0") 
+[0.939s] -- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+[1.082s] -- Configuring done
+[1.087s] -- Generating done
+[1.089s] -- Build files have been written to: /simple_ws/build/zed_wrapper
+[1.096s] Invoked command in '/simple_ws/build/zed_wrapper' returned '0': CMAKE_PREFIX_PATH=/simple_ws/install/zed_components:/simple_ws/install/zed_ros2:/simple_ws/install/zed_wrapper:/simple_ws/install/ros_tcp_endpoint:/simple_ws/install/middle_nodes:/opt/ros/humble /usr/bin/cmake /simple_ws/src/zed_wrapper -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/simple_ws/install/zed_wrapper
+[1.098s] Invoking command in '/simple_ws/build/zed_wrapper': CMAKE_PREFIX_PATH=/simple_ws/install/zed_components:/simple_ws/install/zed_ros2:/simple_ws/install/zed_wrapper:/simple_ws/install/ros_tcp_endpoint:/simple_ws/install/middle_nodes:/opt/ros/humble /usr/bin/cmake --build /simple_ws/build/zed_wrapper -- -j32 -l32
+[1.128s] Invoked command in '/simple_ws/build/zed_wrapper' returned '0': CMAKE_PREFIX_PATH=/simple_ws/install/zed_components:/simple_ws/install/zed_ros2:/simple_ws/install/zed_wrapper:/simple_ws/install/ros_tcp_endpoint:/simple_ws/install/middle_nodes:/opt/ros/humble /usr/bin/cmake --build /simple_ws/build/zed_wrapper -- -j32 -l32
+[1.129s] Invoking command in '/simple_ws/build/zed_wrapper': CMAKE_PREFIX_PATH=/simple_ws/install/zed_components:/simple_ws/install/zed_ros2:/simple_ws/install/zed_wrapper:/simple_ws/install/ros_tcp_endpoint:/simple_ws/install/middle_nodes:/opt/ros/humble /usr/bin/cmake --install /simple_ws/build/zed_wrapper
+[1.135s] -- Install configuration: ""
+[1.136s] -- Execute custom install script
+[1.136s] -- Symlinking: /simple_ws/install/zed_wrapper/share/zed_wrapper/config/common_mono.yaml
+[1.142s] -- Symlinking: /simple_ws/install/zed_wrapper/share/zed_wrapper/config/common_stereo.yaml
+[1.148s] -- Symlinking: /simple_ws/install/zed_wrapper/share/zed_wrapper/config/ffmpeg.yaml
+[1.154s] -- Symlinking: /simple_ws/install/zed_wrapper/share/zed_wrapper/config/virtual.yaml
+[1.160s] -- Symlinking: /simple_ws/install/zed_wrapper/share/zed_wrapper/config/zed.yaml
+[1.166s] -- Symlinking: /simple_ws/install/zed_wrapper/share/zed_wrapper/config/zed2.yaml
+[1.171s] -- Symlinking: /simple_ws/install/zed_wrapper/share/zed_wrapper/config/zed2i.yaml
+[1.177s] -- Symlinking: /simple_ws/install/zed_wrapper/share/zed_wrapper/config/zedm.yaml
+[1.183s] -- Symlinking: /simple_ws/install/zed_wrapper/share/zed_wrapper/config/zedx.yaml
+[1.189s] -- Symlinking: /simple_ws/install/zed_wrapper/share/zed_wrapper/config/zedxm.yaml
+[1.195s] -- Symlinking: /simple_ws/install/zed_wrapper/share/zed_wrapper/config/zedxone4k.yaml
+[1.201s] -- Symlinking: /simple_ws/install/zed_wrapper/share/zed_wrapper/config/zedxonegs.yaml
+[1.207s] -- Symlinking: /simple_ws/install/zed_wrapper/share/zed_wrapper/urdf/include/materials.urdf.xacro
+[1.213s] -- Symlinking: /simple_ws/install/zed_wrapper/share/zed_wrapper/urdf/zed_descr.urdf.xacro
+[1.219s] -- Symlinking: /simple_ws/install/zed_wrapper/share/zed_wrapper/urdf/zed_macro.urdf.xacro
+[1.225s] -- Symlinking: /simple_ws/install/zed_wrapper/share/zed_wrapper/launch/zed_camera.launch.py
+[1.231s] -- Symlinking: /simple_ws/install/zed_wrapper/share/ament_index/resource_index/package_run_dependencies/zed_wrapper
+[1.238s] -- Symlinking: /simple_ws/install/zed_wrapper/share/ament_index/resource_index/parent_prefix_path/zed_wrapper
+[1.244s] -- Symlinking: /simple_ws/install/zed_wrapper/share/zed_wrapper/environment/ament_prefix_path.sh
+[1.249s] -- Symlinking: /simple_ws/install/zed_wrapper/share/zed_wrapper/environment/ament_prefix_path.dsv
+[1.255s] -- Symlinking: /simple_ws/install/zed_wrapper/share/zed_wrapper/environment/path.sh
+[1.261s] -- Symlinking: /simple_ws/install/zed_wrapper/share/zed_wrapper/environment/path.dsv
+[1.267s] -- Symlinking: /simple_ws/install/zed_wrapper/share/zed_wrapper/local_setup.bash
+[1.273s] -- Symlinking: /simple_ws/install/zed_wrapper/share/zed_wrapper/local_setup.sh
+[1.279s] -- Symlinking: /simple_ws/install/zed_wrapper/share/zed_wrapper/local_setup.zsh
+[1.285s] -- Symlinking: /simple_ws/install/zed_wrapper/share/zed_wrapper/local_setup.dsv
+[1.291s] -- Symlinking: /simple_ws/install/zed_wrapper/share/zed_wrapper/package.dsv
+[1.297s] -- Symlinking: /simple_ws/install/zed_wrapper/share/ament_index/resource_index/packages/zed_wrapper
+[1.303s] -- Symlinking: /simple_ws/install/zed_wrapper/share/zed_wrapper/cmake/zed_wrapperConfig.cmake
+[1.308s] -- Symlinking: /simple_ws/install/zed_wrapper/share/zed_wrapper/cmake/zed_wrapperConfig-version.cmake
+[1.314s] -- Symlinking: /simple_ws/install/zed_wrapper/share/zed_wrapper/package.xml
+[1.322s] Invoked command in '/simple_ws/build/zed_wrapper' returned '0': CMAKE_PREFIX_PATH=/simple_ws/install/zed_components:/simple_ws/install/zed_ros2:/simple_ws/install/zed_wrapper:/simple_ws/install/ros_tcp_endpoint:/simple_ws/install/middle_nodes:/opt/ros/humble /usr/bin/cmake --install /simple_ws/build/zed_wrapper

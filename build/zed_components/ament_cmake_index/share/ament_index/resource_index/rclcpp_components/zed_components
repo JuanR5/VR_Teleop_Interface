@@ -1,0 +1,2 @@
+stereolabs::ZedCamera;lib/libzed_camera_component.so
+stereolabs::ZedCameraOne;lib/libzed_camera_one_component.so

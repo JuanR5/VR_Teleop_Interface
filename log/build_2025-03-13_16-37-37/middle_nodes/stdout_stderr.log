@@ -1,0 +1,28 @@
+running develop
+running egg_info
+creating middle_nodes.egg-info
+writing middle_nodes.egg-info/PKG-INFO
+writing dependency_links to middle_nodes.egg-info/dependency_links.txt
+writing entry points to middle_nodes.egg-info/entry_points.txt
+writing requirements to middle_nodes.egg-info/requires.txt
+writing top-level names to middle_nodes.egg-info/top_level.txt
+writing manifest file 'middle_nodes.egg-info/SOURCES.txt'
+reading manifest file 'middle_nodes.egg-info/SOURCES.txt'
+writing manifest file 'middle_nodes.egg-info/SOURCES.txt'
+running build_ext
+Creating /simple_ws/install/middle_nodes/lib/python3.10/site-packages/middle-nodes.egg-link (link to .)
+Installing listener script to /simple_ws/install/middle_nodes/lib/middle_nodes
+Installing listener2 script to /simple_ws/install/middle_nodes/lib/middle_nodes
+Installing talker script to /simple_ws/install/middle_nodes/lib/middle_nodes
+Installing zedStream script to /simple_ws/install/middle_nodes/lib/middle_nodes
+Installing zedimage_bridge script to /simple_ws/install/middle_nodes/lib/middle_nodes
+
+Installed /simple_ws/build/middle_nodes
+running symlink_data
+creating /simple_ws/install/middle_nodes/share/ament_index
+creating /simple_ws/install/middle_nodes/share/ament_index/resource_index
+creating /simple_ws/install/middle_nodes/share/ament_index/resource_index/packages
+symbolically linking /simple_ws/build/middle_nodes/resource/middle_nodes -> /simple_ws/install/middle_nodes/share/ament_index/resource_index/packages
+symbolically linking /simple_ws/build/middle_nodes/package.xml -> /simple_ws/install/middle_nodes/share/middle_nodes
+creating /simple_ws/install/middle_nodes/share/middle_nodes/launch
+symbolically linking /simple_ws/build/middle_nodes/launch/zed_vr_conexion.launch.py -> /simple_ws/install/middle_nodes/share/middle_nodes/launch

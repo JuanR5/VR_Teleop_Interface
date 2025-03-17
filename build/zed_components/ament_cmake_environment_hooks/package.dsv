@@ -1,0 +1,4 @@
+source;share/zed_components/local_setup.bash
+source;share/zed_components/local_setup.dsv
+source;share/zed_components/local_setup.sh
+source;share/zed_components/local_setup.zsh

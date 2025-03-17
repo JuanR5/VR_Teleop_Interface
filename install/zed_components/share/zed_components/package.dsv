@@ -1,0 +1,11 @@
+source;share/zed_components/hook/cmake_prefix_path.ps1
+source;share/zed_components/hook/cmake_prefix_path.dsv
+source;share/zed_components/hook/cmake_prefix_path.sh
+source;share/zed_components/hook/ld_library_path_lib.ps1
+source;share/zed_components/hook/ld_library_path_lib.dsv
+source;share/zed_components/hook/ld_library_path_lib.sh
+source;share/zed_components/local_setup.bash
+source;share/zed_components/local_setup.dsv
+source;share/zed_components/local_setup.ps1
+source;share/zed_components/local_setup.sh
+source;share/zed_components/local_setup.zsh

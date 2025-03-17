@@ -1,0 +1,60 @@
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/opt/ros/humble/include/tf2_ros/tf2_ros/buffer_interface.h:48[m[K,
+                 from [01m[K/opt/ros/humble/include/tf2_ros/tf2_ros/buffer.h:42[m[K,
+                 from [01m[K/simple_ws/src/zed_components/src/zed_camera/include/sl_types.hpp:18[m[K,
+                 from [01m[K/simple_ws/src/zed_components/src/zed_camera/include/zed_camera_component.hpp:24[m[K,
+                 from [01m[K/simple_ws/src/zed_components/src/zed_camera/src/zed_camera_component.cpp:15[m[K:
+[01m[K/simple_ws/src/zed_components/src/zed_camera/src/zed_camera_component.cpp:[m[K In member function ‘[01m[Kbool stereolabs::ZedCamera::startCamera()[m[K’:
+[01m[K/simple_ws/src/zed_components/src/zed_camera/src/zed_camera_component.cpp:4249:21:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%d[m[K’ expects argument of type ‘[01m[Kint[m[K’, but argument 5 has type ‘[01m[Ksize_t[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K-Wformat=[m[K]
+ 4249 |       get_logger(), [01;35m[K" * SVO resolution -> %dx%d"[m[K,
+      |                     [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+ 4250 |       [32m[KmZed->getCameraInformation().camera_configuration.resolution.width[m[K,
+      |       [32m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+      |                                                                    [32m[K|[m[K
+      |                                                                    [32m[Ksize_t {aka long unsigned int}[m[K
+[01m[K/simple_ws/src/zed_components/src/zed_camera/src/zed_camera_component.cpp:4249:44:[m[K [01;36m[Knote: [m[Kformat string is defined here
+ 4249 |       get_logger(), " * SVO resolution -> [01;36m[K%d[m[Kx%d",
+      |                                           [01;36m[K~^[m[K
+      |                                            [01;36m[K|[m[K
+      |                                            [01;36m[Kint[m[K
+      |                                           [32m[K%ld[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/opt/ros/humble/include/tf2_ros/tf2_ros/buffer_interface.h:48[m[K,
+                 from [01m[K/opt/ros/humble/include/tf2_ros/tf2_ros/buffer.h:42[m[K,
+                 from [01m[K/simple_ws/src/zed_components/src/zed_camera/include/sl_types.hpp:18[m[K,
+                 from [01m[K/simple_ws/src/zed_components/src/zed_camera/include/zed_camera_component.hpp:24[m[K,
+                 from [01m[K/simple_ws/src/zed_components/src/zed_camera/src/zed_camera_component.cpp:15[m[K:
+[01m[K/simple_ws/src/zed_components/src/zed_camera/src/zed_camera_component.cpp:4249:21:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%d[m[K’ expects argument of type ‘[01m[Kint[m[K’, but argument 6 has type ‘[01m[Ksize_t[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K-Wformat=[m[K]
+ 4249 |       get_logger(), [01;35m[K" * SVO resolution -> %dx%d"[m[K,
+      |                     [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+ 4250 |       mZed->getCameraInformation().camera_configuration.resolution.width,
+ 4251 |       [32m[KmZed->getCameraInformation().camera_configuration.resolution.height[m[K);
+      |       [32m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+      |                                                                    [32m[K|[m[K
+      |                                                                    [32m[Ksize_t {aka long unsigned int}[m[K
+[01m[K/simple_ws/src/zed_components/src/zed_camera/src/zed_camera_component.cpp:4249:47:[m[K [01;36m[Knote: [m[Kformat string is defined here
+ 4249 |       get_logger(), " * SVO resolution -> %dx[01;36m[K%d[m[K",
+      |                                              [01;36m[K~^[m[K
+      |                                               [01;36m[K|[m[K
+      |                                               [01;36m[Kint[m[K
+      |                                              [32m[K%ld[m[K

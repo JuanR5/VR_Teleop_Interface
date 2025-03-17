@@ -1,0 +1,165 @@
+[0.013s] Invoking command in '/simple_ws/build/zed_components': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/simple_ws/install/ros_tcp_endpoint:/simple_ws/install/middle_nodes:/opt/ros/humble /usr/bin/cmake /simple_ws/src/zed_components -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/simple_ws/install/zed_components
+[0.153s] -- The C compiler identification is GNU 11.4.0
+[0.153s] -- The CXX compiler identification is GNU 11.4.0
+[0.153s] -- Detecting C compiler ABI info
+[0.154s] -- Detecting C compiler ABI info - done
+[0.159s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.159s] -- Detecting C compile features
+[0.160s] -- Detecting C compile features - done
+[0.162s] -- Detecting CXX compiler ABI info
+[0.221s] -- Detecting CXX compiler ABI info - done
+[0.228s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.228s] -- Detecting CXX compile features
+[0.229s] -- Detecting CXX compile features - done
+[0.234s] -- Looking for sgemm_
+[0.285s] -- Looking for sgemm_ - not found
+[0.286s] -- Looking for pthread.h
+[0.340s] -- Looking for pthread.h - found
+[0.340s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[0.397s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[0.398s] -- Found Threads: TRUE  
+[0.418s] -- Looking for sgemm_
+[0.489s] -- Looking for sgemm_ - found
+[0.490s] -- Found BLAS: /usr/lib/x86_64-linux-gnu/libopenblas.so  
+[0.509s] -- Found CUDA: /usr/local/cuda (found suitable version "12.1", minimum required is "12") 
+[0.535s] -- Found CUDA: /usr/local/cuda (found version "12.1") 
+[0.537s] -- Found ament_cmake_auto: 1.3.11 (/opt/ros/humble/share/ament_cmake_auto/cmake)
+[0.627s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.670s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.767s] -- Found rosidl_generator_c: 3.1.6 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.771s] -- Found rosidl_adapter: 3.1.6 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.777s] -- Found rosidl_generator_cpp: 3.1.6 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.785s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.797s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.874s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.876s] -- Found rmw_fastrtps_cpp: 6.2.7 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.951s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[0.968s] -- Found FastRTPS: /opt/ros/humble/include  
+[1.000s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.191s] -- Found eigen3_cmake_module: 0.1.1 (/opt/ros/humble/share/eigen3_cmake_module/cmake)
+[1.192s] -- Found Eigen3: TRUE (found version "3.4.0") 
+[1.192s] -- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+[1.285s] -- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[1.313s] -- Added test 'copyright' to check source files copyright and LICENSE
+[1.315s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[1.315s] -- Configured cppcheck include dirs: /simple_ws/src/zed_components/src/include;/simple_ws/src/zed_components/src/zed_camera/include;/simple_ws/src/zed_components/src/tools/include
+[1.315s] -- Configured cppcheck exclude dirs and/or files: 
+[1.316s] -- Added test 'lint_cmake' to check CMake code style
+[1.317s] -- Added test 'uncrustify' to check C / C++ code style
+[1.317s] -- Configured uncrustify additional arguments: 
+[1.318s] -- Added test 'xmllint' to check XML markup files
+[1.320s] -- Configuring done
+[1.343s] -- Generating done
+[1.349s] -- Build files have been written to: /simple_ws/build/zed_components
+[1.358s] Invoked command in '/simple_ws/build/zed_components' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/simple_ws/install/ros_tcp_endpoint:/simple_ws/install/middle_nodes:/opt/ros/humble /usr/bin/cmake /simple_ws/src/zed_components -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/simple_ws/install/zed_components
+[1.360s] Invoking command in '/simple_ws/build/zed_components': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/simple_ws/install/ros_tcp_endpoint:/simple_ws/install/middle_nodes:/opt/ros/humble /usr/bin/cmake --build /simple_ws/build/zed_components -- -j32 -l32
+[1.400s] [ 10%] [32mBuilding CXX object CMakeFiles/zed_camera_one_component.dir/src/tools/src/sl_tools.cpp.o[0m
+[1.400s] [ 20%] [32mBuilding CXX object CMakeFiles/zed_camera_one_component.dir/src/tools/src/sl_win_avg.cpp.o[0m
+[1.400s] [ 30%] [32mBuilding CXX object CMakeFiles/zed_camera_one_component.dir/src/tools/src/gnss_replay.cpp.o[0m
+[1.400s] [ 40%] [32mBuilding CXX object CMakeFiles/zed_camera_one_component.dir/src/zed_camera/src/zed_camera_one_component.cpp.o[0m
+[1.400s] [ 50%] [32mBuilding CXX object CMakeFiles/zed_camera_component.dir/src/tools/src/sl_tools.cpp.o[0m
+[1.401s] [ 70%] [32mBuilding CXX object CMakeFiles/zed_camera_component.dir/src/tools/src/sl_win_avg.cpp.o[0m
+[1.401s] [ 70%] [32mBuilding CXX object CMakeFiles/zed_camera_component.dir/src/zed_camera/src/zed_camera_component.cpp.o[0m
+[1.401s] [ 80%] [32mBuilding CXX object CMakeFiles/zed_camera_component.dir/src/tools/src/gnss_replay.cpp.o[0m
+[4.836s] In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+[4.836s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+[4.836s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+[4.836s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+[4.836s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+[4.836s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+[4.836s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+[4.836s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+[4.836s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+[4.836s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[4.836s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[4.836s]                  from [01m[K/opt/ros/humble/include/tf2_ros/tf2_ros/buffer_interface.h:48[m[K,
+[4.836s]                  from [01m[K/opt/ros/humble/include/tf2_ros/tf2_ros/buffer.h:42[m[K,
+[4.836s]                  from [01m[K/simple_ws/src/zed_components/src/zed_camera/include/sl_types.hpp:18[m[K,
+[4.836s]                  from [01m[K/simple_ws/src/zed_components/src/zed_camera/include/zed_camera_component.hpp:24[m[K,
+[4.836s]                  from [01m[K/simple_ws/src/zed_components/src/zed_camera/src/zed_camera_component.cpp:15[m[K:
+[4.836s] [01m[K/simple_ws/src/zed_components/src/zed_camera/src/zed_camera_component.cpp:[m[K In member function ‘[01m[Kbool stereolabs::ZedCamera::startCamera()[m[K’:
+[4.836s] [01m[K/simple_ws/src/zed_components/src/zed_camera/src/zed_camera_component.cpp:4249:21:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%d[m[K’ expects argument of type ‘[01m[Kint[m[K’, but argument 5 has type ‘[01m[Ksize_t[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K-Wformat=[m[K]
+[4.836s]  4249 |       get_logger(), [01;35m[K" * SVO resolution -> %dx%d"[m[K,
+[4.836s]       |                     [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[4.836s]  4250 |       [32m[KmZed->getCameraInformation().camera_configuration.resolution.width[m[K,
+[4.836s]       |       [32m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[4.837s]       |                                                                    [32m[K|[m[K
+[4.837s]       |                                                                    [32m[Ksize_t {aka long unsigned int}[m[K
+[4.837s] [01m[K/simple_ws/src/zed_components/src/zed_camera/src/zed_camera_component.cpp:4249:44:[m[K [01;36m[Knote: [m[Kformat string is defined here
+[4.837s]  4249 |       get_logger(), " * SVO resolution -> [01;36m[K%d[m[Kx%d",
+[4.837s]       |                                           [01;36m[K~^[m[K
+[4.837s]       |                                            [01;36m[K|[m[K
+[4.837s]       |                                            [01;36m[Kint[m[K
+[4.837s]       |                                           [32m[K%ld[m[K
+[4.837s] In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+[4.837s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+[4.837s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+[4.837s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+[4.837s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+[4.837s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+[4.837s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+[4.837s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+[4.837s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+[4.837s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[4.837s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[4.837s]                  from [01m[K/opt/ros/humble/include/tf2_ros/tf2_ros/buffer_interface.h:48[m[K,
+[4.837s]                  from [01m[K/opt/ros/humble/include/tf2_ros/tf2_ros/buffer.h:42[m[K,
+[4.837s]                  from [01m[K/simple_ws/src/zed_components/src/zed_camera/include/sl_types.hpp:18[m[K,
+[4.837s]                  from [01m[K/simple_ws/src/zed_components/src/zed_camera/include/zed_camera_component.hpp:24[m[K,
+[4.837s]                  from [01m[K/simple_ws/src/zed_components/src/zed_camera/src/zed_camera_component.cpp:15[m[K:
+[4.837s] [01m[K/simple_ws/src/zed_components/src/zed_camera/src/zed_camera_component.cpp:4249:21:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%d[m[K’ expects argument of type ‘[01m[Kint[m[K’, but argument 6 has type ‘[01m[Ksize_t[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K-Wformat=[m[K]
+[4.837s]  4249 |       get_logger(), [01;35m[K" * SVO resolution -> %dx%d"[m[K,
+[4.837s]       |                     [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[4.837s]  4250 |       mZed->getCameraInformation().camera_configuration.resolution.width,
+[4.837s]  4251 |       [32m[KmZed->getCameraInformation().camera_configuration.resolution.height[m[K);
+[4.837s]       |       [32m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[4.837s]       |                                                                    [32m[K|[m[K
+[4.837s]       |                                                                    [32m[Ksize_t {aka long unsigned int}[m[K
+[4.837s] [01m[K/simple_ws/src/zed_components/src/zed_camera/src/zed_camera_component.cpp:4249:47:[m[K [01;36m[Knote: [m[Kformat string is defined here
+[4.837s]  4249 |       get_logger(), " * SVO resolution -> %dx[01;36m[K%d[m[K",
+[4.838s]       |                                              [01;36m[K~^[m[K
+[4.838s]       |                                               [01;36m[K|[m[K
+[4.838s]       |                                               [01;36m[Kint[m[K
+[4.838s]       |                                              [32m[K%ld[m[K
+[13.115s] [ 90%] [32m[1mLinking CXX shared library libzed_camera_one_component.so[0m
+[13.327s] [ 90%] Built target zed_camera_one_component
+[41.007s] [100%] [32m[1mLinking CXX shared library libzed_camera_component.so[0m
+[41.347s] [100%] Built target zed_camera_component
+[41.357s] Invoked command in '/simple_ws/build/zed_components' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/simple_ws/install/ros_tcp_endpoint:/simple_ws/install/middle_nodes:/opt/ros/humble /usr/bin/cmake --build /simple_ws/build/zed_components -- -j32 -l32
+[41.364s] Invoking command in '/simple_ws/build/zed_components': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/simple_ws/install/ros_tcp_endpoint:/simple_ws/install/middle_nodes:/opt/ros/humble /usr/bin/cmake --install /simple_ws/build/zed_components
+[41.370s] -- Install configuration: "Release"
+[41.371s] -- Execute custom install script
+[41.371s] -- Symlinking: /simple_ws/install/zed_components/lib/libzed_camera_component.so
+[41.377s] -- Symlinking: /simple_ws/install/zed_components/lib/libzed_camera_one_component.so
+[41.383s] -- Symlinking: /simple_ws/install/zed_components/include/zed_components//cost_traversability.hpp
+[41.389s] -- Symlinking: /simple_ws/install/zed_components/include/zed_components//sl_types.hpp
+[41.394s] -- Symlinking: /simple_ws/install/zed_components/include/zed_components//zed_camera_component.hpp
+[41.400s] -- Symlinking: /simple_ws/install/zed_components/include/zed_components//zed_camera_one_component.hpp
+[41.406s] -- Symlinking: /simple_ws/install/zed_components/include/zed_components//gnss_replay.hpp
+[41.412s] -- Symlinking: /simple_ws/install/zed_components/include/zed_components//json.hpp
+[41.418s] -- Symlinking: /simple_ws/install/zed_components/include/zed_components//sl_logging.hpp
+[41.423s] -- Symlinking: /simple_ws/install/zed_components/include/zed_components//sl_tools.hpp
+[41.429s] -- Symlinking: /simple_ws/install/zed_components/include/zed_components//sl_win_avg.hpp
+[41.435s] -- Symlinking: /simple_ws/install/zed_components/include/zed_components//visibility_control.hpp
+[41.441s] -- Symlinking: /simple_ws/install/zed_components/share/zed_components/environment/library_path.sh
+[41.447s] -- Symlinking: /simple_ws/install/zed_components/share/zed_components/environment/library_path.dsv
+[41.452s] -- Symlinking: /simple_ws/install/zed_components/share/ament_index/resource_index/package_run_dependencies/zed_components
+[41.458s] -- Symlinking: /simple_ws/install/zed_components/share/ament_index/resource_index/parent_prefix_path/zed_components
+[41.464s] -- Symlinking: /simple_ws/install/zed_components/share/zed_components/environment/ament_prefix_path.sh
+[41.470s] -- Symlinking: /simple_ws/install/zed_components/share/zed_components/environment/ament_prefix_path.dsv
+[41.475s] -- Symlinking: /simple_ws/install/zed_components/share/zed_components/environment/path.sh
+[41.481s] -- Symlinking: /simple_ws/install/zed_components/share/zed_components/environment/path.dsv
+[41.487s] -- Symlinking: /simple_ws/install/zed_components/share/zed_components/local_setup.bash
+[41.493s] -- Symlinking: /simple_ws/install/zed_components/share/zed_components/local_setup.sh
+[41.499s] -- Symlinking: /simple_ws/install/zed_components/share/zed_components/local_setup.zsh
+[41.505s] -- Symlinking: /simple_ws/install/zed_components/share/zed_components/local_setup.dsv
+[41.511s] -- Symlinking: /simple_ws/install/zed_components/share/zed_components/package.dsv
+[41.518s] -- Symlinking: /simple_ws/install/zed_components/share/ament_index/resource_index/packages/zed_components
+[41.524s] -- Symlinking: /simple_ws/install/zed_components/share/ament_index/resource_index/rclcpp_components/zed_components
+[41.530s] -- Symlinking: /simple_ws/install/zed_components/share/zed_components/cmake/ament_cmake_export_include_directories-extras.cmake
+[41.536s] -- Symlinking: /simple_ws/install/zed_components/share/zed_components/cmake/ament_cmake_export_libraries-extras.cmake
+[41.542s] -- Symlinking: /simple_ws/install/zed_components/share/zed_components/cmake/ament_cmake_export_dependencies-extras.cmake
+[41.548s] -- Symlinking: /simple_ws/install/zed_components/share/zed_components/cmake/zed_componentsConfig.cmake
+[41.554s] -- Symlinking: /simple_ws/install/zed_components/share/zed_components/cmake/zed_componentsConfig-version.cmake
+[41.560s] -- Symlinking: /simple_ws/install/zed_components/share/zed_components/package.xml
+[41.568s] Invoked command in '/simple_ws/build/zed_components' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/simple_ws/install/ros_tcp_endpoint:/simple_ws/install/middle_nodes:/opt/ros/humble /usr/bin/cmake --install /simple_ws/build/zed_components
