@@ -25,9 +25,6 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'talker = middle_nodes.talker:main',
-            'listener = middle_nodes.listener:main',
-            'listener2 = middle_nodes.listener2:main',
             'zedStream = middle_nodes.zed_stream:main',
             'zedimage_bridge = middle_nodes.zedimage_bridge:main',
 
