@@ -1,1 +1,3 @@
-/simple_ws/build/zed_components/ament_cmake_environment_hooks/local_setup.dsv
+source;share/zed_components/environment/ament_prefix_path.sh
+source;share/zed_components/environment/library_path.sh
+source;share/zed_components/environment/path.sh

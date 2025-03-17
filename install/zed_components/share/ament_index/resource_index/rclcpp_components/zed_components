@@ -1,1 +1,2 @@
-/simple_ws/build/zed_components/ament_cmake_index/share/ament_index/resource_index/rclcpp_components/zed_components
+stereolabs::ZedCamera;lib/libzed_camera_component.so
+stereolabs::ZedCameraOne;lib/libzed_camera_one_component.so
