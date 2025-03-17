@@ -1,0 +1,19 @@
+# Ignore ROS2 build, log, and install folders
+build/
+install/
+log/
+
+# Ignore hidden ROS2-related files
+.colcon/
+.ros/
+
+# Ignore editor/IDE-specific files
+.vscode/
+.idea/
+*.swp
+*~
+
+# Ignore Python cache
+__pycache__/
+*.pyc
+*.pyo
