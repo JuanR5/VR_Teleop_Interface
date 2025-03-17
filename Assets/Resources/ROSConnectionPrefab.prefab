@@ -44,11 +44,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7acef0b79454c9b4dae3f8139bc4ba77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_RosIPAddress: 10.4.0.5
+  m_RosIPAddress: 10.4.0.11
   m_RosPort: 10000
   m_ConnectOnStart: 1
-  m_KeepaliveTime: 1
-  m_NetworkTimeoutSeconds: 2
+  m_KeepaliveTime: 3
+  m_NetworkTimeoutSeconds: 3
   m_SleepTimeSeconds: 0.01
   m_ShowHUD: 1
   m_TFTopics:

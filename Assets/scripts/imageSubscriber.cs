@@ -140,54 +140,67 @@ public class StereoImageSubscriber : MonoBehaviour
     /// <summary>
     /// Converts image data from ROS and applies it to the appropriate quad.
     /// </summary>
-    private void ProcessImage(ImageMsg imageMsg, bool isLeft)
+/// <summary>
+/// Converts image data from ROS and applies it to the appropriate quad.
+/// </summary>
+private void ProcessImage(ImageMsg imageMsg, bool isLeft)
+{
+    GameObject quad = isLeft ? leftQuad : rightQuad;
+    Texture2D tex = isLeft ? leftTexture : rightTexture;
+
+    if (quad == null) return;
+
+    // Desired resolution
+    int desiredWidth = 960;
+    int desiredHeight = 540;
+
+    // Initialize texture if needed
+    if (tex == null || tex.width != desiredWidth || tex.height != desiredHeight)
     {
-        GameObject quad = isLeft ? leftQuad : rightQuad;
-        Texture2D tex = isLeft ? leftTexture : rightTexture;
+        tex = new Texture2D(desiredWidth, desiredHeight, TextureFormat.RGB24, false);
+        if (isLeft) leftTexture = tex; else rightTexture = tex;
 
-        if (quad == null) return;
-
-        // Initialize texture if needed
-        if (tex == null || tex.width != imageMsg.width || tex.height != imageMsg.height)
-        {
-            tex = new Texture2D((int)imageMsg.width, (int)imageMsg.height, TextureFormat.RGB24, false);
-            if (isLeft) leftTexture = tex; else rightTexture = tex;
-
-            float aspectRatio = (float)imageMsg.width / imageMsg.height;
-            float quadHeight = displayDistance * 2.0f * quadHeightScale;
-            float quadWidth = quadHeight * aspectRatio * quadWidthScale;
-            quad.transform.localScale = new Vector3(quadWidth, quadHeight, 1f);
-        }
-
-        // Convert image data to texture
-        Color32[] colors = new Color32[imageMsg.width * imageMsg.height];
-        int stride = (int)imageMsg.width * 3;
-
-        for (int y = 0; y < imageMsg.height; y++)
-        {
-            for (int x = 0; x < imageMsg.width; x++)
-            {
-                int sourceIndex = (y * stride) + (x * 3);
-                int targetIndex = ((int)imageMsg.height - 1 - y) * (int)imageMsg.width + x;
-
-                colors[targetIndex] = new Color32(
-                    imageMsg.data[sourceIndex],     // R
-                    imageMsg.data[sourceIndex + 1], // G
-                    imageMsg.data[sourceIndex + 2], // B
-                    255                             // A
-                );
-            }
-        }
-
-        tex.SetPixels32(colors);
-        tex.Apply();
-
-        // Apply texture to quad
-        var material = quad.GetComponent<MeshRenderer>().material;
-        material.mainTexture = tex;
-        material.mainTextureScale = new Vector2(1, 1);
-        material.mainTextureOffset = new Vector2(0, 0);
+        // Calculate quad scale based on desired resolution
+        float aspectRatio = (float)desiredWidth / desiredHeight;
+        float quadHeight = displayDistance * 2.0f * quadHeightScale;
+        float quadWidth = quadHeight * aspectRatio * quadWidthScale;
+        quad.transform.localScale = new Vector3(quadWidth, quadHeight, 1f);
     }
+
+    // Convert image data to texture
+    Color32[] colors = new Color32[desiredWidth * desiredHeight];
+    int stride = (int)imageMsg.width * 3;
+
+    // Resize the image to fit the desired resolution
+    for (int y = 0; y < desiredHeight; y++)
+    {
+        for (int x = 0; x < desiredWidth; x++)
+        {
+             // Map the desired resolution to the original image resolution
+            int sourceX = (int)((x) * ((float)imageMsg.width / desiredWidth)); // Flip horizontally
+            int sourceY = (int)((desiredHeight - 1 - y) * ((float)imageMsg.height / desiredHeight)); // Flip vertically
+
+            int sourceIndex = (sourceY * stride) + (sourceX * 3);
+            int targetIndex = (y * desiredWidth) + x;
+
+            colors[targetIndex] = new Color32(
+                imageMsg.data[sourceIndex],     // R
+                imageMsg.data[sourceIndex + 1], // G
+                imageMsg.data[sourceIndex + 2], // B
+                255                             // A
+            );
+        }
+    }
+
+    tex.SetPixels32(colors);
+    tex.Apply();
+
+    // Apply texture to quad
+    var material = quad.GetComponent<MeshRenderer>().material;
+    material.mainTexture = tex;
+    material.mainTextureScale = new Vector2(1, 1);
+    material.mainTextureOffset = new Vector2(0, 0);
+}
 
     /// <summary>
     /// Updates the position of the display quads based on the IPD setting.
