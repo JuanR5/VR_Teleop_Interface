@@ -1,22 +1,24 @@
-using System.Diagnostics;
 using UnityEngine;
+using Renci.SshNet;
+using System.Threading;
+using System;
 
 public class SSHRunner : MonoBehaviour
 {
-    // Path to Plink executable (set in the Inspector)
-    [SerializeField]
-    private string plinkPath = @"C:\Tools\plink.exe";
-
     // SSH credentials and IP (set in the Inspector)
     [SerializeField]
     private string username = "nakama";
     [SerializeField]
-    private string password = "eve";
+    private string password = "password";
     [SerializeField]
     private string host = "10.4.0.11";
 
     // Command to run on the remote PC
     private string command = "cd VR_Interface/simple_ws && docker compose up -d";
+
+    // SSH client and cancellation token
+    private SshClient sshClient;
+    private CancellationTokenSource cancellationTokenSource;
 
     void Start()
     {
@@ -25,35 +27,99 @@ public class SSHRunner : MonoBehaviour
 
     void RunSSHCommand()
     {
-        // Create the Plink command string
-        string plinkCommand = $"-ssh {username}@{host} -pw {password} {command}";
+        UnityEngine.Debug.Log("SSH connection trying.");
+        // Initialize the SSH client
+        sshClient = new SshClient(host, username, password);
 
-        // Set up the process
-        ProcessStartInfo processInfo = new ProcessStartInfo
+        try
         {
-            FileName = plinkPath,
-            Arguments = plinkCommand,
-            RedirectStandardOutput = true,
-            RedirectStandardError = true,
-            UseShellExecute = false,
-            CreateNoWindow = true
-        };
+            // Connect to the remote server
+            sshClient.Connect();
+            UnityEngine.Debug.Log("SSH connection established.");
 
-        // Start the process
-        using (Process process = Process.Start(processInfo))
+            // Create a cancellation token source
+            cancellationTokenSource = new CancellationTokenSource();
+
+            // Run the command asynchronously
+            RunCommandAsync(command, cancellationTokenSource.Token);
+        }
+        catch (Exception e)
         {
-            // Read the output (optional)
-            string output = process.StandardOutput.ReadToEnd();
-            string error = process.StandardError.ReadToEnd();
+            UnityEngine.Debug.LogError("SSH connection failed: " + e.Message);
+        }
+    }
 
-            process.WaitForExit();
+    async void RunCommandAsync(string command, CancellationToken cancellationToken)
+    {
+        try
+        {
+            // Create and run the command
+            var sshCommand = sshClient.CreateCommand(command);
+            var asyncResult = sshCommand.BeginExecute();
 
-            // Log the output
-            Debug.Log("Output: " + output);
-            if (!string.IsNullOrEmpty(error))
+            // Wait for the command to complete or cancellation
+            while (!asyncResult.IsCompleted && !cancellationToken.IsCancellationRequested)
             {
-                Debug.LogError("Error: " + error);
+                await System.Threading.Tasks.Task.Yield();
             }
+
+            if (cancellationToken.IsCancellationRequested)
+            {
+                // Cancel the command
+                sshCommand.CancelAsync();
+                UnityEngine.Debug.Log("SSH command canceled.");
+            }
+            else
+            {
+                // Command completed
+                string output = sshCommand.EndExecute(asyncResult);
+                UnityEngine.Debug.Log("Command output: " + output);
+            }
+
+            // Keep the connection alive while the simulation is running
+            while (!cancellationToken.IsCancellationRequested)
+            {
+                await System.Threading.Tasks.Task.Delay(1000, cancellationToken); // Wait for 1 second
+            }
+        }
+        catch (Exception e)
+        {
+            UnityEngine.Debug.LogError("Command execution failed: " + e.Message);
+        }
+        finally
+        {
+            // Disconnect the SSH client
+            if (sshClient != null && sshClient.IsConnected)
+            {
+                sshClient.Disconnect();
+                UnityEngine.Debug.Log("SSH connection closed.");
+            }
+        }
+    }
+
+    void OnApplicationQuit()
+    {
+        CancelSSHCommand();
+    }
+
+    void OnDestroy()
+    {
+        CancelSSHCommand();
+    }
+
+    void CancelSSHCommand()
+    {
+        // Cancel the command if it's running
+        if (cancellationTokenSource != null && !cancellationTokenSource.IsCancellationRequested)
+        {
+            cancellationTokenSource.Cancel();
+        }
+
+        // Dispose the SSH client
+        if (sshClient != null && sshClient.IsConnected)
+        {
+            sshClient.Disconnect();
+            sshClient.Dispose();
         }
     }
 }
