@@ -11,6 +11,13 @@ public class Quest2ControllerInput : MonoBehaviour
     private Vector2 lastLeftThumbstick = Vector2.zero;
     private float joystickThreshold = 0.2f; // Higher to ignore drift
 
+    // Trigger threshold for detecting press (0-1 range)
+    public float triggerThreshold = 0.5f;
+
+    // Static properties to store current trigger analog values
+    public static float LeftTriggerValue { get; private set; } = 0f;
+    public static float RightTriggerValue { get; private set; } = 0f;
+
     void Update()
     {
         // ---- Right Controller Button Presses ----
@@ -66,5 +73,18 @@ public class Quest2ControllerInput : MonoBehaviour
             OnThumbstickMoved?.Invoke("Left Thumbstick", filteredLeftInput);
             lastLeftThumbstick = filteredLeftInput;
         }
+
+        // ---- Trigger Button States ----
+        // Right Trigger: Get analog value, update static property, and log state
+        float rightTriggerValue = OVRInput.Get(OVRInput.Axis1D.PrimaryIndexTrigger, OVRInput.Controller.RTouch);
+        RightTriggerValue = rightTriggerValue;
+        int rightTriggerState = rightTriggerValue >= triggerThreshold ? 1 : 0;
+        Debug.Log("Right Trigger State: " + rightTriggerState + " (Analog value: " + rightTriggerValue + ")");
+
+        // Left Trigger: Get analog value, update static property, and log state
+        float leftTriggerValue = OVRInput.Get(OVRInput.Axis1D.PrimaryIndexTrigger, OVRInput.Controller.LTouch);
+        LeftTriggerValue = leftTriggerValue;
+        int leftTriggerState = leftTriggerValue >= triggerThreshold ? 1 : 0;
+        Debug.Log("Left Trigger State: " + leftTriggerState + " (Analog value: " + leftTriggerValue + ")");
     }
 }

@@ -1,28 +1,34 @@
 using UnityEngine;
 using Unity.Robotics.ROSTCPConnector;
 using RosMessageTypes.Geometry;
+using RosMessageTypes.Std;
 using System;
 
 public class ControllerMovementPublisher : MonoBehaviour
 {
     private ROSConnection ros;
     public string topicName = "controller_movement";
+    public string gripperTopic = "gripper_command";
 
     public float publishRate = 10f;
     private float timeElapsed;
 
     // XYZ from right controller, RPY from left controller
-    private Vector3 positionVector = Vector3.zero;  // For XYZ
-    private Vector3 rotationVector = Vector3.zero;  // For RPY
+    private Vector3 positionVector = Vector3.zero;  // For linear movement (XYZ)
+    private Vector3 rotationVector = Vector3.zero;  // For angular movement (RPY)
+
+    // Threshold for triggers (0-1) to decide if the trigger is "pressed"
+    public float triggerThreshold = 0.5f;
 
     void Start()
     {
         ros = ROSConnection.GetOrCreateInstance();
         ros.RegisterPublisher<TwistMsg>(topicName);
+        ros.RegisterPublisher<Float32MultiArrayMsg>(gripperTopic);
 
         timeElapsed = 0f;
 
-        // Subscribe to controller events
+        // Subscribe to controller events (these events are published from your Quest2ControllerInput script)
         Quest2ControllerInput.OnThumbstickMoved += HandleThumbstickInput;
         Quest2ControllerInput.OnButtonPressed += HandleButtonInput;
         Quest2ControllerInput.OnButtonReleased += HandleButtonRelease;
@@ -83,6 +89,7 @@ public class ControllerMovementPublisher : MonoBehaviour
 
     private void PublishMovement()
     {
+        // Publish the movement command as a Twist message
         TwistMsg twistMsg = new TwistMsg
         {
             linear = new RosMessageTypes.Geometry.Vector3Msg(positionVector.x, positionVector.y, positionVector.z),
@@ -91,5 +98,28 @@ public class ControllerMovementPublisher : MonoBehaviour
 
         ros.Publish(topicName, twistMsg);
         Debug.Log($"Published Twist: Linear({positionVector}), Angular({rotationVector})");
+
+        // Publish the gripper command based on trigger inputs
+        PublishGripperCommand();
+    }
+
+    private void PublishGripperCommand()
+    {
+        // Instead of reading the controller triggers directly, we assume that
+        // Quest2ControllerInput already updates these static properties.
+        // (Make sure your Quest2ControllerInput script defines these.)
+        float leftTriggerValue = Quest2ControllerInput.LeftTriggerValue;
+        float rightTriggerValue = Quest2ControllerInput.RightTriggerValue;
+
+        // Convert the analog trigger values to binary states: 1 if pressed above threshold, 0 otherwise.
+        int leftState = leftTriggerValue >= triggerThreshold ? 1 : 0;
+        int rightState = rightTriggerValue >= triggerThreshold ? 1 : 0;
+
+        // Create and publish the gripper command as a Float32MultiArray.
+        Float32MultiArrayMsg gripperMsg = new Float32MultiArrayMsg();
+        gripperMsg.data = new float[] { leftState, rightState };
+
+        ros.Publish(gripperTopic, gripperMsg);
+        Debug.Log($"Published Gripper Command: [{leftState}, {rightState}]");
     }
 }
