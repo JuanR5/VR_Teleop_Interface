@@ -16,6 +16,9 @@
 
 namespace franka_teleop_pkg {
 
+// Define number of joints as a constant.
+static constexpr size_t N_JOINTS = 7;
+
 /**
  * @brief Normalize a quaternion.
  * @param q Input quaternion.
@@ -28,14 +31,15 @@ static inline Eigen::Quaterniond normalizeQuaternion(const Eigen::Quaterniond &q
 /**
  * @brief Compute the error quaternion.
  *
- * Computes the rotation error as desired * current.inverse().
+ * Computes the rotation error as current.inverse() * desired.
  *
  * @param current The current orientation.
  * @param desired The desired orientation.
  * @return Error quaternion.
  */
-static inline Eigen::Quaterniond computeQuaternionError(const Eigen::Quaterniond &current, const Eigen::Quaterniond &desired) {
-  return desired * current.inverse();
+static inline Eigen::Quaterniond computeQuaternionError(const Eigen::Quaterniond &current,
+                                                          const Eigen::Quaterniond &desired) {
+  return current.inverse() * desired;
 }
 
 /**
@@ -48,7 +52,8 @@ static inline Eigen::Quaterniond computeQuaternionError(const Eigen::Quaterniond
  * @param new_target The new desired orientation.
  * @return Updated orientation target.
  */
-static inline Eigen::Quaterniond updateOrientationTarget(const Eigen::Quaterniond &current_target, const Eigen::Quaterniond &new_target) {
+static inline Eigen::Quaterniond updateOrientationTarget(const Eigen::Quaterniond &current_target,
+                                                           const Eigen::Quaterniond &new_target) {
   Eigen::Quaterniond updated = new_target.normalized();
   if (current_target.coeffs().dot(updated.coeffs()) < 0.0) {
     updated.coeffs() = -updated.coeffs();
@@ -60,7 +65,7 @@ controller_interface::InterfaceConfiguration
 CartesianImpedanceController::command_interface_configuration() const {
   controller_interface::InterfaceConfiguration config;
   config.type = controller_interface::interface_configuration_type::INDIVIDUAL;
-  std::string arm_prefix = (arm_id_.empty() ? "fr3" : arm_id_) + "_joint";
+  std::string arm_prefix = (arm_id_.empty() ? "fr3" : arm_id_) + std::string("_joint");
   for (size_t index = 1; index <= N_JOINTS; index++) {
     config.names.push_back(arm_prefix + std::to_string(index) + "/effort");
   }
@@ -71,7 +76,7 @@ controller_interface::InterfaceConfiguration
 CartesianImpedanceController::state_interface_configuration() const {
   controller_interface::InterfaceConfiguration config;
   config.type = controller_interface::interface_configuration_type::INDIVIDUAL;
-  std::string arm_prefix = (arm_id_.empty() ? "fr3" : arm_id_) + "_joint";
+  std::string arm_prefix = (arm_id_.empty() ? "fr3" : arm_id_) + std::string("_joint");
   for (size_t index = 1; index <= N_JOINTS; index++) {
     config.names.push_back(arm_prefix + std::to_string(index) + "/position");
     config.names.push_back(arm_prefix + std::to_string(index) + "/velocity");
@@ -91,17 +96,13 @@ CartesianImpedanceController::state_interface_configuration() const {
 
 controller_interface::CallbackReturn CartesianImpedanceController::on_init() {
   try {
-    // Declare parameters.
+    // Declare only the required parameters.
     auto_declare<std::vector<double>>("k_gains", {});
     auto_declare<std::vector<double>>("d_gains", {});
-    auto_declare<double>("velocity_filter_alpha_gain", 0.99);
-    auto_declare<std::string>("cmd_topic", "~/cmd_pose");
-    auto_declare<std::string>("state_topic", "~/commanded_state");
-    auto_declare<std::string>("arm_id", "fr3");
-    // Parameterize compliance gains.
     auto_declare<double>("translational_stiffness", 150.0);
     auto_declare<double>("rotational_stiffness", 10.0);
-    
+    auto_declare<std::string>("arm_id", "fr3");
+
     // Initialize desired pose.
     position_d_.setZero();
     orientation_d_.coeffs() << 0.0, 0.0, 0.0, 1.0;
@@ -169,7 +170,6 @@ controller_interface::CallbackReturn CartesianImpedanceController::on_configure(
     k_gains_(static_cast<int>(index)) = k_gains_param.at(index);
     d_gains_(static_cast<int>(index)) = d_gains_param.at(index);
   }
-  velocity_filter_alpha_gain_ = get_node()->get_parameter("velocity_filter_alpha_gain").as_double();
 
   // Set up equilibrium pose subscription.
   try {
@@ -188,14 +188,13 @@ controller_interface::CallbackReturn CartesianImpedanceController::on_configure(
 
 controller_interface::CallbackReturn CartesianImpedanceController::on_cleanup(
     const rclcpp_lifecycle::State & /*previous_state*/) {
-  velocity_filter_alpha_gain_ = 0.0;
+  // Reset gains.
   for (size_t index = 0; index < N_JOINTS; index++) {
     k_gains_(static_cast<int>(index)) = 0;
     d_gains_(static_cast<int>(index)) = 0;
   }
-  subscriber_.reset();
+  // Reset subscriptions and publishers.
   sub_equilibrium_pose_.reset();
-  publisher_.reset();
   realtime_publisher_.reset();
 
   RCLCPP_INFO(get_node()->get_logger(), "Cleanup successful");
@@ -223,9 +222,8 @@ controller_interface::CallbackReturn CartesianImpedanceController::on_activate(
       init_robot_state_.o_t_ee.pose.orientation.y, 
       init_robot_state_.o_t_ee.pose.orientation.z);
       
-  Eigen::Affine3d initial_transform = Eigen::Affine3d::Identity();
-  initial_transform.translation() = position_init;
-  initial_transform.rotate(orientation_init.toRotationMatrix());
+  // Build transform using Eigen composition.
+  Eigen::Affine3d initial_transform = Eigen::Translation3d(position_init) * orientation_init;
   
   position_d_ = initial_transform.translation();
   orientation_d_ = initial_transform.rotation();
@@ -250,90 +248,118 @@ controller_interface::CallbackReturn CartesianImpedanceController::on_deactivate
   return controller_interface::CallbackReturn::SUCCESS;
 }
 
+// !
+// !
 controller_interface::return_type CartesianImpedanceController::update(
-    const rclcpp::Time & time, const rclcpp::Duration & /*period*/) {
-  // --- 1. Acquire current robot state ---
-  robot_state_ = franka_msgs::msg::FrankaRobotState();
-  franka_robot_state_->get_values_as_message(robot_state_);
+  const rclcpp::Time & time, const rclcpp::Duration & /*period*/) {
+// --- 1. Acquire current robot state ---
+robot_state_ = franka_msgs::msg::FrankaRobotState();
+franka_robot_state_->get_values_as_message(robot_state_);
 
-  // --- 2. Retrieve robot model data (fixed-size arrays) ---
-  std::array<double, 49> mass = franka_robot_model_->getMassMatrix();
-  std::array<double, 7> coriolis_array = franka_robot_model_->getCoriolisForceVector();
-  std::array<double, 42> jacobian_array = franka_robot_model_->getZeroJacobian(franka::Frame::kEndEffector);
+// --- 2. Retrieve robot model data (fixed-size arrays) ---
+std::array<double, 49> mass = franka_robot_model_->getMassMatrix();
+std::array<double, 7> coriolis_array = franka_robot_model_->getCoriolisForceVector();
+std::array<double, 42> jacobian_array = franka_robot_model_->getZeroJacobian(franka::Frame::kEndEffector);
 
-  Eigen::Map<Eigen::Matrix<double, 7, 7>> M(mass.data());
-  Eigen::Map<Eigen::Matrix<double, 7, 1>> coriolis(coriolis_array.data());
-  Eigen::Map<Eigen::Matrix<double, 6, 7>> jacobian(jacobian_array.data());
+Eigen::Map<Eigen::Matrix<double, 7, 7>> M(mass.data());
+Eigen::Map<Eigen::Matrix<double, 7, 1>> coriolis(coriolis_array.data());
+Eigen::Map<Eigen::Matrix<double, 6, 7>> jacobian(jacobian_array.data());
 
-  // --- 3. Map current joint state (positions, velocities, efforts) ---
-  Eigen::Map<Eigen::Matrix<double, 7, 1>> q(robot_state_.measured_joint_state.position.data());
-  Eigen::Map<Eigen::Matrix<double, 7, 1>> dq(robot_state_.measured_joint_state.velocity.data());
-  Eigen::Map<Eigen::Matrix<double, 7, 1>> tau_j_d(robot_state_.measured_joint_state.effort.data());
-  
-  // --- 4. Compute current end-effector pose ---
-  Eigen::Vector3d position(robot_state_.o_t_ee.pose.position.x,
-                           robot_state_.o_t_ee.pose.position.y,
-                           robot_state_.o_t_ee.pose.position.z);
-      
-  Eigen::Quaterniond orientation(robot_state_.o_t_ee.pose.orientation.w,
-                                 robot_state_.o_t_ee.pose.orientation.x,
-                                 robot_state_.o_t_ee.pose.orientation.y,
-                                 robot_state_.o_t_ee.pose.orientation.z);
-      
-  Eigen::Affine3d transform = Eigen::Affine3d::Identity();
-  transform.translation() = position;
-  transform.rotate(orientation.toRotationMatrix());
+// --- 3. Map current joint state (positions, velocities, efforts) ---
+Eigen::Map<Eigen::Matrix<double, 7, 1>> q(robot_state_.measured_joint_state.position.data());
+Eigen::Map<Eigen::Matrix<double, 7, 1>> dq(robot_state_.measured_joint_state.velocity.data());
+Eigen::Map<Eigen::Matrix<double, 7, 1>> tau_j_d(robot_state_.measured_joint_state.effort.data());
 
-  // --- 5. Compute Cartesian error ---
-  Eigen::Matrix<double, 6, 1> position_error;
-  position_error.head(3) = position - position_d_;
-  
-  orientation = normalizeQuaternion(orientation);
-  if (orientation_d_.coeffs().dot(orientation.coeffs()) < 0.0) {
-    orientation.coeffs() = -orientation.coeffs();
-  }
-  Eigen::Quaterniond error_quaternion = computeQuaternionError(orientation, orientation_d_);
-  position_error.tail(3) << error_quaternion.x(), error_quaternion.y(), error_quaternion.z();
-  position_error.tail(3) = -transform.rotation() * position_error.tail(3);
+// --- 4. Compute current end-effector pose using Eigen composition ---
+Eigen::Vector3d position(robot_state_.o_t_ee.pose.position.x,
+                         robot_state_.o_t_ee.pose.position.y,
+                         robot_state_.o_t_ee.pose.position.z);
+Eigen::Quaterniond orientation(robot_state_.o_t_ee.pose.orientation.w,
+                               robot_state_.o_t_ee.pose.orientation.x,
+                               robot_state_.o_t_ee.pose.orientation.y,
+                               robot_state_.o_t_ee.pose.orientation.z);
+Eigen::Affine3d transform = Eigen::Translation3d(position) * orientation;
 
-  // --- 6. Compute control torques ---
-  Eigen::VectorXd tau_task(7), tau_nullspace(7), tau_d(7);
-  Eigen::MatrixXd jacobian_transpose_pinv = pseudoInverse(jacobian.transpose(), true);
-  tau_task = jacobian.transpose() * (-cartesian_stiffness_ * position_error - cartesian_damping_ * (jacobian * dq));
-  tau_nullspace = (Eigen::MatrixXd::Identity(7, 7) - jacobian.transpose() * jacobian_transpose_pinv) *
-                  (nullspace_stiffness_ * (q_d_nullspace_ - q) - (2.0 * sqrt(nullspace_stiffness_)) * dq);
-  tau_d = tau_task + tau_nullspace + coriolis;
-  
-  tau_d = saturateTorqueRate(tau_d, tau_j_d);
-
-  // --- 7. Send computed torques ---
-  for (int i = 0; i < num_joints; i++) {
-    command_interfaces_[i].set_value(tau_d[i]);
-  }
-
-  // --- 8. Update filtering and target values ---
-  cartesian_stiffness_ = filter_params_ * cartesian_stiffness_target_ + (1.0 - filter_params_) * cartesian_stiffness_;
-  cartesian_damping_ = filter_params_ * cartesian_damping_target_ + (1.0 - filter_params_) * cartesian_damping_;
-  nullspace_stiffness_ = filter_params_ * nullspace_stiffness_target_ + (1.0 - filter_params_) * nullspace_stiffness_;
+// --- 5. Oscillation Update for Desired Target ---
+// On the first call, store the initial desired target.
+if (initialization_flag_) {
   {
     std::lock_guard<std::mutex> lock(position_and_orientation_d_target_mutex_);
-    position_d_ = filter_params_ * position_d_target_ + (1.0 - filter_params_) * position_d_;
-    orientation_d_ = orientation_d_.slerp(filter_params_, orientation_d_target_);
+    initial_position_ = position_d_target_;
+    initial_orientation_ = orientation_d_target_;
   }
-
-  // --- 9. Publish commanded state (preallocate vector if needed) ---
-  if (realtime_publisher_ && realtime_publisher_->trylock()) {
-    realtime_publisher_->msg_.header.stamp = time;
-    if (realtime_publisher_->msg_.data.size() != N_JOINTS) {
-      realtime_publisher_->msg_.data.resize(N_JOINTS, 0.0);
-    }
-    for (size_t i = 0; i < N_JOINTS; ++i) {
-      realtime_publisher_->msg_.data[i] = tau_d[i];
-    }
-    realtime_publisher_->unlockAndPublish();
-  }
-  return controller_interface::return_type::OK;
+  initialization_flag_ = false;
 }
+// Update elapsed time.
+elapsed_time_ += trajectory_period_;
+double radius = 0.1;
+double angle = M_PI / 4 * (1 - std::cos(M_PI / 5.0 * elapsed_time_));
+double delta_x = radius * std::sin(angle);
+double delta_z = radius * (std::cos(angle) - 1);
+
+Eigen::Vector3d oscillation_target = initial_position_;
+oscillation_target(0) -= delta_x;
+oscillation_target(2) -= delta_z;
+{
+  std::lock_guard<std::mutex> lock(position_and_orientation_d_target_mutex_);
+  position_d_target_ = oscillation_target;
+}
+
+// --- 6. Compute Cartesian error ---
+Eigen::Matrix<double, 6, 1> position_error;
+position_error.head(3) = position - position_d_;
+
+// Ensure proper hemisphere alignment.
+orientation = normalizeQuaternion(orientation);
+if (orientation_d_.coeffs().dot(orientation.coeffs()) < 0.0) {
+  orientation.coeffs() = -orientation.coeffs();
+}
+// Use consistent error: current.inverse() * desired.
+Eigen::Quaterniond error_quaternion = computeQuaternionError(orientation, orientation_d_);
+position_error.tail(3) << error_quaternion.x(), error_quaternion.y(), error_quaternion.z();
+position_error.tail(3) = -transform.rotation() * position_error.tail(3);
+
+// --- 7. Compute control torques ---
+Eigen::VectorXd tau_task(7), tau_nullspace(7), tau_d(7);
+Eigen::MatrixXd jacobian_transpose_pinv = pseudoInverse(jacobian.transpose(), true);
+tau_task = jacobian.transpose() * (-cartesian_stiffness_ * position_error - cartesian_damping_ * (jacobian * dq));
+tau_nullspace = (Eigen::MatrixXd::Identity(7, 7) - jacobian.transpose() * jacobian_transpose_pinv) *
+                (nullspace_stiffness_ * (q_d_nullspace_ - q) - (2.0 * sqrt(nullspace_stiffness_)) * dq);
+tau_d = tau_task + tau_nullspace + coriolis;
+tau_d = saturateTorqueRate(tau_d, tau_j_d);
+
+// --- 8. Send computed torques ---
+for (size_t i = 0; i < N_JOINTS; i++) {
+  command_interfaces_[i].set_value(tau_d[i]);
+}
+
+// --- 9. Update filtering and target values ---
+// Copy target values under mutex lock and perform filtering outside the lock.
+Eigen::Vector3d local_position_d_target;
+Eigen::Quaterniond local_orientation_d_target;
+{
+  std::lock_guard<std::mutex> lock(position_and_orientation_d_target_mutex_);
+  local_position_d_target = position_d_target_;
+  local_orientation_d_target = orientation_d_target_;
+}
+position_d_ = filter_params_ * local_position_d_target + (1.0 - filter_params_) * position_d_;
+orientation_d_ = orientation_d_.slerp(filter_params_, local_orientation_d_target);
+
+// --- 10. Publish commanded state (if realtime publisher is available) ---
+if (realtime_publisher_ && realtime_publisher_->trylock()) {
+  realtime_publisher_->msg_.header.stamp = time;
+  if (realtime_publisher_->msg_.data.size() != N_JOINTS) {
+    realtime_publisher_->msg_.data.resize(N_JOINTS, 0.0);
+  }
+  for (size_t i = 0; i < N_JOINTS; ++i) {
+    realtime_publisher_->msg_.data[i] = tau_d[i];
+  }
+  realtime_publisher_->unlockAndPublish();
+}
+return controller_interface::return_type::OK;
+}
+//!
+//!
 
 void CartesianImpedanceController::equilibriumPoseCallback(
     const geometry_msgs::msg::PoseStamped::SharedPtr msg) {
@@ -350,7 +376,7 @@ CartesianImpedanceController::Vector7d CartesianImpedanceController::saturateTor
     const Vector7d& tau_d_calculated,
     const Vector7d& tau_j_d) {
   Vector7d tau_d_saturated;
-  for (size_t i = 0; i < 7; i++) {
+  for (size_t i = 0; i < N_JOINTS; i++) {
     double difference = tau_d_calculated[i] - tau_j_d[i];
     tau_d_saturated[i] = tau_j_d[i] + std::max(std::min(difference, delta_tau_max_), -delta_tau_max_);
   }

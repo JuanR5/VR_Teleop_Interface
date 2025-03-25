@@ -93,7 +93,7 @@ protected:
   /**
    * @brief Declare and initialize controller parameters.
    *
-   * Declares parameters for gains, compliance, topics, etc. and initializes
+   * Declares parameters for gains, compliance, etc. and initializes
    * the default target pose and Cartesian compliance matrices.
    *
    * @return CallbackReturn::SUCCESS on success, ERROR otherwise.
@@ -176,12 +176,10 @@ private:
 
   // --- Private Member Variables ---
   // Subscriptions and publishers.
-  rclcpp::Subscription<CmdMsg>::SharedPtr subscriber_;
-  realtime_tools::RealtimeBuffer<std::shared_ptr<CmdMsg>> rt_command_ptr_;
   rclcpp::Subscription<geometry_msgs::msg::PoseStamped>::SharedPtr sub_equilibrium_pose_;
-  using RtStatePublisher = realtime_tools::RealtimePublisher<StateMsg>;
+  realtime_tools::RealtimeBuffer<std::shared_ptr<CmdMsg>> rt_command_ptr_;
   rclcpp_lifecycle::LifecyclePublisher<StateMsg>::SharedPtr publisher_;
-  std::unique_ptr<RtStatePublisher> realtime_publisher_;
+  std::unique_ptr<realtime_tools::RealtimePublisher<StateMsg>> realtime_publisher_;
 
   // Franka robot semantic components.
   std::unique_ptr<franka_semantic_components::FrankaRobotModel> franka_robot_model_;
@@ -195,7 +193,6 @@ private:
   std::string arm_id_;
 
   // Constants and identifiers.
-  static constexpr int num_joints = 7;
   const std::string k_robot_state_interface_name{"robot_state"};
   const std::string k_robot_model_interface_name{"robot_model"};
   const double delta_tau_max_{1.0};
@@ -203,7 +200,7 @@ private:
   // Parameter values.
   Vector7d k_gains_;
   Vector7d d_gains_;
-  double velocity_filter_alpha_gain_{0.99};
+  // Removed unused velocity_filter_alpha_gain_.
 
   // Cartesian control parameters.
   double filter_params_{0.005};
@@ -233,6 +230,13 @@ private:
   // Internal variables for controller state while active.
   Vector7d filtered_joint_velocities_;
   bool k_elbow_activated{true};
+
+  // Oscillation movement variables.
+  bool initialization_flag_{true};
+  Eigen::Vector3d initial_position_;
+  Eigen::Quaterniond initial_orientation_;
+  double elapsed_time_{0.0};
+  double trajectory_period_{0.001};  // Example update period (1 ms)
 };
 
 } // namespace franka_teleop_pkg

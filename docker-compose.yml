@@ -1,14 +1,14 @@
 services:
   franka_ros2:
     image: juanr55/franka_vrteleop:v4
-    container_name: fr3_VRInterface
+    container_name: fr3_vr_interface
     network_mode: "host"
     privileged: true
     command: /bin/bash
     tty: true
     stdin_open: true
     volumes:
-      - ./:/FR3_VRInterface/src
+      - ./:/FR3_VRInterface/
       - /tmp/.X11-unix:/tmp/.X11-unix
       - ./limits.conf:/etc/security/limits.conf
       - /dev:/dev
