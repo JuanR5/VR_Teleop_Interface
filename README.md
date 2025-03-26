@@ -23,9 +23,12 @@ Another component of this integration is the use of the **SenseOne 6-axis force-
 ```
 ros2_ws/
 ├── src/
-│   ├── franka_ros2/             # Official ROS 2 interface to Franka Emika
-│   ├── teleop_control/          # Custom teleoperation control nodes
-│   ├── senseone_ft_sensor/      # Botasys SenseOne sensor drivers and interfaces
+│   ├── franka_ros2/             # Official ROS 2 interface to Franka Emika and all related packages
+│   ├── franka_teleop_pkg/       # Custom teleoperation control nodes
+|   ├── franka_teleop_pkg_interfaces/    #generated with the pkg generator
+│   ├── ft_sensor_node/          # Botasys SenseOne sensor drivers and interfaces
+│   ├── middle_nodes/            # Additional nodes for data processing and control
+│   ├── ros_tcp_endpoint/        # ROS 2 TCP endpoint for remote control
 │   └── robot_launch/            # Unified launch files and configurations
 ├── install/ #Not included
 ├── build/ #Not included

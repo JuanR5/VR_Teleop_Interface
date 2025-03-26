@@ -39,9 +39,10 @@ install(PROGRAMS
   scripts/keyboard_input.py
   scripts/franka_state_monitor.py
   scripts/gripper_command.py
+  scripts/modify_pose.py
   DESTINATION lib/${PROJECT_NAME}
 )
-  
+
 
 install(
   DIRECTORY launch

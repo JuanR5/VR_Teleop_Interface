@@ -1,0 +1,14 @@
+PROJECT_NAME       = "VR Teleoperation Interface" 
+INPUT              = ./src
+FILE_PATTERNS      = *.cpp *.h *.py
+RECURSIVE          = YES
+OUTPUT_DIRECTORY   = docs
+
+GENERATE_HTML      = YES
+GENERATE_LATEX     = NO
+EXTRACT_ALL        = YES
+MARKDOWN_SUPPORT   = YES
+
+HTML_OUTPUT        = docs/html
+
+DOT_PATH           = /usr/bin/dot

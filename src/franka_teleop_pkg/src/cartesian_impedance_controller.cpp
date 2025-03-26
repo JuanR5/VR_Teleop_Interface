@@ -174,7 +174,7 @@ controller_interface::CallbackReturn CartesianImpedanceController::on_configure(
   // Set up equilibrium pose subscription.
   try {
     sub_equilibrium_pose_ = get_node()->create_subscription<geometry_msgs::msg::PoseStamped>(
-      "equilibrium_pose", 20,
+      "new_goal_pose", 20,
       std::bind(&CartesianImpedanceController::equilibriumPoseCallback, this, std::placeholders::_1)
     );
   } catch (const std::exception &e) {
@@ -213,9 +213,10 @@ controller_interface::CallbackReturn CartesianImpedanceController::on_activate(
   franka_robot_state_->get_values_as_message(init_robot_state_);
 
   Eigen::Map<Eigen::Matrix<double, 7, 1>> q_initial(init_robot_state_.measured_joint_state.position.data());
-  Eigen::Vector3d position_init(init_robot_state_.o_t_ee.pose.position.x,
-                                init_robot_state_.o_t_ee.pose.position.y,
-                                init_robot_state_.o_t_ee.pose.position.z);
+  Eigen::Vector3d position_init(
+      init_robot_state_.o_t_ee.pose.position.x,
+      init_robot_state_.o_t_ee.pose.position.y,
+      init_robot_state_.o_t_ee.pose.position.z);
   Eigen::Quaterniond orientation_init(
       init_robot_state_.o_t_ee.pose.orientation.w, 
       init_robot_state_.o_t_ee.pose.orientation.x,
@@ -229,6 +230,12 @@ controller_interface::CallbackReturn CartesianImpedanceController::on_activate(
   orientation_d_ = initial_transform.rotation();
   position_d_target_ = initial_transform.translation();
   orientation_d_target_ = initial_transform.rotation();
+
+  // Log the initialization pose and orientation.
+  RCLCPP_INFO(get_node()->get_logger(), "Initialization Pose: [x: %f, y: %f, z: %f]",
+  position_init.x(), position_init.y(), position_init.z());
+  RCLCPP_INFO(get_node()->get_logger(), "Initialization Orientation: [w: %f, x: %f, y: %f, z: %f]",
+  orientation_init.w(), orientation_init.x(), orientation_init.y(), orientation_init.z());
 
   q_d_nullspace_ = q_initial;
 
@@ -280,31 +287,6 @@ Eigen::Quaterniond orientation(robot_state_.o_t_ee.pose.orientation.w,
                                robot_state_.o_t_ee.pose.orientation.z);
 Eigen::Affine3d transform = Eigen::Translation3d(position) * orientation;
 
-// --- 5. Oscillation Update for Desired Target ---
-// On the first call, store the initial desired target.
-if (initialization_flag_) {
-  {
-    std::lock_guard<std::mutex> lock(position_and_orientation_d_target_mutex_);
-    initial_position_ = position_d_target_;
-    initial_orientation_ = orientation_d_target_;
-  }
-  initialization_flag_ = false;
-}
-// Update elapsed time.
-elapsed_time_ += trajectory_period_;
-double radius = 0.1;
-double angle = M_PI / 4 * (1 - std::cos(M_PI / 5.0 * elapsed_time_));
-double delta_x = radius * std::sin(angle);
-double delta_z = radius * (std::cos(angle) - 1);
-
-Eigen::Vector3d oscillation_target = initial_position_;
-oscillation_target(0) -= delta_x;
-oscillation_target(2) -= delta_z;
-{
-  std::lock_guard<std::mutex> lock(position_and_orientation_d_target_mutex_);
-  position_d_target_ = oscillation_target;
-}
-
 // --- 6. Compute Cartesian error ---
 Eigen::Matrix<double, 6, 1> position_error;
 position_error.head(3) = position - position_d_;
@@ -328,10 +310,12 @@ tau_nullspace = (Eigen::MatrixXd::Identity(7, 7) - jacobian.transpose() * jacobi
 tau_d = tau_task + tau_nullspace + coriolis;
 tau_d = saturateTorqueRate(tau_d, tau_j_d);
 
+// !!
 // --- 8. Send computed torques ---
 for (size_t i = 0; i < N_JOINTS; i++) {
   command_interfaces_[i].set_value(tau_d[i]);
 }
+// !!
 
 // --- 9. Update filtering and target values ---
 // Copy target values under mutex lock and perform filtering outside the lock.
@@ -342,8 +326,14 @@ Eigen::Quaterniond local_orientation_d_target;
   local_position_d_target = position_d_target_;
   local_orientation_d_target = orientation_d_target_;
 }
-position_d_ = filter_params_ * local_position_d_target + (1.0 - filter_params_) * position_d_;
+position_d_ = filter_params_ * local_position_d_target + (0.5 - filter_params_) * position_d_;
 orientation_d_ = orientation_d_.slerp(filter_params_, local_orientation_d_target);
+
+// Log the desired (filtered) pose and orientation.
+RCLCPP_INFO(get_node()->get_logger(), "Desired Pose (Filtered): [x: %f, y: %f, z: %f]",
+            position_d_.x(), position_d_.y(), position_d_.z());
+RCLCPP_INFO(get_node()->get_logger(), "Desired Orientation (Filtered): [w: %f, x: %f, y: %f, z: %f]",
+            orientation_d_.w(), orientation_d_.x(), orientation_d_.y(), orientation_d_.z());
 
 // --- 10. Publish commanded state (if realtime publisher is available) ---
 if (realtime_publisher_ && realtime_publisher_->trylock()) {
