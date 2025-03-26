@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /simple_ws/src/zed_components
+CMAKE_SOURCE_DIR = /simple_ws2/src/zed_components
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /simple_ws/build/zed_components
+CMAKE_BINARY_DIR = /simple_ws2/build/zed_components
 
 # Utility rule file for all_zed_components_files.
 
@@ -78,6 +78,6 @@ CMakeFiles/all_zed_components_files.dir/clean:
 .PHONY : CMakeFiles/all_zed_components_files.dir/clean
 
 CMakeFiles/all_zed_components_files.dir/depend:
-	cd /simple_ws/build/zed_components && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /simple_ws/src/zed_components /simple_ws/src/zed_components /simple_ws/build/zed_components /simple_ws/build/zed_components /simple_ws/build/zed_components/CMakeFiles/all_zed_components_files.dir/DependInfo.cmake --color=$(COLOR)
+	cd /simple_ws2/build/zed_components && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /simple_ws2/src/zed_components /simple_ws2/src/zed_components /simple_ws2/build/zed_components /simple_ws2/build/zed_components /simple_ws2/build/zed_components/CMakeFiles/all_zed_components_files.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/all_zed_components_files.dir/depend
 

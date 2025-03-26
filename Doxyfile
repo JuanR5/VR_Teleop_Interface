@@ -1,0 +1,90 @@
+#-------------------------------------------------------------
+# Project configuration
+#-------------------------------------------------------------
+
+PROJECT_NAME           = "MiddleNodes"
+PROJECT_BRIEF          = "ROS 2 nodes for ZED camera processing and communication"
+PROJECT_NUMBER         = 0.1
+OUTPUT_DIRECTORY       = docs
+GENERATE_HTML          = YES
+GENERATE_LATEX         = NO
+GENERATE_MAN           = NO
+GENERATE_RTF           = NO
+
+#-------------------------------------------------------------
+# Language support
+#-------------------------------------------------------------
+
+OPTIMIZE_OUTPUT_FOR_C  = NO
+OPTIMIZE_OUTPUT_JAVA   = NO
+OPTIMIZE_FOR_FORTRAN   = NO
+OPTIMIZE_OUTPUT_VHDL   = NO
+EXTENSION_MAPPING      = py=Python
+MARKDOWN_SUPPORT       = YES
+ENABLE_PREPROCESSING   = YES
+MACRO_EXPANSION        = YES
+EXPAND_ONLY_PREDEF     = NO
+
+#-------------------------------------------------------------
+# Input sources
+#-------------------------------------------------------------
+
+INPUT                  = \
+  src/middle_nodes \
+  include \
+  launch
+
+FILE_PATTERNS          = *.cpp *.hpp *.h *.py *.launch.py
+RECURSIVE              = YES
+
+#-------------------------------------------------------------
+# Python-specific parsing
+#-------------------------------------------------------------
+
+PYTHON_DOCSTRING_STYLE = autodoc
+
+# For extracting Doxygen-style docstrings from Python
+EXTRACT_ALL            = YES
+EXTRACT_PRIVATE        = YES
+EXTRACT_STATIC         = YES
+HIDE_UNDOC_MEMBERS     = NO
+
+#-------------------------------------------------------------
+# Output options
+#-------------------------------------------------------------
+
+GENERATE_TREEVIEW      = YES
+FULL_PATH_NAMES        = NO
+STRIP_FROM_PATH        = src
+
+# Enable if you want XML output for further processing
+GENERATE_XML           = NO
+
+#-------------------------------------------------------------
+# Diagrams (optional)
+#-------------------------------------------------------------
+
+HAVE_DOT               = YES
+DOT_GRAPH_MAX_NODES    = 50
+DOT_TRANSPARENT        = YES
+CALL_GRAPH             = YES
+CALLER_GRAPH           = YES
+CLASS_DIAGRAMS         = YES
+DOT_MULTI_TARGETS      = YES
+
+#-------------------------------------------------------------
+# Warnings
+#-------------------------------------------------------------
+
+WARN_IF_UNDOCUMENTED   = YES
+WARN_IF_DOC_ERROR      = YES
+WARN_NO_PARAMDOC       = YES
+
+#-------------------------------------------------------------
+# Custom tags (if needed)
+#-------------------------------------------------------------
+
+ALIASES                = "brief=\brief" \
+                         "param=\param" \
+                         "return=\return" \
+                         "todo=\todo"

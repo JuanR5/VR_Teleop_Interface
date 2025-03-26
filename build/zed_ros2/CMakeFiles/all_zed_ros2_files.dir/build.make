@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /simple_ws/src/zed_ros2
+CMAKE_SOURCE_DIR = /simple_ws2/src/zed_ros2
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /simple_ws/build/zed_ros2
+CMAKE_BINARY_DIR = /simple_ws2/build/zed_ros2
 
 # Utility rule file for all_zed_ros2_files.
 
@@ -78,6 +78,6 @@ CMakeFiles/all_zed_ros2_files.dir/clean:
 .PHONY : CMakeFiles/all_zed_ros2_files.dir/clean
 
 CMakeFiles/all_zed_ros2_files.dir/depend:
-	cd /simple_ws/build/zed_ros2 && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /simple_ws/src/zed_ros2 /simple_ws/src/zed_ros2 /simple_ws/build/zed_ros2 /simple_ws/build/zed_ros2 /simple_ws/build/zed_ros2/CMakeFiles/all_zed_ros2_files.dir/DependInfo.cmake --color=$(COLOR)
+	cd /simple_ws2/build/zed_ros2 && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /simple_ws2/src/zed_ros2 /simple_ws2/src/zed_ros2 /simple_ws2/build/zed_ros2 /simple_ws2/build/zed_ros2 /simple_ws2/build/zed_ros2/CMakeFiles/all_zed_ros2_files.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/all_zed_ros2_files.dir/depend
 

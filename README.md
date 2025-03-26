@@ -54,3 +54,8 @@ docker exec -it vr_zed_container bash
 ```bash
 ros2 launch middle_nodes zed_vr_conexion.launch.py
 ```
+
+---
+# Acknowledgements
+
+- []()

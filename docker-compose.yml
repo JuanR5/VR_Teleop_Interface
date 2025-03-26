@@ -17,8 +17,8 @@ services:
       - /dev/shm:/dev/shm
       - /usr/local/zed/resources:/usr/local/zed/resources
       - /usr/local/zed/settings:/usr/local/zed/settings
-      - ~/VR_Interface/simple_ws:/simple_ws
+      - ./:/simple_ws2
     stdin_open: true
     tty: true
-    command: ["/bin/bash","-c", "source /opt/ros/humble/setup.bash && cd ~/simple_ws && source install/setup.bash && ros2 launch middle_nodes zed_vr_conexion.launch.py"]
+    # command: ["/bin/bash","-c", "source /opt/ros/humble/setup.bash && cd ~/simple_ws && source install/setup.bash && ros2 launch middle_nodes zed_vr_conexion.launch.py"]
 

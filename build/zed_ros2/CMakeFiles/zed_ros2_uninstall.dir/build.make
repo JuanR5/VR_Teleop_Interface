@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /simple_ws/src/zed_ros2
+CMAKE_SOURCE_DIR = /simple_ws2/src/zed_ros2
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /simple_ws/build/zed_ros2
+CMAKE_BINARY_DIR = /simple_ws2/build/zed_ros2
 
 # Utility rule file for zed_ros2_uninstall.
 
@@ -67,7 +67,7 @@ include CMakeFiles/zed_ros2_uninstall.dir/compiler_depend.make
 include CMakeFiles/zed_ros2_uninstall.dir/progress.make
 
 CMakeFiles/zed_ros2_uninstall:
-	/usr/bin/cmake -P /simple_ws/build/zed_ros2/ament_cmake_uninstall_target/ament_cmake_uninstall_target.cmake
+	/usr/bin/cmake -P /simple_ws2/build/zed_ros2/ament_cmake_uninstall_target/ament_cmake_uninstall_target.cmake
 
 zed_ros2_uninstall: CMakeFiles/zed_ros2_uninstall
 zed_ros2_uninstall: CMakeFiles/zed_ros2_uninstall.dir/build.make
@@ -82,6 +82,6 @@ CMakeFiles/zed_ros2_uninstall.dir/clean:
 .PHONY : CMakeFiles/zed_ros2_uninstall.dir/clean
 
 CMakeFiles/zed_ros2_uninstall.dir/depend:
-	cd /simple_ws/build/zed_ros2 && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /simple_ws/src/zed_ros2 /simple_ws/src/zed_ros2 /simple_ws/build/zed_ros2 /simple_ws/build/zed_ros2 /simple_ws/build/zed_ros2/CMakeFiles/zed_ros2_uninstall.dir/DependInfo.cmake --color=$(COLOR)
+	cd /simple_ws2/build/zed_ros2 && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /simple_ws2/src/zed_ros2 /simple_ws2/src/zed_ros2 /simple_ws2/build/zed_ros2 /simple_ws2/build/zed_ros2 /simple_ws2/build/zed_ros2/CMakeFiles/zed_ros2_uninstall.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/zed_ros2_uninstall.dir/depend
 

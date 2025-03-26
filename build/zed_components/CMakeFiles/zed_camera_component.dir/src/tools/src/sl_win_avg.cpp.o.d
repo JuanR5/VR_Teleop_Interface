@@ -1,7 +1,7 @@
 CMakeFiles/zed_camera_component.dir/src/tools/src/sl_win_avg.cpp.o: \
- /simple_ws/src/zed_components/src/tools/src/sl_win_avg.cpp \
+ /simple_ws2/src/zed_components/src/tools/src/sl_win_avg.cpp \
  /usr/include/stdc-predef.h \
- /simple_ws/src/zed_components/src/tools/include/sl_win_avg.hpp \
+ /simple_ws2/src/zed_components/src/tools/include/sl_win_avg.hpp \
  /usr/include/c++/11/cstddef \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
