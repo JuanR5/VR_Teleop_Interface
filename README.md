@@ -46,6 +46,12 @@ ros2_ws/
 - Docker
 
 ---
+## Franka Research 3
+
+Please make sure everything is set up correctly, you followed the Real time kernel configuration, the FCI, the minimun requirements for 1kHz, If working with docker, have all the permisions and cpu acces. And to configure adequatly the cpu to performance [CPU Scaling](https://frankaemika.github.io/docs/troubleshooting.html#disabling-cpu-frequency-scaling)
+also, when building the workspace in ros2, take into account that it must be done with ´´´ colcon build --symlink-install --cmake-args -DCMAKE_BUILD_TYPE=Release ´´´ and that some packages must be built before others due to requirements and dependencies. so first franka_msg, franka_hardware, franka_semantic_components. then ´´´ source install/setup.bash´´´ and the build the rest of the packages
+
+---
 
 ## Running the System
 
@@ -106,6 +112,7 @@ This project builds upon the excellent work from the following repositories and 
 - [botasys/SenseOne-ROS](https://gitlab.com/botasys/bota_serial_driver/-/tree/master?ref_type=heads) – C++ Driver for the SenseOne force-torque sensor
 - [ros2-controller-package-create](https://github.com/jellehierck/ros2-pkg-create/tree/controllers-package) – Thanks to Jelle Hierck, for the automatic package generator with a franka controller template.
 - [ROS-TCP-EndPoint](https://github.com/Unity-Technologies/ROS-TCP-Endpoint/tree/main-ros2)
+- [Cartesian Impedance Controller](https://github.com/sp-sophia-labs/franka_ros2) – Implementation of Cartesian Impedance Controller for the Franka Emika Robot ROS2 
 - The ROS 2 community and contributors for ongoing development of robust robotics middleware
 
 Special thanks to the research community for their input and suggestions, and to all open-source contributors who make robotic development more accessible.
