@@ -10,10 +10,12 @@ from launch.actions import (
     IncludeLaunchDescription, 
     DeclareLaunchArgument, 
     OpaqueFunction,
-    SetLaunchConfiguration)
+    SetLaunchConfiguration,
+    TimerAction)
 from launch.launch_description_sources import PythonLaunchDescriptionSource
 from launch.substitutions import LaunchConfiguration
-from launch_ros.actions import SetRemap
+from launch_ros.actions import SetRemap, Node
+from launch.conditions import UnlessCondition
 
 
 def generate_robot_description(context):
@@ -139,6 +141,22 @@ def generate_launch_description() -> LaunchDescription:
         scoped=True  # Any changes to launch arguments inside this GroupAction do not "spill" outside of the GroupAction
     )
 
+    # Franka Robot State Broadcaster Spawner
+    robot_state_broadcaster_spawner = TimerAction(
+        period=1.0,  # delay to ensure controller manager is ready
+        actions=[
+            Node(
+                package='controller_manager',
+                executable='spawner',
+                arguments=['franka_robot_state_broadcaster'],
+                #parameters=[{'arm_id': LaunchConfiguration('arm_id')}],
+                output='screen',
+                condition=UnlessCondition(LaunchConfiguration('use_fake_hardware')),
+            )
+        ]
+    )
+
+
 
     # cartesian_impedance_controller spawner
     cartesian_impedance_controller_launch = GroupAction(
@@ -165,6 +183,7 @@ def generate_launch_description() -> LaunchDescription:
             set_rd,
             controller_manager_launch,
             robot_description_launch,
+            robot_state_broadcaster_spawner,
             cartesian_impedance_controller_launch,
         ]
     )

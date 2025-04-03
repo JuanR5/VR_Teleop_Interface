@@ -195,7 +195,7 @@ private:
   // Constants and identifiers.
   const std::string k_robot_state_interface_name{"robot_state"};
   const std::string k_robot_model_interface_name{"robot_model"};
-  const double delta_tau_max_{1.0};
+  const double delta_tau_max_{20.0};
 
   // Parameter values.
   Vector7d k_gains_;
@@ -203,7 +203,7 @@ private:
   // Removed unused velocity_filter_alpha_gain_.
 
   // Cartesian control parameters.
-  double filter_params_{0.005};
+  double filter_params_{0.0005};
   double nullspace_stiffness_{20.0};
   double nullspace_stiffness_target_{20.0};
 
@@ -237,6 +237,13 @@ private:
   Eigen::Quaterniond initial_orientation_;
   double elapsed_time_{0.0};
   double trajectory_period_{0.001};  // Example update period (1 ms)
+
+  bool new_goal_pose_received_ {false};
+  bool initialized_ = false;
+  size_t init_counter_ = 0;
+  const size_t ramp_duration_ = 100;  // Adjust ramp time in cycles
+  int steady_state_counter_ = 0; 
+
 };
 
 } // namespace franka_teleop_pkg

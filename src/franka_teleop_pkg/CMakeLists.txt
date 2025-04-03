@@ -65,23 +65,6 @@ install(
   OPTIONAL
 )
 
-# Add executable for oscillatory pose publisher (test node)
-add_executable(testeo src/testeo.cpp)
-target_include_directories(testeo PUBLIC
-  $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
-  $<INSTALL_INTERFACE:include>
-)
-target_compile_features(testeo PUBLIC cxx_std_17)
-ament_target_dependencies(testeo
-  rclcpp
-  geometry_msgs
-  franka_msgs
-)
-install(
-  TARGETS testeo
-  RUNTIME DESTINATION bin
-)
-
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
   find_package(ament_cmake_gmock REQUIRED)

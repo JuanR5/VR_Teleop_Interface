@@ -1,6 +1,6 @@
 services:
   franka_ros2:
-    image: juanr55/franka_vrteleop:v4
+    image: juanr55/franka_vrteleop:v5
     container_name: fr3_vr_interface
     network_mode: "host"
     privileged: true
@@ -15,6 +15,8 @@ services:
     environment:
       QT_X11_NO_MITSHM: 1
       DISPLAY: $DISPLAY
+    group_add:
+      - "dialout"
     cap_add:
       - SYS_NICE
     ulimits:
