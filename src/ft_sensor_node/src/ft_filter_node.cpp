@@ -11,7 +11,7 @@
 FTFilterNode::FTFilterNode() : Node("ft_filter_node"), is_calibrating_(true), filter_window_size_(10)
 {
     // Declare and retrieve ROS parameters
-    this->declare_parameter("max_range", 2.0);             ///< Max expected value for intensity normalization
+    this->declare_parameter("max_range", 3.0);             ///< Max expected value for intensity normalization
     this->declare_parameter("calibration_time", 5.0);      ///< Duration of sensor calibration in seconds
 
     max_range_ = this->get_parameter("max_range").as_double();

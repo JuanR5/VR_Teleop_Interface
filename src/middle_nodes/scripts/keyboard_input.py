@@ -89,7 +89,7 @@ class KeyboardControlNode(Node):
                 if vel_type == 'linear':
                     self.linear_velocity[index] = float(value) * 0.1
                 else:
-                    self.angular_velocity[index] = float(value) * 0.1
+                    self.angular_velocity[index] = float(value) * 0.5
             else:
                 self.active_keys.discard(key)
                 if key not in self.active_keys:

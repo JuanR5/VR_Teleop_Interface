@@ -13,8 +13,8 @@ class EquilibriumPosePublisher(Node):
         super().__init__('equilibrium_pose_publisher')
 
         self.declare_parameter('deadband', 0.001)
-        self.declare_parameter('step_linear', 0.1)
-        self.declare_parameter('step_angular', 0.1)
+        self.declare_parameter('step_linear', 0.2)
+        self.declare_parameter('step_angular', 0.5)
         self.declare_parameter('filter_alpha', 0.1)
 
         self.deadband = self.get_parameter('deadband').value

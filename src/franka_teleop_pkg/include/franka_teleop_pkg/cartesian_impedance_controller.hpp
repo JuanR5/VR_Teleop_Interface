@@ -195,7 +195,7 @@ private:
   // Constants and identifiers.
   const std::string k_robot_state_interface_name{"robot_state"};
   const std::string k_robot_model_interface_name{"robot_model"};
-  const double delta_tau_max_{20.0};
+  
 
   // Parameter values.
   Vector7d k_gains_;
@@ -203,13 +203,38 @@ private:
   // Removed unused velocity_filter_alpha_gain_.
 
   // Cartesian control parameters.
+
+  // Filter parameter for updating the desired pose and compliance values.
+  // - Increasing this value makes the update toward new targets faster (more responsive but potentially abrupt).
+  // - Decreasing it results in a slower, smoother transition.
   double filter_params_{0.0005};
-  double nullspace_stiffness_{20.0};
-  double nullspace_stiffness_target_{20.0};
+
+  // Nullspace stiffness controls how strongly the robot enforces a desired joint configuration.
+  // - Increasing this value makes the robot more rigid in maintaining its joint posture, which can conflict with Cartesian task objectives.
+  // - Decreasing it allows more flexibility in the joint configuration.
+  double nullspace_stiffness_{10.0};
+
+  // Nullspace stiffness target represents the desired value for nullspace stiffness.
+  // - The actual stiffness is gradually filtered toward this target.
+  // - A higher target leads to a stiffer joint posture over time, while a lower target leads to a more compliant posture.
+  double nullspace_stiffness_target_{10.0};
+
+  // Maximum torque rate change per update cycle.
+  // - Increasing this limit permits more aggressive changes in torque commands, potentially yielding a faster response but less smooth control.
+  // - Decreasing this limit enforces smoother, more gradual torque changes.
+  const double delta_tau_max_{40.0};
 
   // New compliance parameters (parameterized).
-  double translational_stiffness_;  ///< Parameterized translational stiffness.
-  double rotational_stiffness_;     ///< Parameterized rotational stiffness.
+
+  // Translational stiffness for the end-effector (position control).
+  // - Higher values result in a more rigid control in x, y, and z directions (less compliant).
+  // - Lower values result in a softer, more compliant behavior.
+  double translational_stiffness_{300.0};
+
+  // Rotational stiffness for the end-effector (orientation control).
+  // - Higher values lead to a rigid control of the robot’s orientation.
+  // - Lower values allow for more flexibility in handling rotational errors.
+  double rotational_stiffness_{20.0};
 
   // Cartesian stiffness and damping matrices.
   Eigen::Matrix<double, 6, 6> cartesian_stiffness_;
