@@ -271,6 +271,13 @@ def generate_launch_description() -> LaunchDescription:
         output="screen"
     )
 
+    # Node for New Goal Pose
+    new_goal_pose = Node(
+        package='middle_nodes',
+        executable='modify_pose.py',
+        output='screen'
+    )
+
     # -----------------------------
     # Construct and Return Launch Description
     # -----------------------------
@@ -282,6 +289,7 @@ def generate_launch_description() -> LaunchDescription:
     ld.add_action(gripper_launch)
     ld.add_action(rviz_node)
     ld.add_action(cartesian_impedance_controller_spawner)
+    ld.add_action(new_goal_pose)
 
     return ld
 

@@ -13,8 +13,8 @@ class EquilibriumPosePublisher(Node):
         super().__init__('equilibrium_pose_publisher')
 
         self.declare_parameter('deadband', 0.001)
-        self.declare_parameter('step_linear', 0.2)
-        self.declare_parameter('step_angular', 0.5)
+        self.declare_parameter('step_linear', 0.1)
+        self.declare_parameter('step_angular', 0.35)
         self.declare_parameter('filter_alpha', 0.1)
 
         self.deadband = self.get_parameter('deadband').value
@@ -58,7 +58,7 @@ class EquilibriumPosePublisher(Node):
 
         if not np.allclose(self.latest_cmd, 0.0, atol=1e-6):
             self.has_new_input = True
-            self.get_logger().info(f"Received movement command: linear {linear_increment}, angular {angular_increment}")
+            # self.get_logger().info(f"Received movement command: linear {linear_increment}, angular {angular_increment}")
 
     def current_pose_callback(self, msg: PoseStamped):
         self.current_pose = msg
@@ -118,7 +118,7 @@ class EquilibriumPosePublisher(Node):
         self.desired_pose.header.stamp = self.get_clock().now().to_msg()
         self.pub_equilibrium_pose.publish(self.desired_pose)
 
-        self.get_logger().info(f"Published new equilibrium pose:\n  Position: {smoothed_pos}\n  Orientation: {smoothed_quat}")
+        # self.get_logger().info(f"Published new equilibrium pose:\n  Position: {smoothed_pos}\n  Orientation: {smoothed_quat}")
 
 
 def main(args=None):

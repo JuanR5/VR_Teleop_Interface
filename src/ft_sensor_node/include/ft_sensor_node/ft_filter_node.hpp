@@ -106,6 +106,24 @@ private:
     /// Size of the moving average filter window
     size_t filter_window_size_;
 
+    /// Threshold to determine frequency output based on intensity
+    double detection_threshold_;
+
+    /// Frequency output when intensity exceeds threshold
+    double high_frequency_;
+
+    /// Frequency output when intensity is below threshold
+    double low_frequency_;
+
+    /// Weight for force deviation in collision detection
+    double force_weight_;
+
+    /// Weight for torque deviation in collision detection
+    double torque_weight_;
+
+    /// Minimum torque deviation to consider (deadband)
+    double torque_deadband_;
+
     // === Calibration Buffers ===
 
     /// Samples collected for force calibration
