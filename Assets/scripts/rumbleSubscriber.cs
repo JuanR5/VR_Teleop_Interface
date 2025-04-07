@@ -46,8 +46,8 @@ public class RumbleSubscriber : MonoBehaviour
             amplitude = (float)Math.Round(amplitude, 3);
             duration = (float)Math.Round(duration, 3);
             
-            // Floor values below 0.1 to 0
-            if (amplitude < 0.2f)
+            // Floor values below 0.3 to 0
+            if (amplitude < 0.3f)
             {
                 amplitude = 0f;
             }

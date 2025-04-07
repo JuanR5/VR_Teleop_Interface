@@ -92,7 +92,7 @@ public class ControllerMovementPublisher : MonoBehaviour
         // Publish the movement command as a Twist message
         TwistMsg twistMsg = new TwistMsg
         {
-            linear = new RosMessageTypes.Geometry.Vector3Msg(positionVector.x, positionVector.y, positionVector.z),
+            linear = new RosMessageTypes.Geometry.Vector3Msg(positionVector.y, -positionVector.x, positionVector.z),
             angular = new RosMessageTypes.Geometry.Vector3Msg(rotationVector.x, rotationVector.y, rotationVector.z)
         };
 

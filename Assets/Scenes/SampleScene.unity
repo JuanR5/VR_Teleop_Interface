@@ -148,6 +148,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d6f26a780ef0994f97f2fb9a221e236, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  triggerThreshold: 0.5
 --- !u!4 &201676
 Transform:
   m_ObjectHideFlags: 0
@@ -306,7 +307,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   topicName: controller_movement
+  gripperTopic: gripper_command
   publishRate: 10
+  triggerThreshold: 0.5
 --- !u!4 &121205146
 Transform:
   m_ObjectHideFlags: 0
@@ -632,7 +635,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f7347de722ec564283eda096915732d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vibrationDuration: 0.2
 --- !u!114 &222602102
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3494,7 +3496,7 @@ MonoBehaviour:
   leftEyeCamera: {fileID: 968699529}
   rightEyeCamera: {fileID: 201285647}
   ipd: 0.063
-  displayDistance: 1.28
+  displayDistance: 1
   yOffset: 0
   quadWidthScale: 1
   quadHeightScale: 1
@@ -4528,6 +4530,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d6f26a780ef0994f97f2fb9a221e236, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  triggerThreshold: 0.5
 --- !u!222 &3355178504154724485
 CanvasRenderer:
   m_ObjectHideFlags: 0
