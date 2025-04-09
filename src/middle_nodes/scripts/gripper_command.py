@@ -1,106 +1,204 @@
 #!/usr/bin/env python3
+"""
+ROS 2 Node for commanding a Franka gripper using action clients.
+
+This node subscribes to the `/gripper_command_input` topic, which must publish a
+Float32MultiArray message containing two elements [open, grasp].
+
+Logic:
+  - If the input array length is less than 2, it warns and does nothing.
+  - If both elements are 1, it reports a conflicting command and ignores it.
+  - If open is 1 (and grasp is 0), it sends a Move action goal (to open the gripper)
+    with:
+       • width = max_width parameter
+       • speed = open_speed parameter.
+  - If grasp is 1 (and open is 0), it sends a Grasp action goal (to close the gripper)
+    with:
+       • width = 0.0
+       • speed = grasp_speed parameter (should be 0.03)
+       • force = grasp_force parameter (should be 0.5)
+       • epsilon.inner = epsilon.outer = grasp_epsilon parameter (should be 0.08)
+  - If the target state is already the current state, no action is taken.
+  
+Ensure that your gripper launch file (which launches the gripper node and its action servers)
+is running. Action servers are expected on `/fr3_gripper/move` and `/fr3_gripper/grasp`.
+
+Usage:
+  $ ros2 run <your_package> gripper_command_node.py
+
+Test by publishing, for example:
+  $ ros2 topic pub /gripper_command_input std_msgs/msg/Float32MultiArray "{data: [1, 0]}"
+  $ ros2 topic pub /gripper_command_input std_msgs/msg/Float32MultiArray "{data: [0, 1]}"
+"""
 
 import rclpy
 from rclpy.node import Node
-from std_msgs.msg import Float64MultiArray
+from std_msgs.msg import Float32MultiArray
 from rclpy.action import ActionClient
-from control_msgs.action import GripperCommand
 
-class GripperController(Node):
+# Import the required action definitions. Ensure the package franka_msgs is installed.
+from franka_msgs.action import Move, Grasp
+
+class GripperCommandNode(Node):
     def __init__(self):
-        super().__init__('gripper_controller')
+        super().__init__('gripper_command_node')
+
+        # Declare parameters and default values.
+        self.declare_parameter('max_width', 0.08)      # Maximum opening width for "open" command.
+        self.declare_parameter('open_speed', 0.03)       # Speed for Move action (open).
+        self.declare_parameter('grasp_speed', 0.03)      # Speed for Grasp action.
+        self.declare_parameter('grasp_force', 0.5)       # Force for Grasp action.
+        self.declare_parameter('grasp_epsilon', 0.08)    # Epsilon (both inner and outer) for Grasp action.
+
+        self.max_width = self.get_parameter('max_width').value
+        self.open_speed = self.get_parameter('open_speed').value
+        self.grasp_speed = self.get_parameter('grasp_speed').value
+        self.grasp_force = self.get_parameter('grasp_force').value
+        self.grasp_epsilon = self.get_parameter('grasp_epsilon').value
+
+        self.get_logger().info(
+            f"GripperCommandNode Parameters:\n"
+            f"  max_width: {self.max_width}\n"
+            f"  open_speed: {self.open_speed}\n"
+            f"  grasp_speed: {self.grasp_speed}\n"
+            f"  grasp_force: {self.grasp_force}\n"
+            f"  grasp_epsilon: {self.grasp_epsilon}"
+        )
+
+        # Create action clients for Move and Grasp actions.
+        self._move_client = ActionClient(self, Move, '/fr3_gripper/move')
+        self._grasp_client = ActionClient(self, Grasp, '/fr3_gripper/grasp')
+
+        # Subscribe to the gripper command input topic.
         self.subscription = self.create_subscription(
-            Float64MultiArray,
+            Float32MultiArray,
             '/gripper_command_input',
             self.command_callback,
             10
         )
-        self.gripper_client = ActionClient(self, GripperCommand, '/franka_gripper_node/gripper_action')
+        self.get_logger().info("Waiting for commands on '/gripper_command_input' topic...")
 
-        # Internal state
-        self.current_state = None  # 'open', 'grasp', or None
+        # Maintain the current state to avoid repeated commands.
+        self.current_state = None
 
-        # Desired open and grasp positions (meters)
-        self.open_width = 0.08
-        self.grasp_width = 0.0
-        self.max_effort = 20.0
-
-        self.get_logger().info("Gripper controller node started")
-
-    def command_callback(self, msg):
+    def command_callback(self, msg: Float32MultiArray):
         if len(msg.data) < 2:
             self.get_logger().warn("Invalid input: expected [open, grasp]")
             return
 
-        open_cmd, grasp_cmd = int(msg.data[0]), int(msg.data[1])
+        open_cmd = int(msg.data[0])
+        grasp_cmd = int(msg.data[1])
+        self.get_logger().info(f"Received command: open={open_cmd}, grasp={grasp_cmd}")
 
         if open_cmd == 1 and grasp_cmd == 1:
             self.get_logger().info("Conflicting command: both open and grasp set. Ignoring.")
             return
 
-        # Determine target state
         target_state = None
         if open_cmd == 1:
             target_state = 'open'
         elif grasp_cmd == 1:
             target_state = 'grasp'
 
-        # If already in the target state, do nothing
+        if target_state is None:
+            self.get_logger().info("No valid command set (both commands are 0). Doing nothing.")
+            return
+
         if target_state == self.current_state:
+            self.get_logger().info(f"Already in target state '{target_state}'. No action taken.")
             return
 
-        # Send action to gripper
+        # Send the corresponding action goal based on the target state.
         self.send_gripper_command(target_state)
+        self.current_state = target_state
 
-    def send_gripper_command(self, target_state):
-        if not self.gripper_client.wait_for_server(timeout_sec=2.0):
-            self.get_logger().error('Gripper action server not available')
-            return
-
-        goal_msg = GripperCommand.Goal()
-
+    def send_gripper_command(self, target_state: str):
         if target_state == 'open':
-            goal_msg.command.position = self.open_width / 2.0  # Franka expects half width
-            goal_msg.command.max_effort = 0.0
+            self.send_move_goal()
         elif target_state == 'grasp':
-            goal_msg.command.position = self.grasp_width / 2.0
-            goal_msg.command.max_effort = self.max_effort
+            self.send_grasp_goal()
         else:
-            self.get_logger().warn("Unknown target state")
+            self.get_logger().warn("Unknown target state.")
+
+    def send_move_goal(self):
+        self.get_logger().info("Preparing Move action goal to open gripper...")
+        if not self._move_client.wait_for_server(timeout_sec=5.0):
+            self.get_logger().error("Move action server not available.")
             return
 
-        self.get_logger().info(f"Sending gripper command: {target_state}")
-        send_goal_future = self.gripper_client.send_goal_async(goal_msg)
-        send_goal_future.add_done_callback(lambda future: self.handle_result(future, target_state))
+        goal_msg = Move.Goal()
+        goal_msg.width = self.max_width
+        goal_msg.speed = self.open_speed
 
-    def handle_result(self, future, target_state):
+        self.get_logger().info(f"Sending Move goal: width={goal_msg.width}, speed={goal_msg.speed}")
+        send_goal_future = self._move_client.send_goal_async(goal_msg)
+        send_goal_future.add_done_callback(self.move_response_callback)
+
+    def move_response_callback(self, future):
         goal_handle = future.result()
         if not goal_handle.accepted:
-            self.get_logger().warn('Gripper goal was rejected')
+            self.get_logger().error("Move goal rejected.")
+            return
+        self.get_logger().info("Move goal accepted. Waiting for result...")
+        get_result_future = goal_handle.get_result_async()
+        get_result_future.add_done_callback(self.move_result_callback)
+
+    def move_result_callback(self, future):
+        result = future.result().result
+        self.get_logger().info(f"Move action result: {result}")
+
+    def send_grasp_goal(self):
+        self.get_logger().info("Preparing Grasp action goal to close gripper...")
+        if not self._grasp_client.wait_for_server(timeout_sec=5.0):
+            self.get_logger().error("Grasp action server not available.")
             return
 
-        result_future = goal_handle.get_result_async()
-        result_future.add_done_callback(lambda f: self.handle_action_result(f, target_state))
+        goal_msg = Grasp.Goal()
+        # Updated parameters based on your command:
+        goal_msg.width = 0.0
+        goal_msg.speed = self.grasp_speed   # Should be 0.03 as per your spec.
+        goal_msg.force = self.grasp_force   # Should be 0.5 as per your spec.
+        goal_msg.epsilon.inner = self.grasp_epsilon  # Should be 0.08.
+        goal_msg.epsilon.outer = self.grasp_epsilon  # Should be 0.08.
 
-    def handle_action_result(self, future, target_state):
+        self.get_logger().info(
+            f"Sending Grasp goal: width={goal_msg.width}, speed={goal_msg.speed}, force={goal_msg.force}, "
+            f"epsilon(inner,outer)=({goal_msg.epsilon.inner}, {goal_msg.epsilon.outer})"
+        )
+        send_goal_future = self._grasp_client.send_goal_async(goal_msg)
+        send_goal_future.add_done_callback(self.grasp_response_callback)
+
+    def grasp_response_callback(self, future):
+        goal_handle = future.result()
+        if not goal_handle.accepted:
+            self.get_logger().error("Grasp goal rejected.")
+            return
+        self.get_logger().info("Grasp goal accepted. Waiting for result...")
+        get_result_future = goal_handle.get_result_async()
+        get_result_future.add_done_callback(self.grasp_result_callback)
+
+    def grasp_result_callback(self, future):
         result = future.result().result
-        if result.reached_goal:
-            self.get_logger().info(f"Gripper {target_state} action succeeded")
-            self.current_state = target_state
-        else:
-            self.get_logger().warn(f"Gripper {target_state} action failed")
+        self.get_logger().info(f"Grasp action result: {result}")
 
 def main(args=None):
     rclpy.init(args=args)
-    node = GripperController()
-    rclpy.spin(node)
-    node.destroy_node()
-    rclpy.shutdown()
+    node = GripperCommandNode()
+    try:
+        rclpy.spin(node)
+    except KeyboardInterrupt:
+        node.get_logger().info("Keyboard interrupt, shutting down node.")
+    finally:
+        node.destroy_node()
+        rclpy.shutdown()
+
+if __name__ == '__main__':
+    main()
 
 
 ## TODO
 # TO TEST THE CODE
-# ros2 topic pub /gripper_command_input std_msgs/msg/Float64MultiArray "data: [1, 0]"  # Open
+# ros2 topic pub /gripper_command_input std_msgs/msg/Float32MultiArray "data: [1, 0]"  # Open
 # ros2 topic pub /gripper_command_input std_msgs/msg/Float64MultiArray "data: [0, 1]"  # Grasp
 # ros2 topic pub /gripper_command_input std_msgs/msg/Float64MultiArray "data: [1, 1]"  # Ignored
 ## TODO

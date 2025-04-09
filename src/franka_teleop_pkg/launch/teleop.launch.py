@@ -235,7 +235,7 @@ def generate_launch_description() -> LaunchDescription:
     gripper_launch = IncludeLaunchDescription(
         PythonLaunchDescriptionSource([
             PathJoinSubstitution([
-                FindPackageShare('franka_gripper'),
+                FindPackageShare('middle_nodes'),
                 'launch', 'gripper.launch.py'
             ])
         ]),
