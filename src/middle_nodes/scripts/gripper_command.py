@@ -72,11 +72,11 @@ class GripperCommandNode(Node):
         # Subscribe to the gripper command input topic.
         self.subscription = self.create_subscription(
             Float32MultiArray,
-            '/gripper_command_input',
+            '/gripper_command',
             self.command_callback,
             10
         )
-        self.get_logger().info("Waiting for commands on '/gripper_command_input' topic...")
+        self.get_logger().info("Waiting for commands on '/gripper_command' topic...")
 
         # Maintain the current state to avoid repeated commands.
         self.current_state = None
