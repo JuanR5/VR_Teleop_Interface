@@ -1,0 +1,26 @@
+# === Project Info ===
+PROJECT_NAME           = UnityROSProject
+OUTPUT_DIRECTORY       = html
+INPUT                  = ../Assets
+RECURSIVE              = YES
+
+# === Language + Parsing ===
+EXTRACT_ALL           = YES
+EXTRACT_PRIVATE       = YES
+EXTRACT_STATIC        = YES
+EXTRACT_LOCAL_METHODS = YES
+EXTRACT_PACKAGE       = YES
+
+# === Diagrams ===
+HAVE_DOT              = YES
+DOT_PATH              = "C:\Program Files\Graphviz\bin\dot.exe"   # Update this if Graphviz is in a custom location
+CALL_GRAPH            = YES
+CALLER_GRAPH          = YES
+DOT_IMAGE_FORMAT      = svg
+DOT_MULTI_TARGETS     = YES
+INTERACTIVE_SVG       = YES
+
+# === Markdown + HTML ===
+MARKDOWN_SUPPORT      = YES
+GENERATE_HTML         = YES
+GENERATE_LATEX        = NO

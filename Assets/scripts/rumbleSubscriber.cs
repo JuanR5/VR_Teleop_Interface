@@ -1,64 +1,70 @@
 using UnityEngine;
 using Unity.Robotics.ROSTCPConnector;
-using RosMessageTypes.Std; // For Float32MultiArray message type
-using System; // For Math.Round
+using RosMessageTypes.Std;
+using System;
 
+/// <summary>
+/// Subscribes to a ROS topic and triggers haptic feedback on VR controllers.
+/// </summary>
 public class RumbleSubscriber : MonoBehaviour
 {
+    /// <summary>
+    /// Reference to the ROSConnection singleton.
+    /// </summary>
     private ROSConnection ros;
+
+    /// <summary>
+    /// Reference to the vibration manager handling controller rumble.
+    /// </summary>
     private ControllerVibrationManager vibrationManager;
-    
-    // Define the topic name
+
+    /// <summary>
+    /// Name of the ROS topic to subscribe to for rumble messages.
+    /// </summary>
     private string rumbleOutputTopic = "/rumble_output";
-    
+
+    /// <summary>
+    /// Initializes the ROS connection and subscribes to the rumble topic.
+    /// </summary>
     private void Start()
     {
-        // Initialize ROS connection
         ros = ROSConnection.GetOrCreateInstance();
-        vibrationManager = FindObjectOfType<ControllerVibrationManager>(); // Find the vibration manager in the scene
-        
+        vibrationManager = FindObjectOfType<ControllerVibrationManager>();
+
         if (vibrationManager == null)
         {
             Debug.LogError("ControllerVibrationManager not found in the scene!");
-            enabled = false; // Disable this script if the manager is missing
+            enabled = false;
             return;
         }
-        
-        // Subscribe to the rumble output topic, using Float32MultiArray message type
+
         ros.Subscribe<Float32MultiArrayMsg>(rumbleOutputTopic, HandleRumbleMessage);
         Debug.Log($"Subscribed to {rumbleOutputTopic}");
     }
-    
+
+    /// <summary>
+    /// Callback invoked when a Float32MultiArrayMsg is received.
+    /// Triggers vibration based on the [amplitude, duration] values.
+    /// </summary>
+    /// <param name="msg">Incoming ROS message containing amplitude and duration.</param>
     private void HandleRumbleMessage(Float32MultiArrayMsg msg)
     {
-        // Check if the array has at least 2 elements (amplitude and duration)
         if (msg.data.Length >= 2)
         {
-            // Get the amplitude and duration from the message
             float amplitude = msg.data[0];
             float duration = msg.data[1];
-            
-            // Filter the input: Clamp amplitude and ensure positive duration
+
             amplitude = Mathf.Clamp(amplitude, 0f, 1f);
             duration = Mathf.Max(0f, duration);
-            
-            // Round both values to 3 decimal places
+
             amplitude = (float)Math.Round(amplitude, 3);
             duration = (float)Math.Round(duration, 3);
-            
-            // Floor values below 0.3 to 0
-            if (amplitude < 0.3f)
-            {
-                amplitude = 0f;
-            }
-            if (duration < 0.1f)
-            {
-                duration = 0f;
-            }
-            
+
+            if (amplitude < 0.3f) amplitude = 0f;
+            if (duration < 0.1f) duration = 0f;
+
             Debug.Log($"Received amplitude: {amplitude}, duration: {duration}");
-            
-            // Trigger vibration only if both amplitude and duration are above zero
+
             if (amplitude > 0f && duration > 0f)
             {
                 vibrationManager.TriggerVibration(OVRInput.Controller.RTouch, amplitude, duration);

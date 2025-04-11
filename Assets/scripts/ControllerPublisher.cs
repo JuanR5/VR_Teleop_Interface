@@ -4,22 +4,42 @@ using RosMessageTypes.Geometry;
 using RosMessageTypes.Std;
 using System;
 
+/// <summary>
+/// Publishes controller movement and trigger inputs to ROS using Twist and Float32MultiArray messages.
+/// Combines thumbstick and button events to generate linear and angular control commands.
+/// </summary>
 public class ControllerMovementPublisher : MonoBehaviour
 {
     private ROSConnection ros;
+
+    /// <summary>
+    /// ROS topic for publishing Twist movement messages.
+    /// </summary>
     public string topicName = "controller_movement";
+
+    /// <summary>
+    /// ROS topic for publishing gripper trigger states.
+    /// </summary>
     public string gripperTopic = "gripper_command";
 
+    /// <summary>
+    /// Frequency (Hz) at which data is published.
+    /// </summary>
     public float publishRate = 10f;
+
     private float timeElapsed;
 
-    // XYZ from right controller, RPY from left controller
-    private Vector3 positionVector = Vector3.zero;  // For linear movement (XYZ)
-    private Vector3 rotationVector = Vector3.zero;  // For angular movement (RPY)
+    private Vector3 positionVector = Vector3.zero;
+    private Vector3 rotationVector = Vector3.zero;
 
-    // Threshold for triggers (0-1) to decide if the trigger is "pressed"
+    /// <summary>
+    /// Threshold to convert analog trigger values into binary states.
+    /// </summary>
     public float triggerThreshold = 0.5f;
 
+    /// <summary>
+    /// Initializes ROS publishers and subscribes to Quest2 input events.
+    /// </summary>
     void Start()
     {
         ros = ROSConnection.GetOrCreateInstance();
@@ -28,12 +48,14 @@ public class ControllerMovementPublisher : MonoBehaviour
 
         timeElapsed = 0f;
 
-        // Subscribe to controller events (these events are published from your Quest2ControllerInput script)
         Quest2ControllerInput.OnThumbstickMoved += HandleThumbstickInput;
         Quest2ControllerInput.OnButtonPressed += HandleButtonInput;
         Quest2ControllerInput.OnButtonReleased += HandleButtonRelease;
     }
 
+    /// <summary>
+    /// Unsubscribes from controller events.
+    /// </summary>
     void OnDestroy()
     {
         Quest2ControllerInput.OnThumbstickMoved -= HandleThumbstickInput;
@@ -41,6 +63,9 @@ public class ControllerMovementPublisher : MonoBehaviour
         Quest2ControllerInput.OnButtonReleased -= HandleButtonRelease;
     }
 
+    /// <summary>
+    /// Publishes messages at fixed rate based on timeElapsed.
+    /// </summary>
     void Update()
     {
         timeElapsed += Time.deltaTime;
@@ -51,6 +76,11 @@ public class ControllerMovementPublisher : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Maps thumbstick input to position or rotation vectors.
+    /// </summary>
+    /// <param name="thumbstick">The thumbstick source.</param>
+    /// <param name="value">The 2D axis input value.</param>
     private void HandleThumbstickInput(string thumbstick, Vector2 value)
     {
         if (thumbstick == "Right Thumbstick")
@@ -60,11 +90,14 @@ public class ControllerMovementPublisher : MonoBehaviour
         }
         else if (thumbstick == "Left Thumbstick")
         {
-            rotationVector.x = value.x; // Roll
-            rotationVector.y = value.y; // Pitch
+            rotationVector.x = value.x;
+            rotationVector.y = value.y;
         }
     }
 
+    /// <summary>
+    /// Handles button presses and maps them to Z-axis movement and yaw.
+    /// </summary>
     private void HandleButtonInput(string button)
     {
         if (button == "B Button (Right Controller)")
@@ -73,11 +106,14 @@ public class ControllerMovementPublisher : MonoBehaviour
             positionVector.z = -1f;
 
         if (button == "Y Button (Left Controller)")
-            rotationVector.z = 1f;  // Yaw right
+            rotationVector.z = 1f;
         if (button == "X Button (Left Controller)")
-            rotationVector.z = -1f; // Yaw left
+            rotationVector.z = -1f;
     }
 
+    /// <summary>
+    /// Resets Z-axis movement or yaw when buttons are released.
+    /// </summary>
     private void HandleButtonRelease(string button)
     {
         if (button == "B Button (Right Controller)" || button == "A Button (Right Controller)")
@@ -87,37 +123,38 @@ public class ControllerMovementPublisher : MonoBehaviour
             rotationVector.z = 0f;
     }
 
+    /// <summary>
+    /// Publishes the current movement state to ROS.
+    /// </summary>
     private void PublishMovement()
     {
-        // Publish the movement command as a Twist message
         TwistMsg twistMsg = new TwistMsg
         {
-            linear = new RosMessageTypes.Geometry.Vector3Msg(positionVector.y, -positionVector.x, positionVector.z),
-            angular = new RosMessageTypes.Geometry.Vector3Msg(rotationVector.x, rotationVector.y, rotationVector.z)
+            linear = new Vector3Msg(positionVector.y, -positionVector.x, positionVector.z),
+            angular = new Vector3Msg(rotationVector.x, rotationVector.y, rotationVector.z)
         };
 
         ros.Publish(topicName, twistMsg);
         Debug.Log($"Published Twist: Linear({positionVector}), Angular({rotationVector})");
 
-        // Publish the gripper command based on trigger inputs
         PublishGripperCommand();
     }
 
+    /// <summary>
+    /// Publishes gripper open/close command to ROS based on trigger inputs.
+    /// </summary>
     private void PublishGripperCommand()
     {
-        // Instead of reading the controller triggers directly, we assume that
-        // Quest2ControllerInput already updates these static properties.
-        // (Make sure your Quest2ControllerInput script defines these.)
         float leftTriggerValue = Quest2ControllerInput.LeftTriggerValue;
         float rightTriggerValue = Quest2ControllerInput.RightTriggerValue;
 
-        // Convert the analog trigger values to binary states: 1 if pressed above threshold, 0 otherwise.
         int leftState = leftTriggerValue >= triggerThreshold ? 1 : 0;
         int rightState = rightTriggerValue >= triggerThreshold ? 1 : 0;
 
-        // Create and publish the gripper command as a Float32MultiArray.
-        Float32MultiArrayMsg gripperMsg = new Float32MultiArrayMsg();
-        gripperMsg.data = new float[] { leftState, rightState };
+        Float32MultiArrayMsg gripperMsg = new Float32MultiArrayMsg
+        {
+            data = new float[] { leftState, rightState }
+        };
 
         ros.Publish(gripperTopic, gripperMsg);
         Debug.Log($"Published Gripper Command: [{leftState}, {rightState}]");
