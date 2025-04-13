@@ -14,24 +14,24 @@ find_package(sensor_msgs REQUIRED)
 find_package(control_msgs REQUIRED)
 find_package(geometry_msgs REQUIRED)
 
-add_executable(gripper_control_node src/gripper_control_node.cpp)
-target_include_directories(gripper_control_node PUBLIC
-  $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
-  $<INSTALL_INTERFACE:include>)
+# add_executable(gripper_control_node src/gripper_control_node.cpp)
+# target_include_directories(gripper_control_node PUBLIC
+#   $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
+#   $<INSTALL_INTERFACE:include>)
 
-target_compile_features(gripper_control_node PUBLIC c_std_99 cxx_std_17)  # Require C99 and C++17
+# target_compile_features(gripper_control_node PUBLIC c_std_99 cxx_std_17)  # Require C99 and C++17
 
-ament_target_dependencies(
-  gripper_control_node
-  "rclcpp"
-  "rclpy"
-  "std_msgs"
-  "sensor_msgs"
-  "geometry_msgs"
-)
+# ament_target_dependencies(
+#   gripper_control_node
+#   "rclcpp"
+#   "rclpy"
+#   "std_msgs"
+#   "sensor_msgs"
+#   "geometry_msgs"
+# )
 
-install(TARGETS gripper_control_node
-  DESTINATION lib/${PROJECT_NAME})
+# install(TARGETS gripper_control_node
+#   DESTINATION lib/${PROJECT_NAME})
   
   
 # Install the Python script separately

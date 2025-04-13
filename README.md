@@ -102,6 +102,131 @@ For Automated data collection a bash script is added wich will generate a rosbag
 
 ---
 
+## Diagrams
+
+### Franka Control Diagram
+
+```mermaid
+classDiagram
+direction TB
+class EquilibriumPosePublisher {
+    - deadband: float
+    - step_linear: float
+    - step_angular: float
+    - filter_alpha: float
+    - latest_cmd: np.array[6]
+    - has_new_input: bool
+    - current_pose: PoseStamped
+    - desired_pose: PoseStamped
+    - sub_movement: Subscription<Twist>
+    - sub_current_pose: Subscription<PoseStamped>
+    - pub_equilibrium_pose: Publisher<PoseStamped>
+    - timer: Timer
+    + controller_movement_callback(msg: Twist)
+    + current_pose_callback(msg: PoseStamped)
+    + timer_callback()
+}
+class CartesianImpedanceController {
+    - stiffness: Matrix6d
+    - damping: Matrix6d
+    - nullspace_stiffness: double
+    - joint_names: vector<string>
+    - arm_id: string
+    - robot_state: franka::RobotState
+    - pose_equilibrium: Pose
+    - k_gains: Vector
+    - d_gains: Vector
+    - filter_params: struct
+    + init()
+    + update()
+    + starting()
+    + stopping()
+    + setEquilibriumPose(pose: Pose)
+    + calculateTorques()
+}
+class teleop_launch {
+    <<launch>>
+    + spawns EquilibriumPosePublisher
+    + spawns CartesianImpedanceController
+    + Include: GripperLaunch (condition: load_gripper)
+    + robot_state_publisher
+    + ros2_control_node
+}
+class Topic_new_goal_pose {
+    - new_goal_pose: PoseStamped
+}
+EquilibriumPosePublisher --> Topic_new_goal_pose : publishes
+Topic_new_goal_pose --> CartesianImpedanceController : subscribes
+teleop_launch --> EquilibriumPosePublisher : launches
+teleop_launch --> CartesianImpedanceController : spawns
+```
+
+### Gripper Diagram
+
+```mermaid
+classDiagram
+direction TB
+class GripperCommandNode {
+    - max_width: float
+    - open_speed: float
+    - grasp_speed: float
+    - grasp_force: float
+    - grasp_epsilon: float
+    - current_state: str
+    - subscription: Subscription
+    - _move_client: ActionClient
+    - _grasp_client: ActionClient
+    + __init__()
+    + command_callback(msg: Float32MultiArray)
+    - send_gripper_command(target_state: str)
+    - send_move_goal()
+    - move_response_callback(future)
+    - move_result_callback(future)
+    - send_grasp_goal()
+    - grasp_response_callback(future)
+    - grasp_result_callback(future)
+}
+class Move {
+    <<action>>
+    + Goal: width, speed
+}
+class Grasp {
+    <<action>>
+    + Goal: width, speed, force, epsilon
+}
+class Float32MultiArray {
+    <<message>>
+}
+class Subscription {
+    <<interface>>
+}
+class ActionClient {
+    <<interface>>
+}
+GripperCommandNode --> Move : uses as action
+GripperCommandNode --> Grasp : uses as action
+GripperCommandNode --> Float32MultiArray : subscribes "/gripper_command"
+GripperCommandNode --> Subscription : uses
+GripperCommandNode --> ActionClient : uses
+class GripperLaunch {
+    <<launch>>
+    + robot_ip : LaunchArgument
+    + Include: franka_gripper/launch/gripper.launch.py
+    + Node: gripper_command_node
+}
+class TeleopLaunch {
+    <<launch>>
+    + Include: GripperLaunch (condition: load_gripper)
+    + robot_state_publisher
+    + ros2_control_node
+    + controller_spawners
+}
+TeleopLaunch --> GripperLaunch : includes
+GripperLaunch --> GripperCommandNode : launches
+```
+
+---
+
 ## License
 
 All packages of `franka_ros2` are licensed under the [Apache 2.0 license](https://www.apache.org/licenses/LICENSE-2.0.html).
