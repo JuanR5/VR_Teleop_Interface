@@ -1,3 +1,0 @@
-franka_robot_state_broadcaster:
-  ros__parameters:
-    arm_id: "fr3"
