@@ -138,7 +138,7 @@ public class WebcamDisplay : MonoBehaviour
 
 ### Controllers Comand reading and Rumble
 
-´´´mermaid
+```mermaid
 classDiagram
 direction TB
 class Quest2ControllerInput {
@@ -186,11 +186,11 @@ ControllerMovementPublisher --> Quest2ControllerInput : subscribes events
 RumbleSubscriber --> ControllerVibrationManager : triggers
 RumbleSubscriber --> ROSConnection : subscribes "/rumble_output"
 ControllerMovementPublisher --> ROSConnection : publishes "/controller_movement", "/gripper_command"
-´´´
+```
 
 ### Camera Input and Stereo Vision
 
-´´´mermaid
+```mermaid
 classDiagram
 direction TB
 class StereoCameraManager {
@@ -277,4 +277,4 @@ StereoCameraManager --> StereoImageSubscriber : or manages
 MeshGenerator--> Stereo Vision : uses left/right
 SSHRunner --> SSH_AORUS_ZED : Run a Docker container
 AbstractStereoSource --> MeshGenerator : uses to CreateEyeQuads
-´´´
+```
