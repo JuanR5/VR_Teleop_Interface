@@ -1,1 +1,0 @@
-/simple_ws2/src/zed_components/src/include/visibility_control.hpp

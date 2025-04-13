@@ -1,1 +1,0 @@
-/simple_ws2/build/middle_nodes/launch/zed_vr_conexion.launch.py

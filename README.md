@@ -37,13 +37,14 @@ Copy inside the file created:
 
 ## Based on the previous you can use the following image:
 ```bash
-docker pull juanr55/zed_rostcp:latest 
+docker pull juanr55/zed_rostcp:v5 
 ```
 
 ### Start the container:
 ```bash
 docker-compose up -d
 ```
+Modify the docker compose, otherwise the following command is already running when you start the container.
 
 ### Attach to the container:
 ```bash
@@ -55,7 +56,52 @@ docker exec -it vr_zed_container bash
 ros2 launch middle_nodes zed_vr_conexion.launch.py
 ```
 
+### Diagram
+
+```mermaid
+classDiagram
+direction TB
+    class ZEDImageBridge {
+	    - CvBridge bridge
+	    - dict last_received_time
+	    - dict last_published_time
+	    - Timer timer
+	    - Subscription right_subscription
+	    - Subscription left_subscription
+	    - Publisher right_publisher
+	    - Publisher left_publisher
+	    + __init__()
+	    + right_image_callback(msg: Image)
+	    + left_image_callback(msg: Image)
+	    + process_and_publish(msg: Image, publisher, eye: str)
+	    + calculate_fps(last_time, eye)
+	    + publish_images()
+    }
+    class ZEDCameraWrapper {
+	    + Publishes raw images
+	    + Topics: /zed/zed_node/left_raw/image_raw_color
+	    /zed/zed_node/right_raw/image_raw_color
+    }
+    class UnityROSTcpEndpoint {
+	    + Listens to republished processed topics
+	    + Params: ROS_IP, ROS_TCP_PORT
+    }
+    class zed_system_launch {
+	    + generate_launch_description()
+    }
+
+	<<subsystem>> ZEDCameraWrapper
+	<<subsystem>> UnityROSTcpEndpoint
+
+    ZEDCameraWrapper --> ZEDImageBridge : raw images
+    ZEDImageBridge --> UnityROSTcpEndpoint : processed images
+    zed_system_launch --> ZEDCameraWrapper : launches
+    zed_system_launch --> ZEDImageBridge : launches
+    zed_system_launch --> UnityROSTcpEndpoint : launches
+```
+
 ---
 # Acknowledgements
 
-- []()
+- [ROS TCP ENDPOINT](https://github.com/Unity-Technologies/ROS-TCP-Endpoint/tree/main-ros2?tab=readme-ov-file)
+- [Stereo Labs - Zed ROS2 Wrapper](https://github.com/stereolabs/zed-ros2-wrapper)

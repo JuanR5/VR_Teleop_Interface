@@ -1,4 +1,0 @@
-[console_scripts]
-zedStream = middle_nodes.zed_stream:main
-zedimage_bridge = middle_nodes.zedimage_bridge:main
-

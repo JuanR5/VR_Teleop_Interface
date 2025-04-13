@@ -1,9 +1,0 @@
-/simple_ws2/build/zed_wrapper/CMakeFiles/uninstall.dir
-/simple_ws2/build/zed_wrapper/CMakeFiles/zed_wrapper_uninstall.dir
-/simple_ws2/build/zed_wrapper/CMakeFiles/test.dir
-/simple_ws2/build/zed_wrapper/CMakeFiles/edit_cache.dir
-/simple_ws2/build/zed_wrapper/CMakeFiles/rebuild_cache.dir
-/simple_ws2/build/zed_wrapper/CMakeFiles/list_install_components.dir
-/simple_ws2/build/zed_wrapper/CMakeFiles/install.dir
-/simple_ws2/build/zed_wrapper/CMakeFiles/install/local.dir
-/simple_ws2/build/zed_wrapper/CMakeFiles/install/strip.dir

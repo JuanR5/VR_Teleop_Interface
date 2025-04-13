@@ -1,9 +1,0 @@
-/simple_ws2/build/zed_ros2/CMakeFiles/uninstall.dir
-/simple_ws2/build/zed_ros2/CMakeFiles/zed_ros2_uninstall.dir
-/simple_ws2/build/zed_ros2/CMakeFiles/all_zed_ros2_files.dir
-/simple_ws2/build/zed_ros2/CMakeFiles/test.dir
-/simple_ws2/build/zed_ros2/CMakeFiles/edit_cache.dir
-/simple_ws2/build/zed_ros2/CMakeFiles/rebuild_cache.dir
-/simple_ws2/build/zed_ros2/CMakeFiles/list_install_components.dir
-/simple_ws2/build/zed_ros2/CMakeFiles/install.dir
-/simple_ws2/build/zed_ros2/CMakeFiles/install/local.dir

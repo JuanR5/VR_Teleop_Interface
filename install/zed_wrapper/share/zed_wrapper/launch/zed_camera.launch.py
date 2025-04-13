@@ -1,1 +1,0 @@
-/simple_ws2/src/zed_wrapper/launch/zed_camera.launch.py
