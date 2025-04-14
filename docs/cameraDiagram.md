@@ -1,4 +1,4 @@
-´´´mermaid
+```mermaid
 classDiagram
 direction TB
 class StereoCameraManager {
@@ -85,4 +85,5 @@ StereoCameraManager --> StereoImageSubscriber : or manages
 MeshGenerator--> Stereo Vision : uses left/right
 SSHRunner --> SSH_AORUS_ZED : Run a Docker container
 AbstractStereoSource --> MeshGenerator : uses to CreateEyeQuads
+```
 ´´´
