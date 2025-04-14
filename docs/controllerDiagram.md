@@ -1,4 +1,4 @@
-´´´mermaid
+```mermaid
 classDiagram
 direction TB
 class Quest2ControllerInput {
@@ -46,4 +46,4 @@ ControllerMovementPublisher --> Quest2ControllerInput : subscribes events
 RumbleSubscriber --> ControllerVibrationManager : triggers
 RumbleSubscriber --> ROSConnection : subscribes "/rumble_output"
 ControllerMovementPublisher --> ROSConnection : publishes "/controller_movement", "/gripper_command"
-´´´
+```
