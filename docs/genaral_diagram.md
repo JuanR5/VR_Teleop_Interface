@@ -1,3 +1,4 @@
+```mermaid
 ---
 config:
   look: classic
@@ -48,3 +49,4 @@ flowchart TB
     Z2 -- Left: /zed2_unity/left_image --> R3
     Z2 -- Right: /zed2_unity/right_image --> R3
     R3 --> U6
+```
