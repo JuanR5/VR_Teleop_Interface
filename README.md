@@ -134,10 +134,147 @@ public class WebcamDisplay : MonoBehaviour
 - **Proper configuration** allows the simulation to run **simultaneously on both the PC and the VR headset**.  
 ---
 
-## Running the ROS2 Connection  
+## Diagrams
 
-After launching the container using Docker Compose, execute the following command inside the running container:  
+### Controllers Comand reading and Rumble
 
-```sh
-ros2 launch middle_nodes zed_vr_conexion.launch.py
+```mermaid
+classDiagram
+direction TB
+class Quest2ControllerInput {
+    + static float LeftTriggerValue
+    + static float RightTriggerValue
+    + static event OnThumbstickMoved(string, Vector2)
+    + static event OnButtonPressed(string)
+    + static event OnButtonReleased(string)
+    - lastRightThumbstick: Vector2
+    - lastLeftThumbstick: Vector2
+    - joystickThreshold: float
+    - triggerThreshold: float
+    + Update()
+}
+class ControllerMovementPublisher {
+    - ros: ROSConnection
+    - topicName: string
+    - gripperTopic: string
+    - publishRate: float
+    - triggerThreshold: float
+    - timeElapsed: float
+    - positionVector: Vector3
+    - rotationVector: Vector3
+    + Start()
+    + OnDestroy()
+    + Update()
+    - HandleThumbstickInput()
+    - HandleButtonInput()
+    - HandleButtonRelease()
+    - PublishMovement()
+    - PublishGripperCommand()
+}
+class RumbleSubscriber {
+    - ros: ROSConnection
+    - rumbleOutputTopic: string
+    - vibrationManager: ControllerVibrationManager
+    + Start()
+    - HandleRumbleMessage(msg: Float32MultiArrayMsg)
+}
+class ControllerVibrationManager {
+    + TriggerVibration(controller: OVRInput.Controller, amplitude: float, duration: float)
+    - StopVibration()
+}
+ControllerMovementPublisher --> Quest2ControllerInput : subscribes events
+RumbleSubscriber --> ControllerVibrationManager : triggers
+RumbleSubscriber --> ROSConnection : subscribes "/rumble_output"
+ControllerMovementPublisher --> ROSConnection : publishes "/controller_movement", "/gripper_command"
+```
+
+### Camera Input and Stereo Vision
+
+```mermaid
+classDiagram
+direction TB
+class StereoCameraManager {
+    - inputType: CameraInputType
+    - leftEyeCamera: Camera
+    - rightEyeCamera: Camera
+    - ipd: float
+    - displayDistance: float
+    - yOffset: float
+    - quadWidthScale: float
+    - quadHeightScale: float
+    - stereoCameraName: string
+    - leftImageTopic: string
+    - rightImageTopic: string
+    - usbCamera: StereoCameraFeed
+    - rosCamera: StereoImageSubscriber
+    - currentActiveCamera: MonoBehaviour
+    + SwitchCameraType(newType)
+}
+
+class StereoCameraFeed {
+    - stereoCameraName: string
+    - webCamTexture: WebCamTexture
+    - leftQuad: GameObject
+    - rightQuad: GameObject
+    + TryFindWebCam(): bool
+    + CreateEyeDisplays()
+    + CreateEyeQuad()
+    + ApplyWebCamTextureToQuad()
+    + UpdateIPDPositions()
+    + Update()
+    + OnDisable()
+}
+
+class StereoImageSubscriber {
+    - leftImageTopic: string
+    - rightImageTopic: string
+    - leftQuad: GameObject
+    - rightQuad: GameObject
+    - leftReceiver: ROSImageReceiver
+    - rightReceiver: ROSImageReceiver
+    + Start()
+    + Update()
+    + OnDestroy()
+}
+class AbstractStereoSource {
+    <<abstract>>
+    + leftEyeCamera: Camera
+    + rightEyeCamera: Camera
+    + ipd: float
+    + displayDistance: float
+    + yOffset: float
+    + quadWidthScale: float
+    + quadHeightScale: float
+    + CreateEyeDisplays()
+    + CreateEyeQuad()
+    + ApplyTextureToQuad()
+    + UpdateIPDPositions()
+}
+
+class MeshGenerator {
+    <<utility>>
+    + CreateQuadMesh(): Mesh
+}
+
+class SSHRunner {
+    - username: string
+    - password: string
+    - host: string
+    - command: string
+    - sshClient: SshClient
+    - cancellationTokenSource: CancellationTokenSource
+    + Start()
+    - RunSSHCommand()
+    - RunCommandAsync(command: string, token)
+    + OnApplicationQuit()
+    + OnDestroy()
+    - CancelSSHCommand()
+}
+StereoCameraFeed --|> AbstractStereoSource
+StereoImageSubscriber --|> AbstractStereoSource
+StereoCameraManager --> StereoCameraFeed : manages
+StereoCameraManager --> StereoImageSubscriber : or manages
+MeshGenerator--> Stereo Vision : uses left/right
+SSHRunner --> SSH_AORUS_ZED : Run a Docker container
+AbstractStereoSource --> MeshGenerator : uses to CreateEyeQuads
 ```
