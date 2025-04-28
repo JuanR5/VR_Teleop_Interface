@@ -1,3 +1,18 @@
+###########################################
+# Dockerfile Summary
+###########################################
+# Purpose: Build a ROS2 Humble container with MoveIt2, libfranka, and VR teleoperation support.
+# Context: ROS2 robotic simulation and manipulation (Unity/MoveIt2/Gazebo integration).
+#
+# Major Components:
+# - Base image: ros:humble
+# - ROS2 Humble installation with MoveIt2, controllers, and visualization tools
+# - Python tools for ROS2 linters and code quality
+# - Manual build and installation of libfranka 0.13.6
+# - Setup ROS2 workspace with custom teleoperation interface
+# - Switch to a non-root user for development security
+###########################################
+
 # Use full ROS 2 Humble desktop image
 FROM ros:humble
 
