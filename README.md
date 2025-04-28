@@ -53,7 +53,7 @@ docker exec -it vr_zed_container bash
 
 ### Launch ROS2 inside the container:
 ```bash
-ros2 launch middle_nodes zed_vr_conexion.launch.py
+ros2 launch middle_nodes zed_vr_conexion.launch.py ros_ip:=<ip_address>
 ```
 
 ### Diagram
