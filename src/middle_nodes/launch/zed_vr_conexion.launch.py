@@ -7,17 +7,21 @@
 
 import os
 from launch import LaunchDescription
-from launch.actions import LogInfo, ExecuteProcess, TimerAction
+from launch.actions import LogInfo, ExecuteProcess, TimerAction, DeclareLaunchArgument
+from launch.substitutions import LaunchConfiguration
 from launch_ros.actions import Node
 
 def generate_launch_description():
-    """
-    @brief Creates the launch description to bring up ZED camera, image bridge, and Unity TCP endpoint in order.
-    
-    @return LaunchDescription object to be run by the ROS 2 launch system.
-    """
+    ros_ip = LaunchConfiguration('ros_ip')
 
     return LaunchDescription([
+        # === Declare ROS_IP as a launch argument ===
+        DeclareLaunchArgument(
+            'ros_ip',
+            default_value='10.4.0.11',
+            description='IP address for the Unity ROS TCP endpoint server'
+        ),
+
         # === Launch ZED Camera using zed_wrapper ===
         ExecuteProcess(
             cmd=[
@@ -30,7 +34,7 @@ def generate_launch_description():
             ],
             name='zed_camera',
             output='screen',
-            shell=True  # Needed to pass ROS args properly
+            shell=True
         ),
 
         # === Delay to allow ZED node startup before bridging ===
@@ -38,19 +42,19 @@ def generate_launch_description():
             period=2.0,
             actions=[
 
-                # Launch custom image bridge node from 'middle_nodes'
+                # Launch custom image bridge node
                 ExecuteProcess(
                     cmd=['ros2', 'run', 'middle_nodes', 'zedimage_bridge'],
                     name='zedimage_bridge',
                     output='screen'
                 ),
 
-                # Launch Unity ROS-TCP endpoint server
+                # Launch Unity ROS TCP endpoint server with configurable ROS_IP
                 ExecuteProcess(
                     cmd=[
                         'ros2', 'run', 'ros_tcp_endpoint', 'default_server_endpoint',
                         '--ros-args',
-                        '-p', 'ROS_IP:=10.4.0.11',
+                        '-p', ['ROS_IP:=', ros_ip],
                         '-p', 'ROS_TCP_PORT:=10000'
                     ],
                     name='ros_tcp_endpoint',
