@@ -1,6 +1,6 @@
 services:
   vr_zed_container:
-    image: juanr55/zed_rostcp:v5
+    image: zed_container:latest # Change the image name accordingly if you build it or pulled it
     container_name: vr_zed_container
     runtime: nvidia
     privileged: true
@@ -11,14 +11,16 @@ services:
       - NVIDIA_DRIVER_CAPABILITIES=all
       - DISPLAY=${DISPLAY}
       - ROS_DOMAIN_ID=55
+      - QT_X11_NO_MITSHM=1
     volumes:
-      - /tmp/.X11-unix:/tmp/.X11-unix
+      - /tmp/.X11-unix:/tmp/.X11-unix:rw
       - /dev:/dev
       - /dev/shm:/dev/shm
-      - /usr/local/zed/resources:/usr/local/zed/resources
-      - /usr/local/zed/settings:/usr/local/zed/settings
       - ./:/simple_ws2
     stdin_open: true
     tty: true
-    # command: ["/bin/bash","-c", "source /opt/ros/humble/setup.bash && cd ~/simple_ws && source install/setup.bash && ros2 launch middle_nodes zed_vr_conexion.launch.py"]
-
+    command: |
+      bash -c "source /opt/ros/humble/setup.bash && \
+               source /root/ros2_ws/install/setup.bash && \
+               exec bash"
+# ros2 launch middle_nodes zed_vr_conexion.launch.py 
