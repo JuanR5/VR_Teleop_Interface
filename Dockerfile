@@ -1,4 +1,20 @@
-# Set build arguments
+###########################################
+# Dockerfile Summary
+###########################################
+# Purpose: Build a ROS2 + CUDA + ZED SDK environment for VR teleoperation.
+# Context: Designed for Ubuntu 22.04 with NVIDIA CUDA 12.6.3 and ZED SDK 4.2.5.
+# Builds a ROS2 workspace from a the VR_Teleop GitHub repository branch Aorus_ZED.
+#
+# Major Components:
+# - Base image: NVIDIA CUDA container with Ubuntu
+# - ROS2 Humble base installation
+# - ZED SDK installation from Stereolabs
+# - ROS2 workspace setup (VR Teleoperation packages)
+# - Includes CUDA libraries, OpenCV, libusb
+# - Bash entrypoint sourcing ROS2 and workspace environments
+###########################################
+
+# Set build arguments for flexible versioning
 ARG UBUNTU_MAJOR=22
 ARG UBUNTU_MINOR=04
 ARG CUDA_MAJOR=12
@@ -89,6 +105,7 @@ RUN mkdir -p src && \
     mv tmp_clone/src/* src/ && \
     rm -rf tmp_clone
 
+# Resolve dependencies and build workspace
 RUN bash -c "source /opt/ros/${ROS2_DIST}/setup.bash && \
   apt-get update && rosdep update && \
   rosdep install --from-paths /root/ros2_ws/src --ignore-src -r -y && \
@@ -99,7 +116,7 @@ RUN bash -c "source /opt/ros/${ROS2_DIST}/setup.bash && \
   -DCMAKE_CXX_FLAGS='-Wl,--allow-shlib-undefined'" && \
   rm -rf /var/lib/apt/lists/*
 
-# Entrypoint setup
+# Define entrypoint to automatically source ROS2 and workspace
 RUN echo '#!/bin/bash\n\
 source "/opt/ros/$ROS_DISTRO/setup.bash"\n\
 source "/root/ros2_ws/install/setup.bash"\n\
