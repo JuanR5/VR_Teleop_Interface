@@ -40,6 +40,11 @@ Copy inside the file created:
 docker pull juanr55/zed_rostcp:v5 
 ```
 
+> Or to build the image from the DockerFile, run the following:
+>```bash
+>docker build -t zed_container:latest .
+>```
+
 ### Start the container:
 ```bash
 docker-compose up -d
