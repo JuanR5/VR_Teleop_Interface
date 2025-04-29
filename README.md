@@ -45,20 +45,47 @@ ros2_ws/
 - Ubuntu 22.04, Real time kernel
 - Docker
 
+---Of course! Here’s a cleaner and more organized version of your Markdown paragraph:
+
 ---
-## Franka Research 3
 
-Please make sure everything is set up correctly, you followed the Real time kernel configuration, the FCI, the minimun requirements for 1kHz, If working with docker, have all the permisions and cpu acces. And to configure adequatly the cpu to performance [CPU Scaling](https://frankaemika.github.io/docs/troubleshooting.html#disabling-cpu-frequency-scaling)
-also, when building the workspace in ros2, take into account that it must be done with:
-´´´ bash
-colcon build --symlink-install --cmake-args -DCMAKE_BUILD_TYPE=Release 
-´´´ 
-and that some packages must be built before others due to requirements and dependencies. so a package-ignore franka_teleop_pkg and interfaces. then 
-´´´ bash
-source install/setup.bash
-´´´ 
-and the build the rest of the packages
+## Franka Research 3 Setup Instructions
 
+Before proceeding, please ensure the following:
+
+- You have completed the **Real-Time Kernel Configuration**.
+- You have set up the **Franka Control Interface (FCI)** correctly.
+- Your system meets the **minimum requirements for 1kHz control**.
+- If you are using **Docker**, verify that:
+  - All necessary permissions are granted.
+  - CPU access settings are properly configured.
+- Configure the CPU for maximum performance by disabling CPU frequency scaling.  
+  See: [CPU Scaling Instructions](https://frankaemika.github.io/docs/troubleshooting.html#disabling-cpu-frequency-scaling).
+
+### ROS 2 Workspace Build Notes
+
+When building the ROS 2 workspace, follow these steps carefully:
+
+1. Build the workspace with the correct optimization flags:
+   ```bash
+   colcon build --symlink-install --cmake-args -DCMAKE_BUILD_TYPE=Release
+   ```
+
+2. Be aware that **some packages must be built in a specific order** due to dependencies:
+   - **First**, exclude `franka_teleop_pkg` and `franka_teleop_pkg_interfaces` using `--packages-skip`:
+     ```bash
+     colcon build --symlink-install --cmake-args -DCMAKE_BUILD_TYPE=Release --packages-skip franka_teleop_pkg franka_teleop_pkg_interfaces
+     ```
+
+3. After the initial build, **source** the workspace:
+   ```bash
+   source install/setup.bash
+   ```
+
+4. Finally, build the skipped packages separately:
+   ```bash
+   colcon build --symlink-install --cmake-args -DCMAKE_BUILD_TYPE=Release --packages-select franka_teleop_pkg_interfaces franka_teleop_pkg
+   ```
 ---
 
 ## Running the System
