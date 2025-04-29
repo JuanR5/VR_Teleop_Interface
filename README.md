@@ -49,7 +49,15 @@ ros2_ws/
 ## Franka Research 3
 
 Please make sure everything is set up correctly, you followed the Real time kernel configuration, the FCI, the minimun requirements for 1kHz, If working with docker, have all the permisions and cpu acces. And to configure adequatly the cpu to performance [CPU Scaling](https://frankaemika.github.io/docs/troubleshooting.html#disabling-cpu-frequency-scaling)
-also, when building the workspace in ros2, take into account that it must be done with ´´´ colcon build --symlink-install --cmake-args -DCMAKE_BUILD_TYPE=Release ´´´ and that some packages must be built before others due to requirements and dependencies. so first franka_msg, franka_hardware, franka_semantic_components. then ´´´ source install/setup.bash´´´ and the build the rest of the packages
+also, when building the workspace in ros2, take into account that it must be done with:
+´´´ bash
+colcon build --symlink-install --cmake-args -DCMAKE_BUILD_TYPE=Release 
+´´´ 
+and that some packages must be built before others due to requirements and dependencies. so a package-ignore franka_teleop_pkg and interfaces. then 
+´´´ bash
+source install/setup.bash
+´´´ 
+and the build the rest of the packages
 
 ---
 
@@ -58,7 +66,7 @@ also, when building the workspace in ros2, take into account that it must be don
 ### Launch Franka Robot with Teleoperation
 
 ```bash
-ros2 launch robot_launch bringup_teleop.launch.py
+ros2 launch franka_teleop_pkg teleop.launch.py
 ```
 
 This launch file will:
