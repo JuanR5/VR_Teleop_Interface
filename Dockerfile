@@ -125,15 +125,31 @@ RUN mkdir -p src && \
 # Set permissions
 RUN sudo chown -R $USERNAME:$USERNAME /home/$USERNAME
 
+WORKDIR /home/$USERNAME/ros2_ws
+RUN bash -c ". /opt/ros/$ROS_DISTRO/setup.bash && \
+    apt-get update && \
+    rosdep update && \
+    rosdep install --from-paths src --ignore-src --rosdistro $ROS_DISTRO -y && \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/*"
+
 # Switch to non-root user
 USER $USERNAME
+
+# Build everything except franka_teleop_pkg
+RUN bash -c ". /opt/ros/$ROS_DISTRO/setup.bash && \
+    colcon build --symlink-install --cmake-args -DCMAKE_BUILD_TYPE=Release \
+    --packages-skip franka_teleop_pkg"
+
+# Build interfaces separately
+RUN bash -c ". install/setup.bash && \
+    colcon build --symlink-install --cmake-args -DCMAKE_BUILD_TYPE=Release \
+    --packages-select franka_teleop_pkg_interfaces franka_teleop_pkg"
 
 # Set default shell
 SHELL ["/bin/bash", "-c"]
 
-# Automatically source, build workspace, and drop to shell
-CMD source /opt/ros/$ROS_DISTRO/setup.bash && \
-    cd ~/ros2_ws && \
-    colcon build --symlink-install --cmake-args -DCMAKE_BUILD_TYPE=Release && \
-    source install/setup.bash && \
-    exec bash
+CMD bash -c "source /opt/ros/$ROS_DISTRO/setup.bash && \
+             source /home/$USERNAME/ros2_ws/install/setup.bash && \
+             exec bash"
+

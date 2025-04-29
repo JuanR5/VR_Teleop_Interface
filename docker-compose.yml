@@ -1,14 +1,19 @@
 services:
   franka_ros2:
-    image: juanr55/franka_vrteleop:v5 #Change the name accordingly if you pulled the image or build it
-    container_name: fr3_vr_interface
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        - USER_UID=${USER_UID}
+        - USER_GID=${USER_GID}
+    image: franka_container:latest #Change the name accordingly if you pulled the image or build it
+    container_name: interface_fr3
     network_mode: "host"
     privileged: true
-    command: /bin/bash
     tty: true
     stdin_open: true
     volumes:
-      - ./:/simple_ws/
+      - ./:/home/user/simple_ws/
       - /tmp/.X11-unix:/tmp/.X11-unix
       - ./limits.conf:/etc/security/limits.conf
       - /dev:/dev
@@ -23,3 +28,8 @@ services:
       rtprio: 99
       rttime: -1
       memlock: 8428281856
+    command: |
+      bash -c "source /opt/ros/humble/setup.bash && \
+               source /home/user/ros2_ws/install/setup.bash && \
+               ros2 launch franka_teleop_pkg teleop.launch.py && \
+               exec bash"
