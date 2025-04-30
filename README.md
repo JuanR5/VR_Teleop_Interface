@@ -8,7 +8,7 @@ This container is based on the [StereoLabs Repository](https://github.com/stereo
 
 
 **DON'T FORGET TO ENABLE GPU FOR DOCKER** 
-### Enable gpu for docker: https://www.stereolabs.com/docs/docker/install-guide-linux#nvidia-docker
+### [Enable gpu for docker](https://www.stereolabs.com/docs/docker/install-guide-linux#nvidia-docker):
 ```bash
 curl -fsSL https://nvidia.github.io/libnvidia-container/gpgkey | sudo gpg --dearmor -o /usr/share/keyrings/nvidia-container-toolkit-keyring.gpg \
 curl -s -L https://nvidia.github.io/libnvidia-container/stable/deb/nvidia-container-toolkit.list | \
