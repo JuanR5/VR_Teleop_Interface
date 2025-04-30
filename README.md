@@ -118,6 +118,26 @@ public class WebcamDisplay : MonoBehaviour
     }
 }
 ```
+---
+
+# Clonning repo and opening in Unity
+> Faster way to set it up.
+#### Steps:
+1. **Clone the repository** from [GitHub](https://github.com/JuanR5/VR_Teleop_Interface/tree/unity_vr)
+
+2. **Open Unity Hub**, click on **"Open"**, and select the **cloned project folder**.
+3. Once Unity loads:
+   - **Select** the appropriate **Scene** to work with (`SampleScene`).
+   - This scene includes all the **elements** and **game objects** connected to the project's scripts.
+4. **Check project settings**:
+   - Ensure the **Robotics package**, **ROS2 plugin** is selected and the **ip** address of the _ROS_TCP_EndPoint PC_ is correct.
+   - Go to **File → Build Settings**, and make sure the **Build Platform** is set to **Android**.
+5. Test the project:
+   - As before, already enabled the **Quest Link** inside the headset.
+   - Press **Play** in Unity to run and visualize the stereo vision from the camera.
+
+> ✅ *If set up correctly, you’ll see the scene in VR through your headset.*
+
 
 ---
 
@@ -278,3 +298,9 @@ MeshGenerator--> Stereo Vision : uses left/right
 SSHRunner --> SSH_AORUS_ZED : Run a Docker container
 AbstractStereoSource --> MeshGenerator : uses to CreateEyeQuads
 ```
+---
+# Acknoledgements
+- [Unity Robotics Hub](https://github.com/Unity-Technologies/Unity-Robotics-Hub)
+- [Meta Quest 2](https://www.meta.com/nl/en/quest/products/quest-2/tech-specs/)
+- [Meta Quest Link](https://www.meta.com/en-gb/help/quest/1517439565442928/)
+- [Meta Quest Developer Hub](https://developers.meta.com/horizon/downloads/package/oculus-developer-hub-win/)
