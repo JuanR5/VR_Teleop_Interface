@@ -2,15 +2,15 @@
 
 ---
 
-This repository provides a multi-branch architecture to integrate **Franka Emika Panda robot (including gripper and Botasys SenseONE)**, **ZED2 stereo camera**, and **VR Meta Quest 2** using **ROS2**, **Unity**, and **Docker**.
+This repository provides a multi-branch architecture to integrate **Franka Emika Panda robot (including gripper and Botasys SenseONE Force-Torque Sensor)**, **ZED2 stereo camera**, and **VR Meta Quest 2** using **ROS2 Humble**, **Unity**, and **Docker**.
 
 ## 📚 Overview
 
 This system enables:
-- 6DOF Cartesian control of a real Franka Panda robot
-- Gripper command publishing from VR
+- 6DOF Cartesian Impedance control of the Franka Research 3 robot
+- Gripper control (Open and Grasping)
 - Real-time stereo camera feed into Unity via ROS TCP
-- Rumble haptics from force/torque sensor collisions
+- Controllers Rumble, haptic feedbakc, from force-torque sensor readings
 - SSH-triggered launch of all ROS infrastructure via Unity
 
 ---
@@ -77,20 +77,19 @@ flowchart TB
 
 | Branch                  | Purpose                                                  |
 |-------------------------|----------------------------------------------------------|
-| `main`                 | WHere you are right now, explanation of the project                      |
-| `Aorus: zed_ros2_ws`   | Docker container incharge of ZED Camera deployment, zed_bridge, launch   |
-| `unity_vr`             | Unity XR + ROS connector, stereo + controller handling   |
-| `cubi: franka_control` | ROS2 Franka bringup, cartesian impedance + gripper ctrl, ft_sensor, launch |
+| `main`                 | Where you are right now, explanation of the project       |
+| [`Aorus: zed_ros2_ws`](https://github.com/JuanR5/VR_Teleop_Interface/tree/aorus_zed)| Docker container incharge of ZED Camera deployment, zed_bridge, ROS TCP Endpoint|
+| [`unity_vr`](https://github.com/JuanR5/VR_Teleop_Interface/tree/unity_vr)| Unity XR + ROS TCP Connector, Stereo Vizualization + controller handling |
+| [`cubi: franka_control`](https://github.com/JuanR5/VR_Teleop_Interface/tree/cubi) | ROS2 Franka bringup, cartesian impedance controller, gripper control, ft_sensor, launch |
 
 ---
 
 ## 🗂️ Components
 
 ### 🎮 Unity
-- `StereoCameraManager`(docs/unity_camera_arch.md)
-- `ControllerPublisher`(docs/controller_integration.md)
-- `RumbleSubscriber`(docs/controller_integration.md)
-- [`SSHRunner`](docs/unity_camera_arch.md)
+- [`StereoCameraManager`](https://github.com/JuanR5/VR_Teleop_Interface/blob/unity_vr/docs/cameraDiagram.md)
+- [`ControllerPublisher`](https://github.com/JuanR5/VR_Teleop_Interface/blob/unity_vr/docs/controllerDiagram.md)
+- [`SSHRunner`](https://github.com/JuanR5/VR_Teleop_Interface/blob/unity_vr/Assets/scripts/sshRunner.cs)
 
 ### 🧠 ROS2
 - `zed_image_bridge.py` – republish ZED images
@@ -103,7 +102,7 @@ flowchart TB
 
 ## 🐳 Docker Setup (ZED PC)
 ```bash
-docker pull juanr55/zed_rostcp:latest
+docker pull juanr55/zed_rostcp:v5
 docker-compose up -d
 docker exec -it vr_zed_container bash
 ros2 launch middle_nodes zed_vr_conexion.launch.py
@@ -112,37 +111,25 @@ ros2 launch middle_nodes zed_vr_conexion.launch.py
 ---
 
 ## 🛠 Setup (Unity)
-1. Open Unity project with Oculus SDK and ROS TCP Connector
-2. Assign `StereoCameraManager` to scene root
-3. Start ROS PC or SSH auto-launch via `SSHRunner`
-4. Play scene in VR
-
----
-
-## 📖 Related Docs
-
-- 📄 [Franka Launch & Control](docs/cartesian_control.md)
-- 🎥 [Camera Integration](docs/unity_camera_arch.md)
-- 🎮 [Controller I/O](docs/controller_integration.md)
-- 📦 [ZED Docker Setup](docs/zed_env.md)
+1. Clone Project and open it in Unity Editor
+2. **Select** the appropriate **Scene** to work with (`SampleScene`).
+This scene includes all the **elements** and **game objects** connected to the project's scripts.
+3. **Check project settings**:
+   - Ensure the **Robotics package**, **ROS2 plugin** is selected and the **ip** address of the _ROS_TCP_EndPoint PC_ is correct.
+   - Go to **File → Build Settings**, and make sure the **Build Platform** is set to **Android**.
+4. Start ROS PC or SSH auto-launch via `SSHRunner`
+5. Play scene in VR
 
 ---
 
 ## 🤝 Credits
 
 - [Franka ROS2](https://github.com/frankaemika/franka_ros2)
+- [Base Cartesian Impedance Controller](https://github.com/sp-sophia-labs/franka_ros2)
 - [Unity ROS TCP Connector](https://github.com/Unity-Technologies/ROS-TCP-Connector)
 - [StereoLabs ZED ROS2 Wrapper](https://github.com/stereolabs/zed-ros2-wrapper)
-
+- [ROS2-pkg-controller-create](https://github.com/jellehierck/ros2-pkg-create)
+- [Nakama Robotics Laboratory, University of Twente](https://www.utwente.nl/en/et/be/research/nakama_robotics_lab/)
+- [Robotics and Autonomous Systems Research Group, Universidad Autónoma de Occidente](https://github.com/RAS-UAO)
+- [Robotics and Mechatronics, University of Twente](https://www.ram.eemcs.utwente.nl/)
 ---
-
-## 🧪 Future Extensions
-
-- 
-
-
----
-
-- [Franka](https://github.com/JuanR5/VR_Teleop_Interface/tree/cubi)
-- [Zed](https://github.com/JuanR5/VR_Teleop_Interface/tree/aorus_zed)
-- [Unity](https://github.com/JuanR5/VR_Teleop_Interface/tree/unity_vr)
