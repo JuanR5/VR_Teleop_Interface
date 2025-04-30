@@ -1,8 +1,6 @@
 # ROS 2 Integration for Franka Robotics Research Robots
 
-[![CI](https://github.com/frankaemika/franka_ros2/actions/workflows/ci.yml/badge.svg)](https://github.com/frankaemika/franka_ros2/actions/workflows/ci.yml)
-
-This repository contains the full ROS 2 workspace setup to interface with the **Franka Emika Research 3 robotic arm** for **teleoperation**. This setup is designed to work with ROS 2 and leverages the **Franka Control Interface (FCI)** for real-time control.
+This repository contains the full ROS 2 workspace setup to interface with the **Franka Emika Research 3 robotic arm** for **teleoperation**. This setup is designed to work with ROS2 Humble and leverages the **Franka Control Interface (FCI)** for real-time control.
 
 Another component of this integration is the use of the **SenseOne 6-axis force-torque sensor from Botasys**, mounted at the end effector of the robotic arm. The sensor data is utilized to enable haptic feedback teleoperation modes.
 
@@ -12,7 +10,7 @@ Another component of this integration is the use of the **SenseOne 6-axis force-
 
 - ✅ Full ROS 2 integration with Franka Research 3 hardware via FCI
 - 🧠 Real-time force/torque feedback using the SenseOne sensor from Botasys
-- 🔄 Modular and extensible ROS 2 node structure
+- 🔄 Modular and extensible ROS2 node structure
 - 🧪 Easily adaptable for research in haptics, human-robot interaction, and impedance control
 - 📦 Includes example launch files and configuration for quick startup
 
@@ -27,12 +25,8 @@ ros2_ws/
 │   ├── franka_teleop_pkg/       # Custom teleoperation control nodes
 |   ├── franka_teleop_pkg_interfaces/    #generated with the pkg generator
 │   ├── ft_sensor_node/          # Botasys SenseOne sensor drivers and interfaces
-│   ├── middle_nodes/            # Additional nodes for data processing and control
-│   ├── ros_tcp_endpoint/        # ROS 2 TCP endpoint for remote control
-│   └── robot_launch/            # Unified launch files and configurations
-├── install/ #Not included
-├── build/ #Not included
-└── log/ #Not included
+│   ├── middle_nodes/            # Additional nodes for data processing, control and gripper
+│   └── ros_tcp_endpoint/        # ROS 2 TCP endpoint for remote control
 ```
 
 ---
@@ -44,8 +38,6 @@ ros2_ws/
 - Franka Research 3 robotic arm
 - Ubuntu 22.04, Real time kernel
 - Docker
-
----Of course! Here’s a cleaner and more organized version of your Markdown paragraph:
 
 ---
 
@@ -85,6 +77,7 @@ When building the ROS 2 workspace, follow these steps carefully:
 4. Finally, build the skipped packages separately:
    ```bash
    colcon build --symlink-install --cmake-args -DCMAKE_BUILD_TYPE=Release --packages-select franka_teleop_pkg_interfaces franka_teleop_pkg
+   source install/setup.bash
    ```
 ---
 
@@ -101,6 +94,7 @@ This launch file will:
 - Connect to the Franka robot via FCI
 - Start the teleoperation control node
 - Launch the SenseOne FT sensor node for data publishing
+- Activate the Gripper Control
 - Optionally visualize the robot in RViz2
 
 ---
@@ -115,7 +109,7 @@ The SenseOne sensor is mounted at the end effector and is used to capture real-t
 
 Teleoperation can be achieved using supported input devices such as:
 
-- Meta Quest 2
+- Meta Quest 2 Touch controllers
 - Keyboard (limited functionality)
 
 The control node maps device inputs to Cartesian commands.
@@ -125,15 +119,6 @@ The control node maps device inputs to Cartesian commands.
 ## User testing
 
 For Automated data collection a bash script is added wich will generate a rosbag with topics of interes, measure task execution, and allow to write down aditional notes for each task. `newTest.sh`
-
----
-
-## Example Applications
-
-- Remote manipulation with real-time force feedback
-- Human-in-the-loop control experiments
-- Assistive robotic tasks with compliant behaviors
-- Research in haptic feedback and shared control
 
 ---
 
