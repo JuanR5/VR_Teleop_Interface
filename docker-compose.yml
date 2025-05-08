@@ -20,6 +20,7 @@ services:
     environment:
       QT_X11_NO_MITSHM: 1
       DISPLAY: $DISPLAY
+      ROS_DOMAIN_ID: 55
     group_add:
       - "dialout"
     cap_add:
