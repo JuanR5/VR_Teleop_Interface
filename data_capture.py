@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 import os
 import sys
 import shutil
@@ -40,6 +42,7 @@ class DataCaptureApp(ctk.CTk):
         self.task_number = None
         self.selected_participant = ctk.StringVar()
         self.selected_task = ctk.StringVar()
+        self.monitor_process = None
 
         os.makedirs(BASE_DIR, exist_ok=True)
         os.makedirs(BAG_DIR, exist_ok=True)
@@ -57,20 +60,21 @@ class DataCaptureApp(ctk.CTk):
             """)
             conn.execute("""
                 CREATE TABLE IF NOT EXISTS tasks (
-                    id INTEGER PRIMARY KEY AUTOINCREMENT,
-                    participant_id TEXT NOT NULL,
-                    task_number INTEGER NOT NULL,
-                    rosbag_path TEXT NOT NULL,
-                    recording_start TEXT NOT NULL,
-                    recording_stop TEXT NOT NULL,
-                    recording_duration_seconds INTEGER NOT NULL,
-                    achieved TEXT NOT NULL,
-                    errors_flagged INTEGER NOT NULL,
-                    restarted TEXT NOT NULL,
-                    restart_count INTEGER NOT NULL,
-                    error_severity INTEGER,
-                    notes TEXT,
-                    FOREIGN KEY(participant_id) REFERENCES participants(participant_id)
+                        id INTEGER PRIMARY KEY AUTOINCREMENT,
+                        participant_id TEXT NOT NULL,
+                        task_number INTEGER NOT NULL,
+                        rosbag_path TEXT NOT NULL,
+                        monitor_csv_path TEXT,
+                        recording_start TEXT NOT NULL,
+                        recording_stop TEXT NOT NULL,
+                        recording_duration_seconds INTEGER NOT NULL,
+                        achieved TEXT NOT NULL,
+                        errors_flagged INTEGER NOT NULL,
+                        restarted TEXT NOT NULL,
+                        restart_count INTEGER NOT NULL,
+                        error_severity INTEGER,
+                        notes TEXT,
+                        FOREIGN KEY(participant_id) REFERENCES participants(participant_id)
                 )
             """)
 
@@ -180,7 +184,7 @@ class DataCaptureApp(ctk.CTk):
                 return
             with sqlite3.connect(DB_PATH) as conn:
                 cur = conn.cursor()
-                cur.execute("SELECT rosbag_path FROM tasks WHERE participant_id = ? AND task_number = ?", (pid, int(task)))
+                cur.execute("SELECT rosbag_path, monitor_csv_path FROM tasks WHERE participant_id = ? AND task_number = ?", (pid, int(task)))
                 row = cur.fetchone()
                 if row:
                     bag_path = os.path.join(BASE_DIR, row[0]) if not os.path.isabs(row[0]) else row[0]
@@ -190,8 +194,14 @@ class DataCaptureApp(ctk.CTk):
                             shutil.rmtree(bag_dir)
                     except Exception as e:
                         mb.showwarning("Warning", f"Failed to delete rosbag directory: {e}")
+                    monitor_csv_path = row[1] if len(row) > 1 else None
+                    try:
+                        if monitor_csv_path and os.path.exists(monitor_csv_path):
+                            os.remove(monitor_csv_path)
+                    except Exception as e:
+                        mb.showwarning("Warning", f"Failed to delete monitor CSV file: {e}")
                 cur.execute("DELETE FROM tasks WHERE participant_id = ? AND task_number = ?", (pid, int(task)))
-            mb.showinfo("Deleted", f"Task {task} for participant {pid} and its rosbag file were deleted.")
+            mb.showinfo("Deleted", f"Task {task} for participant {pid} and its associated files were deleted.")
             if hasattr(self, "dropdown_frame"):
                 self.dropdown_frame.destroy()
             self._create_dropdowns()
@@ -214,6 +224,13 @@ class DataCaptureApp(ctk.CTk):
                     shutil.rmtree(self.bag_dir)
                 except Exception as e:
                     mb.showwarning("Warning", f"Could not remove old rosbag: {e}")
+                        # delete old monitor csv if exists
+            if hasattr(self, "monitor_csv") and self.monitor_csv and os.path.exists(self.monitor_csv):
+                try:
+                    os.remove(self.monitor_csv)
+                except Exception as e:
+                    mb.showwarning("Warning", f"Could not remove old monitor CSV: {e}")
+
             self.bag_process = None
             self.record_start = None
             self.record_stop = None
@@ -239,6 +256,11 @@ class DataCaptureApp(ctk.CTk):
         self.record_start = datetime.datetime.now().isoformat()
         self.bag_dir = bag_base  # store the directory
         self.start_button.configure(fg_color="green")
+
+        monitor_script_path = os.path.join(os.path.dirname(__file__), "monitor.py")
+        self.monitor_csv = bag_base + "_monitor.csv"
+        self.monitor_process = subprocess.Popen(["python3", monitor_script_path, "--output", self.monitor_csv])
+
         mb.showinfo("Recording", f"Recording started: {self.bag_dir}")
 
     def _stop_recording(self):
@@ -249,6 +271,11 @@ class DataCaptureApp(ctk.CTk):
         self.bag_process.wait()
         self.record_stop = datetime.datetime.now().isoformat()
         self.start_button.configure(fg_color="transparent")
+
+        if self.monitor_process:
+            self.monitor_process.terminate()
+            self.monitor_process.wait()
+
         mb.showinfo("Recording", "Recording stopped.")
 
     def _save_task(self):
@@ -283,10 +310,12 @@ class DataCaptureApp(ctk.CTk):
             self.bag_file = os.path.join(self.bag_dir, db3_file)
 
             cur.execute("""
-                INSERT INTO tasks (participant_id, task_number, rosbag_path, recording_start, recording_stop, recording_duration_seconds, achieved, errors_flagged, restarted, restart_count, error_severity, notes)
-                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                INSERT INTO tasks (
+                    participant_id, task_number, rosbag_path, monitor_csv_path, recording_start, recording_stop,
+                    recording_duration_seconds, achieved, errors_flagged, restarted, restart_count, error_severity, notes
+                ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
             """, (
-                pid, task_num, self.bag_file, self.record_start, self.record_stop, dur,
+                pid, task_num, self.bag_file, self.monitor_csv, self.record_start, self.record_stop, dur,
                 v['achieved'].get(), int(v['errors'].get()), v['restarted'].get(),
                 int(v['restarts'].get()), int(v['severity'].get()), v['notes'].get().strip()
             ))
