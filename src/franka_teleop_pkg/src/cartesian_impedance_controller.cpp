@@ -303,10 +303,14 @@ controller_interface::return_type CartesianImpedanceController::update(
                                  robot_state_.o_t_ee.pose.orientation.z);
   Eigen::Affine3d transform = Eigen::Translation3d(position) * orientation;
 
+  Eigen::Matrix3d R_ee = transform.rotation();  // Base → EE rotation //!
+
   // --- 6. Compute Cartesian error ---
   Eigen::Matrix<double, 6, 1> position_error;
-  position_error.head(3) = position - position_d_;
-  
+
+  // position_error.head(3) = position - position_d_; //!
+  position_error.head(3) = R_ee.transpose() * (position - position_d_);  
+
   // Ensure proper hemisphere alignment.
   // orientation = normalizeQuaternion(orientation); //todo
   if (orientation_d_.coeffs().dot(orientation.coeffs()) < 0.0) {
@@ -314,7 +318,10 @@ controller_interface::return_type CartesianImpedanceController::update(
   }
   Eigen::Quaterniond error_quaternion = computeQuaternionError(orientation, orientation_d_);
   position_error.tail(3) << error_quaternion.x(), error_quaternion.y(), error_quaternion.z();
-  position_error.tail(3) = -transform.rotation() * position_error.tail(3);
+
+  // position_error.tail(3) = -transform.rotation() * position_error.tail(3); // !!
+  position_error.tail(3) = error_quaternion.vec(); // keep in EE frame // DO NOT rotate orientation error into base frame — leave it in EE frame
+
 
   //?
   // RCLCPP_INFO(get_node()->get_logger(),
@@ -346,7 +353,22 @@ controller_interface::return_type CartesianImpedanceController::update(
   //     cartesian_velocity[i] = 0.0;
   //   }
   // }
-  tau_task = jacobian.transpose() * (-cartesian_stiffness_ * position_error - cartesian_damping_ * jacobian * dq);
+
+// !
+  Eigen::Matrix<double, 6, 6> cartesian_stiffness_ee;
+  Eigen::Matrix<double, 6, 6> cartesian_damping_ee;
+  cartesian_stiffness_ee.setZero();
+  cartesian_damping_ee.setZero();
+  // Rotate position and orientation components separately
+  cartesian_stiffness_ee.topLeftCorner(3, 3)     = R_ee.transpose() * cartesian_stiffness_.topLeftCorner(3, 3) * R_ee;
+  cartesian_stiffness_ee.bottomRightCorner(3, 3) = R_ee.transpose() * cartesian_stiffness_.bottomRightCorner(3, 3) * R_ee;
+  cartesian_damping_ee.topLeftCorner(3, 3)       = R_ee.transpose() * cartesian_damping_.topLeftCorner(3, 3) * R_ee;
+  cartesian_damping_ee.bottomRightCorner(3, 3)   = R_ee.transpose() * cartesian_damping_.bottomRightCorner(3, 3) * R_ee;
+//!
+
+//  tau_task = jacobian.transpose() * (-cartesian_stiffness_ * position_error - cartesian_damping_ * jacobian * dq); //!
+  tau_task = jacobian.transpose() * (-cartesian_stiffness_ee * position_error - cartesian_damping_ee * jacobian * dq);
+
   tau_nullspace = (Eigen::MatrixXd::Identity(7, 7) - jacobian.transpose() * jacobian_transpose_pinv) *
                   (nullspace_stiffness_ * (q_d_nullspace_ - q) - (2.0 * sqrt(nullspace_stiffness_)) * dq);
   tau_d = tau_task + coriolis; // + tau_nullspace;
